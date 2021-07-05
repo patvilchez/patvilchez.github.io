@@ -1,0 +1,1148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/U-Boot by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:55:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> U-Boot &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/U-Boot?t=1625510734" type="application/x-wiki" title="Edit U-Boot" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/U-Boot?t=1625510734" title="Edit U-Boot" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style>
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_table2 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#table2 td.twikiTableCol0 {width:20%;}
+.twikiTable#table2 th.twikiTableCol0 {width:20%;}
+.twikiTable#table2 td.twikiTableCol1 {width:60%;}
+.twikiTable#table2 th.twikiTableCol1 {width:60%;}
+.twikiTable#table2 td.twikiTableCol2 {width:10%;}
+.twikiTable#table2 th.twikiTableCol2 {width:10%;}
+.twikiTable#table2 td.twikiTableCol3 {width:10%;}
+.twikiTable#table2 th.twikiTableCol3 {width:10%;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="U-Boot.html">U-Boot</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="U_Boot"></a> U-Boot </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#Use_U_Boot"> Use U-Boot</a> <ul>
+<li> <a href="#U_Boot_Main_Commands"> U-Boot Main Commands</a>
+</li> <li> <a href="#U_Boot_script_capability"> U-Boot script capability</a>
+</li> <li> <a href="#Boot_pre_defined_variables_and_c"> Boot pre-defined variables and command:</a>
+</li> <li> <a href="#PDA_detection_at_boot"> PDA detection at boot</a> <ul>
+<li> <a href="#One_wire_EEPROM"> One wire EEPROM</a>
+</li> <li> <a href="#U_boot_behavior"> U-boot behavior</a>
+</li> <li> <a href="#Example"> Example</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Load_Linux_with_U_Boot_on_AT91_b"> Load Linux with U-Boot on AT91 boards</a> <ul>
+<li> <a href="#Preparing_linux_image_optional"> Preparing linux image (optional)</a>
+</li> <li> <a href="#Preparing_Kernel_DTB_image"> Preparing Kernel DTB image</a>
+</li> <li> <a href="#How_to_patch_Device_Tree_Blob_in"> How to patch Device Tree Blob in U-boot using Overlays</a> <ul>
+<li> <a href="#Traditional_way_of_kernel_bootin"> Traditional way of kernel booting</a>
+</li> <li> <a href="#Loading_overlays_and_applying_th"> Loading overlays and applying them on top of the DTB</a>
+</li></ul> 
+</li> <li> <a href="#Loading_through_network"> Loading through network</a>
+</li> <li> <a href="#Using_FIT_with_overlays"> Using FIT with overlays</a> <ul>
+<li> <a href="#Device_Tree_Overlays"> Device Tree Overlays</a>
+</li> <li> <a href="#Loading_FIT_image_with_U_boot"> Loading FIT image with U-boot</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#U_Boot_for_AT91_source_code"> U-Boot for AT91 source code</a> <ul>
+<li> <a href="#Branches"> Branches</a> <ul>
+<li> <a href="#Changes_in_u_boot_2020_01_at91"> Changes in u-boot-2020.01-at91</a>
+</li> <li> <a href="#Changes_in_u_boot_2019_04_at91"> Changes in u-boot-2019.04-at91</a>
+</li> <li> <a href="#Changes_in_u_boot_2018_07_at91"> Changes in u-boot-2018.07-at91</a>
+</li> <li> <a href="#Changes_in_u_boot_2015_01_at91"> Changes in u-boot-2015.01-at91</a>
+</li> <li> <a href="#Changes_in_u_boot_2014_07_at91"> Changes in u-boot-2014.07-at91</a>
+</li></ul> 
+</li> <li> <a href="#Tags"> Tags</a> <ul>
+<li> <a href="#linux4sam_2020_04_tag"> linux4sam_2020.04 tag</a>
+</li> <li> <a href="#linux4sam_6_2_icp_tag"> linux4sam_6.2-icp tag</a>
+</li> <li> <a href="#linux4sam_6_2_tag"> linux4sam_6.2 tag</a>
+</li> <li> <a href="#linux4sam_6_1_tag"> linux4sam_6.1 tag</a>
+</li> <li> <a href="#linux4sam_6_0_tag"> linux4sam_6.0 tag</a>
+</li> <li> <a href="#linux4sam_5_0_alpha7_tag"> linux4sam_5.0-alpha7 tag</a>
+</li> <li> <a href="#linux4sam_4_7_tag"> linux4sam_4.7 tag</a>
+</li> <li> <a href="#linux4sam_4_6_tag"> linux4sam_4.6 tag</a>
+</li> <li> <a href="#linux4sam_4_5_tag"> linux4sam_4.5 tag</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Build_U_Boot_from_sources"> Build U-Boot from sources</a> <ul>
+<li> <a href="#Getting_U_Boot_sources"> Getting U-Boot sources</a>
+</li> <li> <a href="#Setup_ARM_Cross_Compiler"> Setup ARM Cross Compiler</a>
+</li> <li> <a href="#Cross_compiling_U_Boot"> Cross-compiling U-Boot</a> <ul>
+<li> <a href="#U_Boot_environment"> U-Boot environment</a>
+</li> <li> <a href="#Build_U_Boot_binary"> Build U-Boot binary</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Program_U_Boot_binary_into_nandf"> Program U-Boot binary into nandflash</a> <ul>
+<li> <a href="#Using_SAM_BA_to_flash_U_Boot_to"> Using SAM-BA to flash U-Boot to board</a> <ul>
+<li> <a href="#Launch_SAM_BA_tools"> Launch SAM-BA tools</a>
+</li> <li> <a href="#Configure_NAND_ECC_config"> Configure NAND ECC config</a>
+</li> <li> <a href="#Programming_U_Boot"> Programming U-Boot</a>
+</li></ul> 
+</li> <li> <a href="#Using_U_Boot_to_flash_U_Boot_bin"> Using U-Boot to flash U-Boot binary to board</a>
+</li></ul> 
+</li> <li> <a href="#Recent_FAQ"> Recent FAQ</a> <ul>
+<li> <a href="#U_BootFAQ_entries"> U-BootFAQ entries</a>
+</li> <li> <a href="#U_Boot_related_FAQ_entries"> U-Boot related FAQ entries</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+Das U-Boot - the Universal Boot Loader <a href="http://www.denx.de/wiki/U-Boot" target="_blank">wiki website<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is the main entry point for this bootloader / debugging tool available on several processors. It is of course available for AT91 ARM processors.
+<p />
+U-Boot documentation is very rich ; in addition to the official U-Boot website, several others are dealing with U-Boot getting started or configuration. Note that a detailed documentation is simply available in the source code package as the <a href="http://www.denx.de/cgi-bin/gitweb.cgi?p=u-boot.git;a=blob_plain;f=README" target="_blank">README<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> file. Thematic documentation is also available in the <a href="http://www.denx.de/cgi-bin/gitweb.cgi?p=u-boot.git;a=tree;f=doc" target="_blank"> <code>doc/</code> <img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> directory.
+<p />
+U-Boot takes place in the Linux demo as a third stage bootloader. It is responsible of configuring main interfaces and launching a Linux system. Note however that it is possible to avoid this step and to directly boot Linux from <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>, in a production phase for instance.
+<p />
+Now U-Boot moves to the Driver model and use of the Device Tree. Please check the FAQ page about  <a class="twikiLink" href="DriverModelInUBoot.html">Driver Model in U-Boot</a> for more information.
+<p />
+<h2><a name="Use_U_Boot"></a> Use U-Boot </h2>
+<p />
+<h3><a name="U_Boot_Main_Commands"></a> U-Boot Main Commands </h3>
+<p />
+<strong>setenv</strong> this command is used to set variables<br />
+<strong>saveenv</strong> this command saves variables previously set in the environment permanent storage space<br />
+<strong>printenv</strong> this command print the current variables
+<p />
+The <code>help</code> command show a brief summary of the built-in commands of U-Boot. Here is a selection of useful commands :
+<pre>
+U-Boot&#62; help
+?       - alias for &#39;help&#39;
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run &#39;bootcmd&#39;
+bootd   - boot default, i.e., run &#39;bootcmd&#39;
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+cls     - clear screen
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+dhcp    - boot image via network using DHCP/TFTP protocol
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+false   - do nothing, unsuccessfully
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file&#39;s size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+go      - start application at address &#39;addr&#39;
+help    - print command description/usage
+iminfo  - print header information for application image
+imls    - list all images found in flash
+imxtract- extract a part of a multi-image
+itest   - return true/false on integer compare
+loadb   - load binary file over serial line (kermit mode)
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+md      - memory display
+mdio    - MDIO utility commands
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mw      - memory write (fill)
+nand    - NAND sub-system
+nboot   - boot from NAND device
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+ping    - send ICMP ECHO&#95;REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+sf      - SPI flash sub-system
+showvar - print local hushshell variables
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+true    - do nothing, successfully
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+U-Boot&#62;
+</pre>
+<p />
+Refer to the U-Boot manual page for the <a href="http://www.denx.de/wiki/view/DULG/UBootCommandLineInterface" target="_blank">command line interface<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<p />
+<h3><a name="U_Boot_script_capability"></a> U-Boot script capability </h3>
+<p />
+You can create script or complex variables, which prevents you to type commands. Here is a summary of several variables built to make a network loading of linux easier :
+<pre>
+setenv boot&#95;addr 0x21400000
+setenv linux &#39;tftp ${boot&#95;addr} linux-2.6.x.img&#39;
+setenv ramdisk&#95;addr 0x21100000
+setenv ramdisk &#39;tftp ${ramdisk&#95;addr} sam9-ramdisk.gz&#39;
+setenv go &#39;run linux; run ramdisk; bootm ${boot&#95;addr}&#39;
+saveenv
+</pre>
+<p />
+The <code>setenv linux 'tftp ${boot_addr} linux-2.6.x.img'</code> line is equivalent of typing <code>tftp 0x21400000 linux-2.6.x.img</code> but combined with others and stored in flash, it allows you to save time, and automate. For executing a Linux kernel bootup, using this snippet, simply type <code>run go</code>
+<p />
+<p />
+<h3><a name="Boot_pre_defined_variables_and_c"></a> Boot pre-defined variables and command: </h3>
+<p />
+<strong><a href="http://www.denx.de/wiki/view/DULG/UBootCmdGroupEnvironment#Section_5.9.6.5." target="_blank">bootcmd<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> when set, this variable content is executed automatically after the boot delay. It enables the U-Boot autoboot mode <ul>
+<li> Here is a example of <code>bootcmd</code> in default at91 board:   <pre>
+bootcmd=nand read 0x21000000 0x00180000 0x00080000; nand read 0x22000000 0x00200000 0x00600000;bootz 0x22000000 - 0x21000000
+   </pre>
+</li></ul> 
+<strong><a href="http://www.denx.de/wiki/view/DULG/LinuxKernelArgs" target="_blank">bootargs<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> this variable it used as an exchange area to pass information to the main application started by U-Boot (Linux kernel for instance) <ul>
+<li> Here are examples of <code>bootargs</code>:   <pre>
+bootargs_nand=console=ttyS0,115200 mtdparts=atmel_nand:256k(bootstrap)ro,512k(uboot)ro,256K(env),256k(env_redundent),256k(spare),512k(dtb),6M(kernel)ro,-(rootfs) rootfstype=ubifs ubi.mtd=7 root=ubi0:rootfs
+bootargs_nfs=console=ttyS0,115200 mtdparts=atmel_nand:8M(kernel)ro,220M(rootfs),20M(test),-(protect) rw root=/dev/nfs rw nfsroot=10.217.12.45:/nfsroot/rootfs/yocto ip=dhcp
+   </pre>
+</li></ul> 
+<strong><a href="http://www.denx.de/wiki/view/DULG/UBootCmdGroupExec#Section_5.9.4.2." target="_blank">bootm<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> this command executes an application generated by the <em>mkimage</em> tool<br>
+<p />
+<p />
+<p />
+<h3><a name="PDA_detection_at_boot"></a> PDA detection at boot </h3>
+<p />
+Since U-boot 2018.07, released with linux4sam_6.0, we have the feature of auto detection of the connected PDA screen 
+<p />
+<h4><a name="One_wire_EEPROM"></a> One wire EEPROM </h4>
+The PDAs have a 512-byte Maxim DS24 1wire EEPROM which is available on the pin 1 of the LCD connector. This memory holds the specific information for the PDA type.
+<p />
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>Not all evaluation kits have the pin 1 of the LCD connector properly connected to the SAMA5 SoC.</strong> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />
+<p />
+Please check below table for information and hardware required adjustments:
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Board name </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> Hardware changes required </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> </td>
+<th bgcolor="#687684" class="twikiTableCol1 twikiLastCol" valign="top"> <font color="#ffffff">R32 must be moved to position R33</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a> </td>
+<th bgcolor="#687684" class="twikiTableCol1 twikiLastCol" valign="top"> <font color="#ffffff">R95 must be populated</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D2 SOM1 EK</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D2 WLSOM1 EK</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> None </td>
+</tr></table>
+<p />
+<p />
+<p />
+<h4><a name="U_boot_behavior"></a> U-boot behavior </h4>
+At boot time, U-boot will:
+<p /> <ul>
+<li>  Initialize 1wire bus and protocol on the GPIO connected on pin 1 of the LCD connector
+</li> <li>  Read the EEPROM memory of the PDA
+</li> <li>  Copy the contents of the PDA memory at the offset where the screen type is stored into an environment variable called 'pda'
+</li> <li>  Print an information message in the booting log with the detected PDA
+</li></ul> 
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong>  <strong>Any</strong> potential PDA can be detected, as long as it respects the same memory map for the connected EEPROM. U-boot will automatically copy the information from EEPROM in the <strong>pda</strong> environment variable.
+</br>
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong>  By default in Linux4SAM 6.0 and later, U-boot comes with an environment that will take this information into account and select a specific PDA overlay to boot Linux with. For more information visit <a class="twikiLink" href="SelectingPDAatBoot.html">how to manually select your PDA at boot</a> and  <a class="twikiLink" href="UsingFITwithOverlays.html">how to use FIT image and the U-boot environment explained</a>
+<p />
+<h4><a name="Example"></a> Example </h4>
+<pre>
+U-Boot 2018.07-linux4sam&#95;6.0 (Oct 03 2018 - 16:03:04 +0000)
+
+CPU: SAMA5D27-CU
+Crystal frequency:       12 MHz
+CPU clock        :      498 MHz
+Master clock     :      166 MHz
+DRAM:  512 MiB
+MMC:   sdio-host&#64;a0000000: 0, sdio-host&#64;b0000000: 1
+Loading Environment from SPI Flash... SF: Detected at25df321a with page size 256 Bytes, erase size 4 KiB, total 4 MiB
+OK
+In:    serial&#64;f8020000
+Out:   serial&#64;f8020000
+Err:   serial&#64;f8020000
+PDA TM5000 detected
+Net:   eth0: ethernet&#64;f8008000
+Hit any key to stop autoboot:  0
+</pre>
+<p />
+In this example we can see that PDA TM5000 was detected.
+<p />
+Further more, if we inspect the U-boot environment:
+<pre>
+&#61;&#62; print
+baudrate&#61;115200
+bootargs&#61;console&#61;ttyS0,115200 root&#61;/dev/mmcblk0p1 rw rootfstype&#61;ext4 rootwait atmel.pm&#95;modes&#61;standby,ulp1
+bootcmd&#61;ext4load mmc 0 0x24000000 boot/sama5d2&#95;xplained.itb; bootm 0x24000000#kernel&#95;dtb
+bootdelay&#61;1
+ethaddr&#61;fc:c2:3d:0d:1f:4b
+fdtcontroladdr&#61;3fb773c8
+pda&#61;5000
+stderr&#61;serial&#64;f8020000
+stdin&#61;serial&#64;f8020000
+stdout&#61;serial&#64;f8020000
+</pre>
+<p />
+We can see that the variable 'pda' was configured. This can be used in the booting mechanism to inform the OS that the PDA is connected.</br>
+<p />
+<p />
+<p />
+<h2><a name="Load_Linux_with_U_Boot_on_AT91_b"></a> Load Linux with U-Boot on AT91 boards </h2>
+<p />
+This section describes the loading of a Linux kernel and its root file system. Keep in mind <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#U_boot_Main_Commands">useful U-Boot commands</a> to setup your U-Boot behavior.
+<p />
+<h3><a name="Preparing_linux_image_optional"></a> Preparing linux image (optional) </h3>
+<p />
+If you want to use an uImage file with U-Boot, you can use the <em>mkimage</em> tool which encapsulates kernel image with header information, CRC32 checksum, etc. 
+<p />
+<em>mkimage</em> comes in source code with U-Boot distribution and it is built during U-Boot compilation (u-boot-source-dir/tools/mkimage).
+<p />
+See U-Boot <a href="http://www.denx.de/cgi-bin/gitweb.cgi?p=u-boot.git;a=blob_plain;f=README" target="_blank">README<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> file for more information.
+<p />
+Command to generate an uncompressed uImage file {{<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> for <strong>AT91SAM9G45 family</strong>: use proper location for RAM: 0x70000000 instead of 0x20000000}} :
+<pre>
+mkimage -A arm -O linux -C none -T kernel -a 20008000 -e 20008000 -n linux-2.6 -d arch/arm/boot/Image uImage
+</pre>
+<p />
+Commands to generate a compressed uImage file {{<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> for <strong>AT91SAM9G45 family</strong>: use proper location for RAM: 0x70000000 instead of 0x20000000}} :
+<pre>
+mkimage -A arm -O linux -C none -T kernel -a 20008000 -e 20008000 -n linux-2.6 -d arch/arm/boot/zImage uImage
+</pre>
+<p />
+<h3><a name="Preparing_Kernel_DTB_image"></a> Preparing Kernel DTB image </h3>
+<p />
+U-Boot supports the Device Tree Binary which describes the hardware in a binary file.
+<p />
+U-Boot can load both the DTB and kernel. The only change is running <code>bootm</code> or <code>bootz</code> with two arguments:
+<p />
+<code>bootm 0x22000000 - 0x21000000</code>  or  <code>bootz 0x22000000 - 0x21000000</code>
+<p />
+First argument is the address in memory of the Linux kernel, second one is the initrd (missing in the example, we can see a dash), third one is the address of the DTB binary.
+<p />
+<p />
+<p />
+<h3><a name="How_to_patch_Device_Tree_Blob_in"></a> How to patch Device Tree Blob in U-boot using Overlays </h3>
+<p />
+Starting from U-boot 2018.07 released in Linux4SAM6.0, we can use the feature of patching the Device Tree Blob (DTB) with additional Device Tree Overlays (DTBO).
+<p />
+<h4><a name="Traditional_way_of_kernel_bootin"></a> Traditional way of kernel booting </h4>
+<p />
+So far, to boot kernel with zImage and normal DTB, we would use a command like this:</br>
+<pre>
+fatload mmc 0:1 0x24000000 zImage; fatload mmc 0:1 0x21000000 board.dtb; bootz 0x24000000 - 0x21000000;
+</pre></br>
+We can see the DTB is passed as the third argument to the command.
+<p />
+<h4><a name="Loading_overlays_and_applying_th"></a> Loading overlays and applying them on top of the DTB </h4>
+<p />
+<p />
+To apply the DTBO on top of the DTB, we need following commands:</br>
+This will load the original DTB.</br>
+<p />
+<pre>
+setenv fdtaddr 0x21000000;
+fatload mmc 0:1 ${fdtaddr} board.dtb
+</pre></br>
+This will load the DTBO into memory</br>
+<pre>
+setenv fdtovaddr 0x23000000;
+fatload mmc 0:1 ${fdtovaddr} someoverlay.dtbo;
+</pre></br>
+This will configure the address for fdt operations (we set it to the DRAM address where we loaded the base DTB)</br>
+<pre>
+fdt addr ${fdtaddr}
+</pre></br>
+This will resize the original DTB to accommodate more space for the overlay</br>
+<pre>
+fdt resize 8192
+</pre></br>
+This will apply the DTBO loaded at <em>fdtovaddr</em> on top of the DTB at the address we configured with <strong>fdt</strong> <strong>addr</strong> </br>
+<pre>
+fdt apply ${fdtovaddr}
+</pre></br>
+This will boot the kernel with the DTB at <em>fdtaddr</em> which now includes both the original DTB and the applied DTBO
+<pre>
+bootz 0x24000000 - ${fdtaddr}
+</pre></br>
+<p />
+<p />
+<p />
+<h3><a name="Loading_through_network"></a> Loading through network </h3>
+<p />
+On a development system, it is useful to get the kernel and root file system through the network. U-Boot provides support for loading binaries from a remote host on the network using the <a href="ftp://ftp.rfc-editor.org/in-notes/rfc1350.txt" target="_blank">TFTP protocol<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+To manage to use TFTP with U-Boot, you will have to configure a TFTP server on your host machine. Check your distribution manual or Internet resources to configure a Linux or Windows TFTP server on your host:
+<p /> <ul>
+<li> <a href="http://www.denx.de/wiki/view/DULG/SystemSetup#Section_4.6." target="_blank">U-Boot documentation on a Linux host<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch16_:_Telnet%2C_TFTP%2C_and_xinetd#TFTP" target="_blank">another TFTP configuration reference<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+On the U-Boot side, you will have to setup the networking parameters:
+<p /> <ol>
+<li> setup an Ethernet address (MAC address)<br />Check <a href="http://www.denx.de/wiki/DULG/EthernetDoesNotWork" target="_blank">this U-Boot network BuildRootFAQ entry<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> to choose a proper MAC address.<br /> <code>setenv ethaddr 3e:36:65:ba:6f:be</code> 
+</li> <li> setup IP parameters <ul>
+<li> setup the server ip address where the TFTP server is running<br /> <code>setenv serverip 10.159.245.186</code>
+</li> <li> setup board with static IP address <ul>
+<li> the board ip address<br /> <code>setenv ipaddr 10.159.245.180</code>
+</li></ul> 
+</li> <li> setup board with DHCP <ul>
+<li> Using <code>dhcp</code> command if you already have DHCP server in your network.<br /> <code>setenv get_ip 'setenv old_serverip ${serverip};setenv autoload no;dhcp;setenv serverip ${old_serverip}'</code> <br /> <code>run get_ip</code>
+</li></ul> 
+</li></ul> 
+</li> <li> saving Environment to flash<br /> <code>saveenv</code> 
+</li> <li> if Ethernet Phy has not been detected during former bootup, reset the board to reload U-Boot : the Ethernet address and Phy initialization shall be ok, now
+</li> <li> download the Linux <em>uImage</em> and the root file system to a ram location using the U-Boot <code>tftp</code> command (Cf. <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#U_boot_script_capability">U-Boot script capability chapter</a>).
+</li> <li> launch Linux issuing a <code>bootm</code> or <code>boot</code> command.
+</li></ol> 
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/info.gif" width="16" height="16" alt="Info" title="Info" border="0" /> If the board has both emac and gmac, you can use following to choose which one to use:
+   <pre>
+   setenv ethact macb0,gmac0
+   setenv ethprime gmac0
+   </pre>
+<p />
+<p />
+<h3><a name="Using_FIT_with_overlays"></a> Using FIT with overlays </h3>
+<p />
+Since U-boot 2018.07, released with linux4sam_6.0, we have the feature of adding Device Tree overlays to the base Device Tree at boot time, from U-boot. To achieve this, we use a FIT image, which embeds the Kernel + Device Tree blobs in a single file.
+<p />
+<h4><a name="Device_Tree_Overlays"></a> Device Tree Overlays </h4>
+Device Tree Overlays are available in our repository at <a href="https://github.com/linux4sam/dt-overlay-at91" target="_blank">Github<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. Compiling the Device Tree overlays with the corresponding kernel zImage results in a FIT image. The Makefile will do that for you.
+<p />
+<h4><a name="Loading_FIT_image_with_U_boot"></a> Loading FIT image with U-boot </h4>
+<p />
+The FIT image is a placeholder that has the zImage and the base Device Tree, plus additional overlays that can be selected at boot time.
+<p />
+The following steps are required to boot the FIT Image from U-boot:
+<p /> <ul>
+<li> Load the FIT image like you would normally load the uImage or zImage.
+</li> <li> There is no need to load additional Device Tree Blob, the FIT image includes it
+</li> <li> When booting the FIT image, specify the FIT configuration to use. Several configurations can be appended to the basic configuration, which we name 'kernel_dtb'
+</li></ul> 
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> U-boot 2021.04 and newer cannot load FIT images created before linux4sam_2021.04. This is due to an incompatible change in the FIT image configuration check in U-boot.
+<p />
+Example:
+<pre>
+bootm 0x24000000#kernel&#95;dtb
+</pre>
+<p />
+This will load the FIT image from address 0x24000000 in memory and then run the configuration named 'kernel_dtb'. This configuration includes the kernel plus the base Device Tree Blob built with the kernel.
+<p />
+To load additional FIT configurations, just append another configuration to the command.
+<p />
+Example to load the image sensor controller Device Tree overlay + sensor omnivision 0v7740:
+<pre>
+bootm 0x24000000#kernel&#95;dtb#isc#ov7740
+</pre>
+<p />
+<p />
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/info.gif" width="16" height="16" alt="Info" title="Info" border="0" /> We can <a class="twikiLink" href="SelectingPDAatBoot.html">manually select which PDA to be setup at boot time, from U-boot</a>.
+<p />
+<h2><a name="U_Boot_for_AT91_source_code"></a> U-Boot for AT91 source code </h2>
+<p />
+<h3><a name="Branches"></a> Branches </h3>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> <font color="#ffffff">Name</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="60%"> <font color="#ffffff">Board Supported</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Comment</font> </th>
+<th bgcolor="#687684" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <font color="#ffffff">Related Tags</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/u-boot-at91/tree/u-boot-2020.01-at91" target="_blank">u-boot-2020.01-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Microchip boards supported <br />  Boards with demo available:  <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D2 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D2 WLSOM1 EK</a>,  <a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a>, </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Maintained, <strong>stable</strong> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_2020_04_tag">linux4sam_2020.04</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/u-boot-at91/tree/u-boot-2019.04-at91" target="_blank">u-boot-2019.04-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Microchip boards supported <br />  Boards with demo available:  <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D2 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D2 WLSOM1 EK</a>,  <a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a>, </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_6_1_tag">linux4sam_6.1</a> <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_6_2_tag">linux4sam_6.2</a>  <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_6_2_tag">linux4sam_6.2-icp</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/u-boot-at91/tree/u-boot-2018.07-at91" target="_blank">u-boot-2018.07-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D2 SOM1 EK</a>, </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_6_0_tag">linux4sam_6.0</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/u-boot-at91/tree/u-boot-2015.01-at91" target="_blank">u-boot-2015.01-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="Sama5d4ekMainPage.html">SAMA5D4-EK</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d3xekMainPage.html">SAMA5D3-EK</a>  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>, </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_4_7_tag">linux4sam_4.7</a>, <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_5_0_alpha7_tag">linux4sam_5.0-alpha7</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/u-boot-at91/tree/u-boot-2014.07-at91" target="_blank">u-boot-2014.07-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="60%"> All Atmel boards supported <br />  Boards with demo available:  <a class="twikiLink" href="GettingStarted_a5d4_xplained.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="GettingStarted_a5d4ek.html">SAMA5D4-EK</a>,  <a class="twikiLink" href="GettingStarted_a5d3_xplained.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="GettingStarted_a5d3xek.html">SAMA5D3-EK</a>,  <a class="twikiLink" href="GettingStarted_9x5.html">AT91SAM9X5-EK</a>,  <a class="twikiLink" href="GettingStarted_9n12.html">AT91SAM9N12</a>,  <a class="twikiLink" href="GettingStarted.html">Legacy</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol twikiLast" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_4_6_tag">linux4sam_4.6</a>, <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#linux4sam_4_5_tag">linux4sam_4.5</a> </td>
+</tr></table>
+<p />
+<h4><a name="Changes_in_u_boot_2020_01_at91"></a> Changes in u-boot-2020.01-at91 </h4> <ul>
+<li> Based on U-Boot v2020.01
+</li> <li> Support for SST QSPI Unlock feature, will allow erase and write on QSPI SST flashes. 
+</li> <li> Misc fixes.
+</li></ul> 
+<p />
+<h4><a name="Changes_in_u_boot_2019_04_at91"></a> Changes in u-boot-2019.04-at91 </h4> <ul>
+<li> Based on U-Boot v2019.04
+</li> <li> Support for new board <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a>
+</li> <li> Support for new board <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D2 WLSOM1 EK</a>
+</li> <li> Support for new board <a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a>
+</li> <li> Misc fixes.
+</li></ul> 
+<p />
+<h4><a name="Changes_in_u_boot_2018_07_at91"></a> Changes in u-boot-2018.07-at91 </h4> <ul>
+<li> Based on U-Boot v2018.07
+</li> <li> Support for <a class="twikiLink" href="PDADetectionAtBoot.html">PDA detection at boot</a> and <a class="twikiLink" href="SelectingPDAatBoot.html">manual selection</a>
+</li> <li> Support for <a class="twikiLink" href="UsingFITwithOverlays.html">FIT image and overlays</a>
+</li> <li> Support for <a class="twikiLink" href="PatchingDTinUboot.html">manually built overlays</a>
+</li> <li> Support for selecting which CPU is connected for the <a class="twikiLink" href="AT91sam9x5ekMainPage.html">SAM9x5EK</a> board variants
+</li> <li> Misc fixes.
+</li></ul> 
+<p />
+<h4><a name="Changes_in_u_boot_2015_01_at91"></a> Changes in u-boot-2015.01-at91 </h4> <ul>
+<li> Based on U-Boot v2015.01
+</li> <li> Support SAMA5D4EK, SAMA5D4 Xplained and SAMA5D2 Xplained board
+</li> <li> Support FIT image for SAMA5D3X-EK board
+</li> <li> Enable SPL support for SAMA5D4 and SAMA5D3 series board.
+</li> <li> Support Software I2C.
+</li> <li> Support AT24MAC mac address
+</li> <li> Misc fixes.
+</li></ul> 
+<p />
+<h4><a name="Changes_in_u_boot_2014_07_at91"></a> Changes in u-boot-2014.07-at91 </h4> <ul>
+<li> Support SAMA5D4EK and SAMA5D4 Xplained board
+</li> <li> Support FIT image for SAMA5D3X-EK board
+</li></ul> 
+<p />
+<h3><a name="Tags"></a> Tags </h3>
+<p />
+<h4><a name="linux4sam_2020_04_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam-2020.04" target="_blank">linux4sam_2020.04 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Support for SST QSPI Unlock feature, will allow erase and write on QSPI SST flashes.
+</li> <li> Include all features in <code>linux4sam_2020.04</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_6_2_icp_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_6.2-icp" target="_blank">linux4sam_6.2-icp tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Support SAMA5D2-ICP board
+</li> <li> Include all features in <code>linux4sam_6.2</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_6_2_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_6.2" target="_blank">linux4sam_6.2 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Support SAM9X60-EK board
+</li> <li> Support SAMA5D27 WLSOM1 EK board
+</li> <li> Include all features in <code>linux4sam_6.2</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_6_1_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_6.1" target="_blank">linux4sam_6.1 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Update U-boot to mainline 2019.04 version
+</li> <li> Include all features in <code>linux4sam_6.1</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_6_0_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_6.0" target="_blank">linux4sam_6.0 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Include all features in <code>linux4sam_6.0</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_5_0_alpha7_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_5.0-alpha7" target="_blank">linux4sam_5.0-alpha7 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Support SAMA5D2 Xplained board
+</li> <li> Support AT24MAC mac address
+</li> <li> Include all features in <code>linux4sam_4.7</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_4_7_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_4.7" target="_blank">linux4sam_4.7 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Based on U-Boot v2015.01
+</li> <li> Support SAMA5D4EK and SAMA5D4 Xplained board
+</li> <li> Support FIT image for SAMA5D3X-EK board
+</li> <li> Enable SPL support for SAMA5D4 and SAMA5D3 series board.
+</li> <li> Support Software I2C.
+</li> <li> Misc fixes.
+</li></ul> 
+<p />
+<h4><a name="linux4sam_4_6_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_4.6" target="_blank">linux4sam_4.6 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Add support for SAMA5D4 Xplained board
+</li> <li> Include all features in <code>linux4sam_4.5</code>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_4_5_tag"></a> <a href="https://github.com/linux4sam/u-boot-at91/tree/linux4sam_4.5" target="_blank">linux4sam_4.5 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> Based on U-Boot v2014.07
+</li> <li> Add support for SAMA5D4EK board
+</li> <li> Support FIT image for SAMA5D3X-EK board
+</li></ul> 
+<p />
+<h2><a name="Build_U_Boot_from_sources"></a> Build U-Boot from sources </h2>
+<p />
+To build the binary found above, you will have to go through the following steps.
+<p />
+<h3><a name="Getting_U_Boot_sources"></a> Getting U-Boot sources </h3>
+<p />
+<p />
+Dedicated page on U-Boot wiki: <a href="http://www.denx.de/wiki/U-Boot/SourceCode" target="_blank">http://www.denx.de/wiki/U-Boot/SourceCode<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+You can easily download U-Boot source code from <a href="https://github.com/linux4sam/u-boot-at91/" target="_blank">Linux4SAM GitHub U-Boot repository<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>:
+<p /> <ul>
+<li> clone the Linux4sam GitHub U-Boot repository   <pre>
+   $ git clone git://github.com/linux4sam/u-boot-at91.git
+   Cloning into 'u-boot-at91'...
+   remote: Enumerating objects: 106920, done.
+   remote: Counting objects: 100% (106920/106920), done.
+   remote: Compressing objects: 100% (24617/24617), done.
+   remote: Total 566593 (delta 84756), reused 96342 (delta 81351), pack-reused 459673
+   Receiving objects: 100% (566593/566593), 131.67 MiB | 430.00 KiB/s, done.
+   Resolving deltas: 100% (456142/456142), done.
+   $ cd u-boot-at91
+   </pre>
+</li></ul> 
+<p /> <ul>
+<li> The source code has been taken from the <em>master</em> branch which is pointing to the latest branch we use. If you want to use the other branch, you can list them and use one of them by doing:   <pre>
+   $ git branch -r
+   origin/HEAD -> origin/master
+   origin/master
+   origin/u-boot-2012.10-at91
+   origin/u-boot-2013.07-at91
+   origin/u-boot-2014.07-at91
+   origin/u-boot-2015.01-at91
+   origin/u-boot-2016.03-at91
+   origin/u-boot-2017.03-at91
+   origin/u-boot-2018.07-at91
+   origin/u-boot-2019.04-at91
+   origin/u-boot-2020.01-at91
+   origin/uboot_5series_1.x
+   $ git checkout origin/u-boot-2020.01-at91 -b u-boot-2020.01-at91
+   Branch u-boot-2020.01-at91 set up to track remote branch u-boot-2020.01-at91 from origin.
+   Switched to a new branch 'u-boot-2020.01-at91'
+   </pre>
+</li></ul> 
+<p />
+<p />
+<p />
+<h3><a name="Setup_ARM_Cross_Compiler"></a> Setup ARM Cross Compiler </h3>
+<p />
+Since U-boot 2018.07, it is <strong>mandatory</strong> to use a toolchain newer than 6.0.
+Be warned that Linux distrubutions like Ubuntu may come with older toolchains.
+In such case, below is detailed how to download and install the Linaro toolchain, in the example we use 7.3.1.
+<p />
+<p />
+<p /> <ul>
+<li> Ubuntu: <br />   In Ubuntu, you can install the ARM Cross Compiler by doing:   <pre>
+sudo apt-get install gcc-arm-linux-gnueabi
+export CROSS&#95;COMPILE&#61;arm-linux-gnueabi-
+   </pre>
+</li></ul> 
+<p /> <ul>
+<li> Others: <br />   For others, you can download the Linaro cross compiler and setup the environment by doing:   <pre>
+wget -c https://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi.tar.xz
+tar xf gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi.tar.xz
+export CROSS&#95;COMPILE&#61;`pwd`/gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi/bin/arm-linux-gnueabi-
+   </pre>
+</li></ul> 
+<p />
+<p />
+<p />
+<h3><a name="Cross_compiling_U_Boot"></a> Cross-compiling U-Boot </h3>
+<p />
+<h4><a name="U_Boot_environment"></a> U-Boot environment </h4>
+<p />
+The <a href="http://www.denx.de/wiki/view/DULG/UBootEnvVariables" target="_blank">U-Boot environment<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is a little read/write persistent space that stores variables needed by the bootloader to configure itself properly and to adapt to its environment (network configuration, boot arguments, storage location, etc.). It is located in the same media that it has booted from.
+<p />
+<h4><a name="Build_U_Boot_binary"></a> Build U-Boot binary </h4>
+<p />
+In this section we take SAMA5D3X-EK board as a example. Before compile the U-Boot, you need setup cross compile toolchain in the <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-Boot.html#Setup_ARM_Cross_Compiler">section</a>.
+<p />
+<p />
+<p />
+<p />
+Once the AT91 U-Boot sources available, cross-compile U-Boot is made in two steps: configuration and compiling. Check the <a href="http://www.denx.de/wiki/view/DULG/UBootConfiguration" target="_blank">Configuration chapter<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> in U-Boot reference manual.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Go to the <code>configs/</code> to find the exact target when invoking <em>make</em>.
+<p />
+The U-Boot environment variables can be stored in different media, above config files can specify where to store the U-Boot environment.
+<pre>
+   # To put environment variables in serial flash:
+   sama5d3xek&#95;spiflash&#95;defconfig
+   # To put environment variables in nandflash (default):
+   sama5d3xek&#95;nandflash&#95;defconfig
+   # To put environment variables in SD/MMC card:
+   sama5d3xek&#95;mmc&#95;defconfig
+</pre>
+<p />
+Here are the building steps for the SAMA5D3x-EK board:
+<pre>
+# You can change the config according to your needs.
+make sama5d3xek&#95;nandflash&#95;defconfig
+make
+</pre>
+<p />
+The result of these operations is a fresh U-Boot binary called <code>u-boot.bin</code> corresponding to the binary ELF file <code>u-boot</code>. <ul>
+<li> <code>u-boot.bin</code> is the file you should store on the board
+</li> <li> <code>u-boot</code> is the ELF format binary file you may use to debug U-Boot through a JTag link for instance.
+</li></ul> 
+<p />
+<p />
+<h2><a name="Program_U_Boot_binary_into_nandf"></a> Program U-Boot binary into nandflash </h2>
+<p />
+<h3><a name="Using_SAM_BA_to_flash_U_Boot_to"></a> Using SAM-BA to flash U-Boot to board </h3>
+<p />
+<h4><a name="Launch_SAM_BA_tools"></a> Launch SAM-BA tools </h4>
+<p /> <ul>
+<li> According to <a class="twikiAnchorLink" href="Sama5d3xekMainPage.html#Connect_the_USB_to_the_board_bef">this section (take sama5d3xek as example)</a> make sure that the chip can execute the SAM-BA Monitor.
+</li></ul> 
+<p />
+<p />
+<p /> <ul>
+<li> Start SAM-BA GUI application
+</li> <li> Select the board: "at91sama5d3x-ek" in the drop-down menu and choose the USB connection.
+</li></ul> 
+<img alt="samba_board_select_sama5d3xek.png" src="../../../pub/Linux4SAM/SambaSubsections/samba_board_select_sama5d3xek.png" />
+<p /> <ul>
+<li> Click the "Connect" button, the SAM-BA main window show up:
+</li></ul> 
+<img alt="samba_main_window_nand_sama5d3xek.png" src="../../../pub/Linux4SAM/SambaSubsections/samba_main_window_nand_sama5d3xek.png" />
+<p />
+<p />
+<p />
+<h4><a name="Configure_NAND_ECC_config"></a> Configure NAND ECC config </h4>
+<p />
+<p />
+<p />
+<h4><a name="Programming_U_Boot"></a> Programming U-Boot </h4>
+<p /> <ol>
+<li> Modify the <strong><em>Address</em></strong> to 0x40000
+</li> <li> Choose <strong><em>Send File Name</em></strong> open file dialog and select the U-Boot binary file and to program the binary to the NandFlash
+</li> <li> Click  <strong><em>Send File</em></strong> button to program the binary to the NandFlash in address 0x40000.
+</li></ol> 
+<img alt="samba_send_file_nand.png" src="../../../pub/Linux4SAM/SambaSubsections/samba_send_file_nand.png" />
+<p />
+<p />
+<h3><a name="Using_U_Boot_to_flash_U_Boot_bin"></a> Using U-Boot to flash U-Boot binary to board </h3>
+<pre>
+setenv load_add 22000000
+setenv erase_uboot 'nand erase 40000 80000'          # erase U-Boot in nand.
+setenv mmc_uboot_file 'u-boot.bin'                   # u-boot file name in mmc card
+setenv flash_uboot_from_mmc 'run erase_uboot;fatload mmc 0 ${load_addr} ${mmc_uboot_file}; nand write ${load_addr} 40000 ${filesize};'
+run flash_uboot_from_mmc
+</pre>
+<p />
+<h2><a name="Recent_FAQ"></a> Recent FAQ </h2>
+<p />
+<h3><a name="U_BootFAQ_entries"></a> U-BootFAQ entries </h3>
+<div class="twikiToc"> <ul>
+<li> <a href="U-BootFAQ.html#How_does_U_Boot_auto_detect_the"> How does U-Boot auto-detect the connected PDA on my board ?</a>
+</li> <li> <a href="U-BootFAQ.html#How_can_I_add_another_Device_Tre"> How can I add another Device Tree overlay to my base Device Tree blob at runtime ?</a>
+</li> <li> <a href="U-BootFAQ.html#My_U_boot_detects_some_screens_b"> My U-boot detects some screens but not mine. What can I do ?</a>
+</li> <li> <a href="U-BootFAQ.html#Which_screens_can_be_connected_t"> Which screens can be connected to my board? Does U-boot detect them all ?</a>
+</li> <li> <a href="U-BootFAQ.html#I_have_a_connected_screen_but_U"> I have a connected screen, but U-boot detects it wrong. Can I force U-boot to load another screen configuration?</a>
+</li> <li> <a href="U-BootFAQ.html#My_screen_is_black_although_it_s"> My screen is black, although it's a right screen, it is supposed to be detected. What can I do?</a>
+</li> <li> <a href="U-BootFAQ.html#What_is_a_FIT_image_and_how_does"> What is a FIT image and how does this work with U-boot?</a>
+</li> <li> <a href="U-BootFAQ.html#I_have_a_working_setup_with_a_sp"> I have a working setup with a specific PDA. I want to connect another PDA. Do I need to reflash my board or change any configuration ?</a>
+</li> <li> <a href="U-BootFAQ.html#How_do_I_use_U_Boot_to_store_bin"> How do I use U-Boot to store binaries in FLASH ?</a>
+</li> <li> <a href="U-BootFAQ.html#How_do_I_access_U_Boot_environme"> How do I access U-Boot environment while Linux is running ?</a>
+</li></ul> 
+</div>
+<p />
+<h3><a name="U_Boot_related_FAQ_entries"></a> U-Boot related FAQ entries </h3>
+<p /> <dl>
+<dt> <a class="twikiCurrentTopicLink twikiLink" href="U-Boot.html">U-Boot</a> </dt><dd> <br />&#8226; <a href="HasherrorwhenbootingFITimage.html" >Hasherrorwhenbooting FITimage</a>: . (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>) <br />&#8226; <a href="UsingFITwithOverlays.html" >Using FITwith Overlays</a>: How to use U-boot with FIT image to load overlays. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>) <br />&#8226; <a href="Sam9x60EkAttachingTm5000Display.html" >Sam 9 x 60 Ek Attaching Tm 5000 Display</a>: Addition to the other generic FAQ about LCD displays: <a class="twikiLink" href="ConnectModuleFromPDA.html">ConnectModuleFromPDA</a>. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>) <br />&#8226; <a href="BootLogo.html" >Boot Logo</a>: Boot Logo for At91 SOC's. (<a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>) <br />&#8226; <a href="PatchingDTinUboot.html" >Patching DTin Uboot</a>: How to apply DTBOs in U-boot. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="U-BootFAQ.html" >U-Boot FAQ</a>: Some U-Boot FAQ entries. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="PDADetectionAtBoot.html" >PDADetection At Boot</a>: PDA detection in U-boot. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>) <br />&#8226; <a href="SelectingPDAatBoot.html" >Selecting PDAat Boot</a>: How to manually select PDA in U-boot. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="DriverModelInUBoot.html" >Driver Model In UBoot</a>: How to enable U-Boot driver model, using <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a> as an example. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="ConsoleNoLongerReceivesCharacters.html" >Console No Longer Receives Characters</a>: Can't interact with the console. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>) <br />&#8226; <a href="UbootFitImage.html" >Uboot Fit Image</a>: How to use the FIT image. (<a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>)
+</dd></dl>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="U-Bootaabf.html?sortcol=0;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="U-Bootad61.html?sortcol=1;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="U-Boot306b.html?sortcol=2;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="U-Boote4a1.html?sortcol=3;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="U-Boote152.html?sortcol=4;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="U-Bootb628.html?sortcol=5;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="U-Boot6808.html?sortcol=6;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/U-Boot/ECC_config_4bit.png">ECC_config_4bit.PNG</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/U-Boot?filename=ECC_config_4bit.PNG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 14.0&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-04 - 03:48</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/U-Boot/SAM-BA_mainwin.png">SAM-BA_mainwin.PNG</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/U-Boot?filename=SAM-BA_mainwin.PNG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 40.0&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-04 - 03:46</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> SAM-BA Windows to flash u-boot </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/U-Boot/SAM-BA_selectboard.png">SAM-BA_selectboard.PNG</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/U-Boot?filename=SAM-BA_selectboard.PNG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 10.5&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2013-02-04 - 03:47</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> &nbsp; </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r99 - 29 May 2020 - 07:38:32 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiCurrentTopicLink twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/U-Boot"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="U-Boot3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/U-Boot by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:56:23 GMT -->
+</html>

@@ -1,0 +1,1418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/CryptoConfig by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:07:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> CryptoConfig &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/CryptoConfig?t=1625510967" type="application/x-wiki" title="Edit CryptoConfig" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/CryptoConfig?t=1625510967" title="Edit CryptoConfig" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="CryptoConfig.html">CryptoConfig</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <div class="twikiToc"> <ul>
+<li> <a href="#Crypto_hardware_acceleration">Crypto hardware acceleration</a> <ul>
+<li> <a href="#Introduction">Introduction </a>
+</li> <li> <a href="#Hardware_Support">Hardware Support</a>
+</li> <li> <a href="#Prerequisites">Prerequisites</a> <ul>
+<li> <a href="#cryptodev_linux">cryptodev-linux</a>
+</li> <li> <a href="#ocf_linux"> ocf-linux</a>
+</li> <li> <a href="#af_alg">af_alg</a>
+</li> <li> <a href="#Building_the_openssl_binary_and">Building the openssl binary and the user space interface</a>
+</li> <li> <a href="#openssl_binary">openssl binary</a>
+</li> <li> <a href="#Configurations_in_Kernel">Configurations in Kernel</a>
+</li></ul> 
+</li> <li> <a href="#Applications">Applications</a> <ul>
+<li> <a href="#OpenSSL"> OpenSSL</a>
+</li> <li> <a href="#OpenSSH"> OpenSSH</a>
+</li> <li> <a href="#OpenVPN"> OpenVPN</a>
+</li></ul> 
+</li> <li> <a href="#FAQ">FAQ </a> <ul>
+<li> <a href="#Q_What_algorithms_are_supported">Q: What algorithms are supported in hardware acceleration?</a>
+</li> <li> <a href="#Q_How_can_I_get_the_performance">Q: How can I get the performance comparisions between software and hardware?</a>
+</li> <li> <a href="#Q_How_can_I_use_the_cyptodev_int">Q: How can I use the cyptodev interface in my own application?</a>
+</li> <li> <a href="#Q_How_do_I_know_the_crypto_hardw">Q: How do I know the crypto hardware acceleration is used in kernel?</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<h1><a name="Crypto_hardware_acceleration"></a> Crypto hardware acceleration </h1>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+This page is mainly about how to use crypto hardware acceleration in OpenSSL.Many internet applications such as OpenSSH and OpenVPN depends on <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenSSL?topicparent=Linux4SAM.CryptoConfig;nowysiwyg=1" rel="nofollow" title="OpenSSL (this topic does not yet exist; you can create it)">OpenSSL</a></span> to do encryption/decryption. So this can accelerate the crypto speed and reduce the CPU usage than software implementation.
+<p />
+<h2><a name="Hardware_Support"></a> Hardware Support </h2>
+The crypto is supported in AT91SAM9G46, AT91SAM9CN11, AT91SAMA5D3, AT91SAMA5D4.
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> algo\board </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> AT91SAM9G46 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> AT91SAM9CN11 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> AT91SAMA5D3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> AT91SAMA5D4 </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> AT91SAMA5D2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SHA1 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SHA256 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SHA224 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SHA384 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SHA512 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> HMAC-SHAx </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> DES </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> TDES </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-ECB </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-CBC </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-OFB </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-CFB </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-CTR </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-GCM </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> X </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AES-XTS </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLastCol" valign="top"> X </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> AEAD AES+HMAC-SHA </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLastCol twikiLast" valign="top"> X </td>
+</tr></table>
+<p />
+- Not supported,       X Supported
+<p />
+<h2><a name="Prerequisites"></a> Prerequisites </h2>
+The hardware acceleration is implemented as a driver in kernel space. In order to use it in user space application, the third party kernel module is needed to convert the request of user space into kernel space. It provides the interface for user space to use. And OpenSSL can use it. There are
+two candidates, one is ocf-linux, and the other is cryptodev-linux. There is a third candidate called afalg, which supports fewer algorithms. They can be selected and built in buildroot.
+<p />
+<h3><a name="cryptodev_linux"></a> cryptodev-linux </h3>
+<a href="http://cryptodev-linux.org/" target="_blank">Cryptodev-linux<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is a device that allows access to Linux kernel cryptographic drivers; thus allowing of user-space applications to take advantage of hardware accelerators. Cryptodev-linux is implemented as a standalone module that requires no dependencies other than a stock linux kernel. Its API is compatible with OpenBSD's cryptodev user-space API (/dev/crypto). 
+<p />
+<h3><a name="ocf_linux"></a> ocf-linux </h3>
+<a href="http://ocf-linux.sourceforge.net/" target="_blank">OCF-Linux<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is a Linux port of the OpenBSD/FreeBSD Cryptographic Framework (OCF).
+<p />
+<h3><a name="af_alg"></a> af_alg </h3>
+Starting in <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenSSL?topicparent=Linux4SAM.CryptoConfig;nowysiwyg=1" rel="nofollow" title="OpenSSL (this topic does not yet exist; you can create it)">OpenSSL</a></span> 1.1.0, an AF_ALG engine can be used. The AF_ALG interface uses sockets to allow access to the kernel crypto algorithms, so you won't see a /dev/crypto interface associated with it.
+<p />
+<h3><a name="Building_the_openssl_binary_and"></a> Building the openssl binary and the user space interface </h3>
+<h3><a name="openssl_binary"></a> openssl binary </h3>
+Entering buildroot source directory:
+<pre>
+make menuconfig
+</pre>
+Make sure the openssl binary and the associated helper scripts will be installed to the target file system:
+<pre>
+Target packages
+     --&#62;   Libraries
+          --&#62;     Crypto
+               --&#62;      cryptodev
+                    --&#62;      openssl support (BR2&#95;PACKAGE&#95;OPENSSL &#91;&#61;y])
+                         --&#62;      ssl library (&#60;choice&#62; &#91;&#61;y])
+                              --&#62;      openssl (BR2&#95;PACKAGE&#95;LIBOPENSSL &#91;&#61;y])
+</pre>
+ <img src="../../../pub/Linux4SAM/CryptoConfig/openssl-binary.png" alt="openssl-binary.png" width="674" height="449" />
+<p />
+Enter the buildroot source directory and select cryptodev. cryptodev-linux can be selected in:
+<pre>
+Target packages
+     --&#62;   Libraries
+          --&#62;      Crypto
+               --&#62;         cryptodev
+</pre>
+<img src="../../../pub/Linux4SAM/CryptoConfig/cryptodev.png" alt="cryptodev-linux.png" width="674" height="449" />
+<p />
+If you want to use ocf-linux, select it:
+<p />
+ <img src="../../../pub/Linux4SAM/CryptoConfig/cryptodev-linux.png" alt="cryptodev-linux.png" width="674" height="449" />
+<p />
+If you want to use additional openssl engines, like af_alg, select the following:
+<p />
+ <img src="../../../pub/Linux4SAM/CryptoConfig/af_alg.png" alt="af_alg.png" width="674" height="449" />
+<p />
+If cryptodev is built and installed in root filesystem, when board startup, enter command
+<pre>
+modprobe cryptodev
+</pre>
+a device node <strong>/dev/crypto</strong> will appear. If not, the hardware drivers cannot be used in user space program.
+<p />
+Note, the Linux kernel must be enabled in buildroot.
+<p />
+<h3><a name="Configurations_in_Kernel"></a> Configurations in Kernel </h3>
+Atmel hardware driver must be enabled in kernel configuration. Entering Linux source directory:
+<pre>
+make menuconfig
+
+Cryptographic API
+     --&#62;   Hardware crypto devices
+</pre>
+<img src="../../../pub/Linux4SAM/CryptoConfig/cryptodriver.png" alt="cryptodev-linux.png" width="674" height="449" />
+<p />
+The following configs will be enabled in .config
+<pre>
+CONFIG&#95;CRYPTO&#95;HW&#61;y
+CONFIG&#95;CRYPTO&#95;DEV&#95;ATMEL&#95;AES&#61;y
+CONFIG&#95;CRYPTO&#95;DEV&#95;ATMEL&#95;TDES&#61;y
+CONFIG&#95;CRYPTO&#95;DEV&#95;ATMEL&#95;SHA&#61;y
+</pre>
+If you select them as modules, please enter the following commands after board up.
+<pre>
+modprobe atmel-sha
+modprobe atmel-aes
+modprobe atmel-tdes
+</pre>
+After the hardware drivers are loaded, the algorithms will be registered to crypto framework. Using the following command to see them:
+<pre>
+root&#64;sama5d4ek:~# cat /proc/crypto &#124; grep atmel
+driver       : atmel-ofb-tdes
+driver       : atmel-cfb32-tdes
+driver       : atmel-cfb16-tdes
+driver       : atmel-cfb8-tdes
+driver       : atmel-cfb-tdes
+driver       : atmel-cbc-tdes
+driver       : atmel-ecb-tdes
+driver       : atmel-ofb-des
+driver       : atmel-cfb32-des
+driver       : atmel-cfb16-des
+driver       : atmel-cfb8-des
+driver       : atmel-cfb-des
+driver       : atmel-cbc-des
+driver       : atmel-ecb-des
+driver       : atmel-sha512
+driver       : atmel-sha384
+driver       : atmel-sha224
+driver       : atmel-sha256
+driver       : atmel-sha1
+driver       : atmel-cfb64-aes
+driver       : atmel-ctr-aes
+driver       : atmel-cfb8-aes
+driver       : atmel-cfb16-aes
+driver       : atmel-cfb32-aes
+driver       : atmel-cfb-aes
+driver       : atmel-ofb-aes
+driver       : atmel-cbc-aes
+driver       : atmel-ecb-aes
+</pre>
+<h2><a name="Applications"></a> Applications </h2>
+<h3><a name="OpenSSL"></a> OpenSSL </h3>
+OpenSSL is an open source toolkit implementing the Secure Socket Layer (SSL) and Transport Layer Security protocols as well as a full-strength general purpose cryptography library.
+<p />
+We are using it with cryptodev-linux which makes the link between OpenSSL and cryptography hardware drivers.
+<p />
+OpenSSL can do benches when we give to it "speed" parameter. Other parameters given for the benches are: <ol>
+<li> evp: algorithm name <ul>
+<li> SHA:sha1, sha256, sha224 sha384 and sha512
+</li> <li> DES/TDES: des-cbc and des-ede3-cbc
+</li> <li> AES: aes-128-cbc, aes-192-cbc and aes-256-cbc
+</li></ul> 
+</li> <li> elapsed: performances are calculated in taking into account time consumed in user space and kernel space. Without this parameter only user space time is used.
+</li> <li> mr: produce machine readable output
+</li></ol> 
+Linux "time" command is used to get CPU load.
+<p />
+Before and after running an openssl speed test, check the number of interrupts on the crypto IPs:
+<pre>
+cat /proc/interrupts
+           CPU0 
+ ...
+ 27:          0  atmel-aic5  12 Level     atmel-sha
+ 28:          0  atmel-aic5   9 Level      atmel-aes
+ ...
+ 49:          0  atmel-aic5  11 Level     atmel-tdes
+</pre>
+<p />
+Keep in mind the number of interrupts and then run an openssl speed test. AES with 128bits key example:
+<pre>
+time -v openssl speed -evp aes-128-cbc -elapsed -mr
+</pre>
+<p />
+Verify that the number of interrupts increased on the AES IP:
+<pre>
+cat /proc/interrupts
+           CPU0
+ ...
+ 27:          0  atmel-aic5  12 Level     atmel-sha
+ 28:        247  atmel-aic5   9 Level    atmel-aes
+ ...
+ 49:          0  atmel-aic5  11 Level     atmel-tdes
+</pre>
+<p />
+If you want to accelerate the algotithm through afalg, do the following:
+<pre>
+time -v openssl speed -evp aes-128-cbc -engine afalg -elapsed -mr
+</pre>
+<p />
+Verify that the number of interrupts increased on the AES IP:
+<pre>
+           CPU0       
+ ...
+ 27:          0  atmel-aic5  12 Level     atmel-sha
+ 28:        495  atmel-aic5   9 Level     atmel-aes
+ ...
+ 49:          0  atmel-aic5  11 Level     atmel-tdes
+</pre>
+<p />
+<h3><a name="OpenSSH"></a> OpenSSH </h3>
+OpenSSH (OpenBSD Secure Shell) is a set of computer programs providing encrypted communication sessions over a computer network using the SSH protocol.<br>
+For the benches we are using "scp" program to copy a 20Mbytes file from Atmel board to a PC and then from the PC to Atmel board. Both client and server mode are tested.<br>
+RSA public keys are used for encryption.<br>
+Files are copied to/from /tmp directory in order to reduce the impact of memory accesses on measurements.<br>
+Moreover Atmel board and the PC are directly connected via ethernet cable.<br>
+Arguments given to scp are: <ul>
+<li> -c : algorithm name: aes128-cbc, aes192-cbc, aes256-cbc and 3des-cbc
+</li> <li> source file
+</li> <li> destination file
+</li> <li> -v: verbose mode
+</li></ul> 
+Example for AES 128bits key: <ul>
+<li> Atmel board is SSH client: commands are executed from it: <ul>
+<li> From Atmel board to the PC (write access):
+</li></ul> 
+</li></ul> 
+<pre>
+        scp -v -c aes128-cbc /tmp/test&#95;20M PC&#95;user&#64;PC&#95;IP:/tmp
+</pre> <ul>
+ <li>
+ <ul>
+<li> From the PC to Atmel board (read access):
+</li></ul> 
+</li></ul> 
+<pre>
+        scp -v -c aes128-cbc PC&#95;user&#64;PC&#95;IP:/tmp/test&#95;20M /tmp/
+</pre> <ul>
+<li> Atmel board is SSH server: commands are executed from the PC: <ul>
+<li> From Atmel board to the PC (read access):
+</li></ul> 
+</li></ul> 
+<pre>
+        scp -v -c aes128-cbc board&#95;user&#64;board&#95;IP:/tmp/test&#95;20M /tmp
+</pre> <ul>
+ <li>
+ <ul>
+<li> From the PC to Atmel board (write access):
+</li></ul> 
+</li></ul> 
+<pre>
+        scp -v -c aes128-cbc /tmp/test&#95;20M board&#95;user&#64;board&#95;IP:/tmp
+</pre>
+<p />
+<h3><a name="OpenVPN"></a> OpenVPN </h3>
+OpenVPN is an open source software application that implements Virtual Private Network (VPN) techniques for creating secure connections. <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenVPN?topicparent=Linux4SAM.CryptoConfig;nowysiwyg=1" rel="nofollow" title="OpenVPN (this topic does not yet exist; you can create it)">OpenVPN</a></span> uses the OpenSSL library to provide encryption of both the data and control channels.<br>
+For the benches we are using a point-to-point connection between Atmel board and a PC.<br>
+Atmel board and the PC are directly connected via ethernet cable. The PC is the server and Atmel board is the client.<br>
+Server and client configuration files are based on sample configuration files provided with OpenVPN source code: static-office.conf and static-home.conf.
+<p />
+Atmel board configuration files: <ul>
+<li> atmel-board.conf:
+</li></ul> 
+<pre>
+      dev tun
+      #Server
+      remote 192.168.2.2
+      ifconfig 10.1.0.2 10.1.0.1
+      up ./atmel-board.up
+      secret static.key
+      script-security 3 system
+      no-replay
+      tun-mtu 60000
+      fragment 0
+      mssfix 0
+</pre> <ul>
+<li> atmel-board.up:
+</li></ul> 
+<pre>
+      #!/bin/sh
+      route add -net 10.0.0.0 netmask 255.255.255.0 gw $5
+</pre>
+PC configuration files: <ul>
+<li> PC.conf:
+</li></ul> 
+<pre>
+      dev tun
+      ifconfig 10.1.0.1 10.1.0.2
+      up ./PC.up
+      secret static.key
+      script-security 3 system
+      no-replay
+      tun-mtu 60000
+      fragment 0
+      mssfix 0
+</pre> <ul>
+<li> PC.up:
+</li></ul> 
+<pre>
+      #!/bin/sh
+      route add -net 10.0.1.0 netmask 255.255.255.0 gw $5
+</pre>
+In order to change the cipher we add this parameter to both the Atmel board and the PC at openVPN startup: --cipher algorithm_name (DES-EDE3-CBC, AES-128-CBC and AES-256-CBC).
+<p />
+Moreover on Atmel board we also give the following parameter to openVPN to tell it to use hardware cryptography drivers: --engine cryptodev.
+<p />
+AES 256 bits key example: <ul>
+<li> Atmel board <ul>
+<li> SW driver:
+</li></ul> 
+</li></ul> 
+<pre>
+        openvpn --config atmel-board.conf --cipher AES-2 56-CBC
+</pre> <ul>
+ <li>
+ <ul>
+<li> HW driver:
+</li></ul> 
+</li></ul> 
+<pre>
+        openvpn --config atmel-board.conf --engine cryptodev --cipher AES-2 56-CBC
+</pre> <ul>
+<li> PC:
+</li></ul> 
+<pre>
+      openvpn --config PC.conf --cipher AES-2 56-CBC
+</pre>
+Once VPN is up performances are measured with "iperf" tool. Both client and server mode are tested. <ul>
+<li> Command executed on server:
+</li></ul> 
+<pre>      
+      iperf -s
+</pre> <ul>
+<li> Command executed on client:
+</li></ul> 
+<pre>
+      iperf -c server&#95;IP
+</pre>
+<p />
+<h2><a name="FAQ"></a> FAQ </h2>
+<h3><a name="Q_What_algorithms_are_supported"></a> Q: What algorithms are supported in hardware acceleration? </h3>
+A: SHA-1, SHA-224, SHA-256, SHA-384, SHA-512. DES, TDES, AES and all the modes defined in FIPS.
+<h3><a name="Q_How_can_I_get_the_performance"></a> Q: How can I get the performance comparisions between software and hardware? </h3>
+A: Disable the atmel hardware driver in kernel. The default software implementation will be selected by crypto framework. <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenSSL?topicparent=Linux4SAM.CryptoConfig;nowysiwyg=1" rel="nofollow" title="OpenSSL (this topic does not yet exist; you can create it)">OpenSSL</a></span> can be used to get the performance comparisons whether atmel hardware driver enabled or not.
+<h3><a name="Q_How_can_I_use_the_cyptodev_int"></a> Q: How can I use the cyptodev interface in my own application? </h3>
+A: There are several examples provided in cryptodev-linux's documents. They can be referred in your applicaions. <ul>
+<li> <a href="https://github.com/nmav/cryptodev-linux/blob/master/examples/sha.c" target="_blank">cryptodev sha example<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://github.com/nmav/cryptodev-linux/blob/master/examples/aes.c" target="_blank">cryptodev aes example<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://github.com/nmav/cryptodev-linux/tree/master/examples" target="_blank">cryptodev all examples<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<h3><a name="Q_How_do_I_know_the_crypto_hardw"></a> Q: How do I know the crypto hardware acceleration is used in kernel? </h3>
+A: Execute the following command and check the priority of registered algorithm. The kernel will take the highest priority If there are multiple same algorithms registered. Please ensure that there are no priority of other algorithms are higher than priority of atmel crypto driver.
+<pre>
+root&#64;buildroot:~# cat /proc/crypto 
+name         : ofb(des3&#95;ede)
+driver       : atmel-ofb-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 16
+max keysize  : 24
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb32(des3&#95;ede)
+driver       : atmel-cfb32-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 4
+min keysize  : 16
+max keysize  : 16
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb16(des3&#95;ede)
+driver       : atmel-cfb16-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 2
+min keysize  : 16
+max keysize  : 16
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb8(des3&#95;ede)
+driver       : atmel-cfb8-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 1
+min keysize  : 16
+max keysize  : 16
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb(des3&#95;ede)
+driver       : atmel-cfb-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 16
+max keysize  : 16
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cbc(des3&#95;ede)
+driver       : atmel-cbc-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 16
+max keysize  : 24
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : ecb(des3&#95;ede)
+driver       : atmel-ecb-tdes
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 16
+max keysize  : 24
+ivsize       : 0
+geniv        : &#60;default&#62;
+
+name         : ofb(des)
+driver       : atmel-ofb-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb32(des)
+driver       : atmel-cfb32-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 4
+min keysize  : 8
+max keysize  : 8
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb16(des)
+driver       : atmel-cfb16-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 2
+min keysize  : 8
+max keysize  : 8
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb8(des)
+driver       : atmel-cfb8-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 1
+min keysize  : 8
+max keysize  : 8
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cfb(des)
+driver       : atmel-cfb-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : cbc(des)
+driver       : atmel-cbc-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+ivsize       : 8
+geniv        : &#60;default&#62;
+
+name         : ecb(des)
+driver       : atmel-ecb-des
+module       : atmel&#95;tdes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+ivsize       : 0
+geniv        : &#60;default&#62;
+
+name         : sha512
+driver       : atmel-sha512
+module       : atmel&#95;sha
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ahash
+async        : yes
+blocksize    : 128
+digestsize   : 64
+
+name         : sha384
+driver       : atmel-sha384
+module       : atmel&#95;sha
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ahash
+async        : yes
+blocksize    : 128
+digestsize   : 48
+
+name         : sha224
+driver       : atmel-sha224
+module       : atmel&#95;sha
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ahash
+async        : yes
+blocksize    : 64
+digestsize   : 28
+
+name         : sha256
+driver       : atmel-sha256
+module       : atmel&#95;sha
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ahash
+async        : yes
+blocksize    : 64
+digestsize   : 32
+
+name         : sha1
+driver       : atmel-sha1
+module       : atmel&#95;sha
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ahash
+async        : yes
+blocksize    : 64
+digestsize   : 20
+
+name         : cfb64(aes)
+driver       : atmel-cfb64-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : ctr(aes)
+driver       : atmel-ctr-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : cfb8(aes)
+driver       : atmel-cfb8-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 8
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : cfb16(aes)
+driver       : atmel-cfb16-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 2
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : cfb32(aes)
+driver       : atmel-cfb32-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 4
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : cfb(aes)
+driver       : atmel-cfb-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : ofb(aes)
+driver       : atmel-ofb-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : cbc(aes)
+driver       : atmel-cbc-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 16
+geniv        : &#60;default&#62;
+
+name         : ecb(aes)
+driver       : atmel-ecb-aes
+module       : atmel&#95;aes
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : ablkcipher
+async        : yes
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+ivsize       : 0
+geniv        : &#60;default&#62;
+
+name         : stdrng
+driver       : krng
+module       : kernel
+priority     : 200
+refcnt       : 1
+selftest     : passed
+type         : rng
+seedsize     : 0
+
+name         : lzo
+driver       : lzo-generic
+module       : kernel
+priority     : 0
+refcnt       : 2
+selftest     : passed
+type         : compression
+
+name         : crc32c
+driver       : crc32c-generic
+module       : kernel
+priority     : 100
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 1
+digestsize   : 4
+
+name         : deflate
+driver       : deflate-generic
+module       : kernel
+priority     : 0
+refcnt       : 2
+selftest     : passed
+type         : compression
+
+name         : aes
+driver       : aes-generic
+module       : kernel
+priority     : 100
+refcnt       : 2
+selftest     : passed
+type         : cipher
+blocksize    : 16
+min keysize  : 16
+max keysize  : 32
+
+name         : des3&#95;ede
+driver       : des3&#95;ede-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : cipher
+blocksize    : 8
+min keysize  : 24
+max keysize  : 24
+
+name         : des
+driver       : des-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : cipher
+blocksize    : 8
+min keysize  : 8
+max keysize  : 8
+
+name         : sha384
+driver       : sha384-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 128
+digestsize   : 48
+
+name         : sha512
+driver       : sha512-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 128
+digestsize   : 64
+
+name         : sha224
+driver       : sha224-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 64
+digestsize   : 28
+
+name         : sha256
+driver       : sha256-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 64
+digestsize   : 32
+
+name         : sha1
+driver       : sha1-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 64
+digestsize   : 20
+
+name         : md5
+driver       : md5-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 64
+digestsize   : 16
+
+name         : md4
+driver       : md4-generic
+module       : kernel
+priority     : 0
+refcnt       : 1
+selftest     : passed
+type         : shash
+blocksize    : 64
+digestsize   : 16
+
+</pre> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiForm">
+<table class='twikiFormTable' border='1'><tr><th class='twikiFormTableHRow twikiFirstCol' colspan='2'>
+<a class="twikiLink" href="WebFaqBaseForm.html">WebFaqBaseForm</a>
+</th></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Boards </td><td>
+<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Components </td><td>
+<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Summary </td><td>
+How to configure Crypto driver
+</td></tr></table>
+</div><!-- /twikiForm --><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="CryptoConfig6f9e.html?sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="CryptoConfig8f98.html?sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="CryptoConfig668c.html?sortcol=2;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="CryptoConfig40db.html?sortcol=3;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="CryptoConfig904b.html?sortcol=4;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="CryptoConfig9b54.html?sortcol=5;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="CryptoConfig946b.html?sortcol=6;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/CryptoConfig/af_alg.png">af_alg.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/CryptoConfig?filename=af_alg.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 59.2&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2020-01-29 - 09:46</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/TudorAmbarus?origurl=/bin/view/Main/TudorAmbarus">TudorAmbarus</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> Openssl additional engines like af_alg </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/CryptoConfig/cryptodev-linux.png">cryptodev-linux.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/CryptoConfig?filename=cryptodev-linux.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 34.0&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2015-05-20 - 02:42</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/CryptoConfig/cryptodev.png">cryptodev.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/CryptoConfig?filename=cryptodev.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 41.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2015-05-20 - 02:41</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/CryptoConfig/cryptodriver.png">cryptodriver.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/CryptoConfig?filename=cryptodriver.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 39.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2015-05-20 - 02:41</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/CryptoConfig/openssl-binary.png">openssl-binary.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/CryptoConfig?filename=openssl-binary.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 58.2&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2020-01-29 - 09:45</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/TudorAmbarus?origurl=/bin/view/Main/TudorAmbarus">TudorAmbarus</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> Openssl Binary Kconfig </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r20 - 02 Jun 2020 - 06:37:33 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/CryptoConfig"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="CryptoConfig3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/CryptoConfig by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:05 GMT -->
+</html>

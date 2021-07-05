@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PmeccConfigure by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:14:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> PmeccConfigure &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/PmeccConfigure?t=1625511183" type="application/x-wiki" title="Edit PmeccConfigure" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/PmeccConfigure?t=1625511183" title="Edit PmeccConfigure" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_table1 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#table1 {width:50%;}
+</style>
+<!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="TipsNTricks.html">TipsNTricks</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="PmeccConfigure.html">PmeccConfigure</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="Enable_and_Configure_PMECC_Progr"></a> Enable and Configure PMECC (Programmable Multibit ECC) in AT91SAM SoC </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#PMECC_prerequisites"> PMECC prerequisites</a>
+</li> <li> <a href="#How_to_configure_PMECC_parameter"> How to configure PMECC parameters</a> <ul>
+<li> <a href="#Find_the_minimum_required_ECC_bi"> Find the minimum required ECC bits of NAND flash</a>
+</li> <li> <a href="#Configurations_in_SAM_BA"> Configurations in SAM-BA</a>
+</li> <li> <a href="#Configurations_in_AT91Bootstrap"> Configurations in AT91Bootstrap</a>
+</li> <li> <a href="#Configurations_in_U_Boot"> Configurations in U-Boot</a>
+</li> <li> <a href="#Configurations_in_Kernel"> Configurations in Kernel</a> <ul>
+<li> <a href="#Kernel_v2_6_39_in_Linux4sam_plus"> Kernel v2.6.39 in Linux4sam plus PMECC patches</a>
+</li> <li> <a href="#v3_7_with_DTS_modification"> v3.7 with DTS modification</a>
+</li> <li> <a href="#v3_10_and_v3_18"> v3.10 and v3.18</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#FAQ"> FAQ</a> <ul>
+<li> <a href="#Q_How_do_I_know_the_PMECC_is_ena"> Q: How do I know the PMECC is enabled or not when booting?</a>
+</li></ul> 
+</li> <li> <a href="#Reference"> Reference</a>
+</li></ul> 
+</div>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+This page is mainly about how to enable and configure the PMECC in AT91SAM SoCs for different NAND flash devices.
+<p /> <ul>
+<li> The PMECC controller is a programmable binary BCH (Bose, Chaudhuri and Hocquenghem) encoder and decoder. It can be used to support both SLC and MLC NAND Flash devices. 
+</li> <li> The PMECC module can correct 2, 4, 8, 12 or 24 bits of error per sector of data (512 Bytes or 1024 Bytes).
+</li> <li> According to different correctable ECC bits and sector size, the PMECC encoding data size is different.
+</li> <li> And the settings for different correctable ECC bits are <strong>incompatible</strong>. <ul>
+<li> The following table shows the PMECC encoding data size for different configurations:          <table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all" width="50%">      <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Correction Capability</font> </th>   <th bgcolor="#687684" class="twikiTableCol1" valign="top"> <font color="#ffffff">512-Byte Sector</font> </th>   <th align="center" bgcolor="#687684" class="twikiTableCol2 twikiLastCol" valign="top"> <font color="#ffffff">1024-Byte Sector</font> </th>   </tr>      <tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> 2 bits </td>   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> 4 Bytes </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> 4 Bytes </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> 4 bits </td>   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> 7 Bytes </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> 7 Bytes </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> 8 bits </td>   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> 13 Bytes </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> 14 Bytes </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> 12 bits </td>   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> 20 Bytes </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> 21 Bytes </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> 24 bits </td>   <td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> 39 Bytes </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> 42 Bytes </td>   </tr>   </table>
+</li> <li> In general, the PMECC encoding data are located at the end of the OOB area in NAND Flash.  <ul>
+<li> Here is an example for a NAND flash with the page size of 2KBytes, the OOB size of which is 64 Bytes. Configure the PMECC to 2-bit correction in 512-Byte sector.         <pre>
+OOB:
+        ff ff ff ff ff ff ff ff
+        ff ff ff ff ff ff ff ff
+        ff ff ff ff ff ff ff ff
+        ff ff ff ff ff ff ff ff
+        ff ff ff ff ff ff ff ff
+        ff ff ff ff ff ff ff ff
+        bd f3 0f 02 90 98 99 00
+        2e bd 4b 02 59 19 3b 01
+         </pre>
+</li> <li> Details for the above example:  <ul>
+<li> The 2KB page has 4 sectors (2048 / 512 = 4).
+</li> <li> Every sector needs 4-Byte PMECC encoding data (Check the above table for the size of ECC Bytes in a 512-Byte sector with 2-bit correction capability).
+</li> <li> So the PMECC encoding data size is 16 Bytes for every page (4 sector * 4 Bytes/Sector). 
+</li> <li> The 16-Byte PMECC encoding data are located in the OOB area, from the 48th Byte to the end (64 - 16 = 48).
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<p />
+<h2><a name="PMECC_prerequisites"></a> PMECC prerequisites </h2>
+As described in the introduction, it's important in your whole system to have the same ECC management. This is why we will detail below all the software components in a Linux based system.
+<p /> <ul>
+<li> In AT91SAM SoCs, the SAM9x5 series and SAM9N12 both support PMECC.
+</li></ul> 
+<p /> <ul>
+<li> The software versions that support PMECC: <ul>
+<li> SAM-BA <strong>2.11</strong> or later versions
+</li> <li> AT91Bootstrap <strong>v3.5.0</strong> or later versions
+</li> <li> U-Boot <strong>v2012.10</strong> or later versions
+</li> <li> Kernel versions that support PMECC <ul>
+<li> Kernel <strong>v2.6.39</strong> in Linux4sam plus PMECC patches
+</li> <li> Kernel <strong>v3.7</strong> with DTS modification
+</li> <li> Kernel <strong>v3.10</strong>, <strong>v3.18</strong> in linux4sam
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<p />
+<h2><a name="How_to_configure_PMECC_parameter"></a> How to configure PMECC parameters </h2>
+<p />
+<h3><a name="Find_the_minimum_required_ECC_bi"></a> Find the minimum required ECC bits of NAND flash </h3> <ol>
+<li> For ONFI compliant NAND flash: <ul>
+<li> In the ONFI parameter structure, the 112th Byte, number of bits of ECC correctability, indicates the minimum required ECC bits in a 512-Byte sector.
+</li> <li> For <strong>ONFI 2.1 or later versions</strong>, if the number of bits of ECC correctabilty is 0xFF, then the actual correctable ECC bits and sector size should be found in the extended parameter page. The 14th Byte of ONFI parameter indicates the start of the extended parameter page.
+</li></ul> 
+</li> <li> For non-ONFI compliant NAND flash, assume using 1-bit ECC.
+</li></ol> 
+<p />
+<h3><a name="Configurations_in_SAM_BA"></a> Configurations in SAM-BA </h3>
+The SAM-BA configuration is important as this tool is used to program the external NAND flash. During the NAND flash programming, the ECC needs to bet configured correctly to assure a good coherency of your system content.
+<p />
+If you do not use SAM-BA to program your NAND flash, please update accordingly your NAND flash programmer.
+<p />
+The configuration steps in SAM-BA:
+<p /> <ul>
+<li> Choose the NAND flash media tab in the SAM-BA GUI. 
+</li> <li> Initialize the media by choosing <code>Enable NandFlash</code> in the Scripts rolling menu and press <code>Execute</code>.
+</li> <li> Select <code>Enable OS PMECC parameters</code> in the Scripts rolling menu and press <code>Execute</code>. The default ECC configuration dialog will pop up: <ul>
+<li> <img src="../../../pub/Linux4SAM/PmeccConfigure/SAM-BA_ecc_parameters.jpg" />
+</li></ul> 
+</li> <li> The detailed information for each item: <ul>
+<li> <code>Ecc type</code>: Select pmecc
+</li> <li> <code>Number of sectors per page</code>: Spare size / Sector size
+</li> <li> <code>Spare size</code>: OOB size in bytes
+</li> <li> <code>Number of ECC bits required</code>: Can be 2,4,8,12,24 bits. Set it according to the NAND flash minimum requirement.
+</li> <li> <code>Size of the ECC sector</code>: Can be 512,1024 in bytes. Set it according to the NAND flash minimum requirement.
+</li> <li> <code>Ecc offset</code>: Start position of PMECC encoding data in the OOB area, which is:      <pre>oob size - (PMECC encode data size * sector number per page)</pre>
+</li> <li> <code>Trimffs</code>: If select this option, then SAM-BA will <strong>NOT</strong> generate PMECC data for all 0xFF data page, since the generated PMECC data for all 0xFF data page are not 0xFF (Except <strong>SAMA5D4</strong> chip). This option should be enabled when flash a rootfs in nand if the chip is not <strong>SAMA5D4</strong>.
+</li></ul> 
+</li></ul> 
+<p />
+<h3><a name="Configurations_in_AT91Bootstrap"></a> Configurations in AT91Bootstrap </h3> <ul>
+<li> The AT91Bootstrap v3.5.0 or later versions support PMECC and the PMECC parameter can be changed.
+</li> <li> The AT91Bootstrap v3.7.0 or later versions support ONFI ecc parameters auto detection. That means it will detect nandflash's ONFI and set the PMECC paramters automatically.
+</li> <li> Change the correctable PMECC bits &amp; sector size <ul>
+<li> For <strong>v3.5.0</strong>, modify the board head file, which is under AT91Bootstrap board directory.      <pre>
+#define PMECC_ERROR_CORR_BITS   2     /* Correctable ECC bits, can be 2,4,8,12,24 bits */
+#define PMECC_SECTOR_SIZE       512   /* Sector size in bytes, can be 512 or 1024 */
+      </pre>
+</li> <li> For <strong>v3.6.0</strong>, run the <code>make menuconfig</code> to configure PMECC parameters      <pre>
+make sama5d3xeknf_uboot_defconfig   # take SAMA5D3 as an example
+make menuconfig
+      </pre>      In the popup menu, select as following to configure PMECC correctable bits &amp; sector size      <pre>
+      Memory selection --->
+          NAND flash configuration --->
+              PMECC Configuration --->
+                  PMECC Error Correction Bits (4-bit)  --->
+                  PMECC Sector Size (512-byte) --->
+      </pre>
+</li> <li> For <strong>v3.7.0</strong> or later, you need deselect <code>Auto-detect ONFI minimum error requirement</code> option before you set your own pmecc configuration. Then the operation is same as v3.6.0.      <pre>
+      Memory selection --->
+          NAND flash configuration --->
+              PMECC Configuration --->
+                  Auto-detect ONFI minimum error requirement
+      </pre>
+</li></ul> 
+</li> <li> Compile the AT91Bootstrap.
+</li></ul> 
+<p />
+<h3><a name="Configurations_in_U_Boot"></a> Configurations in U-Boot </h3> <ul>
+<li> Only U-Boot v2012.10 and later versions support PMECC.
+</li> <li> Change the correctable PMECC bits &amp; sector size in board configuration file, which is under directory <code>include/configs/</code>.   <pre>
+/* PMECC & PMERRLOC */
+#define CONFIG_ATMEL_NAND_HWECC         1
+#define CONFIG_ATMEL_NAND_HW_PMECC      1
+#define CONFIG_PMECC_CAP                2        /* Correctable ECC bits, can be 2,4,8,12,24 bits */
+#define CONFIG_PMECC_SECTOR_SIZE        512      /* Sector size in bytes, can be 512 or 1024 */
+#define CONFIG_PMECC_INDEX_TABLE_OFFSET 0x8000   /* Different sector size has different Index table. If the sector size is 1024, need to change it to 0x10000  */
+   </pre>
+</li> <li> U-Boot v2013.07 and later versions support ONFI ecc parameters auto detection. To enable auto detection, you need remove the definitions of <code>CONFIG_PMECC_CAP</code> and <code>CONFIG_PMECC_SECTOR_SIZE</code>.
+</li> <li> Compile the U-Boot.
+</li></ul> 
+<h3><a name="Configurations_in_Kernel"></a> Configurations in Kernel </h3>
+<h4><a name="Kernel_v2_6_39_in_Linux4sam_plus"></a> Kernel v2.6.39 in Linux4sam plus PMECC patches </h4> <ol>
+<li> Get Linux 2.6.39 kernel.      <pre>
+         # Get v2.6.39 kernel
+         wget http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.39.tar.bz2
+         tar xvjf linux-2.6.39.tar.bz2
+         cd linux-2.6.39
+      </pre>
+</li> <li> Apply at91 patches       <ul>
+<li> For SAM9x5 series <ul>
+<li> a) Get Linux 2.6.39 and apply the latest at91 patches for SAM9x5. Please refer to Linux4sam.      <pre>
+         # Apply at91 patch for AT91SAM9x5
+         wget ftp://ftp.linux4sam.org/pub/linux/2.6.39-at91/2.6.39-at91-exp.2.tar.gz
+         tar xvzf 2.6.39-at91-exp.2.tar.gz
+         for p in 2.6.39-at91-exp.2/* ; do patch -p1 < $p ; done
+      </pre>
+</li> <li> b) Apply the patches that support different PMECC settings.      <pre>
+         wget http://www.at91.com/linux4sam/pub/Linux4SAM/PmeccConfigure/9x5_pmecc_2639.tar.bz2
+         tar xvjf 9x5_pmecc_2639.tar.bz2
+         for p in 9x5_pmecc_2639/* ; do patch -p1 < $p ; done
+      </pre>	 
+</li></ul> 
+</li> <li> For SAM9N12 <ul>
+<li> a) Get Linux 2.6.39 and apply the latest at91 patches for SAM9n12. You can also refer to Linux4sam.      <pre>
+         # Apply at91 patch for AT91SAM9N12
+         wget ftp://ftp.linux4sam.org/pub/linux/2.6.39-at91/2.6.39-at91sam9n12-exp.tar.gz
+         tar xvzf 2.6.39-at91sam9n12-exp.tar.gz
+         patch -p1 < 2.6.39-at91-exp.patch
+      </pre>
+</li> <li> b) Apply the patches that support different PMECC settings.      <pre>
+         wget http://www.at91.com/linux4sam/pub/Linux4SAM/PmeccConfigure/9n12_pmecc_2639.tar.bz2
+         tar xvjf 9n12_pmecc_2639.tar.bz2
+         for p in 9n12_pmecc_2639/* ; do patch -p1 < $p ; done
+      </pre>	 
+</li></ul> 
+</li></ul> 
+</li> <li> Change the PMECC settings to support different correctable ECC bits and sector size. <ul>
+<li> Find the board file for the PMECC settings in <code>arch/arm/mach-at91/</code> <ul>
+<li> 9X5: <code>board-sam9x5cm.c</code>
+</li> <li> 9N12: <code>board-sam9n12ek.c</code>
+</li></ul> 
+</li> <li> Here lists the NAND flash setting which also has PMECC settings:         <pre>
+static struct atmel_nand_data __initdata cm_nand_data = {
+	... ...
+	.ecc_mode       = NAND_ECC_HW,	// Use Hardware ECC not software ECC
+	.has_pmecc      = 1,		// Using PMECC
+	.pmecc_corr_cap = 2,		// PMECC correctable ECC bits, can be 2,4,8,12,24 bits. Set it according to the NAND flash minimum requirement.
+	.pmecc_sector_size = 512,	// PMECC sector size, can be 512, 1024 Bytes. Set it according to the NAND flash minimum requirement.
+	.pmecc_lookup_table_offset = 0x8000,
+	... ...
+         </pre>
+</li></ul> 
+</li> <li> Compile the kernel code.
+</li></ol> 
+<p />
+<h4><a name="v3_7_with_DTS_modification"></a> v3.7 with DTS modification </h4> <ol>
+<li> Apply the patch to add DT support for PMECC (Please skip this step and go to step2 if you are using <strong>3.6.9-at91</strong> kernel) <ul>
+<li> For sam9x5      <pre>
+wget http://www.at91.com/linux4sam/pub/Linux4SAM/PmeccConfigure/0001-at91-9x5-add-DT-parameters-to-enable-PMECC.patch
+patch -p1 < 0001-at91-9x5-add-DT-parameters-to-enable-PMECC.patch
+      </pre>
+</li> <li> For sam9N12      <pre>
+wget http://www.at91.com/linux4sam/pub/Linux4SAM/PmeccConfigure/0002-at91-at91sam9n12-add-DT-parameters-to-enable-PMECC.patch
+patch -p1 < 0002-at91-at91sam9n12-add-DT-parameters-to-enable-PMECC.patch
+      </pre>
+</li></ul> 
+</li> <li> Change the PMECC settings <ul>
+<li> Find the DTS file for the PMECC settings in <code>arch/arm/boot/dts/</code> <ul>
+<li> 9X5: <code>at91sam9x5cm.dtsi</code>
+</li> <li> 9N12: <code>at91sam9n12ek.dts</code>
+</li> <li> SAMA5D3: <code>sama5d3cm.dtsi</code>
+</li></ul> 
+</li> <li> Here lists the PMECC settings in DTS file:      <pre>
+         nand-ecc-mode = "hw";
+         atmel,has-pmecc;        /* Enable PMECC */
+         atmel,pmecc-cap = <2>;  /* Correctable ECC bits, can be 2,4,8,12,24 bits */
+         atmel,pmecc-sector-size = <512>; /* Sector size in bytes, can be 512, 1024 */
+      </pre>
+</li></ul> 
+</li> <li> Compile the DTB file.
+</li></ol> 
+<p />
+<h4><a name="v3_10_and_v3_18"></a> v3.10 and v3.18 </h4> <ol>
+<li> SAMA5D4EK and AT91-SAMA5D4 Xplained board will detect ONFI ecc paramters automatically. That means they won't set <code>atmel,pmecc-cap</code> and <code>atmel,pmecc-sector-size</code> in the dt node.
+</li> <li> If you want to change the PMECC settings, it is same as above v3.7 section.
+</li></ol> 
+<p />
+<h2><a name="FAQ"></a> FAQ </h2>
+<p />
+<h3><a name="Q_How_do_I_know_the_PMECC_is_ena"></a> Q: How do I know the PMECC is enabled or not when booting? </h3>
+<p />
+In the kernel dmesg, if you enable PMECC, you should find the line as below:
+<pre>
+atmel_nand 40000000.nand: Initialize PMECC params, cap: 2, sector: 512
+</pre>
+<p />
+In the U-Boot, to see the PMECC information you need enable the MTD debug in the board config file. For example, in SAMA5D3 need to add the following lines in <code>include/configs/sama5d3xek.h</code>, then rebuild the U-Boot.bin.
+<pre>
+#define CONFIG_MTD_DEBUG
+#define CONFIG_MTD_DEBUG_VERBOSE     1
+</pre>
+<p />
+<h2><a name="Reference"></a> Reference </h2>
+<p /> <ul>
+<li> Website:      <a href="http://www.onfi.org/specifications" target="_blank">ONFI specifications<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+</li></ul>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiForm">
+<table class='twikiFormTable' border='1'><tr><th class='twikiFormTableHRow twikiFirstCol' colspan='2'>
+<a class="twikiLink" href="WebFaqBaseForm.html">WebFaqBaseForm</a>
+</th></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Boards </td><td>
+<a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Components </td><td>
+<p />
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Summary </td><td>
+About PMECC configuration
+</td></tr></table>
+</div><!-- /twikiForm --><div class="twikiAttachments">
+ <div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="PmeccConfigure6f9e.html?sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="PmeccConfigure8f98.html?sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="PmeccConfigure668c.html?sortcol=2;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="PmeccConfigure40db.html?sortcol=3;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="PmeccConfigure904b.html?sortcol=4;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="PmeccConfigure9b54.html?sortcol=5;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="PmeccConfigure946b.html?sortcol=6;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">patch</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/PmeccConfigure/0001-at91-9x5-add-DT-parameters-to-enable-PMECC.patch">0001-at91-9x5-add-DT-parameters-to-enable-PMECC.patch</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/PmeccConfigure?filename=0001-at91-9x5-add-DT-parameters-to-enable-PMECC.patch;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 1.5&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-01 - 03:26</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">patch</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/PmeccConfigure/0002-at91-at91sam9n12-add-DT-parameters-to-enable-PMECC.patch">0002-at91-at91sam9n12-add-DT-parameters-to-enable-PMECC.patch</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/PmeccConfigure?filename=0002-at91-at91sam9n12-add-DT-parameters-to-enable-PMECC.patch;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 1.3&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-01 - 03:27</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">bz2</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/PmeccConfigure/9n12_pmecc_2639.tar.bz2">9n12_pmecc_2639.tar.bz2</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/PmeccConfigure?filename=9n12_pmecc_2639.tar.bz2;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 16.3&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-01 - 03:27</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">bz2</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/PmeccConfigure/9x5_pmecc_2639.tar.bz2">9x5_pmecc_2639.tar.bz2</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/PmeccConfigure?filename=9x5_pmecc_2639.tar.bz2;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 15.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-01 - 03:28</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/PmeccConfigure/SAM-BA_ecc_parameters.jpg">SAM-BA_ecc_parameters.jpg</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/PmeccConfigure?filename=SAM-BA_ecc_parameters.jpg;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 21.8&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2013-02-01 - 03:29</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/UnknownUser?origurl=/bin/view/Main/UnknownUser">UnknownUser</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> &nbsp; </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r6 - 27 Aug 2015 - 02:59:05 - <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Main/JoshWu?topicparent=Linux4SAM.PmeccConfigure;nowysiwyg=1" rel="nofollow" title="JoshWu (this topic does not yet exist; you can create it)">JoshWu</a></span></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiCurrentTopicLink twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/PmeccConfigure"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="PmeccConfigure3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PmeccConfigure by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:14:39 GMT -->
+</html>

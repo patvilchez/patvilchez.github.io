@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/DriverModelInUBoot?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:17:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; DriverModelInUBoot &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="Driver_Model_in_U_Boot"></a>  Driver Model in U-Boot </h1>
+<p />
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Configure_U_Boot"> Configure U-Boot</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Enable_the_Device_Tree_Support"> Enable the Device Tree Support</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Enable_the_Drivers"> Enable the Drivers</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Enable_the_Driver_Model"> Enable the Driver Model</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Enable_the_Individual_Driver"> Enable the Individual Driver</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Support_the_Clock_Framework">  Support the Clock Framework</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Support_the_Pinctrl_Framework"> Support the Pinctrl Framework</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Enable_the_Individual_Driver_wit"> Enable the Individual Driver with Driver Model</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Build_U_Boot"> Build U-Boot</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Building"> Building</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#The_Building_Output_files"> The Building Output files </a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#U_Boot_dm_Command_usage"> U-Boot dm Command usage</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Reference_Documents"> Reference Documents</a>
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+<p />
+Driver model in U-Boot is to provide a consistent model for U-Boot drivers and the platform data / device tree information used by the drivers to instantiate devices. 
+<p />
+The model is arranged by three concepts:
+<p /> <dl>
+<dt> <strong>Uclass</strong> </dt><dd> A group of  devices which operate in the same way. A uclass provides a way of accessing individual devices within the group, but always using the same interface. 
+</dd></dl> 
+<p /> <dl>
+<dt> <strong>Driver</strong> </dt><dd> Some code which talks to a peripheral and presents a higher-level interface to it.
+</dd></dl> 
+<p /> <dl>
+<dt> <strong>Device</strong> </dt><dd> An instance of a driver, tied to a peripheral port or peripheral, created from some platform-specific information bound to a driver.
+</dd></dl> 
+<p />
+<h1><a name="Configure_U_Boot"></a> Configure U-Boot </h1>
+<p />
+To use U-Boot with driver model and device tree supported, you should to do, <ol>
+<li> First enable the driver model support, then enable the drivers after enabling the driver model for the corresponding sub-system.
+</li> <li> Provide the run-time configuration of U-Boot via a flat device tree (fdt), and enables the FDT library as well.
+</li></ol> 
+<p />
+<strong>Note</strong>: In the following configuration, we take sama5d2 Xplained boards for example.
+<p />
+Firstly, use your default kernel configuration:
+<p />
+<pre>
+make ARCH&#61;arm sama5d2&#95;xplained&#95;spiflash&#95;defconfig
+</pre>
+<p />
+You can configure the options by using U-Boot configuration interface.
+<p />
+<pre>
+make ARCH&#61;arm menuconfig
+</pre>
+<p />
+<h2><a name="Enable_the_Device_Tree_Support"></a> Enable the Device Tree Support </h2>
+First, you enable the device tree support by enabling the symbols <code>CONFIG_OF_CONTROL</code>
+<p />
+You should select the separate DTB for DT control ( <code>CONFIG_OF_SEPARATE</code> ), which is recommended for the production devices.
+<p />
+Then specify the default filename of the device tree source <code>CONFIG_DEFAULT_DEVICE_TREE="at91-sama5d2_xplained"</code>
+<pre>
+    Device Tree Control  ---&#62;
+        &#91;&#42;] Run-time configuration via Device Tree
+        &#91;&#42;]   Enable run-time configuration via Device Tree in SPL
+              Provider of DTB for DT control (Separate DTB for DT control)  ---&#62;
+        (at91-sama5d2&#95;xplained) Default Device Tree for DT control
+        (pinctrl-0 pinctrl-names interrupt-parent) List of device tree properties to drop for SPL
+</pre>
+<p />
+Of course, the FDT library is required.
+<p />
+Make the FDT library available by enabling the symbols <code>CONFIG_OF_LIBFDT</code>, <code>CONFIG_SPL_OF_LIBFDT</code>.
+<p />
+<pre>
+    Library routines  ---&#62;
+        &#91;&#42;] Enable the FDT library
+        &#91; ] Enable the FDT library overlay support
+        &#91;&#42;] Enable the FDT library for SPL
+</pre>
+<p />
+The FDT library provides functions for accessing binary device tree images in memory, such as adding and removing nodes and properties, scanning through the tree and finding particular compatible nodes.
+<p />
+<h2><a name="Enable_the_Drivers"></a> Enable the Drivers </h2>
+<p />
+<h3><a name="Enable_the_Driver_Model"></a> Enable the Driver Model </h3>
+<p />
+First of all, you can enable the driver model by enabling the symbol <code>CONFIG_DM</code>, <code>CONFIG_SPL_DM</code>.
+<p />
+<pre>
+     Device Drivers  ---&#62; 
+          Generic Driver Options  ---&#62;
+              &#91;&#42;] Enable Driver Model
+              &#91;&#42;]   Enable Driver Model for SPL
+              &#91;&#42;]   Enable warnings in driver model
+              &#91;&#42;]   Support device removal
+              &#91;&#42;]   Support stdio registration
+              &#91;&#42;]   Support numbered aliases in device tree
+</pre>
+<p />
+<h3><a name="Enable_the_Individual_Driver"></a> Enable the Individual Driver </h3>
+Before enabling the driver with  driver model support, you should enable the common clock framework and pinctrl framework.
+<p />
+<h4><a name="Support_the_Clock_Framework"></a> Support the Clock Framework </h4>
+Enable the clock framework by enabling the symbols <code>CONFIG_CLK</code>, <code>CONFIG_SPL_CLK</code>, <code>CONFIG_CLK_AT91</code>.
+<p />
+<pre>
+    Device Drivers  ---&#62; 
+        Clock  ---&#62;
+            &#91;&#42;] Enable clock driver support 
+            &#91;&#42;]   Enable clock support in SPL
+            &#91;&#42;] AT91 clock drivers
+            &#91;&#42;]   Support UTMI PLL Clock
+            &#91;&#42;]   Support H32MX 32-bit Matrix Clock
+            &#91;&#42;]   Support Generic Clock
+</pre>
+<p />
+<h4><a name="Support_the_Pinctrl_Framework"></a> Support the Pinctrl Framework </h4>
+Enable the pinctrl framework by enabling the symbols, <code>CONFIG_PINCTRL</code>, <code>CONFIG_PINCTRL_AT91PIO4</code>.
+<p />
+<pre>
+    Device Drivers  ---&#62; 
+        Pin controllers  ---&#62;
+            &#91;&#42;] Support pin controllers
+            &#91;&#42;]   Support full pin controllers
+            &#91;&#42;]     Support generic pin controllers
+            &#91;&#42;]       Support pin multiplexing controllers
+
+            &#91;&#42;] AT91 PIO4 pinctrl driver
+</pre>
+<p />
+<h4><a name="Enable_the_Individual_Driver_wit"></a> Enable the Individual Driver with Driver Model </h4>
+To enable the driver with driver model support, firstly, enable the driver model for the corresponding sub-system, i.e. enabling the symbol like <code>CONFIG_DM_&lt;subsys&gt;</code>.
+<p />
+Take the Atmel SPI driver for example to configure. 
+<p />
+Enable the Atmel SPI driver with driver model by enabling the symbols, <code>CONFIG_DM_SPI</code>, <code>CONFIG_ATMEL_SPI</code>.
+<p />
+<pre>
+    Device Drivers  ---&#62;
+        SPI Support  ---&#62;
+            &#91;&#42;] Enable Driver Model for SPI drivers
+
+            &#91;&#42;]   Atmel SPI driver
+</pre>
+<p />
+<h1><a name="Build_U_Boot"></a> Build U-Boot </h1>
+<h2><a name="Building"></a> Building </h2>
+After the configuration is done, built U-Boot with driver model and fdt supported in two ways,
+<p />
+1. Build with the default DTS which is defined from CONFIG_DEFAULT_DEVICE_TREE.
+<p />
+<pre>
+make ARCH&#61;arm CROSS&#95;COMPILE&#61;&#60;path&#95;to&#95;cross-compiler/cross-compiler-prefix-&#62;
+</pre>
+<p />
+2. Build with the user specified dts file.
+<pre>
+make ARCH&#61;arm CROSS&#95;COMPILE&#61;&#60;path&#95;to&#95;cross-compiler/cross-compiler-prefix-&#62; DEVICE&#95;TREE&#61;&#60;dts-file-name&#62;
+</pre>
+<p />
+<em>path_to_cross-compiler</em> is only needed if the path of the cross-compiler is not in your PATH.
+<p />
+<em>cross-compiler-prefix-</em> looks like <em>arm-linux-</em> , <em>arm-elf-</em> , <em>arm-linux-gnueabihf-</em> , or <em>arm-none-linux-gnueabi-</em> .
+<p />
+<em>dts-file-name</em> is the filename of the device tree source for the board, as <em>at91-sama5d2_xplained</em>
+<p />
+<h2><a name="The_Building_Output_files"></a> The Building Output files </h2>
+<p />
+After the built is done, you can see the generated files like,
+<p />
+<pre>
+$ ls -l u-boot&#42;.bin
+-rw-rw-r-- 1 wyang wyang 381857 Nov  3 15:45 u-boot.bin
+-rw-rw-r-- 1 wyang wyang 381857 Nov  3 15:45 u-boot-dtb.bin
+-rwxrwxr-x 1 wyang wyang 369264 Nov  3 15:45 u-boot-nodtb.bin
+</pre>
+<p />
+<pre>
+$ ls -l u-boot&#42;.dtb
+-rw-rw-r-- 1 wyang wyang 12593 Nov  3 15:45 u-boot.dtb
+</pre>
+<p />
+<em>u-boot.dtb</em> is the compact binary file produced by <strong>dtc</strong> tool from the device tree source file.
+<p />
+<em>u-boot-nodtb.bin</em> is the raw binary file of U-Boot without DT stuff.
+<p />
+<em>u-boot-dtb.bin</em> is the binary file generated by joining the above two file.
+<p />
+<pre>
+cat u-boot-nodtb.bin u-boot.dtb &#62; u-boot-dtb.bin
+</pre>
+<p />
+<em>u-boot.bin</em> is identical to <em>u-boot-dtb.bin</em>.
+<p />
+<em>u-boot.bin</em> single file is pretty different as the one without the DM/DT but it's <strong>use</strong> is the same.
+<p />
+Nothing needs to change for the first bootloader.  
+<p />
+<h1><a name="U_Boot_dm_Command_usage"></a> U-Boot <strong>dm</strong> Command usage </h1>
+<p />
+Flash the <em>u-boot.bin</em> image to the target board.
+<p />
+After U-Boot boot up successfully, you can check the driver model tree using the <em>dm</em> command. It is very helpful for the developer to check the device binding.
+<p />
+<pre>
+&#61;&#62; dm help
+dm - Driver model low level access
+
+Usage:
+dm tree         Dump driver model tree (&#39;&#42;&#39; &#61; activated)
+dm uclass        Dump list of instances for each uclass
+dm devres        Dump list of device resources for each device
+</pre>
+<p />
+<pre>
+&#61;&#62; dm tree
+ Class       Probed   Name
+----------------------------------------
+ root        &#91; + ]    root&#95;driver
+ video       &#91; + ]    &#124;-- hlcdc&#64;f0000000
+ vidconsole0 &#91; + ]    &#124;   `-- hlcdc&#64;f0000000.vidconsole0
+ simple&#95;bus  &#91; + ]    `-- ahb
+ usb         &#91;   ]        &#124;-- ehci&#64;00500000
+ mmc         &#91; + ]        &#124;-- sdio-host&#64;a0000000
+ mmc         &#91; + ]        &#124;-- sdio-host&#64;b0000000
+ simple&#95;bus  &#91; + ]        `-- apb
+ clk         &#91; + ]            &#124;-- pmc&#64;f0014000
+ clk         &#91; + ]            &#124;   &#124;-- mainck
+ clk         &#91; + ]            &#124;   &#124;-- pllack
+ clk         &#91; + ]            &#124;   &#124;-- utmick
+ clk         &#91; + ]            &#124;   &#124;-- masterck
+ clk         &#91; + ]            &#124;   &#124;-- h32mxck
+ clk         &#91;   ]            &#124;   &#124;-- systemck
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- ddrck
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- lcdck
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uhpck
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- udpck
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- pck0
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- pck1
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- pck2
+ clk         &#91;   ]            &#124;   &#124;   `-- iscck
+ clk         &#91; + ]            &#124;   &#124;-- periph32ck
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- macb0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- tdes&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- matrix1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- hsmc&#95;clk
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- pioA&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- flx0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- flx1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- flx2&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- flx3&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- flx4&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uart0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uart1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uart2&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uart3&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uart4&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- twi0&#95;clk
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- twi1&#95;clk
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- spi0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- spi1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- tcb0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- tcb1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- pwm&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- adc&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- uhphs&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- udphs&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- ssc0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- ssc1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- trng&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- pdmic&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- i2s0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- i2s1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- can0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- can1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   `-- classd&#95;clk
+ clk         &#91; + ]            &#124;   &#124;-- periph64ck
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- dma0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- dma1&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- aes&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- aesb&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- sha&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- mpddr&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- matrix0&#95;clk
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- sdmmc0&#95;hclk
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- sdmmc1&#95;hclk
+ clk         &#91; + ]            &#124;   &#124;   &#124;-- lcdc&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- isc&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   &#124;-- qspi0&#95;clk
+ clk         &#91;   ]            &#124;   &#124;   `-- qspi1&#95;clk
+ clk         &#91; + ]            &#124;   `-- gck
+ clk         &#91; + ]            &#124;       &#124;-- sdmmc0&#95;gclk
+ clk         &#91; + ]            &#124;       &#124;-- sdmmc1&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- tcb0&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- tcb1&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- pwm&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- pdmic&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- i2s0&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- i2s1&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- can0&#95;gclk
+ clk         &#91;   ]            &#124;       &#124;-- can1&#95;gclk
+ clk         &#91;   ]            &#124;       `-- classd&#95;gclk
+ spi         &#91; + ]            &#124;-- spi&#64;f8000000
+ spi&#95;flash   &#91;   ]            &#124;   `-- spi&#95;flash&#64;0
+ eth         &#91; + ]            &#124;-- ethernet&#64;f8008000
+ serial      &#91; + ]            &#124;-- serial&#64;f8020000
+ clk         &#91;   ]            &#124;-- sckc&#64;f8048050
+ clk         &#91;   ]            &#124;   `-- slowck
+ i2c         &#91; + ]            &#124;-- i2c&#64;fc028000
+ i2c&#95;generic &#91; + ]            &#124;   `-- generic&#95;5c
+ gpio        &#91; + ]            `-- gpio&#64;fc038000
+ pinctrl     &#91; + ]                `-- pinctrl
+ pinconfig   &#91; + ]                    &#124;-- i2c1&#95;default
+ pinconfig   &#91; + ]                    &#124;-- pinctrl&#95;lcd&#95;base
+ pinconfig   &#91; + ]                    &#124;-- pinctrl&#95;lcd&#95;pwm
+ pinconfig   &#91; + ]                    &#124;-- pinctrl&#95;lcd&#95;rgb666
+ pinconfig   &#91; + ]                    &#124;-- macb0&#95;phy&#95;irq
+ pinconfig   &#91; + ]                    &#124;-- macb0&#95;rmii
+ pinconfig   &#91;   ]                    &#124;-- qspi0&#95;default
+ pinconfig   &#91; + ]                    &#124;-- sdmmc0&#95;cmd&#95;dat&#95;default
+ pinconfig   &#91; + ]                    &#124;-- sdmmc0&#95;ck&#95;cd&#95;default
+ pinconfig   &#91; + ]                    &#124;-- sdmmc1&#95;cmd&#95;dat&#95;default
+ pinconfig   &#91; + ]                    &#124;-- sdmmc1&#95;ck&#95;cd&#95;default
+ pinconfig   &#91; + ]                    &#124;-- spi0&#95;default
+ pinconfig   &#91; + ]                    &#124;-- uart1&#95;default
+ pinconfig   &#91;   ]                    &#124;-- usb&#95;default
+ pinconfig   &#91;   ]                    `-- usba&#95;vbus
+</pre>
+<p />
+<pre>
+&#61;&#62; dm uclass
+uclass 0: root
+- &#42; root&#95;driver &#64; 3f981028, seq 0, (req -1)
+
+uclass 9: simple&#95;bus
+- &#42; ahb &#64; 3f981138, seq 0, (req -1)
+- &#42; apb &#64; 3f981308, seq 1, (req -1)
+
+uclass 11: clk
+- &#42; pmc&#64;f0014000 &#64; 3f981390, seq 0, (req -1)
+- &#42; mainck &#64; 3f9813e8, seq 7, (req -1)
+- &#42; pllack &#64; 3f981450, seq 8, (req -1)
+- &#42; utmick &#64; 3f9814b8, seq 9, (req -1)
+- &#42; masterck &#64; 3f981520, seq 10, (req -1)
+- &#42; h32mxck &#64; 3f981578, seq 14, (req -1)
+-   systemck &#64; 3f9815e0
+-   ddrck &#64; 3f981648
+-   lcdck &#64; 3f9816a0
+-   uhpck &#64; 3f9816f8
+-   udpck &#64; 3f981750
+-   pck0 &#64; 3f9817a8
+-   pck1 &#64; 3f981800
+-   pck2 &#64; 3f981858
+-   iscck &#64; 3f9818b0
+- &#42; periph32ck &#64; 3f981908, seq 1, (req -1)
+- &#42; macb0&#95;clk &#64; 3f981970, seq 17, (req -1)
+-   tdes&#95;clk &#64; 3f9819c8
+-   matrix1&#95;clk &#64; 3f981a20
+-   hsmc&#95;clk &#64; 3f981a78
+- &#42; pioA&#95;clk &#64; 3f981ad0, seq 2, (req -1)
+-   flx0&#95;clk &#64; 3f981b28
+-   flx1&#95;clk &#64; 3f981b80
+-   flx2&#95;clk &#64; 3f981bd8
+-   flx3&#95;clk &#64; 3f981c30
+-   flx4&#95;clk &#64; 3f981c88
+-   uart0&#95;clk &#64; 3f981ce0
+-   uart1&#95;clk &#64; 3f981d38
+-   uart2&#95;clk &#64; 3f981d90
+-   uart3&#95;clk &#64; 3f981de8
+-   uart4&#95;clk &#64; 3f981e40
+-   twi0&#95;clk &#64; 3f981e98
+- &#42; twi1&#95;clk &#64; 3f981ef0, seq 16, (req -1)
+- &#42; spi0&#95;clk &#64; 3f981f48, seq 13, (req -1)
+-   spi1&#95;clk &#64; 3f981fa0
+-   tcb0&#95;clk &#64; 3f981ff8
+-   tcb1&#95;clk &#64; 3f982050
+-   pwm&#95;clk &#64; 3f9820a8
+-   adc&#95;clk &#64; 3f982100
+-   uhphs&#95;clk &#64; 3f982158
+-   udphs&#95;clk &#64; 3f9821b0
+-   ssc0&#95;clk &#64; 3f982208
+-   ssc1&#95;clk &#64; 3f982260
+-   trng&#95;clk &#64; 3f9822b8
+-   pdmic&#95;clk &#64; 3f982310
+-   i2s0&#95;clk &#64; 3f982368
+-   i2s1&#95;clk &#64; 3f9823c0
+-   can0&#95;clk &#64; 3f982418
+-   can1&#95;clk &#64; 3f982470
+-   classd&#95;clk &#64; 3f9824c8
+- &#42; periph64ck &#64; 3f982520, seq 3, (req -1)
+-   dma0&#95;clk &#64; 3f982588
+-   dma1&#95;clk &#64; 3f9825e0
+-   aes&#95;clk &#64; 3f982638
+-   aesb&#95;clk &#64; 3f982690
+-   sha&#95;clk &#64; 3f9826e8
+-   mpddr&#95;clk &#64; 3f982740
+-   matrix0&#95;clk &#64; 3f982798
+- &#42; sdmmc0&#95;hclk &#64; 3f9827f0, seq 4, (req -1)
+- &#42; sdmmc1&#95;hclk &#64; 3f982848, seq 11, (req -1)
+- &#42; lcdc&#95;clk &#64; 3f9828a0, seq 15, (req -1)
+-   isc&#95;clk &#64; 3f9828f8
+-   qspi0&#95;clk &#64; 3f982950
+-   qspi1&#95;clk &#64; 3f9829a8
+- &#42; gck &#64; 3f982a00, seq 5, (req -1)
+- &#42; sdmmc0&#95;gclk &#64; 3f982a68, seq 6, (req -1)
+- &#42; sdmmc1&#95;gclk &#64; 3f982ac0, seq 12, (req -1)
+-   tcb0&#95;gclk &#64; 3f982b18
+-   tcb1&#95;gclk &#64; 3f982b70
+-   pwm&#95;gclk &#64; 3f982bc8
+-   pdmic&#95;gclk &#64; 3f982c20
+-   i2s0&#95;gclk &#64; 3f982c78
+-   i2s1&#95;gclk &#64; 3f982cd0
+-   can0&#95;gclk &#64; 3f982d28
+-   can1&#95;gclk &#64; 3f982d80
+-   classd&#95;gclk &#64; 3f982dd8
+-   sckc&#64;f8048050 &#64; 3f983070
+-   slowck &#64; 3f9830c8
+
+uclass 14: disk
+uclass 18: eth
+- &#42; ethernet&#64;f8008000 &#64; 3f982f78, seq 0, (req -1)
+
+uclass 19: gpio
+- &#42; gpio&#64;fc038000 &#64; 3f9831b8, seq 0, (req -1)
+
+uclass 20: i2c
+- &#42; i2c&#64;fc028000 &#64; 3f983140, seq 1, (req 1)
+
+uclass 22: i2c&#95;generic
+- &#42; generic&#95;5c &#64; 3f984350, seq 0, (req -1)
+
+uclass 28: usb&#95;mass&#95;storage
+uclass 30: mmc
+- &#42; sdio-host&#64;a0000000 &#64; 3f981258, seq 0, (req -1)
+- &#42; sdio-host&#64;b0000000 &#64; 3f9812b0, seq 1, (req -1)
+
+uclass 34: panel
+uclass 35: backlight
+uclass 39: pinctrl
+- &#42; pinctrl &#64; 3f983240, seq 0, (req -1)
+
+uclass 40: pinconfig
+- &#42; i2c1&#95;default &#64; 3f9832c8, seq 9, (req -1)
+- &#42; pinctrl&#95;lcd&#95;base &#64; 3f983320, seq 6, (req -1)
+- &#42; pinctrl&#95;lcd&#95;pwm &#64; 3f983378, seq 7, (req -1)
+- &#42; pinctrl&#95;lcd&#95;rgb666 &#64; 3f9833d0, seq 8, (req -1)
+- &#42; macb0&#95;phy&#95;irq &#64; 3f983428, seq 11, (req -1)
+- &#42; macb0&#95;rmii &#64; 3f983480, seq 10, (req -1)
+-   qspi0&#95;default &#64; 3f9834d8
+- &#42; sdmmc0&#95;cmd&#95;dat&#95;default &#64; 3f983530, seq 1, (req -1)
+- &#42; sdmmc0&#95;ck&#95;cd&#95;default &#64; 3f983588, seq 2, (req -1)
+- &#42; sdmmc1&#95;cmd&#95;dat&#95;default &#64; 3f9835e0, seq 3, (req -1)
+- &#42; sdmmc1&#95;ck&#95;cd&#95;default &#64; 3f983638, seq 4, (req -1)
+- &#42; spi0&#95;default &#64; 3f983690, seq 5, (req -1)
+- &#42; uart1&#95;default &#64; 3f9836e8, seq 0, (req -1)
+-   usb&#95;default &#64; 3f983740
+-   usba&#95;vbus &#64; 3f983798
+
+uclass 44: regulator
+uclass 48: serial
+- &#42; serial&#64;f8020000 &#64; 3f983008, seq 0, (req -1)
+
+uclass 49: spi
+- &#42; spi&#64;f8000000 &#64; 3f982e50, seq 0, (req 0)
+
+uclass 50: spi&#95;flash
+- &#42; spi&#95;flash&#64;0 &#64; 3f982ed8, seq 0, (req -1)
+
+uclass 51: spi&#95;generic
+uclass 56: usb
+-   ehci&#64;00500000 &#64; 3f9811d0
+
+uclass 57: usb&#95;dev&#95;generic
+uclass 58: usb&#95;hub
+uclass 59: video
+- &#42; hlcdc&#64;f0000000 &#64; 3f9810b0, seq 0, (req -1)
+
+uclass 61: vidconsole0
+- &#42; hlcdc&#64;f0000000.vidconsole0 &#64; 3f984088, seq 0, (req -1)
+</pre>
+<p />
+<h1><a name="Reference_Documents"></a> Reference Documents </h1> <ol>
+<li> <a href="http://git.denx.de/?p=u-boot.git;a=blob;f=doc/driver-model/README.txt" target="_blank">doc/driver-model/README<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://git.denx.de/?p=u-boot.git;a=blob;f=doc/README.fdt-control" target="_blank">doc/README.fdt-control<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://www.denx.de/wiki/U-Boot/DriverModel" target="_blank">U-Boot Driver Model<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ol> 
+<p />
+   Other useful slides: <ol>
+<li> <a href="http://events.linuxfoundation.org/sites/events/files/slides/Order at last - U-Boot driver model slides (2).pdf" target="_blank">Order at Last, The New U-Boot Driver Model Architecture<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> by Simon Glass, ELEC 2015, Dublin.
+</li> <li> <a href="http://www.denx.de/wiki/pub/U-Boot/MiniSummitELCE2014/dm-u-boot.pdf" target="_blank">Driver Model in U-Boot<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> by Simon Glass, U-Boot Mini-Summit 2014.
+</li></ol>  
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/DriverModelInUBoot?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:17:24 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

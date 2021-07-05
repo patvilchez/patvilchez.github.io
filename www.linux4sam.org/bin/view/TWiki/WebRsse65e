@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wiki="http://purl.org/rss/1.0/modules/wiki/" ><channel rdf:about="https://www.linux4sam.org/bin/view/TWiki">
+<title>TWiki search results for plugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki</link>
+  <description>The Documentation Web of TWiki. TWiki is an Enterprise Collaboration Platform.</description>
+<image rdf:resource="https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png" />
+  <dc:language>en-us</dc:language>
+  <dc:rights>Copyright 2021 by contributing authors</dc:rights>
+  <dc:publisher>TWiki Administrator [notice@noreply.at91.com]</dc:publisher>
+  <dc:creator>The contributing authors of TWiki</dc:creator>
+  <dc:source>TWiki</dc:source>
+  <items>
+    <rdf:Seq>
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/FlexWebListPlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/BreadCrumbsPlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiStoreRcsFileDotPm" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiStoreDotPm" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiPluginDotPm" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiReleaseNotes06x00" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiHistory" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/JQueryPlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarTABLE" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiScripts" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/WysiwygPluginSettings" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/WebHome" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiVariables" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/SlideShowPlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/SmiliesPlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarEDITTABLE" />
+    </rdf:Seq>
+  </items>
+</channel>
+<image rdf:about="https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png">
+  <title>Linux4SAM.TWiki</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki</link>
+  <url>https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png</url>
+</image>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/GluePlugin">
+  <title>GluePlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/GluePlugin</link>
+  <description>GluePlugin Description This plugin will help you to write readable markup (TWikiMarkup, HMTL, ...) within TWiki by allowing tags and arguments to be formatted... (last changed by TWikiAdminUser)</description>
+  <dc:date>2015-07-17T04:34:19Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiAdminUser">
+      <rdf:value>admin</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/AliasPlugin">
+  <title>AliasPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/AliasPlugin</link>
+  <description>AliasPlugin Description This plugin allows you to create arbitrary word aliases. If you write down a word that has a defined alias, it will then be replaced... (last changed by TWikiAdminUser)</description>
+  <dc:date>2015-07-17T04:30:47Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiAdminUser">
+      <rdf:value>admin</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/FormPlugin">
+  <title>FormPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/FormPlugin</link>
+  <description>Main features No html knowledge required to create forms Add input fields, textareas, dropdown select boxes, checkboxes, radio buttons Set preselected... (last changed by TWikiContributor)</description>
+  <dc:date>2015-02-25T18:07:24Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/SourceCode">
+  <title>SourceCode</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/SourceCode</link>
+  <description>TWiki Source Code Packages This documentation is automatically generated from the pod , so it always matches the running code Monitor Monitoring package. Instrument... (last changed by TWikiContributor)</description>
+  <dc:date>2013-10-14T08:02:47Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiSiteTools">
+  <title>TWikiSiteTools</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiSiteTools</link>
+  <description>TWiki Site Tools Utilities for searching, navigation, and monitoring site activity TWiki Site Tools include utilities for navigating, searching and keeping up with... (last changed by TWikiContributor)</description>
+  <dc:date>2013-10-13T10:29:54Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/EmptyPlugin">
+  <title>EmptyPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/EmptyPlugin</link>
+  <description>Empty TWiki Plugin Introduction This is an empty plugin. Use it as a template to build your own .TWikiPlugins. This plugin does nothing, but is ready to be extended... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-27T08:40:54Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/WysiwygPlugin">
+  <title>WysiwygPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/WysiwygPlugin</link>
+  <description>Wysiwyg Plugin Support for the integration of WYSIWYG (What You See Is What You Get) editors. On its own, the only thing this plugin gives you is a stand alone HTML... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-18T23:51:41Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/WatchlistPlugin">
+  <title>WatchlistPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/WatchlistPlugin</link>
+  <description>Watchlist Plugin Introduction The WatchlistPlugin adds watchlist feature to TWiki topics. Topics of interest can be watched and unwatched. A user can see recent changes... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-15T22:07:24Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TinyMCEQuickHelp">
+  <title>TinyMCEQuickHelp</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TinyMCEQuickHelp</link>
+  <description>TinyMCE Editor Help Summary #tinyMceInfo td {vertical align:top; padding:0 1em 0 0;} #tinyMceInfo td.primaryTextcolumn {width:60%;} #tinyMceInfo td.secondaryTextcolumn... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-13T06:54:46Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/SiteStatisticsFooter">
+  <title>SiteStatisticsFooter</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/SiteStatisticsFooter</link>
+  <description>Legend: Webs Total : Number of webs, excluding template webs Webs Viewed : Number of webs viewed This can be bigger than Webs Total since this... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-12T01:06:30Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/PreferencesPlugin">
+  <title>PreferencesPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/PreferencesPlugin</link>
+  <description>PreferencesPlugin Introduction Allows editing of preferences using fields predefined in a .TWikiForms. However, the edit fields are inlined in the text, similar... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-08T23:56:43Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiPlugins">
+  <title>TWikiPlugins</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiPlugins</link>
+  <description>TWiki Plugins Add functionality to TWiki with readily available plugins; create plugins based on APIs Overview You can add plugins to extend TWiki functionality... (last changed by TWikiContributor)</description>
+  <dc:date>2013-08-30T01:12:19Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/PageRenderingProcess">
+  <title>PageRenderingProcess</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/PageRenderingProcess</link>
+  <description>Page Rendering Process Overview of how TWiki works To achieve a goal in TWiki either by making use of existing features or implementing new features, good understanding... (last changed by TWikiContributor)</description>
+  <dc:date>2013-08-30T00:07:32Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiUpgradeGuide">
+  <title>TWikiUpgradeGuide</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiUpgradeGuide</link>
+  <description>TWiki Upgrade Guide This guide covers upgrading from a previous version of TWiki (such as TWiki 4.3) to TWiki 5.1 Overview TWiki 5.1 is a minor release introducing... (last changed by TWikiContributor)</description>
+  <dc:date>2013-07-16T05:42:32Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiUserAuthentication">
+  <title>TWikiUserAuthentication</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiUserAuthentication</link>
+  <description>TWiki User Authentication TWiki site access control and user activity tracking options Overview Authentication, or `loging in`, is the process by which a user lets... (last changed by TWikiContributor)</description>
+  <dc:date>2013-06-28T07:21:27Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/InstalledPlugins">
+  <title>InstalledPlugins</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/InstalledPlugins</link>
+  <description>Installed Plugins Plugins are mainly user contributed add ons that enhance and extend TWiki features and capabilities. A limited number of plugins are included in... (last changed by TWikiContributor)</description>
+  <dc:date>2013-03-01T23:41:54Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<!-- <ul>
+<li> Set SKIN = rss
+</li></ul> 
+--></rdf:RDF>

@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/BuildRootBuild by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:17:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> BuildRootBuild &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/BuildRootBuild?t=1625511248" type="application/x-wiki" title="Edit BuildRootBuild" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/BuildRootBuild?t=1625511248" title="Edit BuildRootBuild" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style>
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="BuildRoot.html">BuildRoot</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="BuildRootBuild.html">BuildRootBuild</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="How_to_build_Buildroot_for_AT91"></a> How to build Buildroot for AT91 </h1>
+<p />
+<h2><a name="Prerequisites"></a> Prerequisites </h2>
+<p />
+Host build system should be a Linux system with <a href="http://buildroot.uclibc.org/downloads/manual/manual.html#requirement" target="_blank">necessary software<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> installed.
+<p />
+In addition to these required packages, you should also install libssl-dev:
+<pre>
+$ sudo apt-get install libssl1.0-dev
+</pre>
+or, depending on your host distribution:
+<pre>
+$ sudo apt-get install libssl-dev
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> You can install missing packages using <code>yum install</code> with Fedora or <code>apt-get install</code> with Ubuntu or Debian. These commands may require <strong>root</strong> privileges or being in a correct sudoers group.
+<p />
+<h2><a name="Get_sources"></a> Get sources </h2>
+<p />
+To get the source code, you have to clone the buildroot-at91 and buildroot-external-microchip repositories. buildroot-at91 is a fork of Buildroot with a minimal amount of patches, only the ones which have not hit the mainline yet. The external tree provides stuff which won't hit the mainline: additional defconfigs and packages dedicated to our demos.
+<p />
+<pre>
+$ git clone https://github.com/linux4sam/buildroot-at91.git
+Cloning into &#39;buildroot-at91&#39;...
+remote: Counting objects: 271126, done.
+remote: Compressing objects: 100&#37; (2/2), done.
+remote: Total 271126 (delta 0), reused 2 (delta 0), pack-reused 271124
+Receiving objects: 100&#37; (271126/271126), 61.00 MiB &#124; 2.36 MiB/s, done.
+Resolving deltas: 100&#37; (186357/186357), done.
+
+$ ls buildroot-at91/
+arch  board  boot  CHANGES  Config.in  Config.in.legacy  configs  COPYING  DEVELOPERS  docs  fs  linux  Makefile  Makefile.legacy  package  README  support  system  toolchain  utils
+
+
+$ git clone https://github.com/linux4sam/buildroot-external-microchip.git
+Cloning into &#39;buildroot-external-microchip&#39;...
+remote: Counting objects: 571, done.
+remote: Compressing objects: 100&#37; (159/159), done.
+remote: Total 571 (delta 217), reused 288 (delta 170), pack-reused 225
+Receiving objects: 100&#37; (571/571), 94.41 KiB &#124; 76.00 KiB/s, done.
+Resolving deltas: 100&#37; (332/332), done.
+
+$ ls buildroot-external-microchip/
+board  Config.in  configs  COPYING  docs  external.desc  external.mk  package  patches  README.md  system
+</pre>
+<p />
+The source code has been taken from the <code>master</code> branch which is pointing to the latest version of buildroot-at91 and buildroot-external-microchip. We advise you to use linux4sam tags to be sure that there is no mismatch between the versions of these two repositories. 
+<p />
+You can list them and use one of them by doing this:
+<p />
+<pre>
+$ cd buildroot-external-microchip/
+$ git tag &#124; grep linux4sam
+linux4sam&#95;5.8
+linux4sam&#95;6.0
+&#91;...]
+linux4sam&#95;6.1
+linux4sam&#95;6.2
+linux4sam-2020.04
+linux4sam-2020.10
+$ git checkout linux4sam-2020.10 -b buildroot-external-microchip-linux4sam-2020.10
+
+$ cd ../buildroot-at91/
+$ git tag &#124; grep linux4sam
+linux4sam&#95;5.8
+linux4sam&#95;5.8-rc1
+linux4sam&#95;6.0
+linux4sam&#95;6.0-rc1
+linux4sam&#95;6.0-rc2
+linux4sam&#95;6.0-rc3
+linux4sam&#95;6.1
+linux4sam&#95;6.1-rc1
+linux4sam&#95;6.2
+linux4sam-2020.04
+linux4sam-2020.10
+$ git checkout linux4sam-2020.10 -b buildroot-at91-linux4sam-2020.10
+</pre>
+<p />
+<p />
+<h2><a name="Build_the_rootfs_image"></a> Build the rootfs image </h2>
+<p />
+Assuming you are at the Buildroot root directory, you'll find a <code>configs</code> folder containing several default configurations. If you are familiar with kernel configuration, you'll see that it works in the same way.
+<p />
+For the same board, several defconfig files are provided inside the buildroot-at91. These defconfigs are from upstream and, as said above, without the richness of a full linux4sam release. They can be used for a minimal test image. <ul>
+<li> <code>atmel_[soc]_xplained_defconfig</code> provides at91bootstrap, u-boot, the kernel image and dtb files, a very basic rootfs for NAND flash memory.
+</li> <li> <code>atmel_[soc]_xplained_mmc_defconfig</code> provides the same stuff but for SD card. Moreover a SD card image is done to ease the creation of the bootable SD card.
+</li> <li> <code>atmel_[soc]_xplained_dev_defconfig</code> and <code>atmel_[soc]_xplained_mmc_dev_defconfig</code> provide a rootfs with additional tools to use <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/SoC?topicparent=Linux4SAM.BuildRootBuild;nowysiwyg=1" rel="nofollow" title="SoC (this topic does not yet exist; you can create it)">SoC</a></span> devices (<span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/I2C?topicparent=Linux4SAM.BuildRootBuild;nowysiwyg=1" rel="nofollow" title="I2C (this topic does not yet exist; you can create it)">I2C</a></span>, CAN, audio, etc.).
+</li></ul> 
+<p />
+The external provides extra defconfigs in its own <code>configs</code> folder: <ul>
+<li> <code>[soc]_[board]_headless_defconfig</code> provides barely the same stuff as <code>atmel_[soc]_xplained_mmc_dev_defconfig</code> plus AWS greengrass or other command-line tools, but with no graphics related packages.
+</li> <li> <code>[soc]_[board]_graphics_defconfig</code> provides the same stuff plus a full graphics (EGT) demo.
+</li></ul> 
+All these defconfigs target the SD card as boot media.
+<p />
+If you want to build the <strong>basic</strong> rootfs image we provide for sama5d2-xplained for example, you'll have to do:
+<pre>
+$ make atmel&#95;sama5d2&#95;xplained&#95;mmc&#95;defconfig
+</pre>
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> BR2_EXTERNAL is not mandatory if you don't plan to use the content of the external tree
+<p />
+If you want to build the <strong>linux4sam demo</strong> rootfs image we provide for sama5d2-xplained, you'll have to do:
+<pre>
+$ BR2&#95;EXTERNAL&#61;../buildroot-external-microchip/ make sama5d2&#95;xplained&#95;graphics&#95;defconfig
+</pre>
+<p />
+Then you can build the rootfs:
+<p />
+<pre>
+$ make
+</pre>
+<p />
+Once compilation is done, have a look to <code>output/images</code> to see what has been generated:
+<p />
+<pre>
+$ ls output/images/
+at91bootstrap.bin          rootfs.ext2                       sama5d2&#95;xplained&#95;isc.dtbo     sama5d2&#95;xplained&#95;pda4.dtbo   sama5d2&#95;xplained&#95;qspi.dtbo                    zImage
+at91-sama5d2&#95;xplained.dtb  rootfs.ext4                       sama5d2&#95;xplained.itb          sama5d2&#95;xplained&#95;pda5.dtbo   sama5d2&#95;xplained-sdcardboot-uboot-3.9.0.bin
+boot.bin                   rootfs.tar                        sama5d2&#95;xplained&#95;ov7670.dtbo  sama5d2&#95;xplained&#95;pda7b.dtbo  sdcard.img
+boot.vfat                  sama5d2&#95;xplained&#95;i2s0&#95;proto.dtbo  sama5d2&#95;xplained&#95;ov7740.dtbo  sama5d2&#95;xplained&#95;pda7.dtbo   u-boot.bin
+</pre>
+<p />
+You can have a look at the <a class="twikiLink" href="DemoSD.html">Create a SD card with the demo</a> page to create an SD card from the <code>sdcard.img</code> file. If you want to flash NAND or whatever memory you want with Sam-Ba, please go to the <code>Using SAM-BA to flash components to board</code> section of your board.
+<p />
+<p />
+<h2><a name="Cross_toolchain"></a> Cross toolchain </h2>
+<p />
+While creating the rootfs, Buildroot will build a cross toolchain (or will download or use one present on your machine). You can find it under <code>output/host/usr</code>:
+<p />
+<pre>
+$ ls output/host/usr/bin
+2to3                                             arm-linux-gcc-ranlib  fdtoverlay                libpng-config     python3.7m-config
+2to3-3.7                                         arm-linux-gcov        fdtput                    libtool           python3-config
+aclocal                                          arm-linux-gcov-dump   fincore                   libtoolize        python-config
+aclocal-1.15                                     arm-linux-gcov-tool   findmnt                   linux32           python-freeze-importlib
+arm-buildroot-linux-gnueabihf-addr2line          arm-linux-gdb         fixqt4headers.pl          linux64           pyvenv
+arm-buildroot-linux-gnueabihf-ar                 arm-linux-gprof       flex                      linux-dtc         qdbuscpp2xml
+arm-buildroot-linux-gnueabihf-as                 arm-linux-ld          flex++                    logger            qdbusxml2cpp
+arm-buildroot-linux-gnueabihf-c++                arm-linux-ld.bfd      flock                     look              qlalr
+arm-buildroot-linux-gnueabihf-c++.br&#95;real        arm-linux-nm          gapplication              lrelease          qmake
+arm-buildroot-linux-gnueabihf-cc                 arm-linux-objcopy     gawk                      lsattr            qmlcachegen
+arm-buildroot-linux-gnueabihf-cc.br&#95;real         arm-linux-objdump     gdbus                     lsblk             qmlimportscanner
+arm-buildroot-linux-gnueabihf-c++filt            arm-linux-ranlib      gdbus-codegen             lscpu             qmllint
+arm-buildroot-linux-gnueabihf-cpp                arm-linux-readelf     gdk-pixbuf-csource        lsipc             qmlmin
+arm-buildroot-linux-gnueabihf-cpp.br&#95;real        arm-linux-size        gdk-pixbuf-pixdata        lslocks           qt.conf
+arm-buildroot-linux-gnueabihf-elfedit            arm-linux-strings     gdk-pixbuf-query-loaders  lsmem             qvkgen
+arm-buildroot-linux-gnueabihf-g++                arm-linux-strip       gdk-pixbuf-thumbnailer    lsns              rake
+arm-buildroot-linux-gnueabihf-g++.br&#95;real        attr                  gem                       lupdate           rcc
+arm-buildroot-linux-gnueabihf-gcc                autoconf              genbrk                    lzip              rdjpgcom
+arm-buildroot-linux-gnueabihf-gcc-7.4.0          autoheader            gencfu                    m4                rdoc
+arm-buildroot-linux-gnueabihf-gcc-7.4.0.br&#95;real  autom4te              gencnval                  makeconv          rename
+arm-buildroot-linux-gnueabihf-gcc-ar             automake              gendict                   makedevs          renice
+arm-buildroot-linux-gnueabihf-gcc.br&#95;real        automake-1.15         genimage                  mcookie           reset
+arm-buildroot-linux-gnueabihf-gcc-nm             autopoint             genrb                     meson             rev
+arm-buildroot-linux-gnueabihf-gcc-ranlib         autoreconf            getfacl                   mk&#95;cmds           ri
+arm-buildroot-linux-gnueabihf-gcov               autoscan              getfattr                  mkenvimage        ruby
+arm-buildroot-linux-gnueabihf-gcov-dump          autoupdate            getopt                    mkimage           script
+arm-buildroot-linux-gnueabihf-gcov-tool          bison                 gettextize                mkpasswd          scriptreplay
+arm-buildroot-linux-gnueabihf-gdb                cal                   gio                       moc               setarch
+arm-buildroot-linux-gnueabihf-gprof              captoinfo             gio-querymodules          mount             setfacl
+arm-buildroot-linux-gnueabihf-ld                 chacl                 glib-compile-resources    mountpoint        setfattr
+arm-buildroot-linux-gnueabihf-ld.bfd             chattr                glib-compile-schemas      msgfmt            setsid
+arm-buildroot-linux-gnueabihf-nm                 choom                 glib-genmarshal           msgmerge          sip
+arm-buildroot-linux-gnueabihf-objcopy            cjpeg                 glib-gettextize           namei             smtpd.py
+arm-buildroot-linux-gnueabihf-objdump            clear                 glib-mkenums              ncurses6-config   smtpd.py.7
+arm-buildroot-linux-gnueabihf-ranlib             cmake                 gobject-query             ninja             swig
+arm-buildroot-linux-gnueabihf-readelf            col                   gperf                     node              swig3.0
+arm-buildroot-linux-gnueabihf-run                colcrt                gresource                 npm               syncqt.pl
+arm-buildroot-linux-gnueabihf-size               colrm                 gsettings                 npx               tabs
+arm-buildroot-linux-gnueabihf-strings            column                gtester                   openssl           tic
+arm-buildroot-linux-gnueabihf-strip              compile&#95;et            gtester-report            patchelf          toe
+arm-linux-addr2line                              convert-dtsv0         hexdump                   pcre-config       toolchain-wrapper
+arm-linux-ar                                     cpack                 i386                      pcregrep          torque
+arm-linux-as                                     c&#95;rehash              icu-config                pcretest          tput
+arm-linux-c++                                    ctest                 icuinfo                   pkgconf           tset
+arm-linux-c++.br&#95;real                            djpeg                 ifnames                   pkg-config        uic
+arm-linux-cc                                     dmesg                 infocmp                   pkgdata           umount
+arm-linux-cc.br&#95;real                             dtc                   infotocap                 prlimit           uname26
+arm-linux-c++filt                                dtdiff                ipcmk                     pydoc             utmpdump
+arm-linux-cpp                                    dumpimage             ipcrm                     pydoc3            uuidgen
+arm-linux-cpp.br&#95;real                            easy&#95;install          ipcs                      pydoc3.7          uuidparse
+arm-linux-elfedit                                easy&#95;install-2.7      irb                       python            whereis
+arm-linux-g++                                    easy&#95;install-3.7      isosize                   python2           wrjpgcom
+arm-linux-g++.br&#95;real                            eject                 jpegtran                  python2.7         x86&#95;64
+arm-linux-gcc                                    erb                   kill                      python2.7-config  xgettext
+arm-linux-gcc-7.4.0                              faked                 kmod                      python2-config    xmlwf
+arm-linux-gcc-7.4.0.br&#95;real                      fakeroot              last                      python3           yacc
+arm-linux-gcc-ar                                 fallocate             lastb                     python3.7
+arm-linux-gcc.br&#95;real                            fdtdump               lconvert                  python3.7-config
+arm-linux-gcc-nm                                 fdtget                libpng16-config           python3.7m
+</pre> 
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> If you do a <code>make clean</code>, you will delete the rootfs but also the cross toolchain. You can save the cross toolchain in another place. Moreover you can tell Buildroot to use it to save time for next compilations. To do it run <code>make menuconfig</code> then go to the <code>Toolchain</code> menu. Then select <em>External toolchain</em> as <code>Toolchain type</code>, <em>Custom toolchain</em> as <code>Toolchain</code>, <em>Pre-installed toolchain</em> as <code>Toolchain origin</code>. Finally set <code>Toolchain path</code> and <code>Toolchain prefix</code>.
+<p />
+<h1><a name="Customizing_Buildroot"></a> Customizing Buildroot </h1>
+<p />
+Before building the rootfs image, you may want to customize it: adding/removing packages, modifying component configurations such as busybox and uclibc, generate the kernel, etc.
+<p />
+<h2><a name="Customizing_Busybox_Linux_U_boot"></a> Customizing Busybox / Linux / U-boot / uClibc configuration </h2>
+<p />
+All the explanations are available in the Buildroot manual <a href="http://buildroot.uclibc.org/downloads/manual/manual.html#_configuration_of_other_components" target="_blank">Configuration of other components<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> section.
+<p />
+<h2><a name="Adding_removing_packages_from_th"></a> Adding/removing packages from the rootfs </h2>
+<p />
+You can easily add or remove packages from the rootfs. You simply have to do:
+<pre>
+BR2&#95;EXTERNAL&#61;../buildroot-external-microchip/ make menuconfig
+</pre>
+<p />
+and to go to the <code>Package Selection for the target</code> menu. Packages are sorted by categories:
+<p />
+<a href="../../../pub/Linux4SAM/BuildRootBuild/buildroot_package_selection.png"><img src="../../../pub/Linux4SAM/BuildRootBuild/buildroot_package_selection.png" alt="buildroot_package_selection.png" width='800' height='500'/></a>
+<p />
+You simply have to go in the desired category and to select or deselect the packages you want. Once done, you can build your rootfs.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> If you have already done a build and you want to remove packages, you may have to do <code>make clean</code> and to rebuild the whole rootfs to be sure that the packages will be removed.
+<p />
+<h2><a name="Updating_the_rootfs_for_another"></a> Updating the rootfs for another nand flash device </h2>
+<p />
+The rootfs are configured to run on the nand flash device present on atmel boards. If you use another one you may have to update some parameters. To do it, run <code>make menuconfig</code> and go to <code>Filesystem images</code>:
+<p />
+<a href="../../../pub/Linux4SAM/BuildRootBuild/buildroot_nand_conf.png"><img src="../../../pub/Linux4SAM/BuildRootBuild/buildroot_nand_conf.png" alt="buildroot_nand_conf.png" width='800' height='500'/></a>
+<p />
+For a jffs2 root filesystem, you may have to update the page and erase size from <code>Flash Type</code>.
+<p />
+For a ubifs root filesystem, you may have to update the <code>UBI logical erase block size</code>, the <code>UBI minimum I/O size</code>, the <code>Maximum LEB count</code>, the <code>UBI physical erase block size</code> and the <code>UBI sub-page size</code>. You can find more information about these parameters in the <a href="http://www.linux-mtd.infradead.org/doc/ubi.html" target="_blank">ubi documentation<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. 
+<p />
+<h2><a name="Add_your_own_software_to_Buildro"></a> Add your own software to Buildroot </h2>
+<p />
+Builroot is basically a big set of makefiles so you will have to follow some steps to insert your own application to the cross-building system. You should have a look at the <a href="http://buildroot.uclibc.org/downloads/manual/manual.html#adding-packages" target="_blank">official documentation<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> since the procedure depends on the build system used.
+<p />
+<p /> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="BuildRootBuild33a1.html?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="BuildRootBuild44bd.html?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="BuildRootBuild76e2.html?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="BuildRootBuildb21c.html?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="BuildRootBuildd1c3.html?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="BuildRootBuilde84d.html?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="BuildRootBuildbf07.html?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/BuildRootBuild/buildroot_kernel_linux-at91.png">buildroot_kernel_linux-at91.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/BuildRootBuild?filename=buildroot_kernel_linux-at91.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 62.0&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-01 - 10:23</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/LudovicDesroches?origurl=/bin/view/Main/LudovicDesroches">LudovicDesroches</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> buildroot kernel build screenshot </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/BuildRootBuild/buildroot_nand_conf.png">buildroot_nand_conf.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/BuildRootBuild?filename=buildroot_nand_conf.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 92.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2013-02-01 - 10:06</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/LudovicDesroches?origurl=/bin/view/Main/LudovicDesroches">LudovicDesroches</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> buildroot nand configuration screenshot </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/BuildRootBuild/buildroot_package_selection.png">buildroot_package_selection.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/BuildRootBuild?filename=buildroot_package_selection.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 79.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2013-02-01 - 09:59</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/LudovicDesroches?origurl=/bin/view/Main/LudovicDesroches">LudovicDesroches</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> buildroot package selection screenshot </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r33 - 22 Feb 2021 - 18:09:55 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/BuildRootBuild"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="BuildRootBuild3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/BuildRootBuild by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:17:44 GMT -->
+</html>

@@ -1,0 +1,1359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/Sama5d2XplainedMainPage by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:49:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> Sama5d2XplainedMainPage &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/Sama5d2XplainedMainPage?t=1625510669" type="application/x-wiki" title="Edit Sama5d2XplainedMainPage" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/Sama5d2XplainedMainPage?t=1625510669" title="Edit Sama5d2XplainedMainPage" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_table2 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#table2 {width:100%;}
+.twikiTable#table2 td.twikiTableCol0 {width:10%;}
+.twikiTable#table2 th.twikiTableCol0 {width:10%;}
+.twikiTable#table2 td.twikiTableCol1 {width:10%;}
+.twikiTable#table2 th.twikiTableCol1 {width:10%;}
+.twikiTable#table2 td.twikiTableCol2 {width:10%;}
+.twikiTable#table2 th.twikiTableCol2 {width:10%;}
+.twikiTable#table2 td.twikiTableCol3 {width:35%;}
+.twikiTable#table2 th.twikiTableCol3 {width:35%;}
+.twikiTable#table2 td.twikiTableCol4 {width:30%;}
+.twikiTable#table2 th.twikiTableCol4 {width:30%;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2XplainedMainPage</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="SAMA5D2_Xplained_Board"></a> SAMA5D2 Xplained Board </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="#SoC_Features"> SoC Features</a>
+</li> <li> <a href="#Kit_Information"> Kit Information</a> <ul>
+<li> <a href="#Kit_Overview"> Kit Overview</a>
+</li> <li> <a href="#Access_the_console"> Access the console</a>
+</li> <li> <a href="#Access_the_console_on_DEBUG_seri"> Access the console on DEBUG serial port</a> <ul>
+<li> <a href="#Using_DEBUG_on_TTL_to_USB_connec"> Using DEBUG on TTL-to-USB connector (DEBUG J1)</a>
+</li> <li> <a href="#Using_the_micro_A_USB_connector"> Using the micro-A USB connector (J14 EDBG-USB)</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Demo"> Demo</a> <ul>
+<li> <a href="#Demo_archives"> Demo archives</a>
+</li> <li> <a href="#Create_a_SD_card_with_the_demo"> Create a SD card with the demo</a> <ul>
+<li> <a href="#Multi_platform_procedure"> Multi-platform procedure</a>
+</li></ul> 
+</li> <li> <a href="#Flash_the_demo"> Flash the demo</a> <ul>
+<li> <a href="#Connect_the_USB_to_the_board_bef"> Connect the USB to the board before launching SAM-BA</a>
+</li> <li> <a href="#Run_script_to_flash_the_demo"> Run script to flash the demo</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Build_From_source_code"> Build From source code</a> <ul>
+<li> <a href="#Setup_ARM_Cross_Compiler"> Setup ARM Cross Compiler</a>
+</li> <li> <a href="#Build_AT91Bootstrap_from_sources"> Build AT91Bootstrap from sources</a> <ul>
+<li> <a href="#Get_AT91Bootstrap_Source_Code"> Get AT91Bootstrap Source Code</a>
+</li> <li> <a href="#Configure_AT91Bootstrap"> Configure AT91Bootstrap</a>
+</li> <li> <a href="#Customize_AT91Bootstrap"> Customize AT91Bootstrap</a>
+</li> <li> <a href="#Build_AT91Bootstrap"> Build AT91Bootstrap</a>
+</li></ul> 
+</li> <li> <a href="#Build_U_Boot_from_sources"> Build U-Boot from sources</a> <ul>
+<li> <a href="#Getting_U_Boot_sources"> Getting U-Boot sources</a>
+</li> <li> <a href="#Cross_compiling_U_Boot"> Cross-compiling U-Boot</a>
+</li></ul> 
+</li> <li> <a href="#Build_Kernel_from_sources"> Build Kernel from sources</a> <ul>
+<li> <a href="#Getting_Kernel_sources"> Getting Kernel sources</a>
+</li> <li> <a href="#Configure_and_Build_the_Linux_ke"> Configure and Build the Linux kernel</a>
+</li></ul> 
+</li> <li> <a href="#Build_Yocto_Poky_rootfs_from_sou"> Build Yocto/Poky rootfs from sources</a> <ul>
+<li> <a href="#Building_environment"> Building environment</a> <ul>
+<li> <a href="#Prerequisite"> Prerequisite</a>
+</li> <li> <a href="#Step_by_step_build_procedure"> Step by step build procedure</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Using_SAM_BA_to_flash_components"> Using SAM-BA to flash components to board</a> <ul>
+<li> <a href="#SPI_eMMC_Flash_demo_Memory_map"> SPI + eMMC Flash demo - Memory map</a>
+</li> <li> <a href="#Install_SAM_BA_software_in_your"> Install SAM-BA software in your PC</a>
+</li> <li> <a href="#Launch_SAM_BA_tools"> Launch SAM-BA tools</a>
+</li> <li> <a href="#Programming_components_into_SPI"> Programming components into SPI flash</a> <ul>
+<li> <a href="#Program_AT91Bootstrap_binary"> Program AT91Bootstrap binary</a>
+</li> <li> <a href="#Program_U_Boot_binary"> Program U-Boot binary</a>
+</li></ul> 
+</li> <li> <a href="#Programming_components_into_eMMC"> Programming components into eMMC flash</a> <ul>
+<li> <a href="#Program_rootfs_file"> Program rootfs file</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<p />
+<p />
+<p />
+<p />
+<p />
+<hr />
+<p />
+<h1><a name="SoC_Features"></a> SoC Features </h1>
+<p />
+<p />
+The SAMA5D2 series is a high-performance, ultra-low-power ARM Cortex-A5 processor based MPU. The Cortex A5 processor runs up to 500MHz and features the ARM NEON SIMD engine a 128kB L2 cache and a floating point unit. It supports multiple memories, including latest-generation technologies such as DDR3, LPDDR3, and QSPI Flash. It integrates powerful peripherals for connectivity (EMAC, USB, dual CAN, up to 10 UARTs, etc.) and user interface applications (TFT LCD controller, embedded capacitive touch controller, class D amplifier, audio PLL, CMOS sensor interface, etc.). The devices offer advanced security functions to protect customer code and secure external data transfers. These include ARM TrustZone, tamper detection, secure data storage, hardware encryption engines including private keys, on-the-fly decryption of code stored in external DDR or QSPI memory and a secure boot loader.
+<p><img src="../../../../www.microchip.com/images/default-source/design-centers/32-bit-mpus/mc32-diag-sama5d2.png" alt="SAMA5D2 Chip Features" /></p>
+<br>
+<p />
+<p />
+<p />
+<p />
+<h1><a name="Kit_Information"></a> Kit Information </h1>
+<p />
+<h2><a name="Kit_Overview"></a> Kit Overview </h2>
+<p />
+<table tableborder="0" cellpadding="0" cellspacing="0" cellborder="0" width="100%">
+<tr>
+  <td valign="center">
+<img src="../../../pub/Linux4SAM/KitInformation/a5d2_xplained_board_presentation.png" alt="SAMA5D2 Xplained" />
+  </td>
+</tr>
+</table>
+<p />
+<p />
+<h2><a name="Access_the_console"></a> Access the console </h2>
+<p />
+<p />
+<p />
+<p />
+The usual serial communication parameters are <code>115200 8-N-1</code> :
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Baud rate </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> 115200 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Data </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> 8 bits </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Parity </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Stop </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> 1 bit </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> Flow control </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> None </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Access_the_console_on_DEBUG_seri"></a> Access the console on DEBUG serial port </h2>
+The serial console can be accessed from two connectors. One is from the DEBUG port with the help of a TTL-to-USB serial cable (marked as DEBUG J1), another is from micro-A USB connector that gives access to the <strong>on-board</strong> serial-to-USB converter (marked as J14 EDBG-USB).
+<p />
+<h3><a name="Using_DEBUG_on_TTL_to_USB_connec"></a> Using DEBUG on TTL-to-USB connector (DEBUG J1) </h3>
+<p /> <ul>
+<li> <strong>For Microsoft Windows users:</strong> Install the driver of your USB TTL serial cable. FTDI-based ones are the most popular, have a look to this page to get the driver: <a href="http://www.ftdichip.com/Drivers/VCP.htm" target="_blank">http://www.ftdichip.com/Drivers/VCP.htm<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Open JP2 to enable this DEBUG interface
+</li> <li> Be sure to connect a 3.3V compatible cable and identify its GND pin. Place it properly according to the silkscreen and connect the cable to the board (J1) <ul>
+<li> <strong>For Microsoft Windows users:</strong> Identify the USB connection that is established, <code>USB Serial Port</code> should appear in Device Manager. The <code>COMxx</code> number will be used to configure the terminal emulator. <br />  <img src="../../../pub/Linux4SAM/KitInformation/sama5d3_xplained_ftdi.png" alt="ftdi serial line" /> <br />  &nbsp;
+</li> <li> <strong>For Linux users:</strong> Identify the serial USB connection by monitoring the last lines of <code>dmesg</code> command. The <code><span style="color: #008000">/dev/ttyUSBx</span></code> number will be used to configure the terminal emulator. <pre>
+[605576.562740] usb 1-1.1.2: new full-speed USB device number 17 using ehci-pci
+[605576.660920] usb 1-1.1.2: New USB device found, idVendor=0403, idProduct=6001
+[605576.660933] usb 1-1.1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[605576.660939] usb 1-1.1.2: Product: TTL232R-3V3
+[605576.660944] usb 1-1.1.2: Manufacturer: FTDI
+[605576.660958] usb 1-1.1.2: SerialNumber: FTGNVZ04
+[605576.663092] ftdi_sio 1-1.1.2:1.0: FTDI USB Serial Device converter detected
+[605576.663120] usb 1-1.1.2: Detected FT232RL
+[605576.663122] usb 1-1.1.2: Number of endpoints 2
+[605576.663124] usb 1-1.1.2: Endpoint 1 MaxPacketSize 64
+[605576.663126] usb 1-1.1.2: Endpoint 2 MaxPacketSize 64
+[605576.663128] usb 1-1.1.2: Setting MaxPacketSize 64
+[605576.663483] usb 1-1.1.2: FTDI USB Serial Device converter now attached to <span style="color: #008000">ttyUSB0</span>
+</pre> A <span style="color: #008000">/dev/ttyUSB0</span> node has been created.
+</li></ul> 
+</li> <li> Now open your favorite terminal emulator with appropriate settings
+</li></ul> 
+<p />
+<h3><a name="Using_the_micro_A_USB_connector"></a> Using the micro-A USB connector (J14 EDBG-USB) </h3>
+You can also access the serial console through the <strong>on-board</strong> serial-to-USB converter. In fact, the Atmel EDBG (Embedded Debugger) chip on the Evaluation Kit acts as a serial-to-USB converter and is loaded with a firmware that is able to talk USB-CDC protocol.
+<p /> <ul>
+<li> <strong>For Microsoft Windows users:</strong> <a href="https://gallery.atmel.com/Products/Details/6272a8fd-68fe-43d8-a990-741878cfe7b6" target="_blank">Install USB drivers for Atmel and Segger tools<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. No need to install a driver on any regular Linux distribution.
+</li> <li> Open JP1 to enable EDBG
+</li> <li> Close JP2 to disable de DEBUG port J1 (needed to avoid conflict on the UART TX line)
+</li> <li> Connect the USB cable to the board (J14 EDBG-USB) <ul>
+<li> <strong>For Microsoft Windows users:</strong> identify the USB connection that is established <br />  <code>EDBG Virtual COM Port</code> should appear in Device Manager. The <code>COMxx</code> number will be used to configure the terminal emulator. <br />  <img src="../../../pub/Linux4SAM/KitInformation/sama5d4_xplained_edbg_win.png" alt="EDBG CDC UART Port" /> <br />  &nbsp;
+</li> <li> <strong>For Linux users:</strong> identify the USB connection by monitoring the last lines of <code>dmesg</code> command. The <code><span style="color: #008000">/dev/ttyACMx</span></code> number will be used to configure the terminal emulator: <pre>
+usb 1-1.1.1: new high-speed USB device number 20 using ehci-pci
+usb 1-1.1.1: New USB device found, idVendor=03eb, idProduct=2111
+usb 1-1.1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1.1.1: Product: EDBG CMSIS-DAP
+usb 1-1.1.1: Manufacturer: Atmel Corp.
+usb 1-1.1.1: SerialNumber: ATML0000001989463039
+hid-generic 0003:03EB:2111.0007: hiddev0,hidraw3: USB HID v1.11 Device [Atmel Corp. EDBG CMSIS-DAP] on usb-0000:00:1a.0-1.1.1/input0
+cdc_acm 1-1.1.1:1.1: <span style="color: #008000">ttyACM0</span>: USB ACM device
+</pre>
+</li></ul> 
+</li> <li> Now open your favorite terminal emulator with appropriate settings
+</li></ul> 
+<p />
+<p />
+<p />
+<h1><a name="Demo"></a> Demo </h1>
+<h2><a name="Demo_archives"></a> Demo archives </h2>
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demoa5d2xplained"></a> Boot on SPI Flash<br /> + rootfs on eMMC </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-poky-sama5d2_xplained-headless-2020.10.zip" target="_blank">linux4sam-poky-sama5d2_xplained-headless-2020.10.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 145 MB) <br />md5: 424d840a8ec903a2868fbf778220605b </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam-2020.10</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Flash_the_demo">#Flash_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) <br /> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-poky-sama5d2_xplained-graphics-2020.10.zip" target="_blank">linux4sam-poky-sama5d2_xplained-graphics-2020.10.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 220 MB) <br />md5: 41ab90815510fa7ca5fd8dd395075fb1 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-poky-sama5d2_xplained-headless-2020.10.img.bz2" target="_blank">linux4sam-poky-sama5d2_xplained-headless-2020.10.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 133 MB) <br />md5: abe9a7414c685e44a0bc443d164d6ee6 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam-2020.10</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) <br /> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-poky-sama5d2_xplained-graphics-2020.10.img.bz2" target="_blank">linux4sam-poky-sama5d2_xplained-graphics-2020.10.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 204 MB) <br />md5: adfe7374141b42215eadad42c5c33e64 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-buildroot-sama5d2_xplained-headless-2020.10.img.bz2" target="_blank">linux4sam-buildroot-sama5d2_xplained-headless-2020.10.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 86 MB) <br />md5: 13e68836b7fa41be928afb0daca1960e </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam-2020.10</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) <br /> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-buildroot-sama5d2_xplained-graphics-2020.10.img.bz2" target="_blank">linux4sam-buildroot-sama5d2_xplained-graphics-2020.10.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 196 MB) <br />md5: c9fcb065d5f1dd0023b6d51607671274 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam-2020.10/linux4sam-openwrt-sama5d2_xplained-headless-2020.10.img.gz" target="_blank">linux4sam-openwrt-sama5d2_xplained-headless-2020.10.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 13 MB) <br />md5: f608392b8c3cca13541cd9d469efe382 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam-2020.10</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Create_a_SD_card_with_the_demo"></a> Create a SD card with the demo </h2>
+<p />
+You need a 1 GB SD card (or more) and to download the image of the demo. The image is compressed to reduce the amount of data to download.
+This image contains: <ul>
+<li> a FAT32 partition with the AT91Bootstrap, U-Boot and the Linux Kernel (zImage and dtb).
+</li> <li> an EXT4 partition for the rootfs.
+</li></ul> 
+<p />
+<h3><a name="Multi_platform_procedure"></a> Multi-platform procedure </h3>
+<p />
+To write the compressed image on the SD card, you will have to download and install <a href="https://etcher.io/" target="_blank">Etcher<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. This tool, which is an Open Source software, is useful since it allows to get a compressed image as input. More information and extra help available on the <a href="https://etcher.io/" target="_blank">Etcher website<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p /> <ul>
+<li> Insert your SD card and launch <code>Etcher</code>:
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/SoftwareTools/etcher_sel.jpg" alt="Etcher selection step" />
+<p /> <ol>
+<li> Select the demo image. They are marked as "SD Card image" in the demo table above.<br />  Note that you can select a compressed image (like the demos available here). The tool is able to uncompress files on the fly
+</li> <li> Select the device corresponding to your SD card (Etcher proposes you the devices that are removable to avoid erasing your system disk)
+</li> <li> Click on the <code>Flash!</code> button
+</li> <li> On Linux, Etcher finally asks you to enter your root password because it needs access to the hardware (your SD card reader or USB to SD card converter)
+</li> <li> then the flashing process begins followed by a verification phase (optional)
+</li></ol> 
+<p />
+<img src="../../../pub/Linux4SAM/SoftwareTools/etcher_finishing.jpg" alt="Etcher flashing done!" />
+<p /> <ul>
+<li> Once writing done, Etcher asks you if you want to burn another demo image:
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/SoftwareTools/etcher_done.jpg" alt="Etcher flashing done!" />
+<p /> <ul>
+<li> Your SD card is ready!
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<!--
+test<br /> 
+serialflash
+<br /> test
+-->
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Flash_the_demo"></a> Flash the demo </h2>
+<p />
+<p />
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/help.gif" alt="HELP" title="HELP" width="16" height="16" border="0" />  If you need to store the root filesystem on a SD Card, use information contained in <a class="twikiLink" href="StroreRootFSonSD.html">StroreRootFSonSD</a>. This is useful for Linux4SAM demos older than 5.6.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" alt="ALERT!" title="ALERT!" width="16" height="16" border="0" />  use SAM-BA 3.2.y onwards. You can download it here: <a href="https://github.com/atmelcorp/sam-ba/releases" target="_blank">SAM-BA 3.x release page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<p />
+<p />
+<p />
+<p />
+<h3><a name="Connect_the_USB_to_the_board_bef"></a> Connect the USB to the board before launching SAM-BA </h3>
+<p /> <ul>
+<li> <span style="color: #ff6600">Short the JP9 (BOOT_DIS)</span> to prevents booting from eMMC or serial Flash by disabling Flash Chip Selects
+</li> <li> Connect a USB micro-A cable to the board (J23 A5-USB-A). It powers the board
+</li> <li> check whether the board is found in your PC as a USB device: <ul>
+<li> <strong>For Microsoft Windows users:</strong> verify that the USB connection is well established <br />  <code>AT91 USB to Serial Converter</code> should appear in Device Manager. If it shows a unknown device you need to download and install the driver: <a href="http://www.atmel.com/images/atm6124_cdc_signed.zip" target="_blank">AT91SAM USB CDC driver<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a><br />  <img src="../../../pub/Linux4SAM/SambaSubsections/devman_AT91_USB_SAMBA-CDC.png" alt="AT91 USB to Serial Converter" /><br />  &nbsp;
+</li> <li> <strong>For Linux users:</strong> check <span style="color: #008000">/dev/ttyACMx</span> by monitoring the last lines of <code>dmesg</code> command: <br /> 
+</li></ul> 
+</li></ul> 
+<p />
+   <pre>
+[172677.700868] usb 2-1.4.4: new full-speed USB device number 31 using ehci-pci
+[172677.792677] usb 2-1.4.4: not running at top speed; connect to a high speed hub
+[172677.793418] usb 2-1.4.4: New USB device found, idVendor=03eb, idProduct=6124
+[172677.793424] usb 2-1.4.4: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[172677.793897] cdc_acm 2-1.4.4:1.0: This device cannot do calls on its own. It is not a modem.
+[172677.793924] cdc_acm 2-1.4.4:1.0: <span style="color: #008000">ttyACM0</span>: USB ACM device
+   </pre> idVendor=03eb, idProduct=6124: from this message you can see it's Microchip board USB connection.
+<p />
+<p /> <ul>
+<li> <span style="color: #ff6600">Open the JP9 (BOOT_DIS)</span> to reactivate access to the on-board Flash devices
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<h3><a name="Run_script_to_flash_the_demo"></a> Run script to flash the demo </h3> <ul>
+<li> download the demo package for the board. They are marked as "Media type: Boot on SPI Flash + rootfs on eMMC" in the table above
+</li> <li> extract the demo package
+</li> <li> run your usual terminal emulator and enter the demo directory
+</li> <li> make sure that the <code>sam-ba</code> application is in your Operating System <em>path</em> so that you can reach it from your demo package directory
+</li> <li> <strong>for Microsoft Windows users</strong>: Launch the <code>demo_linux_serialflash.bat</code> file
+</li> <li> <strong>for Linux users</strong>: Launch the <code>demo_linux_serialflash.sh</code> file
+</li> <li> this script runs SAM-BA 3 and the associated <code>QML</code> sam-ba script (<code>demo_linux_serialflash_usb.qml</code>) with proper parameters
+</li> <li> when you reach the end of the flashing process (this will take a few minutes), the following line is written:     <pre>-I- === Done. ===</pre>
+</li> <li> connect a serial link on DBGU and open the terminal emulator program <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Access_the_console">as explained just above</a>
+</li> <li> power cycle the board
+</li> <li> monitor the system while it's booting on the LCD screen or through the serial line
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h1><a name="Build_From_source_code"></a> Build From source code </h1>
+<p />
+<h2><a name="Setup_ARM_Cross_Compiler"></a> Setup ARM Cross Compiler </h2>
+<p />
+<p /> <ul>
+<li> Ubuntu: <br />   In Ubuntu, you can install the ARM Cross Compiler by doing:   <pre>
+sudo apt-get install gcc-arm-linux-gnueabi
+export CROSS&#95;COMPILE&#61;arm-linux-gnueabi-
+   </pre>
+</li></ul> 
+<p /> <ul>
+<li> Others: <br />   For others, you can download the Linaro cross compiler and setup the environment by doing:   <pre>
+wget -c https://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi.tar.xz
+tar xf gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi.tar.xz
+export CROSS&#95;COMPILE&#61;`pwd`/gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi/bin/arm-linux-gnueabi-
+   </pre>
+</li></ul> 
+<p />
+<p />
+<p />
+<h2><a name="Build_AT91Bootstrap_from_sources"></a> Build AT91Bootstrap from sources </h2>
+<p />
+<p />
+This section describes how to get source code from the git repository, how to configure with the default configuration, how to customize AT91Bootstrap based on the default configuration and finally to build AT91Bootstrap to produce the binary. take the default configuration to download U-Boot from NandFlash for example.
+<p />
+<h3><a name="Get_AT91Bootstrap_Source_Code"></a> Get AT91Bootstrap Source Code </h3>
+You can easily download AT91Bootstrap source code on the <a href="https://github.com/linux4sam/at91bootstrap" target="_blank">at91bootstrap<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> git repository.<br>
+<p />
+To get the source code, you should clone the repository by doing:
+<pre>
+$ git clone git://github.com/linux4sam/at91bootstrap.git
+Cloning into &#39;at91bootstrap&#39;...
+remote: Enumerating objects: 51, done.
+remote: Counting objects: 100&#37; (51/51), done.
+remote: Compressing objects: 100&#37; (32/32), done.
+remote: Total 10880 (delta 20), reused 39 (delta 19), pack-reused 10829
+Receiving objects: 100&#37; (10880/10880), 4.03 MiB &#124; 395.00 KiB/s, done.
+Resolving deltas: 100&#37; (8300/8300), done.
+$ cd at91bootstrap/
+</pre>
+<p />
+<h3><a name="Configure_AT91Bootstrap"></a> Configure AT91Bootstrap </h3>
+<p />
+<p />
+Assuming you are at the AT91Bootstrap root directory, you will find a <code>board/sama5d2_xplained</code> folder which contains several default configuration files: <br>
+<p />
+<pre>
+sama5d2&#95;xplaineddf&#95;uboot&#95;defconfig
+sama5d2&#95;xplainedsd&#95;uboot&#95;defconfig
+</pre>
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> <code>nf</code> means to read nandflash, <code>df</code> means to read serial flash, <code>sd</code> means to read mmc card. <br />
+<p />
+You can configure AT91Bootstrap to load U-Boot binary from SPI flash by doing:
+<pre>
+$ make mrproper
+$ make sama5d2&#95;xplaineddf&#95;uboot&#95;defconfig
+</pre>
+If the configuring process is successful, the .config file can be found at AT91Bootstrap root directory.
+<p />
+<p />
+<p />
+<h3><a name="Customize_AT91Bootstrap"></a> Customize AT91Bootstrap </h3>
+If the default configuration doesn't meet your need, after configuring with the default configuration, you can customize it by doing:
+<pre>
+$ make menuconfig
+</pre>
+Now, in the menuconfig dialog,  you can easily add or remove some features to/from AT91Bootstrap as the same way as kernel configuration.<br>Move to <code>&lt;Exit&gt;</code> with arrows and press this button hitting the <code>Enter</code> key to exit from this screen.
+<p />
+<h3><a name="Build_AT91Bootstrap"></a> Build AT91Bootstrap </h3>
+Then you can build the AT91Bootstrap binary by doing:
+<pre>
+$ make
+</pre>
+<p />
+If the building process is successful, the final .bin image is <em>binaries/at91bootstrap.bin</em>.
+<p />
+<p />
+<p />
+<h2><a name="Build_U_Boot_from_sources"></a> Build U-Boot from sources </h2>
+<p />
+<p />
+<h3><a name="Getting_U_Boot_sources"></a> Getting U-Boot sources </h3>
+<p />
+<p />
+Dedicated page on U-Boot wiki: <a href="http://www.denx.de/wiki/U-Boot/SourceCode" target="_blank">http://www.denx.de/wiki/U-Boot/SourceCode<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+You can easily download U-Boot source code from <a href="https://github.com/linux4sam/u-boot-at91/" target="_blank">Linux4SAM GitHub U-Boot repository<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>:
+<p /> <ul>
+<li> clone the Linux4sam GitHub U-Boot repository   <pre>
+   $ git clone git://github.com/linux4sam/u-boot-at91.git
+   Cloning into 'u-boot-at91'...
+   remote: Enumerating objects: 106920, done.
+   remote: Counting objects: 100% (106920/106920), done.
+   remote: Compressing objects: 100% (24617/24617), done.
+   remote: Total 566593 (delta 84756), reused 96342 (delta 81351), pack-reused 459673
+   Receiving objects: 100% (566593/566593), 131.67 MiB | 430.00 KiB/s, done.
+   Resolving deltas: 100% (456142/456142), done.
+   $ cd u-boot-at91
+   </pre>
+</li></ul> 
+<p /> <ul>
+<li> The source code has been taken from the <em>master</em> branch which is pointing to the latest branch we use. If you want to use the other branch, you can list them and use one of them by doing:   <pre>
+   $ git branch -r
+   origin/HEAD -> origin/master
+   origin/master
+   origin/u-boot-2012.10-at91
+   origin/u-boot-2013.07-at91
+   origin/u-boot-2014.07-at91
+   origin/u-boot-2015.01-at91
+   origin/u-boot-2016.03-at91
+   origin/u-boot-2017.03-at91
+   origin/u-boot-2018.07-at91
+   origin/u-boot-2019.04-at91
+   origin/u-boot-2020.01-at91
+   origin/uboot_5series_1.x
+   $ git checkout origin/u-boot-2020.01-at91 -b u-boot-2020.01-at91
+   Branch u-boot-2020.01-at91 set up to track remote branch u-boot-2020.01-at91 from origin.
+   Switched to a new branch 'u-boot-2020.01-at91'
+   </pre>
+</li></ul> 
+<p />
+<p />
+<p />
+<h3><a name="Cross_compiling_U_Boot"></a> Cross-compiling U-Boot </h3>
+<p />
+Before compiling the U-Boot, you need setup cross compile toolchain in the <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Setup_ARM_Cross_Compiler">section</a>.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> Latest versions of U-boot (2018.07 and newer) have a minimum requirement of 6.0 version of the GCC toolchain. We always recommend to use the latest versions.
+<p />
+<p />
+<p />
+Once the AT91 U-Boot sources available, cross-compile U-Boot is made in two steps: configuration and compiling. Check the <a href="http://www.denx.de/wiki/view/DULG/UBootConfiguration" target="_blank">Configuration chapter<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> in U-Boot reference manual.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Go to the <code>configs/</code> to find the exact target when invoking <em>make</em>.
+<p />
+The U-Boot environment variables can be stored in different media, above config files can specify where to store the U-Boot environment.
+<pre>
+   # To put environment variables in serial flash:
+   sama5d2&#95;xplained&#95;spiflash&#95;defconfig
+   # To put environment variables in SD/MMC card:
+   sama5d2&#95;xplained&#95;mmc&#95;defconfig
+</pre>
+<p />
+Here are the building steps for the SAMA5D2-Xplained board:
+<pre>
+# You can change the config according to your needs.
+make sama5d2&#95;xplained&#95;spiflash&#95;defconfig
+make
+</pre>
+<p />
+The result of these operations is a fresh U-Boot binary called <code>u-boot.bin</code> corresponding to the binary ELF file <code>u-boot</code>. <ul>
+<li> <code>u-boot.bin</code> is the file you should store on the board
+</li> <li> <code>u-boot</code> is the ELF format binary file you may use to debug U-Boot through a JTag link for instance.
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Build_Kernel_from_sources"></a> Build Kernel from sources </h2>
+<p />
+<p />
+<p />
+<h3><a name="Getting_Kernel_sources"></a> Getting Kernel sources </h3>
+<p />
+To get the source code, you have to clone the repository:
+<p />
+<pre>
+$ git clone git://github.com/linux4sam/linux-at91.git
+Cloning into &#39;linux-at91&#39;...
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100&#37; (50/50), done.
+remote: Compressing objects: 100&#37; (44/44), done.
+remote: Total 7282027 (delta 24), reused 17 (delta 6), pack-reused 7281977
+Receiving objects: 100&#37; (7282027/7282027), 2.09 GiB &#124; 15.93 MiB/s, done.
+Resolving deltas: 100&#37; (6114478/6114478), done.
+Checking out files: 100&#37; (61813/61813), done.
+$ cd linux-at91
+</pre>
+<p />
+The source code has been taken from the master branch which is pointing on the latest branch we use.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Note that you can also add this Linux4SAM repository as a <a href="http://git-scm.com/book/en/Git-Basics-Working-with-Remotes" target="_blank">remote GIT repository<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> to your usual Linux git tree. It will save you a lot of bandwidth and download time: 
+<p />
+<pre>
+$ git remote add linux4sam git://github.com/linux4sam/linux-at91.git
+$ git remote update linux4sam
+Fetching linux4sam
+From git://github.com/linux4sam/linux-at91
+ &#42; &#91;new branch]                linux-2.6.39-at91 -&#62; linux4sam/linux-2.6.39-at91
+ &#42; &#91;new branch]                linux-3.10-at91 -&#62; linux4sam/linux-3.10-at91
+ &#42; &#91;new branch]                linux-3.15-at91 -&#62; linux4sam/linux-3.15-at91
+ &#42; &#91;new branch]                linux-3.18-at91 -&#62; linux4sam/linux-3.18-at91
+ &#42; &#91;new branch]                linux-3.4.9-at91 -&#62; linux4sam/linux-3.4.9-at91
+ &#42; &#91;new branch]                linux-3.6.9-at91 -&#62; linux4sam/linux-3.6.9-at91
+ &#42; &#91;new branch]                linux-4.1-at91 -&#62; linux4sam/linux-4.1-at91
+ &#42; &#91;new branch]                linux-4.4-at91 -&#62; linux4sam/linux-4.4-at91
+ &#42; &#91;new branch]                linux-4.9-at91 -&#62; linux4sam/linux-4.9-at91
+ &#42; &#91;new branch]                linux-4.14-at91 -&#62; linux4sam/linux-4.14-at91
+ &#42; &#91;new branch]                linux-4.19-at91 -&#62; linux4sam/linux-4.19-at91
+ &#42; &#91;new branch]                linux-5.4-at91 -&#62; linux4sam/linux-5.4-at91
+ &#42; &#91;new branch]                master     -&#62; linux4sam/master
+</pre>
+<p />
+If you want to use an other branch, you can list them and use one of them by doing this:
+<p />
+<pre>
+$ git branch -r
+  origin/HEAD -&#62; origin/master
+  origin/linux-2.6.39-at91
+  origin/linux-3.10-at91
+  origin/linux-3.15-at91
+  origin/linux-3.18-at91
+  origin/linux-3.4.9-at91
+  origin/linux-3.6.9-at91
+  origin/linux-4.1-at91
+  origin/linux-4.4-at91
+  origin/linux-4.9-at91
+  origin/linux-4.14-at91
+  origin/linux-4.19-at91
+  origin/linux-5.4-at91
+  origin/master
+$ git checkout origin/linux-5.4-at91 -b linux-5.4-at91
+Branch linux-5.4-at91 set up to track remote branch linux-5.4-at91 from origin.
+Switched to a new branch &#39;linux-5.4-at91&#39;
+</pre>
+<p />
+<h3><a name="Configure_and_Build_the_Linux_ke"></a> Configure and Build the Linux kernel </h3>
+Now you have to configure the Linux kernel according to your hardware. We have two default configuration at91 SoC in <code>arch/arm/configs</code>
+<pre>
+arch/arm/configs/at91&#95;dt&#95;defconfig
+arch/arm/configs/sama5&#95;defconfig
+</pre>
+<p /> <ul>
+<li> <code>at91_dt_defconfig</code>: for SAM9 (ARM926) series chips
+</li> <li> <code>sama5_defconfig</code>: for SAMA5 series chips
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+Now we Configure and Build kernel for sama5d2_xplained board:
+<p />
+<pre>
+$ make ARCH&#61;arm sama5&#95;defconfig
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+</pre>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+At this step, you can modify default configuration using the <code>menuconfig</code>
+<pre>
+$ make ARCH&#61;arm menuconfig
+</pre>
+Now, in the menuconfig dialog, you can easily add or remove some features. Once done, Move to <code>&lt;Exit&gt;</code> with arrows and press this button hitting the <code>Enter</code> key to exit from this screen.
+<p />
+Build the Linux kernel image, before you build you need set up the cross compile toolchain, check <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Setup_ARM_Cross_Compiler">this section</a>.
+<p />
+<pre>
+$ make ARCH&#61;arm
+
+&#91;..]
+
+  Kernel: arch/arm/boot/Image is ready
+  Kernel: arch/arm/boot/zImage is ready
+</pre>
+<p />
+Now you have an usable compressed kernel image <code>zImage</code>.
+<p />
+If you need an uImage you can run this additional step:
+<p />
+<pre>
+make ARCH&#61;arm uImage LOADADDR&#61;0x20008000
+
+&#91;..]
+
+  Kernel: arch/arm/boot/zImage is ready
+  UIMAGE  arch/arm/boot/uImage
+Image Name:   Linux-4.1.0-linux4sam&#95;5.3+
+Created:      Fri Sep  9 17:02:45 2016
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    3441072 Bytes &#61; 3360.42 kB &#61; 3.28 MB
+Load Address: 20008000
+Entry Point:  20008000
+  Image arch/arm/boot/uImage is ready
+
+</pre>
+<p />
+<pre>
+make ARCH&#61;arm dtbs
+
+&#91;..]
+  DTC     arch/arm/boot/dts/at91-kizbox2.dtb
+  DTC     arch/arm/boot/dts/at91-nattis-2-natte-2.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d27&#95;som1&#95;ek.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d2&#95;ptc&#95;ek.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d2&#95;xplained.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d3&#95;xplained.dtb
+  DTC     arch/arm/boot/dts/at91-tse850-3.dtb
+  DTC     arch/arm/boot/dts/sama5d31ek.dtb
+  DTC     arch/arm/boot/dts/sama5d33ek.dtb
+  DTC     arch/arm/boot/dts/sama5d34ek.dtb
+  DTC     arch/arm/boot/dts/sama5d35ek.dtb
+  DTC     arch/arm/boot/dts/sama5d36ek.dtb
+  DTC     arch/arm/boot/dts/sama5d36ek&#95;cmp.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4&#95;ma5d4evk.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4&#95;xplained.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4ek.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4ek&#95;isi.dtb
+  DTC     arch/arm/boot/dts/at91-vinco.dtb
+&#91;..]
+</pre>
+<p />
+If the building process is successful, the final images can be found under <em>arch/arm/boot/</em> directory.
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Build_Yocto_Poky_rootfs_from_sou"></a> Build Yocto/Poky rootfs from sources </h2>
+<p />
+<p />
+<p />
+Note that building an entire distribution is a long process. It also requires a big amount of free disk space.
+<p />
+The support for Atmel AT91 SoC family is included in a particular Yocto layer: <code>meta-atmel</code>. The source for this layer are hosted on <a href="https://github.com/linux4sam" target="_blank">Linux4SAM GitHub account<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>: <a href="https://github.com/linux4sam/meta-atmel" target="_blank">https://github.com/linux4sam/meta-atmel<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h3><a name="Building_environment"></a> Building environment </h3>
+<p />
+A step-by-step comprehensive installation is explained in the <a href="https://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#super-user" target="_blank">Yocto Project Quick Start<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. The following lines have to be considered as an add-on that is AT91 specific or that can facilitate your setup.
+<p />
+<h4><a name="Prerequisite"></a> Prerequisite </h4>
+<p />
+Here are the reference pages for setting up a Yocto building environment: <a href="https://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#yp-resources" target="_blank">What You Need and How You Get It<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h4><a name="Step_by_step_build_procedure"></a> Step by step build procedure </h4>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> here is a copy of the <a href="https://raw.githubusercontent.com/linux4sam/meta-atmel/dunfell/README" target="_blank">README<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> procedure available directly in the <code>meta-atmel</code> layer. This file in the meta-atmel layer repository must be considered as the reference and the following copy can be out-of-sync.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> starting with <code>Linux4SAM 2020.04</code> release, the <code>meta-atmel</code> layer supports Yocto templates, so make sure you create a new build environment using <code>oe-init-build-env</code>
+<pre>
+This layer provides support for Microchip microprocessors (aka AT91)
+====================================================================
+
+For more information about the Microchip MPU product line see:
+http://www.microchip.com/design-centers/32-bit-mpus
+Linux & Open Source on Microchip microprocessors:
+http://www.linux4sam.org
+
+
+Supported SoCs / MACHINE names
+==============================
+Note that most of the machine names below, have a SD Card variant that can be
+built by adding an "-sd" suffix to the machine name.
+- SAMA5D2 product family / sama5d2-xplained, sama5d2-xplained-emmc, sama5d27-som1-ek-sd, sama5d2-ptc-ek, sama5d2-icp, sama5d27-wlsom1-ek-sd
+- SAMA5D4 product family / sama5d4ek, sama5d4-xplained
+- SAMA5D3 product family / sama5d3xek, sama5d3-xplained
+- AT91SAM9x5 product family (AT91SAM9G15, AT91SAM9G25, AT91SAM9X25, AT91SAM9G35 and AT91SAM9X35) / at91sam9x5ek
+- AT91SAM9RL / at91sam9rlek
+- AT91SAM9G45 / at91sam9m10g45ek
+- SAM9X60 / sam9x60ek
+- SAMA7G5 / sama7g5ek-sd, sama7g5ek-emmc
+
+
+Sources
+=======
+- meta-atmel
+URI: git://github.com/linux4sam/meta-atmel.git
+URI: https://github.com/linux4sam/meta-atmel.git
+Branch: dunfell
+
+
+Dependencies
+============
+This Layer depends on :
+- poky
+URI: git://git.yoctoproject.org/poky
+Branch: dunfell
+Tag: 861cfcd52f0b769772c3726530210f2f43c3449b
+
+- meta-openembedded
+URI: git://git.openembedded.org/meta-openembedded
+URI: http://cgit.openembedded.org/meta-openembedded/
+Branch: dunfell
+Tag: f2d02cb71eaff8eb285a1997b30be52486c160ae
+
+- meta-aws (for AWS Greengrass, mandatory for SAMA5D2 microchip-* images)
+URI: git://github.com/aws/meta-aws.git
+URI: https://github.com/aws/meta-aws
+Branch: dunfell
+Tag: e34ed15a87e36fa4199c63a184630fa370abac55
+
+Build procedure
+===============
+
+0/ Create a directory
+mkdir my_dir
+cd my_dir
+
+1/ Clone yocto/poky git repository with the proper branch ready
+git clone git://git.yoctoproject.org/poky -b dunfell
+
+2/ Clone meta-openembedded git repository with the proper branch ready
+git clone git://git.openembedded.org/meta-openembedded -b dunfell
+
+3/ Clone meta-aws git repository with the proper branch ready
+git clone git://github.com/aws/meta-aws -b dunfell
+
+4/ Clone meta-atmel layer with the proper branch ready
+git clone git://github.com/linux4sam/meta-atmel.git -b dunfell
+
+5/ Enter the poky directory to configure the build system and start the build process
+cd poky
+
+6/ Change TEMPLATECONF from .templateconf to:
+export TEMPLATECONF=${TEMPLATECONF:-../meta-atmel/conf}
+Note: If it's the first time you use Yocto Project templates, and if the
+build-microchip directory remains from a previous use, we advice you start
+from a fresh directory. Keep your build-microchip/conf/local.conf file for
+reference.
+
+7/ Initialize build directory
+source oe-init-build-env build-microchip
+
+8/ To build a small image provided by Yocto Project:
+[MACHINE=<machine>] bitbake core-image-minimal
+
+Example for sama5d2-xplained-sd SD card image:
+MACHINE=sama5d2-xplained-sd bitbake core-image-minimal
+
+9/ To build the microchip image with no graphics support:
+[MACHINE=<machine>] bitbake microchip-headless-image
+
+Example for sama5d2-xplained-sd SD card image:
+MACHINE=sama5d2-xplained-sd bitbake microchip-headless-image
+
+10/ To build the microchip image with graphics support (EGT):
+[MACHINE=<machine>] bitbake microchip-graphics-image
+
+Example for sama5d2-xplained-sd SD card image:
+MACHINE=sama5d2-xplained-sd bitbake microchip-graphics-image
+
+Typical bitbake output
+======================
+Build Configuration:
+BB_VERSION           = "1.46.0"
+BUILD_SYS            = "x86_64-linux"
+NATIVELSBSTRING      = "universal"
+TARGET_SYS           = "arm-poky-linux-gnueabi"
+MACHINE              = "sama5d2-xplained-sd"
+DISTRO               = "poky-atmel"
+DISTRO_VERSION       = "3.1.4"
+TUNE_FEATURES        = "arm vfp cortexa5 neon vfpv4 thumb callconvention-hard"
+TARGET_FPU           = "hard"
+meta
+meta-poky
+meta-yocto-bsp       = "dunfell:861cfcd52f0b769772c3726530210f2f43c3449b"
+meta-oe
+meta-networking
+meta-python
+meta-initramfs       = "dunfell:f2d02cb71eaff8eb285a1997b30be52486c160ae"
+meta-atmel           = "dunfell:060a1d102176dbffdcd113d62585f728735811d3"
+meta-multimedia      = "dunfell:f2d02cb71eaff8eb285a1997b30be52486c160ae"
+meta-aws             = "dunfell:e34ed15a87e36fa4199c63a184630fa370abac55"
+
+
+Contributing
+============
+To contribute to this layer you should submit the patches for review to:
+the github pull-request facility directly or the forum. Anyway, don't forget to
+Cc the maintainers.
+
+AT91 Forum:
+http://www.at91.com/discussions/
+
+for some useful guidelines to be followed when submitting patches:
+http://www.openembedded.org/wiki/How_to_submit_a_patch_to_OpenEmbedded
+
+Maintainers:
+Codrin Ciubotariu <codrin.ciubotariu@microchip.com>
+Nicolas Ferre <nicolas.ferre@microchip.com>
+
+When creating patches insert the [meta-atmel] tag in the subject, for example
+use something like:
+git format-patch -s --subject-prefix='meta-atmel][PATCH' <origin>
+</pre>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h1><a name="Using_SAM_BA_to_flash_components"></a> Using SAM-BA to flash components to board </h1>
+<p />
+<p />
+<p />
+<h2><a name="SPI_eMMC_Flash_demo_Memory_map"></a> SPI + eMMC Flash demo - Memory map </h2>
+<p />
+<img alt="demo_spi_emmc_map_lnx4sam6x.png" src="../../../pub/Linux4SAM/Samba3Subsections/demo_spi_emmc_map_lnx4sam6x.png" />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Install_SAM_BA_software_in_your"></a> Install SAM-BA software in your PC </h2>
+<p />
+In addition to the official SAM-BA pages on <a href="http://www.microchip.com/" target="_blank">http://www.microchip.com<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, we maintain information about SAM-BA in the <a class="twikiAnchorLink" href="SoftwareTools.html#SAM_BA">SoftwareTools</a> page.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" alt="ALERT!" title="ALERT!" width="16" height="16" border="0" /> use SAM-BA 3.2.y onwards. You can download it here: <a href="https://github.com/atmelcorp/sam-ba/releases" target="_blank">SAM-BA 3.x release page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<p />
+<p />
+<h2><a name="Launch_SAM_BA_tools"></a> Launch SAM-BA tools </h2>
+<p /> <ul>
+<li> According to <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#Connect_the_USB_to_the_board_bef">this section</a> make sure that the chip can execute the SAM-BA Monitor.
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+In addition to the Qt5 <code>QML</code> language for scripting used for flashing the demos, most common SAM-BA action can be done using SAM-BA command line.
+<p />
+For browsing information on the SAM-BA command line usage, please see the Command Line Documentation that is available in the SAM-BA installation directory: <code>doc/index.html</code> or <code>doc/cmdline.html</code> .
+<p />
+<!-- From SAM-BA 3.2-beta4 doc/cmdline.html -->
+<p />
+<p>SAM-BA includes command line interface that provides support for the most common actions:</p>
+<ul>
+<li>reading / writing to arbitrary memory addresses and/or peripherals</li>
+<li>uploading applets and using them to erase/read/write external memories</li>
+</ul>
+<p>The command line interface is designed to be self-documenting.</p>
+<p>The main commands can be listed using the &quot;<i>sam-ba --help</i>&quot; command:</p>
+<pre class="cpp">Usage: <span class="operator">.</span><span class="operator">/</span>sam<span class="operator">-</span>ba <span class="operator">[</span>options<span class="operator">]</span>
+SAM<span class="operator">-</span>BA Command Line Tool
+
+Options:
+  <span class="operator">-</span>v<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>version                          Displays version information<span class="operator">.</span>
+  <span class="operator">-</span>h<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>help                             Displays <span class="keyword">this</span> help<span class="operator">.</span>
+  <span class="operator">-</span>x<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>execute <span class="operator">&lt;</span>script<span class="operator">.</span>qml<span class="operator">&gt;</span>             Execute script <span class="operator">&lt;</span>script<span class="operator">-</span>file<span class="operator">&gt;</span><span class="operator">.</span>
+  <span class="operator">-</span>p<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>port <span class="operator">&lt;</span>port<span class="operator">[</span>:options:<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span><span class="operator">]</span><span class="operator">&gt;</span>        Communicate with device <span class="keyword">using</span> <span class="operator">&lt;</span>port<span class="operator">&gt;</span><span class="operator">.</span>
+  <span class="operator">-</span>d<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>device <span class="operator">&lt;</span>device<span class="operator">&gt;</span>                  Connected device is <span class="operator">&lt;</span>device<span class="operator">&gt;</span><span class="operator">.</span>
+  <span class="operator">-</span>b<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>board <span class="operator">&lt;</span>board<span class="operator">&gt;</span>                    Connected board is <span class="operator">&lt;</span>board<span class="operator">&gt;</span><span class="operator">.</span>
+  <span class="operator">-</span>m<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span><span class="keyword">monitor</span> <span class="operator">&lt;</span>command<span class="operator">[</span>:options:<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span><span class="operator">]</span><span class="operator">&gt;</span>  Run <span class="keyword">monitor</span> command <span class="operator">&lt;</span>command<span class="operator">&gt;</span><span class="operator">.</span>
+  <span class="operator">-</span>a<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>applet <span class="operator">&lt;</span>applet<span class="operator">[</span>:options:<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span><span class="operator">]</span><span class="operator">&gt;</span>    Load and initialize applet <span class="operator">&lt;</span>applet<span class="operator">&gt;</span><span class="operator">.</span>
+  <span class="operator">-</span>c<span class="operator">,</span> <span class="operator">-</span><span class="operator">-</span>command <span class="operator">&lt;</span>command<span class="operator">[</span>:args:<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span><span class="operator">]</span><span class="operator">&gt;</span>     Run command <span class="operator">&lt;</span>command<span class="operator">&gt;</span><span class="operator">.</span></pre>
+<p>Additional help can be obtained for most commands by supplying a &quot;help&quot; parameter that will display their usage.</p>
+<p>For example &quot;<i>sam-ba --port help</i>&quot; will display:</p>
+<pre class="cpp">Known ports: j<span class="operator">-</span>link<span class="operator">,</span> serial</pre>
+<p>Command that take an argument with options (port, monitor, applet) will display even more documentation when called with &quot;help&quot; as option value.</p>
+<p>For example &quot;<i>sam-ba --port serial:help</i>&quot; will display:</p>
+<pre class="cpp">Syntax: serial:<span class="operator">[</span><span class="operator">&lt;</span>port<span class="operator">&gt;</span><span class="operator">]</span>:<span class="operator">[</span><span class="operator">&lt;</span>baudrate<span class="operator">&gt;</span><span class="operator">]</span>
+Examples: serial <span class="operator">-</span><span class="operator">&gt;</span> serial port (will use first AT91 USB <span class="keyword">if</span> found otherwise first serial port)
+          serial:COM80 <span class="operator">-</span><span class="operator">&gt;</span> serial port on COM80
+          serial:ttyUSB0:<span class="number">57600</span> <span class="operator">-</span><span class="operator">&gt;</span> serial port on <span class="operator">/</span>dev<span class="operator">/</span>ttyUSB0<span class="operator">,</span> baudrate <span class="number">57600</span></pre>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Programming_components_into_SPI"></a> Programming components into SPI flash </h2>
+<p />
+<h3><a name="Program_AT91Bootstrap_binary"></a> Program AT91Bootstrap binary </h3>
+<p />
+<p />
+<p />
+Run SAM-BA with USB connection (equivalent to <code>serial</code>) and erase the beginning of the SPI flash <strong>and then</strong> write AT91Bootstrap binary:
+<p />
+<pre>
+# sam-ba -p serial -b sama5d2-xplained -a serialflash -c erase::0x3000 -c writeboot:at91bootstrap-sama5d2_xplained.bin
+Opening serial port 'ttyACM0'
+Connection opened.
+Detected memory size is 4194304 bytes.
+Page size is 256 bytes.
+Buffer is 93952 bytes (367 pages) at address 0x002290c0.
+Supported erase block sizes: 4KB, 32KB, 64KB
+Executing command 'erase::0x3000'
+Erased 4096 bytes at address 0x00000000 (33.33%)
+Erased 4096 bytes at address 0x00001000 (66.67%)
+Erased 4096 bytes at address 0x00002000 (100.00%)
+Executing command 'writeboot:at91bootstrap-sama5d2_xplained.bin'
+Appending 56 bytes of padding to fill the last written page
+Wrote 10752 bytes at address 0x00000000 (100.00%)
+Connection closed.
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/help.gif" alt="HELP" title="HELP" width="16" height="16" border="0" /> Note that you can run several commands on the same SAM-BA invocation.
+<p />
+<p />
+<p />
+<h3><a name="Program_U_Boot_binary"></a> Program U-Boot binary </h3>
+<p />
+Run SAM-BA with USB connection (equivalent to <code>serial</code>) and erase the U-Boot section in the <a class="twikiCurrentTopicLink twikiAnchorLink" href="Sama5d2XplainedMainPage.html#SPI_eMMC_Flash_demo_Memory_map">SPI flash memory map</a> <strong>and then</strong> write U-Boot binary:
+<p />
+<pre>
+# sam-ba -p serial -b sama5d2-xplained -a serialflash -c erase:0x8000:0x70000 -c write:u-boot-sama5d2-xplained.bin:0x8000
+Opening serial port 'ttyACM0'
+Connection opened.
+Detected memory size is 4194304 bytes.
+Page size is 256 bytes.
+Buffer is 93952 bytes (367 pages) at address 0x002290c0.
+Supported erase block sizes: 4KB, 32KB, 64KB
+Executing command 'erase:0x8000:0x70000'
+Erased 32768 bytes at address 0x00008000 (7.14%)
+Erased 65536 bytes at address 0x00010000 (21.43%)
+Erased 65536 bytes at address 0x00020000 (35.71%)
+Erased 65536 bytes at address 0x00030000 (50.00%)
+Erased 65536 bytes at address 0x00040000 (64.29%)
+Erased 65536 bytes at address 0x00050000 (78.57%)
+Erased 65536 bytes at address 0x00060000 (92.86%)
+Erased 32768 bytes at address 0x00070000 (100.00%)
+Executing command 'write:u-boot-sama5d2-xplained.bin:0x8000'
+Appending 118 bytes of padding to fill the last written page
+Wrote 93952 bytes at address 0x00008000 (23.30%)
+Wrote 93952 bytes at address 0x0001ef00 (46.60%)
+Wrote 93952 bytes at address 0x00035e00 (69.90%)
+Wrote 93952 bytes at address 0x0004cd00 (93.21%)
+Wrote 27392 bytes at address 0x00063c00 (100.00%)
+Connection closed.
+</pre>
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Programming_components_into_eMMC"></a> Programming components into eMMC flash </h2>
+<p />
+<h3><a name="Program_rootfs_file"></a> Program rootfs file </h3>
+<p />
+With SAM-BA you can directly program SD/MMC images to the on-board eMMC. These images are named <code>*.img</code> or <code>*.wic</code> for the ones generated by Yocto Project.
+<p />
+<pre>
+# sam-ba -p serial -b sama5d2-xplained -a sdmmc -c write:atmel-qt5-demo-image-sama5d2-xplained.wic
+Opening serial port 'ttyACM0'
+Connection opened.
+Detected memory size is 3925868544 bytes.
+Page size is 512 bytes.
+Buffer is 88576 bytes (173 pages) at address 0x0022a5a0.
+Executing command 'write:atmel-qt5-demo-image-sama5d2-xplained.wic'
+Wrote 88576 bytes at address 0x00000000 (0.02%)
+Wrote 88576 bytes at address 0x00015a00 (0.04%)
+Wrote 88576 bytes at address 0x0002b400 (0.05%)
+Wrote 88576 bytes at address 0x00040e00 (0.07%)
+Wrote 88576 bytes at address 0x00056800 (0.09%)
+[..]
+Wrote 88576 bytes at address 0x1d4e8600 (99.98%)
+Wrote 88576 bytes at address 0x1d4fe000 (100.00%)
+Wrote 4608 bytes at address 0x1d513a00 (100.00%)
+Connection closed.
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/help.gif" alt="HELP" title="HELP" width="16" height="16" border="0" /> Note that programming a rootfs of several hundreds of MiB will take a few minutes to complete.
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h1><a name="Recent_FAQ"></a> Recent FAQ </h1>
+<p />
+<p /> <dl>
+<dt> <a class="twikiCurrentTopicLink twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a> </dt><dd> <br />&#8226; <a href="HasherrorwhenbootingFITimage.html" >Hasherrorwhenbooting FITimage</a>: . (<a class="twikiLink" href="U-Boot.html">U-Boot</a>) <br />&#8226; <a href="UsingI2SC.html" >Using I 2 SC</a>: How to use I2SC. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="UsingFITwithOverlays.html" >Using FITwith Overlays</a>: How to use U-boot with FIT image to load overlays. (<a class="twikiLink" href="U-Boot.html">U-Boot</a>, <a class="twikiLink" href="LinuxKernel.html">Kernel</a>) <br />&#8226; <a href="BuildLinuxSsl.html" >Build Linux Ssl</a>: Kernel Compilation Error related to OpenSSL. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>) <br />&#8226; <a href="BuildIssueOpenWrtUbuntu2004.html" >Build Issue Open Wrt Ubuntu 2004</a>: OpenWrt build error on Ubuntu 20.04. (<a class="twikiLink" href="OpenWrt.html">OpenWrt</a>) <br />&#8226; <a href="ConnectModuleFromPDA.html" >Connect Module From PDA</a>: How to connect LCD module from PDA to the Boards. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>) <br />&#8226; <a href="SDCardBootNotice.html" >SDCard Boot Notice</a>: How to boot up the board from SD card. (<a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>) <br />&#8226; <a href="UsingSAMA5D2ResistiveTouchscreen.html" >Using SAMA 5 D 2 Resistive Touchscreen</a>: Guide for SAMA5D2 Resistive Touchscreen. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="ISCWhiteBalanceFeatures.html" >ISCWhite Balance Features</a>: White balance features of the Image sensor controller.. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="UsingMaxTouch.html" >Using Max Touch</a>: Introduction for how to use <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/MaxTouch?topicparent=Linux4SAM.Sama5d2XplainedMainPage;nowysiwyg=1" rel="nofollow" title="MaxTouch (this topic does not yet exist; you can create it)">MaxTouch</a></span>. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="UsingSAMA5D2ADCDevice.html" >Using SAMA 5 D 2 ADCDevice</a>: Using the SAMA5D2-compatible ADC device. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="ExternalComponentOnEBI.html" >External Component On EBI</a>: Connecting an external component on the External Bus Interface. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="UsingAtmelDRMDriver.html" >Using Atmel DRMDriver</a>: Using Atmel KMS/DRM LCD driver. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="PwmFaq.html" >Pwm Faq</a>: PWM Driver. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_3_10.html">linux-3.10-at91</a>, <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="USBGadgetConfig.html" >USBGadget Config</a>: Configure AT91 USB Gadget on Linux and Endpoint order management (composite USB). (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>) <br />&#8226; <a href="CryptoConfig.html" >Crypto Config</a>: How to configure Crypto driver. (<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>)
+</dd></dl>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r7 - 12 Sep 2018 - 14:20:55 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/AndreiStefanescu?origurl=/bin/view/Main/AndreiStefanescu">AndreiStefanescu</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiCurrentTopicLink twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/Sama5d2XplainedMainPage"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="Sama5d2XplainedMainPage3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/Sama5d2XplainedMainPage by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:49:40 GMT -->
+</html>

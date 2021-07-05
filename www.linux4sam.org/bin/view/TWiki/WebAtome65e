@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TWiki's TWiki web</title>
+<subtitle>The Documentation Web of TWiki. TWiki is an Enterprise Collaboration Platform.</subtitle>
+<link rel="self" type="application/atom+xml" href="https://www.linux4sam.org/bin/view/TWiki/WebAtom"/>
+<id>https://www.linux4sam.org/bin/view/TWiki</id>
+<rights>Copyright 2021 by contributing authors</rights>
+<updated>2015-07-17T04:33:33Z</updated>
+<entry>
+ <title>FlexWebListTree</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/FlexWebListTree?t=2015-07-17T04:33:33Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/FlexWebListTree</id>
+ <updated>2015-07-17T04:33:33Z</updated>
+ <summary>Flex Web List Tree The fragment below can be used in a sidebar navigation to establish a folder like subweb navigation. This uses the jqTreeview widget of the TWiki... (last changed by TWikiAdminUser)</summary>
+ <author>
+  <name>TWikiAdminUser</name></author>
+</entry>
+<entry>
+ <title>FlexWebListPlugin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/FlexWebListPlugin?t=2015-07-17T04:33:33Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/FlexWebListPlugin</id>
+ <updated>2015-07-17T04:33:33Z</updated>
+ <summary>FlexWebListPlugin Description This is a replacement for TWiki`s standard WEBLIST variable. It is extended to improve the display of hierarchical web structures... (last changed by TWikiAdminUser)</summary>
+ <author>
+  <name>TWikiAdminUser</name></author>
+</entry>
+<entry>
+ <title>FlexWebListNavi</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/FlexWebListNavi?t=2015-07-17T04:33:33Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/FlexWebListNavi</id>
+ <updated>2015-07-17T04:33:33Z</updated>
+ <summary>Flex Web List Navigation The fragment below can be used in a sidebar navigation to establish a `twisted` subweb navigation. Use it by adding % INCLUDE{`TWiki.FlexWebListNavi... (last changed by TWikiAdminUser)</summary>
+ <author>
+  <name>TWikiAdminUser</name></author>
+</entry>
+<entry>
+ <title>FormPlugin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/FormPlugin?t=2015-02-25T18:07:24Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/FormPlugin</id>
+ <updated>2015-02-25T18:07:24Z</updated>
+ <summary>Main features No html knowledge required to create forms Add input fields, textareas, dropdown select boxes, checkboxes, radio buttons Set preselected... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiStoreRcsFileDotPm</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiStoreRcsFileDotPm?t=2013-10-14T08:02:47Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiStoreRcsFileDotPm</id>
+ <updated>2013-10-14T08:02:47Z</updated>
+ <summary>Package TWiki::Store::RcsFile This class is PACKAGE PRIVATE to Store, and should never be used from anywhere else. It is the base class of implementations of stores... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiHistory</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiHistory?t=2013-10-14T07:00:12Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiHistory</id>
+ <updated>2013-10-14T07:00:12Z</updated>
+ <summary>Appendix A: TWiki Development Time line TWiki Release 6.0 (Jerusalem) released on 2013 10 14 New Features and Enhancements of TWiki Release 6.0 Bug Fixes... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiSiteTools</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiSiteTools?t=2013-10-13T10:29:54Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiSiteTools</id>
+ <updated>2013-10-13T10:29:54Z</updated>
+ <summary>TWiki Site Tools Utilities for searching, navigation, and monitoring site activity TWiki Site Tools include utilities for navigating, searching and keeping up with... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>UserBookmarks</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/UserBookmarks?t=2013-10-03T21:25:06Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/UserBookmarks</id>
+ <updated>2013-10-03T21:25:06Z</updated>
+ <summary>Bookmarks Application Page This page contains several parts that are used by user bookmark pages. Bookmark pages reside in the web and are named wikiname Bookmarks... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TopMenuSkin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TopMenuSkin?t=2013-09-28T08:05:43Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TopMenuSkin</id>
+ <updated>2013-09-28T08:05:43Z</updated>
+ <summary>TopMenuSkin The TopMenuSkin adds pulldown menus to the PatternSkin. Screenshot Tob Bar and Menu Structure TopMenuSkinTopBar top bar with menu bar, logo and... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiScripts</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiScripts?t=2013-09-25T19:36:54Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiScripts</id>
+ <updated>2013-09-25T19:36:54Z</updated>
+ <summary>TWiki CGI and Command Line Scripts Programs on the TWiki server performing actions such as rendering, saving and renaming topics. The TWiki scripts are located in... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>WysiwygPlugin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/WysiwygPlugin?t=2013-09-18T23:51:41Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/WysiwygPlugin</id>
+ <updated>2013-09-18T23:51:41Z</updated>
+ <summary>Wysiwyg Plugin Support for the integration of WYSIWYG (What You See Is What You Get) editors. On its own, the only thing this plugin gives you is a stand alone HTML... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>WatchlistPlugin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/WatchlistPlugin?t=2013-09-15T22:07:24Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/WatchlistPlugin</id>
+ <updated>2013-09-15T22:07:24Z</updated>
+ <summary>Watchlist Plugin Introduction The WatchlistPlugin adds watchlist feature to TWiki topics. Topics of interest can be watched and unwatched. A user can see recent changes... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiPlugins</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiPlugins?t=2013-08-30T01:12:19Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiPlugins</id>
+ <updated>2013-08-30T01:12:19Z</updated>
+ <summary>TWiki Plugins Add functionality to TWiki with readily available plugins; create plugins based on APIs Overview You can add plugins to extend TWiki functionality... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiVariables</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiVariables?t=2013-04-24T23:58:24Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiVariables</id>
+ <updated>2013-04-24T23:58:24Z</updated>
+ <summary>TWiki Variables Special text strings expand on the fly to display dynamic content, such as user data or system info TWikiVariables are text strings % VARIABLE... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiEditingShorthand</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiEditingShorthand?t=2013-03-19T02:30:13Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiEditingShorthand</id>
+ <updated>2013-03-19T02:30:13Z</updated>
+ <summary>TWiki Editing Shorthand These instructions are for contributors who prefer to use the Raw Edit over the default WYSIWYG editor. Formatting Command: You write:... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>EditTablePlugin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/EditTablePlugin?t=2013-02-16T18:14:56Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/EditTablePlugin</id>
+ <updated>2013-02-16T18:14:56Z</updated>
+ <summary>Edit Table Plugin Introduction Edit TWiki tables in place, using edit fields and drop down boxes, without having to edit the complete topic. Simply add an Edit... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+ <!-- <ul>
+<li> Set SKIN = rssatom
+</li></ul> 
+--></feed>

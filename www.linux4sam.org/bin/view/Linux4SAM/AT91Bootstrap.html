@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/AT91Bootstrap by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:55:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> AT91Bootstrap &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/AT91Bootstrap?t=1625510733" type="application/x-wiki" title="Edit AT91Bootstrap" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/AT91Bootstrap?t=1625510733" title="Edit AT91Bootstrap" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style>
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="AT91Bootstrap"></a> AT91Bootstrap </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#Boot_strategies"> Boot strategies</a> <ul>
+<li> <a href="#ROM_Code_boot_Sequence_example"> ROM Code boot Sequence example</a>
+</li></ul> 
+</li> <li> <a href="#Build_AT91Bootstrap_from_sources"> Build AT91Bootstrap from sources</a> <ul>
+<li> <a href="#Setup_ARM_Cross_Compiler"> Setup ARM Cross Compiler</a>
+</li> <li> <a href="#Other_dependencies"> Other dependencies</a>
+</li> <li> <a href="#Build_AT91Bootstrap"> Build AT91Bootstrap</a> <ul>
+<li> <a href="#Get_AT91Bootstrap_Source_Code"> Get AT91Bootstrap Source Code</a>
+</li> <li> <a href="#Configure_AT91Bootstrap"> Configure AT91Bootstrap</a>
+</li> <li> <a href="#Customize_AT91Bootstrap"> Customize AT91Bootstrap</a>
+</li> <li> <a href="#Build_AT91Bootstrap_AN1"> Build AT91Bootstrap</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Program_AT91Bootstrap_binary_int"> Program AT91Bootstrap binary into nandflash</a> <ul>
+<li> <a href="#Using_SAM_BA_to_flash_AT91Bootst"> Using SAM-BA to flash AT91Bootstrap to board</a> <ul>
+<li> <a href="#Launch_SAM_BA_tools"> Launch SAM-BA tools</a>
+</li> <li> <a href="#Configure_NAND_ECC_config"> Configure NAND ECC config</a>
+</li> <li> <a href="#Programming_AT91Bootstrap"> Programming AT91Bootstrap</a>
+</li></ul> 
+</li> <li> <a href="#Using_U_Boot_to_flash_AT91Bootst"> Using U-Boot to flash AT91Bootstrap</a> <ul>
+<li> <a href="#Setup_PMECC_header_for_different"> Setup PMECC header for different type of board</a>
+</li> <li> <a href="#Load_AT91Bootstrap_binary_and_se"> Load AT91Bootstrap binary and setup the 6th vector (offset is 0x14) as the file size</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Contributing_to_AT91Bootstrap"> Contributing to AT91Bootstrap</a>
+</li> <li> <a href="#Known_Issues"> Known Issues</a>
+</li> <li> <a href="#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<p />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+AT91Bootstrap is the 2nd level bootloader for Atmel AT91 SoC providing a set of algorithms to manage the hardware initialization such as clock speed configuration, PIO settings, DRAM initialization, to download your main application from specified boot media (NAND FLASH, serial FLASH (both AT25-compatible of DataFlash), serial EEPROM, SD Card, etc.) to main memory and to start it.
+<p />
+<h1><a name="Boot_strategies"></a> Boot strategies </h1>
+AT91 chips embed a boot ROM code. It is enabled depending on BMS (Boot Mode Select) pin state on reset. The ROM code scans the contents of different media like serial FLASH, NAND FLASH, SD/MMC Card and serial EEPROM. If a valid application is available then it downloads this application into the chip internal SRAM and runs it. To determine if a valid application is present the ROM code checks the eight ARM exception vectors.<br>
+<p />
+If no valid application is available then SAM-BA Monitor is executed. It waits for transactions either on the USB device, or on the DBGU serial port, then the SAM-BA tool can be used to program FLASH or EEPROM present on your board.<br>
+<p />
+For more information on this topic, please check the corresponding SAM product datasheet section <em>Boot Strategies</em>.
+<p />
+<h2><a name="ROM_Code_boot_Sequence_example"></a> ROM Code boot Sequence example </h2>
+<p />
+This is an <strong>example</strong> of boot sequence when <strong>BMS=1</strong> taken from the <code>sama5</code> product family:
+<p />
+<p><img src="../../../pub/Linux4SAM/AT91Bootstrap/nvm_boot_sequence.png" alt="sama5 boot sequence diagram" /></p>
+<p />
+By programming BSC_CR register, we can bypass some steps in above sequence.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Note need a reset to make BSC_CR effective. And BSC_CR will be restored to factory value if power is removed.
+<p />
+<h1><a name="Build_AT91Bootstrap_from_sources"></a> Build AT91Bootstrap from sources </h1>
+<h2><a name="Setup_ARM_Cross_Compiler"></a> Setup ARM Cross Compiler </h2>
+<p />
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />  If using an old toolchain, there have been reported issues. Please see the document <a href="https://github.com/linux4sam/at91bootstrap/blob/master/KNOWN_ISSUES" target="_blank">KNOWN ISSUES<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>  for your release which is inside the source code. We always recommend using up-to-date toolchains.
+<p />
+<p />
+<p /> <ul>
+<li> Ubuntu: <br />   In Ubuntu, you can install the ARM Cross Compiler by doing:   <pre>
+sudo apt-get install gcc-arm-linux-gnueabi
+export CROSS&#95;COMPILE&#61;arm-linux-gnueabi-
+   </pre>
+</li></ul> 
+<p /> <ul>
+<li> Others: <br />   For others, you can download the Linaro cross compiler and setup the environment by doing:   <pre>
+wget -c https://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi.tar.xz
+tar xf gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi.tar.xz
+export CROSS&#95;COMPILE&#61;`pwd`/gcc-linaro-7.3.1-2018.05-x86&#95;64&#95;arm-linux-gnueabi/bin/arm-linux-gnueabi-
+   </pre>
+</li></ul> 
+<p />
+<p />
+<p />
+<h2><a name="Other_dependencies"></a> Other dependencies </h2>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />  Starting with version 3.9.3, AT91bootstrap changed the python requirements for the pmecc header generating scripts to Python3.<br>
+Version 3.9.2 is equivalent with version 3.9.3 but continues to use Python2. <br>
+Yocto Project version 3.1 (Dunfell) and later , have obsoleted Python2, thus must use Python3. That is why Yocto Dunfell and later use 3.9.3 or later versions with Python3.<br>
+Future versions of <a class="twikiCurrentTopicLink twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> will most likely be Python3 only.
+<p />
+<h2><a name="Build_AT91Bootstrap"></a> Build AT91Bootstrap </h2>
+<p />
+<p />
+This section describes how to get source code from the git repository, how to configure with the default configuration, how to customize AT91Bootstrap based on the default configuration and finally to build AT91Bootstrap to produce the binary. take the default configuration to download U-Boot from NandFlash for example.
+<p />
+<h3><a name="Get_AT91Bootstrap_Source_Code"></a> Get AT91Bootstrap Source Code </h3>
+You can easily download AT91Bootstrap source code on the <a href="https://github.com/linux4sam/at91bootstrap" target="_blank">at91bootstrap<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> git repository.<br>
+<p />
+To get the source code, you should clone the repository by doing:
+<pre>
+$ git clone git://github.com/linux4sam/at91bootstrap.git
+Cloning into &#39;at91bootstrap&#39;...
+remote: Enumerating objects: 51, done.
+remote: Counting objects: 100&#37; (51/51), done.
+remote: Compressing objects: 100&#37; (32/32), done.
+remote: Total 10880 (delta 20), reused 39 (delta 19), pack-reused 10829
+Receiving objects: 100&#37; (10880/10880), 4.03 MiB &#124; 395.00 KiB/s, done.
+Resolving deltas: 100&#37; (8300/8300), done.
+$ cd at91bootstrap/
+</pre>
+<p />
+<h3><a name="Configure_AT91Bootstrap"></a> Configure AT91Bootstrap </h3>
+<p />
+<p />
+Assuming you are at the AT91Bootstrap root directory, you will find a <code>board/sam9x60ek</code> folder which contains several default configuration files: <br>
+<p />
+<pre>
+sam9x60ekqspi&#95;uboot&#95;defconfig
+sam9x60eksd&#95;uboot&#95;defconfig
+sam9x60eknf&#95;uboot&#95;defconfig
+</pre>
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> <code>qspi</code> means to read quad-SPI serial flash, <code>sd</code> means to read mmc card, <code>nf</code> means to read nand flash<br />
+<p />
+You can configure AT91Bootstrap to load U-Boot binary from SD Card by doing:
+<pre>
+$ make mrproper
+$ make sam9x60eksd&#95;uboot&#95;defconfig
+</pre>
+If the configuring process is successful, the .config file can be found at AT91Bootstrap root directory.
+<p />
+<p />
+<p />
+<h3><a name="Customize_AT91Bootstrap"></a> Customize AT91Bootstrap </h3>
+If the default configuration doesn't meet your need, after configuring with the default configuration, you can customize it by doing:
+<pre>
+$ make menuconfig
+</pre>
+Now, in the menuconfig dialog,  you can easily add or remove some features to/from AT91Bootstrap as the same way as kernel configuration.<br>Move to <code>&lt;Exit&gt;</code> with arrows and press this button hitting the <code>Enter</code> key to exit from this screen.
+<p />
+<h3><a name="Build_AT91Bootstrap_AN1"></a> Build AT91Bootstrap </h3>
+Then you can build the AT91Bootstrap binary by doing:
+<pre>
+$ make
+</pre>
+<p />
+If the building process is successful, the final .bin image is <em>binaries/at91bootstrap.bin</em>.
+<p />
+<p />
+<p />
+<h1><a name="Program_AT91Bootstrap_binary_int"></a> Program AT91Bootstrap binary into nandflash </h1>
+<p />
+<h2><a name="Using_SAM_BA_to_flash_AT91Bootst"></a> Using SAM-BA to flash AT91Bootstrap to board </h2>
+<p />
+<h3><a name="Launch_SAM_BA_tools"></a> Launch SAM-BA tools </h3>
+<p /> <ul>
+<li> According to <a class="twikiAnchorLink" href="Sama5d3xekMainPage.html#Connect_the_USB_to_the_board_bef">this section (take sama5d3xek as example)</a> make sure that the chip can execute the SAM-BA Monitor.
+</li></ul> 
+<p />
+<p />
+<h3><a name="Configure_NAND_ECC_config"></a> Configure NAND ECC config </h3>
+<p />
+<p />
+<p />
+<h3><a name="Programming_AT91Bootstrap"></a> Programming AT91Bootstrap </h3>
+<p /> <ul>
+<li> Choose <strong><em>Send Boot File</em></strong> action, then press <strong><em>Execute</em></strong> button to select the at91bootstrap binary file and to program the binary to the NandFlash
+</li></ul> 
+<p />
+<p />
+<h2><a name="Using_U_Boot_to_flash_AT91Bootst"></a> Using U-Boot to flash AT91Bootstrap </h2>
+<p />
+<h3><a name="Setup_PMECC_header_for_different"></a> Setup PMECC header for different type of board </h3>
+<p />
+When ROM code load AT91Bootstrap in nandflash, at first ROM code will check the header to know what kind of ecc that binary is stored in nand.
+<p />
+So the header is made of 52 times the same 32-bit word, total in <strong>0xd0</strong> bytes, each 32-bit word in made in following format:
+<p><img src="../../../pub/Linux4SAM/AT91Bootstrap/pmecc_header_format.png" alt="pmecc header" /></p>
+<p />
+For different EK boards, the pmecc header is listed in following:
+<pre>
+# at91sam9x5ek & at91sam9n12ek
+# 2 bit pmecc in 512 byte sector, one page has 4 sectors, spare size: 64, ecc offset: 48
+setenv pmecc_header 0xc0c00405
+
+# sama5d3xek & sama5d3_xplained
+# 4 bit pmecc in 512 byte sector, one page has 4 sectors, spare size: 64, ecc offset: 36
+setenv pmecc_header 0xc0902405
+
+# sama5d4ek & sama5d4 xplained
+# 8 bit pmecc in 512 byte sector, one page has 8 sectors, spare size: 224, ecc offset: 120
+setenv pmecc_header 0xc1e04e07
+</pre>
+<p />
+<h3><a name="Load_AT91Bootstrap_binary_and_se"></a> Load AT91Bootstrap binary and setup the 6th vector (offset is 0x14) as the file size </h3>
+<p /> <ul>
+<li> Following is U-Boot commands that can flash at91bootstrap to nand flash   <pre>
+setenv load_addr 22000000                            # load_addr started by pmecc header
+setenv load_addr_bootstrap 220000d0                  # load_addr + 0xd0
+setenv load_addr_bootstrap_vector 220000e4           # load_addr + 0xd0 + 0x14
+
+setenv erase_bootstrap 'nand erase 0 10000'          # erase first 64k nand.
+
+setenv mmc_bootstrap_file 'boot.bin'                 # at91bootstrap file name in mmc card
+setenv load_mmc_bootstrap 'mw.b ${load_addr} 0xff 0x10000; mw.l ${load_addr} ${pmecc_header} 0x34; fatload mmc 0 ${load_addr_bootstrap} ${mmc_bootstrap_file};'
+
+setenv flash_bootstrap_from_mmc 'run erase_bootstrap; run load_mmc_bootstrap; mw.l ${load_addr_bootstrap_vector} ${filesize}; nand write ${load_addr} 0 0x10000;'
+
+setenv tftp_bootstrap_file 'u-boot/boot.bin'         # at91bootstrap file name in tftp server folder
+setenv load_tftp_bootstrap 'mw.b ${load_addr} 0xff 0x10000; mw.l ${load_addr} ${pmecc_header} 0x34;tftp ${load_addr_bootstrap} ${tftp_bootstrap_file};'
+
+setenv flash_bootstrap_from_tftp 'run erase_bootstrap; run load_tftp_bootstrap; mw.l ${load_addr_bootstrap_vector} ${filesize}; nand write ${load_addr} 0 0x10000;'
+   </pre>
+</li></ul> 
+<p /> <ul>
+<li> Now we can run following commands to programming at91bootstrap to nandflash in U-Boot: <br/>   <code>run flash_bootstrap_from_tftp</code> or <code>run flash_bootstrap_from_mmc</code>
+</li></ul> 
+<p />
+<h1><a name="Contributing_to_AT91Bootstrap"></a> Contributing to AT91Bootstrap </h1>
+<p />
+If the system board that you have is not listed, then you will need to port <a class="twikiCurrentTopicLink twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> to your hardware platform. To do this, follow these steps:
+<p /> <ol>
+<li> Create a new directory to hold your board specific code under contrib/board/ directory. Add any files you need. In your board directory, you will need at least the "board.mk", a ".c", ".h", "Config.in.board", and "Config.in.boardname".
+</li> <li> Create the necessary default configuration files such as "df_uboot_defconfig" in your new board directory.
+</li> <li> Add(source) your board's "Config.in.board" in "contrib/board/Config.in.board" file.
+</li> <li> Add(source) your board's "Config.in.boardname" in the "contrib/board/Config.in.boardname" file.
+</li> <li> Add your board's ".h" in the "contrib/include/contrib_board.h" file.
+</li> <li>  Run "make df_uboot_defconfig" with your new name.
+</li> <li> Type "make", and you should get the final .bin image can be found under the binaries/ directory.
+</li></ol> 
+<p />
+To contribute to AT91Bootstrap you should submit the patches for review to the <a href="https://github.com/linux4sam/at91bootstrap/" target="_blank">github pull-request facility<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> directly.
+<p />
+Maintainers:
+<p />
+Eugen Hristev eugen.hristev at microchip dot com
+<p />
+Nicolas Ferre nicolas.ferre at microchip dot com
+<p />
+<h1><a name="Known_Issues"></a> Known Issues </h1>
+<p />
+About the latest version, some issues are found not fixed, please see the document <a href="https://github.com/linux4sam/at91bootstrap/blob/master/KNOWN_ISSUES" target="_blank">KNOWN ISSUES<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> with the project.
+<p />
+<h1><a name="Recent_FAQ"></a> Recent FAQ </h1>
+<p />
+<p /> <dl>
+<dt> <a class="twikiCurrentTopicLink twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> </dt><dd> <br />&#8226; <a href="SDCardBootNotice.html" >SDCard Boot Notice</a>: How to boot up the board from SD card. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="SOM1EKeMMCSupport.html" >SOM 1 EKe MMCSupport</a>: . (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>) <br />&#8226; <a href="AudioClocksOnSAM9X60.html" >Audio Clocks On SAM 9 X 60</a>: How to configure PLLA in AT91bootstrap to generate clocks for SAM9X60. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>) <br />&#8226; <a href="AT91BootstrapDebugEclipse.html" >AT 91 Bootstrap Debug Eclipse</a>: Debug <a class="twikiCurrentTopicLink twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>. (<a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>)
+</dd></dl>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="AT91Bootstrap33a1.html?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="AT91Bootstrap44bd.html?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="AT91Bootstrap76e2.html?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="AT91Bootstrapb21c.html?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="AT91Bootstrapd1c3.html?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="AT91Bootstrape84d.html?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="AT91Bootstrapbf07.html?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/AT91Bootstrap/nvm_boot_sequence.png">nvm_boot_sequence.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/AT91Bootstrap?filename=nvm_boot_sequence.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 39.8&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2015-05-19 - 03:31</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Main/JoshWu?topicparent=Linux4SAM.AT91Bootstrap;nowysiwyg=1" rel="nofollow" title="JoshWu (this topic does not yet exist; you can create it)">JoshWu</a></span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/AT91Bootstrap/pmecc_header_format.png">pmecc_header_format.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/AT91Bootstrap?filename=pmecc_header_format.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 15.4&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2015-05-19 - 03:32</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Main/JoshWu?topicparent=Linux4SAM.AT91Bootstrap;nowysiwyg=1" rel="nofollow" title="JoshWu (this topic does not yet exist; you can create it)">JoshWu</a></span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> &nbsp; </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r79 - 29 May 2020 - 12:04:52 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiCurrentTopicLink twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/AT91Bootstrap"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="AT91Bootstrap3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/AT91Bootstrap by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:55:38 GMT -->
+</html>

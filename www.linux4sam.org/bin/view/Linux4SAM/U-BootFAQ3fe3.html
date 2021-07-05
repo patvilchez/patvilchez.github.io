@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/U-BootFAQ?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; U-BootFAQ &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="U_Boot_FAQ"></a> U-Boot FAQ </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#How_does_U_Boot_auto_detect_the"> How does U-Boot auto-detect the connected PDA on my board ?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#How_can_I_add_another_Device_Tre"> How can I add another Device Tree overlay to my base Device Tree blob at runtime ?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#My_U_boot_detects_some_screens_b"> My U-boot detects some screens but not mine. What can I do ?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Which_screens_can_be_connected_t"> Which screens can be connected to my board? Does U-boot detect them all ?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#I_have_a_connected_screen_but_U"> I have a connected screen, but U-boot detects it wrong. Can I force U-boot to load another screen configuration?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#My_screen_is_black_although_it_s"> My screen is black, although it's a right screen, it is supposed to be detected. What can I do?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#What_is_a_FIT_image_and_how_does"> What is a FIT image and how does this work with U-boot?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#I_have_a_working_setup_with_a_sp"> I have a working setup with a specific PDA. I want to connect another PDA. Do I need to reflash my board or change any configuration ?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#How_do_I_use_U_Boot_to_store_bin"> How do I use U-Boot to store binaries in FLASH ?</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#How_do_I_access_U_Boot_environme"> How do I access U-Boot environment while Linux is running ?</a>
+</li></ul> 
+</div>
+<p />
+<h3><a name="How_does_U_Boot_auto_detect_the"></a> How does U-Boot auto-detect the connected PDA on my board ? </h3>
+A: U-Boot uses a specific GPIO pin to read a memory from the connected PDA. More information can be found on <a class="twikiLink" href="PDADetectionAtBoot.html">this page</a>.
+<p />
+<h3><a name="How_can_I_add_another_Device_Tre"></a> How can I add another Device Tree overlay to my base Device Tree blob at runtime ? </h3>
+A: U-boot allows the user to load a Device Tree Overlay and apply it on the base Device Tree Blob just before booting Linux, thus making it transparent for Linux (Linux will see just one Device Tree Blob like it expects). For more information, visit <a class="twikiLink" href="PatchingDTinUboot.html">this page</a>.
+<p />
+<h3><a name="My_U_boot_detects_some_screens_b"></a> My U-boot detects some screens but not mine. What can I do ? </h3>
+A: U-boot  <a class="twikiLink" href="PDADetectionAtBoot.html">detects all PDAs that have the EEPROM properly pre-programmed</a>. The U-boot environment loads a specific overlay for Linux for 4 possible screen types. Your screen might be detected, but the required overlay for Linux may not be loaded. There is a difference between detecting a screen and loading an overlay for a specific screen type. U-boot in our release comes with a pre-written U-boot environment script that loads the corresponding Device Tree Overlay for specific types of screens. You are free to manually override this behavior, add your own custom behavior, or force U-boot to do something else at boot time. For more information about the default environment and how to tweak it from U-boot prompt, visit <a class="twikiLink" href="SelectingPDAatBoot.html">this page</a>.
+<p />
+<h3><a name="Which_screens_can_be_connected_t"></a> Which screens can be connected to my board? Does U-boot detect them all ? </h3>
+A: For information about which screens you can connect, check <a class="twikiLink" href="ConnectModuleFromPDA.html">this page</a>. For information about what screens can U-boot detect, check  <a class="twikiCurrentTopicLink twikiAnchorLink" href="U-BootFAQ.html#My_U_boot_detects_some_screens_b">this question</a>.
+<p />
+<h3><a name="I_have_a_connected_screen_but_U"></a> I have a connected screen, but U-boot detects it wrong. Can I force U-boot to load another screen configuration? </h3>
+A: Yes. Check <a class="twikiLink" href="SelectingPDAatBoot.html">this page</a> on how to force U-boot to load another screen type.
+<p />
+<h3><a name="My_screen_is_black_although_it_s"></a> My screen is black, although it's a right screen, it is supposed to be detected. What can I do? </h3>
+A:  <ul>
+<li> Check the hardware: ribbon cables, check that your board supports the 1Wire EEPROM connection. <a class="twikiLink" href="PDADetectionAtBoot.html">This page</a> explains this mechanism.
+</li> <li> Check if the display is really detected: When U-boot boots, it should print "PDA TMXXXX detected" , according to which screen you have connected. If it does not print, then you either have a faulty hardware setup, or, you have an unknown screen.
+</li> <li> If you have an old variant of TM5000 screen, the EEPROM is not properly programmed. You need to force U-boot to load the TM5000 configuration. See  <a class="twikiLink" href="SelectingPDAatBoot.html">this page</a> on how to do that.
+</li> <li> If your screen is unknown, but is a correct hardware setup, then, U-boot will read the screen information and set an environment variable. Stop the U-boot autoboot and at the prompt issue 'printenv' . Look at the 'pda' variable. Debug further from there, if you need to load a specific Device Tree overlay for your screen. You can find information about how to tweak your U-boot environment script to cope with different situations <a class="twikiLink" href="SelectingPDAatBoot.html">here</a>.
+</li> <li> If everything is fine in U-boot, then the Linux Kernel is to blame !
+</li></ul> 
+<p />
+<h3><a name="What_is_a_FIT_image_and_how_does"></a> What is a FIT image and how does this work with U-boot? </h3>
+A: A FIT image is like an archive, a collection of more images that can be used in the boot process, wrapped in a single file. It can contain Kernel images, Device tree Blobs, etc. More information is available <a class="twikiLink" href="UsingFITwithOverlays.html">here</a>.
+<p />
+<h3><a name="I_have_a_working_setup_with_a_sp"></a> I have a working setup with a specific PDA. I want to connect another PDA. Do I need to reflash my board or change any configuration ? </h3>
+A: No. U-boot will automatically detect your new connected PDA and load the specific configuration, all is already present on your board. You do not need to change anything. Remove your PDA, connect the new PDA and replug your board !
+<p />
+<h3><a name="How_do_I_use_U_Boot_to_store_bin"></a> How do I use U-Boot to store binaries in FLASH ? </h3>
+A: One U-Boot available on the board, you can use it to flash binaries on storage media. The following examples can be used for Linux kernel, root filesystem or whatever you binary you want on your FLASH storage media :
+<p /> <ul>
+<li> <a class="twikiAnchorLink" href="OpenEmbeddedAngstromGet.html#Using_u_boot_commands">Use U-Boot to write JFFS2 in NAND FLASH</a> =&gt; use of the <code>nand write</code> command
+</li> <li> <a href="http://www.denx.de/wiki/view/DULG/RootFileSystemOnAJFFS2FileSystem" target="_blank">Use U-Boot to write JFFS2 in NOR FLASH<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> =&gt; use of the <code>cp.b</code> command applicable for <strong>DataFlash</strong> and <strong>any binary file</strong>
+</li></ul> 
+<p />
+<h3><a name="How_do_I_access_U_Boot_environme"></a> How do I access U-Boot environment while Linux is running ? </h3>
+A: U-Boot provides little command line tool to access environment from Linux. It is located in U-Boot source code tree : <code>tools/env</code> directory. You will certainly have to tailor your MTD partitioning to identify the U-Boot environment in one MTD partition.<br /> 
+Have a look at the U-Boot <a href="http://git.denx.de/?p=u-boot.git;a=blob_plain;f=tools/env/README;hb=HEAD" target="_blank">README<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> documentation for <code>fw_env</code>.
+<p />
+Here is a post in at91.com forum that talks about <a href="http://www.at91.com/viewtopic.php?t=4283" target="_blank">modifying U-Boot parameter out of Linux<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/U-BootFAQ?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:47 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

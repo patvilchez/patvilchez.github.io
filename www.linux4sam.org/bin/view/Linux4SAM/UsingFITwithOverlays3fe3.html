@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingFITwithOverlays?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; UsingFITwithOverlays &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="Using_FIT_image_and_Device_Tree"></a> Using FIT image and Device Tree Overlays </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Using_FIT_image_and_Device_Tree"> Using FIT image and Device Tree Overlays</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#How_it_works"> How it works</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Using_FIT_with_overlays"> Using FIT with overlays</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Device_Tree_Overlays"> Device Tree Overlays</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Loading_FIT_image_with_U_boot"> Loading FIT image with U-boot</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Example"> Example</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#U_boot_env_explained"> U-boot env explained</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Extract_parts_of_the_FIT_image_w"> Extract parts of the FIT image with U-boot</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</div>
+<h2><a name="How_it_works"></a> How it works </h2>
+<p />
+<h3><a name="Using_FIT_with_overlays"></a> Using FIT with overlays </h3>
+<p />
+Since U-boot 2018.07, released with linux4sam_6.0, we have the feature of adding Device Tree overlays to the base Device Tree at boot time, from U-boot. To achieve this, we use a FIT image, which embeds the Kernel + Device Tree blobs in a single file.
+<p />
+<h4><a name="Device_Tree_Overlays"></a> Device Tree Overlays </h4>
+Device Tree Overlays are available in our repository at <a href="https://github.com/linux4sam/dt-overlay-at91" target="_blank">Github<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. Compiling the Device Tree overlays with the corresponding kernel zImage results in a FIT image. The Makefile will do that for you.
+<p />
+<h4><a name="Loading_FIT_image_with_U_boot"></a> Loading FIT image with U-boot </h4>
+<p />
+The FIT image is a placeholder that has the zImage and the base Device Tree, plus additional overlays that can be selected at boot time.
+<p />
+The following steps are required to boot the FIT Image from U-boot:
+<p /> <ul>
+<li> Load the FIT image like you would normally load the uImage or zImage.
+</li> <li> There is no need to load additional Device Tree Blob, the FIT image includes it
+</li> <li> When booting the FIT image, specify the FIT configuration to use. Several configurations can be appended to the basic configuration, which we name 'kernel_dtb'
+</li></ul> 
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> U-boot 2021.04 and newer cannot load FIT images created before linux4sam_2021.04. This is due to an incompatible change in the FIT image configuration check in U-boot.
+<p />
+Example:
+<pre>
+bootm 0x24000000#kernel&#95;dtb
+</pre>
+<p />
+This will load the FIT image from address 0x24000000 in memory and then run the configuration named 'kernel_dtb'. This configuration includes the kernel plus the base Device Tree Blob built with the kernel.
+<p />
+To load additional FIT configurations, just append another configuration to the command.
+<p />
+Example to load the image sensor controller Device Tree overlay + sensor omnivision 0v7740:
+<pre>
+bootm 0x24000000#kernel&#95;dtb#isc#ov7740
+</pre>
+<p />
+<p />
+<h4><a name="Example"></a> Example </h4>
+<p />
+Further more, if we inspect the U-boot environment (just an example)
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> The default U-boot environment adds loading commands for the screens TM7000, TM7000B, TM5000 and TM4300. <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />
+</br>  <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> If you <strong>have a different screen</strong> you need to similarly edit this environment and take your <strong>specific</strong> screen into consideration. <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />
+<p />
+<pre>
+&#61;&#62; print
+at91&#95;pda&#95;detect&#61;run pda4300test; run pda7000test; run pda7000btest; run pda5000test; run hdmi&#95;test;
+at91&#95;prepare&#95;bootargs&#61;test -n $display&#95;var &#38;&#38; setenv bootargs ${bootargs} ${at91&#95;video&#95;bootargs}
+at91&#95;prepare&#95;overlays&#95;config&#61;test -n $display&#95;var &#38;&#38; setenv at91&#95;overlays&#95;config &#39;#&#39;${display&#95;var}
+at91&#95;prepare&#95;video&#95;bootargs&#61;test -n $display&#95;var &#38;&#38; setenv at91&#95;video&#95;bootargs video&#61;${video&#95;mode}
+at91&#95;set&#95;display&#61;test -n $pda &#38;&#38; setenv display $pda
+baudrate&#61;115200
+bootargs&#61;console&#61;ttyS0,115200 root&#61;/dev/mmcblk0p1 rw rootfstype&#61;ext4 rootwait atmel.pm&#95;modes&#61;standby,ulp1
+bootcmd&#61;run at91&#95;set&#95;display; run at91&#95;pda&#95;detect; run at91&#95;prepare&#95;video&#95;bootargs; run at91&#95;prepare&#95;bootargs; run at91&#95;prepare&#95;overlays&#95;config; run bootcmd&#95;boot;
+bootcmd&#95;boot&#61;ext4load mmc 0 0x24000000 boot/sama5d2&#95;xplained.itb; bootm 0x24000000#kernel&#95;dtb${at91&#95;overlays&#95;config}
+bootdelay&#61;1
+ethaddr&#61;fc:c2:3d:0d:1f:4b
+fdtcontroladdr&#61;3fb773c8
+hdmi&#95;test&#61;test -n $display &#38;&#38; test $display &#61; hdmi &#38;&#38; setenv display&#95;var &#39;hdmi&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;hdmi}
+pda4300test&#61;test -n $display &#38;&#38; test $display &#61; 4300 &#38;&#38; setenv display&#95;var &#39;pda4&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda4}
+pda5000test&#61;test -n $display &#38;&#38; test $display &#61; 5000 &#38;&#38; setenv display&#95;var &#39;pda5&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda5}
+pda7000btest&#61;test -n $display &#38;&#38; test $display &#61; 7000B &#38;&#38; setenv display&#95;var &#39;pda7b&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda7b}
+pda7000test&#61;test -n $display &#38;&#38; test $display &#61; 7000 &#38;&#38; setenv display&#95;var &#39;pda7&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda7}
+stderr&#61;serial&#64;f8020000
+stdin&#61;serial&#64;f8020000
+stdout&#61;serial&#64;f8020000
+video&#95;mode&#95;hdmi&#61;HDMI-A-1:1152x768-16
+video&#95;mode&#95;pda4&#61;Unknown-1:480x272-16
+video&#95;mode&#95;pda5&#61;Unknown-1:800x480-16
+video&#95;mode&#95;pda7&#61;Unknown-1:800x480-16
+video&#95;mode&#95;pda7b&#61;Unknown-1:800x480-16 
+</pre>
+<p />
+We can see that the variable 'bootcmd_boot' loads the FIT image from SD-Card, and then it boots it with the 'kernel_dtb' configuration, plus an additional configuration for a <a class="twikiLink" href="PDADetectionAtBoot.html">specific PDA if it's detected at boot-time</a>
+<p />
+<h4><a name="U_boot_env_explained"></a> U-boot env explained </h4>
+<pre>
+video&#95;mode&#95;hdmi&#61;HDMI-A-1:1152x768-16
+video&#95;mode&#95;pda4&#61;Unknown-1:480x272-16
+video&#95;mode&#95;pda5&#61;Unknown-1:800x480-16
+video&#95;mode&#95;pda7&#61;Unknown-1:800x480-16
+video&#95;mode&#95;pda7b&#61;Unknown-1:800x480-16 
+</pre>
+These are hardcoded variables that are written by default in the u-boot env that comes with the release.
+<p />
+<pre>
+at91&#95;set&#95;display&#61;test -n $pda &#38;&#38; setenv display $pda
+</pre>
+This command will test to see if U-boot detected any screen and set the 'display' variable accordingly.
+<p />
+<pre>
+at91&#95;pda&#95;detect&#61;run pda4300test; run pda7000test; run pda7000btest; run pda5000test; run hdmi&#95;test;
+</pre>
+This command will run a test on the display variable for each possible screen that we have. 
+<p />
+The tests are detailed below:
+<pre>
+hdmi&#95;test&#61;test -n $display &#38;&#38; test $display &#61; hdmi &#38;&#38; setenv display&#95;var &#39;hdmi&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;hdmi}
+pda4300test&#61;test -n $display &#38;&#38; test $display &#61; 4300 &#38;&#38; setenv display&#95;var &#39;pda4&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda4}
+pda5000test&#61;test -n $display &#38;&#38; test $display &#61; 5000 &#38;&#38; setenv display&#95;var &#39;pda5&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda5}
+pda7000btest&#61;test -n $display &#38;&#38; test $display &#61; 7000B &#38;&#38; setenv display&#95;var &#39;pda7b&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda7b}
+pda7000test&#61;test -n $display &#38;&#38; test $display &#61; 7000 &#38;&#38; setenv display&#95;var &#39;pda7&#39; &#38;&#38; setenv video&#95;mode ${video&#95;mode&#95;pda7}
+</pre>
+These tests check for the 'display' variable and configure the video mode correctly and the 'display_var' . This display_var is the actual name of the screen configuration for the overlays, that we pass to the overlay configuration.
+<p />
+<pre>
+at91&#95;prepare&#95;video&#95;bootargs&#61;test -n $display&#95;var &#38;&#38; setenv at91&#95;video&#95;bootargs video&#61;${video&#95;mode}
+</pre>
+This command will prepare the bootargs that we need to pass to the kernel in case we are using video.
+<p />
+<pre>
+at91&#95;prepare&#95;bootargs&#61;test -n $display&#95;var &#38;&#38; setenv bootargs ${bootargs} ${at91&#95;video&#95;bootargs}
+</pre>
+This command will actually append the video bootargs to our default bootargs if the display is detected. In case we do not have any display, bootargs is not modified.
+<p />
+<pre>
+at91&#95;prepare&#95;overlays&#95;config&#61;test -n $display&#95;var &#38;&#38; setenv at91&#95;overlays&#95;config &#39;#&#39;${display&#95;var}
+</pre>
+This command will configure an overlay name , with the appended '#' that we just need to append to the bootm FIT image booting sequence.
+<p />
+<pre>
+bootcmd&#61;run at91&#95;set&#95;display; run at91&#95;pda&#95;detect; run at91&#95;prepare&#95;video&#95;bootargs; run at91&#95;prepare&#95;bootargs; run at91&#95;prepare&#95;overlays&#95;config; run bootcmd&#95;boot;
+</pre>
+The new bootcmd will first run all the display tests , in order, and then run a new bootcommand, bootcmd_boot
+<p />
+<pre>
+bootcmd&#95;boot&#61;ext4load mmc 0 0x24000000 boot/sama5d2&#95;xplained.itb; bootm 0x24000000#kernel&#95;dtb${at91&#95;overlays&#95;config}
+</pre>
+This is the actual boot command, that will load the FIT image and add the configured overlays in the FIT boot sequence.
+<p />
+<h4><a name="Extract_parts_of_the_FIT_image_w"></a> Extract parts of the FIT image with U-boot </h4>
+<p />
+With the use of the imxtract command in U-boot, we can extract parts of the FIT image into the memory and use them.
+<p />
+The imxtract command uses the syntax:
+<pre>
+imxtract &#60;FIT addr&#62; &#60;FIT subimage&#62; &#60;address in DRAM&#62;
+</pre></br>
+It will extract from the FIT image at <strong>FIT addr</strong> the subimage named <strong>FIT subimage</strong> and place it into the DRAM at <strong>address in DRAM</strong> </br>
+To obtain information about which subimages are in a FIT image, use the <em>iminfo</em> command .</br>
+Here is an example:</br> <ul>
+<li> Step 1: load the FIT from a hardware media, in this example mmc: 
+</li></ul> 
+<pre>
+&#61;&#62; fatload mmc 1:1 0x24000000 sama5d2&#95;xplained.itb;
+4430768 bytes read in 305 ms (13.9 MiB/s)
+</pre></br> <ul>
+<li> Step 2: Check possible images in this FIT we downloaded:
+</li></ul> 
+<pre>
+&#61;&#62; iminfo 0x24000000
+
+## Checking Image at 24000000 ...
+   FIT image found
+   FIT description: Microchip SAMA5D2 Xplained FIT Image
+    Image 0 (kernel)
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x240000e0
+     Data Size:    4360432 Bytes &#61; 4.2 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   ed62149a
+     Hash algo:    sha1
+     Hash value:   1cf2de3d85ee120240c0f2cb955327c607846a2c
+    Image 1 (base&#95;fdt)
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x24428afc
+     Data Size:    40797 Bytes &#61; 39.8 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   86179ff1
+     Hash algo:    sha1
+     Hash value:   8a64ec5fc53f0a318c630387ed55e57f537b0061
+    Image 2 (fdt&#95;isc)
+     Description:  Device Tree blob ISC overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x24432b64
+     Data Size:    1074 Bytes &#61; 1 KiB
+     Architecture: ARM
+     Load Address: 0x23100000
+     Hash algo:    crc32
+     Hash value:   ea22f84e
+     Hash algo:    sha1
+     Hash value:   6feab4a58949dd88593c8aba3ad6d73d8124403f
+    Image 3 (fdt&#95;ov7670)
+     Description:  Device Tree blob Ov7670 overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x244330a4
+     Data Size:    2045 Bytes &#61; 2 KiB
+     Architecture: ARM
+     Load Address: 0x23110000
+     Hash algo:    crc32
+     Hash value:   44c22b8b
+     Hash algo:    sha1
+     Hash value:   8e319fc07d00806b866bfe60b9b87849813ecefd
+    Image 4 (fdt&#95;ov7740)
+     Description:  Device Tree blob OV7740 overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x244339b0
+     Data Size:    2045 Bytes &#61; 2 KiB
+     Architecture: ARM
+     Load Address: 0x23120000
+     Hash algo:    crc32
+     Hash value:   cc72f933
+     Hash algo:    sha1
+     Hash value:   3c44d90fe915d0e1fb63dfc50038fb0fc861b8a5
+    Image 5 (fdt&#95;pda4)
+     Description:  Device Tree blob pda4300 overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x244342c0
+     Data Size:    4499 Bytes &#61; 4.4 KiB
+     Architecture: ARM
+     Load Address: 0x23130000
+     Hash algo:    crc32
+     Hash value:   c9b532e8
+     Hash algo:    sha1
+     Hash value:   a7f75ea4a91884840d40b379e7b843a95b9b9da4
+    Image 6 (fdt&#95;pda5)
+     Description:  Device Tree blob pda5000 overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x24435564
+     Data Size:    4499 Bytes &#61; 4.4 KiB
+     Architecture: ARM
+     Load Address: 0x23140000
+     Hash algo:    crc32
+     Hash value:   591d531b
+     Hash algo:    sha1
+     Hash value:   f9f3c25e8591f603492451b4e4eb369eba818ab2
+    Image 7 (fdt&#95;pda7)
+     Description:  Device Tree blob pda7000 overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x24436808
+     Data Size:    4507 Bytes &#61; 4.4 KiB
+     Architecture: ARM
+     Load Address: 0x23150000
+     Hash algo:    crc32
+     Hash value:   3fc0c1ec
+     Hash algo:    sha1
+     Hash value:   d202bd4cc83aef48b33fae2a1b104c5bc597956c
+    Image 8 (fdt&#95;pda7b)
+     Description:  Device Tree blob pda7000b overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x24437ab4
+     Data Size:    4507 Bytes &#61; 4.4 KiB
+     Architecture: ARM
+     Load Address: 0x23160000
+     Hash algo:    crc32
+     Hash value:   a27df839
+     Hash algo:    sha1
+     Hash value:   94f77b4afd7718cd309be34147c49753abf53375
+    Image 9 (fdt&#95;i2s0&#95;proto)
+     Description:  Device Tree blob PROTO Audio board overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x24438d6c
+     Data Size:    1066 Bytes &#61; 1 KiB
+     Architecture: ARM
+     Load Address: 0x23170000
+     Hash algo:    crc32
+     Hash value:   38a511f6
+     Hash algo:    sha1
+     Hash value:   74d5c3996811a9307097969d8fe3c5e63b9973a0
+    Image 10 (fdt&#95;qspi)
+     Description:  Device Tree blob QSPI overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x244392a4
+     Data Size:    461 Bytes &#61; 461 Bytes
+     Architecture: ARM
+     Load Address: 0x23180000
+     Hash algo:    crc32
+     Hash value:   df13d1c0
+     Hash algo:    sha1
+     Hash value:   0abdc429d44d5f0fc7f97bea47e5c58308e8c5b1
+    Default Configuration: &#39;kernel&#95;dtb&#39;
+    Configuration 0 (kernel&#95;dtb)
+     Description:  Linux kernel and base FDT blob for SAMA5D2&#95;XPLAINED board
+     Kernel:       kernel
+     FDT:          base&#95;fdt
+    Configuration 1 (base&#95;dtb)
+     Description:  Base FDT blob for SAMA5D2&#95;XPLAINED board
+     Kernel:       unavailable
+     FDT:          base&#95;fdt
+    Configuration 2 (isc)
+     Description:  FDT overlay blob for isc
+     Kernel:       unavailable
+     FDT:          fdt&#95;isc
+    Configuration 3 (ov7670)
+     Description:  FDT overlay blob for ov7670 sensor
+     Kernel:       unavailable
+     FDT:          fdt&#95;ov7670
+    Configuration 4 (ov7740)
+     Description:  FDT overlay blob for ov7740 sensor
+     Kernel:       unavailable
+     FDT:          fdt&#95;ov7740
+    Configuration 5 (pda4)
+     Description:  FDT overlay blob for PDA TM4300 screen
+     Kernel:       unavailable
+     FDT:          fdt&#95;pda4
+    Configuration 6 (pda5)
+     Description:  FDT overlay blob for PDA TM5000 screen
+     Kernel:       unavailable
+     FDT:          fdt&#95;pda5
+    Configuration 7 (pda7)
+     Description:  FDT overlay blob for PDA TM7000 screen
+     Kernel:       unavailable
+     FDT:          fdt&#95;pda7
+    Configuration 8 (pda7b)
+     Description:  FDT overlay blob for PDA TM7000B screen
+     Kernel:       unavailable
+     FDT:          fdt&#95;pda7b
+    Configuration 9 (i2s0&#95;proto)
+     Description:  FDT overlay blob for I2S0 PROTO audio board
+     Kernel:       unavailable
+     FDT:          fdt&#95;i2s0&#95;proto
+    Configuration 10 (qspi)
+     Description:  FDT overlay blob for QSPI memory
+     Kernel:       unavailable
+     FDT:          fdt&#95;qspi
+## Checking hash(es) for FIT Image at 24000000 ...
+   Hash(es) for Image 0 (kernel): crc32+ sha1+
+   Hash(es) for Image 1 (base&#95;fdt): crc32+ sha1+
+   Hash(es) for Image 2 (fdt&#95;isc): crc32+ sha1+
+   Hash(es) for Image 3 (fdt&#95;ov7670): crc32+ sha1+
+   Hash(es) for Image 4 (fdt&#95;ov7740): crc32+ sha1+
+   Hash(es) for Image 5 (fdt&#95;pda4): crc32+ sha1+
+   Hash(es) for Image 6 (fdt&#95;pda5): crc32+ sha1+
+   Hash(es) for Image 7 (fdt&#95;pda7): crc32+ sha1+
+   Hash(es) for Image 8 (fdt&#95;pda7b): crc32+ sha1+
+   Hash(es) for Image 9 (fdt&#95;i2s0&#95;proto): crc32+ sha1+
+   Hash(es) for Image 10 (fdt&#95;qspi): crc32+ sha1+
+</pre></br> <ul>
+<li> Step 3: extract the kernel image, for example:
+</li></ul> 
+<pre>
+&#61;&#62; imxtract 0x24000000 kernel 0x21000000
+## Copying &#39;kernel&#39; subimage from FIT image at 24000000 ...
+crc32+ sha1+    Loading part 0 ... OK
+</pre></br> <ul>
+<li> Step 4: extract a base device tree , for example:
+</li></ul> 
+<pre>
+&#61;&#62; imxtract 0x24000000 base&#95;fdt 0x22000000
+## Copying &#39;base&#95;fdt&#39; subimage from FIT image at 24000000 ...
+crc32+ sha1+    Loading part 186 ... OK
+</pre></br> <ul>
+<li> Step 5: Boot the kernel with this device tree, for example:
+</li></ul> 
+<pre>
+&#61;&#62; bootz 0x21000000 - 0x22000000
+## Flattened Device Tree blob at 22000000
+   Booting using the fdt blob at 0x22000000
+   Loading Device Tree to 3fb48000, end 3fb54f5c ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.19.0+ (eugen&#64;eh-station) (gcc version 7.3.1 20180425 &#91;linaro-7.3-2018.05 revision d29120a424ecfbc167ef90065c0eeb7f91977701] (Linaro GCC 7.3-2018.05)) #6 Thu Nov 1 17:35:45 EET 2018
+CPU: ARMv7 Processor &#91;410fc051] revision 1 (ARMv7), cr&#61;10c53c7d
+....
+</pre> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingFITwithOverlays?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:45 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

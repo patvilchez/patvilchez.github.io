@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/WilcFaq?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; WilcFaq &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="How_to_use_WILC3000_on_SAM_devel"></a>  How to use WILC3000 on SAM development boards </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Supported_devices"> Supported devices</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Kernel_support"> Kernel support</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Overlay_support"> Overlay support</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Configuration_steps"> Configuration steps</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Kernel_module"> Kernel module</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Client_mode"> Client mode</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Step_by_step_configuration"> Step by step configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Pre_defined_script"> Pre-defined script</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Provisioning_mode"> Provisioning mode</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Access_Point_mode"> Access Point mode</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Open_Access_Point_configuration"> Open Access Point configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#WEP_Access_Point_configuration"> WEP Access Point configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#WPA_Access_Point_configuration"> WPA Access Point configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#DHCP_server_configuration"> DHCP server configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Start_Access_Point"> Start Access Point</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Pre_defined_script_AN1"> Pre-defined script</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Bluethooth_mode"> Bluethooth mode</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Step_by_step_configuration_AN1"> Step-by-step configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Pre_defined_script_AN2"> Pre-defined script</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Notes"> Notes</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#References"> References</a>
+</li></ul> 
+</div>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+This page describes how WILC3000 devices could be used on SAM development boards.
+<p />
+<h2><a name="Supported_devices"></a> Supported devices </h2>
+The following table specifies the boards were WILC3000 is soldered and the boards were WILC3000 could be soldered.
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <b>Board Name</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <b>Socket</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <b>Present</b> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAM9X60-EK </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> U24 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> N* </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D27-WLSOM1-EK1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> U4 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> Y </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> SAMA5D2-ICP </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> U32 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> N* </td>
+</tr></table>
+*) WILC3000 could be soldered on the corresponding socket
+<p />
+<h2><a name="Kernel_support"></a> Kernel support </h2>
+The driver that is used to control the WILC3000 devices is WILC1000 driver. The compatible strings available for these devices are:
+<pre>
+&#34;microchip,wilc1000&#34;
+&#34;microchip,wilc3000
+</pre>
+<p />
+<h2><a name="Overlay_support"></a> Overlay support </h2>
+For boards where WILC3000 module is already soldered on the there is no need to follow instruction on this chapter.
+<p />
+For boards where WILC3000 module is soldered by the used the proper device tree overlay should be loaded from U-Boot. To check the available WILC device tree overlays check the files <code>*_wilc.dtso</code> in <a href="https://github.com/linux4sam/dt-overlay-at91" target="_blank">dt-overlay-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> repository.
+<p />
+To load WILC overlay follow the next steps:<br>
+1. Enter U-Boot prompt by hitting enter when <code>Hit any key to stop autoboot</code> message appears on console:
+<pre>
+U-Boot 2019.04-linux4sam&#95;6.2 (Oct 25 2019 - 03:10:23 +0000)
+
+CPU: SAM9X60
+Crystal frequency:       24 MHz
+CPU clock        :      600 MHz
+Master clock     :      200 MHz
+DRAM:  256 MiB
+MMC:   sdhci-host&#64;80000000: 0
+Loading Environment from FAT... OK
+In:    serial
+Out:   serial
+Err:   serial
+Net:   eth0: ethernet&#64;f802c000
+Hit any key to stop autoboot:  3
+</pre> 
+2. Edit <code>bootcmd</code> U-Boot environment variable and add <code>#wilc</code> string at the end:
+<pre>
+U-Boot&#62; edit bootcmd
+edit: fatload mmc 0:1 0x24000000 sam9x60ek.itb; bootm 0x24000000#kernel&#95;dtb#wilc
+</pre>
+<p />
+3. Enter <code>boot</code> command. The Linux kernel would be loaded using the WILC device tree overlay:<br>
+<pre>
+U-Boot&#62; boot
+4508836 bytes read in 225 ms (19.1 MiB/s)
+## Loading kernel from FIT Image at 24000000 ...
+   Using &#39;kernel&#95;dtb&#39; configuration
+   Trying &#39;kernel&#39; kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x240000d8
+     Data Size:    4447104 Bytes &#61; 4.2 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   2c706949
+     Hash algo:    sha1
+     Hash value:   d8d72f7fb8603a35a39a6803d9b418abebbca9a5
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 24000000 ...
+   Using &#39;kernel&#95;dtb&#39; configuration
+   Trying &#39;base&#95;fdt&#39; fdt subimage
+     Description:  SAM9X60-EK Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x2443dd90
+     Data Size:    28407 Bytes &#61; 27.7 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   b8c3d3b7
+     Hash algo:    sha1
+     Hash value:   b538fc9f410be576b6bba6e18add7010e68f6f7b
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x2443dd90 to 0x23000000
+## Loading fdt from FIT Image at 24000000 ...
+   Using &#39;wilc&#39; configuration
+   Trying &#39;fdt&#95;wilc&#39; fdt subimage
+     Description:  Device Tree blob WILC3000 overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x2444b168
+     Data Size:    1572 Bytes &#61; 1.5 KiB
+     Architecture: ARM
+     Load Address: 0x23180000
+     Hash algo:    crc32
+     Hash value:   e8fbf3b2
+     Hash algo:    sha1
+     Hash value:   e36920209c1e758e6e67207b4a1646896b3a8784
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x2444b168 to 0x23180000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 2feeb000, end 2fef51c8 ... OK
+
+Starting kernel ...
+</pre>
+<p />
+<h2><a name="Configuration_steps"></a> Configuration steps </h2>
+<p />
+<h3><a name="Kernel_module"></a> Kernel module </h3>
+To be able to use the WILC devices the following kernel needs to be inserted after kernel boots:
+<pre>
+cfg80211.ko
+pwrseq&#95;wilc.ko
+wilc-sdio.ko
+</pre> 
+Check the above modules are inserted by running <code>lsmod</code> command:
+<pre>
+root&#64;sama5d27-wlsom1-ek-sd:~# lsmod
+Module                  Size  Used by
+cfg80211              237568  0
+usb&#95;f&#95;acm              12288  1
+u&#95;serial               16384  1 usb&#95;f&#95;acm
+g&#95;serial               12288  0
+libcomposite           32768  2 g&#95;serial,usb&#95;f&#95;acm
+pwrseq&#95;wilc            12288  1
+atmel&#95;usba&#95;udc         24576  0
+</pre>
+<p />
+If one of the above modules is missing try inserting them using <code>insmod</code> or <code>modprobe</code> command. In the above example wilc-sdio.ko module is missing. To insert it:
+<pre>
+root&#64;sama5d27-wlsom1-ek-sd:~# insmod /lib/modules/$(uname -r)/kernel/drivers/staging/wilc1000/wilc-sdio.ko 
+wilc&#95;sdio: module is from the staging directory, the quality is unknown, you have been warned.
+wifi&#95;pm : 0
+wifi&#95;pm : 1
+wilc&#95;sdio mmc1:0001:1: Driver Initializing success
+</pre>
+<p />
+In case the other modules are missing try insert them using <code>insmod</code> or <code>modprobe</code> commands:
+<pre>
+insmod /lib/modules/$(uname -r)/kernel/net/wireless/cfg80211.ko
+insmod /lib/modules/$(uname -r)/kernel/drivers/mmc/core/pwrseq&#95;wilc.ko
+insmod /lib/modules/$(uname -r)/kernel/drivers/staging/wilc1000/wilc-sdio.ko 
+</pre>
+<p />
+After all kernel modules are installed the <code>wlan0</code> interface should apear in <code>ifconfig</code>:
+<pre>
+root&#64;sama5d27-wlsom1-ek-sd:~# ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 54:10:ec:ff:fa:16  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:30 Base address:0x8000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:2 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:140 (140.0 B)  TX bytes:140 (140.0 B)
+
+p2p0      Link encap:Ethernet  HWaddr 00:00:00:00:00:00  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+sit0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr 00:00:00:00:00:00  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+</pre>
+<p />
+From here on the WILC device could be used in either WiFi client mode, Access Point mode or BT.
+<p />
+<h3><a name="Client_mode"></a> Client mode </h3>
+In this mode WILC device would behave as an WiFi client by connecting to an Access Point device and requesting from it IP addresses, DNS etc.
+<p />
+<h4><a name="Step_by_step_configuration"></a> Step by step configuration </h4>
+To work in this mode create or edit* <code>/etc/wpa_supplicant.conf</code> file. The content of file should be as follows:
+<pre>
+ctrl&#95;interface&#61;/var/run/wpa&#95;supplicant
+update&#95;config&#61;1
+network&#61;{
+    ssid&#61;&#34;access-point-name&#34;
+    psk&#61;&#34;access-point-passwork&#34;
+}
+</pre>
+<p />
+Where SSID and PSK variables keeps the Access Point name and password the WILC device will be connected to.
+Save the file.
+<p />
+Start the WPA supplicant service using the following command:
+<pre>
+wpa&#95;supplicant -B -iwlan0 -Dnl80211 -c /etc/wpa&#95;supplicant.conf &#38;
+</pre>
+Initiate a DHCP request so that a proper IP address and DNS settings to be installed for WILC device:
+<pre>
+udhcpc -i wlan0 &#38;
+</pre>
+At this point an IP address should be assigned to wlan0 interface and IP connectivity should be alive.
+<p />
+<h4><a name="Pre_defined_script"></a> Pre-defined script </h4>
+Starting with Linux4SAM-2020.04 release for boards where WILC device is soldered, Buildroot root file system provides a demo script that allows configuring WILC device in STA mode by running just one command. To do this run the following script:
+<pre> /root/Start&#95;STA.sh </pre>
+<p />
+<h4><a name="Provisioning_mode"></a> Provisioning mode </h4>
+Starting with Linux4SAM-2020.04 release for boards where WILC device is soldered, Buildroot root file system provides a provisioning mechanism which allows the configuration of WILC devices in STA mode.
+<p />
+To start provisioning execute the script <code>/root/Start_Provision.sh</code>:
+<pre>/root/Start&#95;Provision.sh</pre>
+<p />
+This will reboot the board. After reboot the WILC device will enter in SoftAP mode with name <code>wilc_SoftAP</code> and IP <code>192.168.0.1</code>. This allow connecting to the WILC device using any Wi-Fi device for provisioning. Connecting to <code>192.168.0.1</code> will allow the configuration for Access Point to connect to. The meaning of fields in the opened web page are as follows:
+<pre>
+Network Name: The Access Point name that WILC in STA mode should connect
+Pass phrase: The Access Point password
+Device Name: The name of the WILC device
+</pre>
+<p />
+After filling in the above fields and pressing <code>Connect</code> button the board will reboot and WILC device will start in STA mode and connect to the configured Access Point. 
+<p />
+<h3><a name="Access_Point_mode"></a> Access Point mode </h3>
+WILC device could work in Access Point mode in different configurations depending on the level of security. This could be Open, WEP, WPA.
+<p />
+<h4><a name="Open_Access_Point_configuration"></a> Open Access Point configuration </h4>
+For this mode create or edit* <code>/etc/wilc_hostapd_open.conf</code> file as follows:
+<pre>
+interface&#61;wlan0
+driver&#61;nl80211
+ctrl&#95;interface&#61;/var/run/hostapd
+ssid&#61;wilc&#95;OpenAP
+dtim&#95;period&#61;2
+beacon&#95;int&#61;100
+channel&#61;7
+hw&#95;mode&#61;g
+max&#95;num&#95;sta&#61;8
+ap&#95;max&#95;inactivity&#61;300 
+</pre>
+Where the Access Point name would be <code>wilc_OpenAP</code>.
+<p />
+<h4><a name="WEP_Access_Point_configuration"></a> WEP Access Point configuration </h4>
+For this mode create or edit* <code>/etc/wilc_hostapd_wep.conf</code> file as follows:
+<pre>
+interface&#61;wlan0
+driver&#61;nl80211
+ctrl&#95;interface&#61;/var/run/hostapd
+ssid&#61;wilc&#95;WepAP
+dtim&#95;period&#61;2
+beacon&#95;int&#61;100
+channel&#61;7
+hw&#95;mode&#61;g
+max&#95;num&#95;sta&#61;8
+ap&#95;max&#95;inactivity&#61;300
+ieee80211n&#61;1
+auth&#95;algs&#61;1
+
+######### WEP ###########
+wep&#95;default&#95;key&#61;0
+wep&#95;key0&#61;1234567890
+wep&#95;key1&#61;&#34;vwxyz&#34;
+wep&#95;key2&#61;0102030405060708090a0b0c0d
+wep&#95;key3&#61;&#34;.2.4.6.8.0.23&#34;
+wep&#95;key&#95;len&#95;broadcast&#61;5
+wep&#95;key&#95;len&#95;unicast&#61;5
+wep&#95;rekey&#95;period&#61;300
+</pre>
+Where the Access Point name would be <code>wilc_WepAP</code> and password would be <code>1234567890</code>.
+<p />
+<h4><a name="WPA_Access_Point_configuration"></a> WPA Access Point configuration </h4>
+For this mode create or edit* <code>/etc/wilc_hostapd_wpa.conf</code> file as follows:
+<pre>
+interface&#61;wlan0
+driver&#61;nl80211
+ctrl&#95;interface&#61;/var/run/hostapd
+ssid&#61;wilc&#95;WpaAP
+dtim&#95;period&#61;2
+beacon&#95;int&#61;100
+channel&#61;7
+hw&#95;mode&#61;g
+max&#95;num&#95;sta&#61;8
+ap&#95;max&#95;inactivity&#61;300
+ieee80211n&#61;1
+auth&#95;algs&#61;1
+
+######### WPA/WPA2 ###########
+wpa&#61;3
+wpa&#95;passphrase&#61;12345678
+wpa&#95;key&#95;mgmt&#61;WPA-PSK
+wpa&#95;pairwise&#61;TKIP CCMP
+rsn&#95;pairwise&#61;CCMP
+</pre>
+Where the Access Point name would be <code>wilc_WpaAP</code> and password would be <code>12345678</code>.
+<p />
+<h4><a name="DHCP_server_configuration"></a> DHCP server configuration </h4>
+To enable offering IPs to WiFi clients DHCP server service have to be enabled.
+<p />
+Create or edit* <code>/etc/dhcp/dhcpd.conf</code> with the following content:
+<pre>
+option domain-name &#34;tecmint.lan&#34;;
+option domain-name-servers ns1.tecmint.lan, ns2.tecmint.lan;
+default-lease-time 3600;
+max-lease-time 7200;
+authoritative;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+        option routers                  192.168.1.1;
+        option subnet-mask              255.255.255.0;
+        option domain-search            &#34;tecmint.lan&#34;;
+        option domain-name-servers      192.168.1.1;
+        range   192.168.1.10   192.168.1.100;
+        range   192.168.1.110   192.168.1.200;
+}
+</pre>
+<p />
+<h4><a name="Start_Access_Point"></a> Start Access Point </h4>
+To start WILC working in Access Point:
+1. Start <code>hostapd</code> service with file configured above:
+<pre>
+hostapd -B &#60;configuration file&#62;
+</pre>
+<p />
+Where configuration file could be one of the following:
+<pre>
+/etc/wilc&#95;hostapd&#95;open.conf
+/etc/wilc&#95;hostapd&#95;web.conf
+/etc/wilc&#95;hostapd&#95;open.conf
+</pre>
+<p />
+2. Configure an IP address to wlan0 interface:
+<pre>
+ifconfig wlan0 192.168.1.1 netmask 255.255.255.0 up
+</pre>
+<p />
+3. Start DHCP server:
+<pre>
+dhcpd -cf /etc/dhcp/dhcpd.conf
+</pre>
+<p />
+<h4><a name="Pre_defined_script_AN1"></a> Pre-defined script </h4>
+Starting with Linux4SAM-2020.04 release for boards where WILC device is soldered, Buildroot root file system provides a demo script that allows configuring WILC device in Access Point mode by running just one command. To do this run the following script:
+<pre>
+/root/Start&#95;AP.sh
+</pre>
+<p />
+This will start WILC device in Open Access Point mode.
+<p />
+4. Connect from an WiFi client to newly created access point and try a ping.
+<h3><a name="Bluethooth_mode"></a> Bluethooth mode </h3>
+To be able to use WILC device in Bluetooth mode on devices were WILC device is not soldered on the board, user has to wire WILC BT serial with one of serial supported by <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/SoC?topicparent=Linux4SAM.WilcFaq;nowysiwyg=1" rel="nofollow" title="SoC (this topic does not yet exist; you can create it)">SoC</a></span>. The table below specifies what serial, pins could be used on SAM boards. On boards were WILC device is soldered on the board there is no need for extra wires and the table specifies NA in connector and connector pins columns. 
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <b>Board Name</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <b>Serial</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <b>Connector</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> <b>Connector Pins</b> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAM9X60-EK </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> ttyS1 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> J14 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> TX, RX </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D2-ICP </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> ttyS3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> J22 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> TX, RX </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D2-Xplained </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> ttyS1 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> J17 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> 27, 28 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D4-Xplained </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> ttyS5 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> J17 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> 9, 10 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D27-SOM1-EK </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> ttyS1 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> J25 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> 3, 4 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D27-WLSOM1-EK1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> ttyS1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> J19 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> TX, RX </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D3-Xplained </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> ttyS1 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> NA </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> NA </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> SAMA5D2-PTC-EK </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> ttyS1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> J15 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol twikiLast" valign="top"> 3, 4 </td>
+</tr></table>
+<p />
+<h4><a name="Step_by_step_configuration_AN1"></a> Step-by-step configuration </h4>
+Insert the next commands to configure WILC device in Bluetooth mode:
+<pre>
+echo BT&#95;SDIO&#95;INIT &#62; /dev/wilc&#95;bt
+echo BT&#95;POWER&#95;UP &#62; /dev/wilc&#95;bt
+echo BT&#95;FW&#95;CHIP&#95;WAKEUP &#62; /dev/wilc&#95;bt
+echo BT&#95;DOWNLOAD&#95;FW &#62; /dev/wilc&#95;bt
+echo BT&#95;FW&#95;CHIP&#95;ALLOW&#95;SLEEP &#62; /dev/wilc&#95;bt
+hciattach &#60;bluetooth-serial&#62; any 115200 noflow # see table at the beginning of this chapter
+hciconfig hci0 up
+ln -svf /usr/libexec/bluetooth/bluetoothd /usr/sbin
+bluetoothd -p time -n &#38;
+</pre>
+If the last command returns a D-Bus error check if <code>bluetoothd</code> daemon is already started. If yes, kill it and retry the last command:
+<pre>
+kill bluetoothd
+bluetoothd -p time -n &#38;
+</pre>
+<p />
+Check bluethooth interface status:
+<pre>
+hciconfig -a
+</pre>
+<p />
+Enable LE activity:
+<pre>
+hciconfig hci0 leadv
+</pre>
+<p />
+Try to scan and connect to a device:
+<pre>
+bluetoothctl
+scan on
+connect &#60;identifier-listed-by-scan&#62;
+</pre>
+<p />
+If scan fails run the following command:
+<pre>
+power on
+</pre>
+<p />
+<h4><a name="Pre_defined_script_AN2"></a> Pre-defined script </h4>
+Starting with Linux4SAM-2020.04 release for boards where WILC device is soldered, Buildroot root file system provides a demo script that allows configuring WILC device in Bluethoot mode by running just one command. To do this run the following script:
+<pre>
+/root/Start&#95;BT.sh
+</pre>
+<p />
+This will start WILC device in Bluethoot mode.
+<p />
+<h2><a name="Notes"></a> Notes </h2>
+* Starting with Linux4SAM-2020.04 predefined wpa_supplicant and hostapd configuration files are installed on Yocto and Buildroot images.
+<p />
+<h2><a name="References"></a> References </h2>
+The above documentation is inspired from documentation already present on <a href="https://www.microchip.com/wwwproducts/en/ATWILC3000" target="_blank">Microchip WILC3000 webpage<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, more precisely the  <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/ATWILC1000-ATWILC3000-Wi-Fi-Link-Controller-Linux-User-Guide-DS70005328C.pdf" target="_blank">ATWILC1000/ATWILC 3000 Wi-Fi Link Controller Linux User Guide<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/WilcFaq?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:47 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

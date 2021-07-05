@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TWiki's TWiki web</title>
+<subtitle>The Documentation Web of TWiki. TWiki is an Enterprise Collaboration Platform.</subtitle>
+<link rel="self" type="application/atom+xml" href="https://www.linux4sam.org/bin/view/TWiki/WebAtom"/>
+<id>https://www.linux4sam.org/bin/view/TWiki</id>
+<rights>Copyright 2021 by contributing authors</rights>
+<updated>2013-10-14T08:02:47Z</updated>
+<entry>
+ <title>TWikiConfigureCheckersCertificateKeyCheckerDotPm</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiConfigureCheckersCertificateKeyCheckerDotPm?t=2013-10-14T08:02:47Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiConfigureCheckersCertificateKeyCheckerDotPm</id>
+ <updated>2013-10-14T08:02:47Z</updated>
+ <summary>Package TWiki::Configure::Checkers::Certificate::KeyChecker Configure GUI checker for Certificate Key items. This checker validates files that contain private key... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarUSERSWEB</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarUSERSWEB?t=2013-09-25T19:36:51Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarUSERSWEB</id>
+ <updated>2013-09-25T19:36:51Z</updated>
+ <summary>USERSWEB name of users web The web containing individual user topics, .TWikiGroups, and customized site wide preferences. Syntax: % USERSWEB% Expands... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarSTATISTICSTOPIC</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarSTATISTICSTOPIC?t=2013-09-20T08:03:05Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarSTATISTICSTOPIC</id>
+ <updated>2013-09-20T08:03:05Z</updated>
+ <summary>STATISTICSTOPIC name of statistics topic Note: Each web has a statistics topic Syntax: % STATISTICSTOPIC% Expands to: , renders as Category... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>WelcomeGuest</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/WelcomeGuest?t=2013-05-01T08:03:47Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/WelcomeGuest</id>
+ <updated>2013-05-01T08:03:47Z</updated>
+ <summary>Welcome, ! Welcome to TWiki! This is a TWikiSite (pronounced twee kee site ), a meeting place to work on common interests. Anyone can contribute using any web... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>InterwikiPlugin</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/InterwikiPlugin?t=2013-02-22T01:06:25Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/InterwikiPlugin</id>
+ <updated>2013-02-22T01:06:25Z</updated>
+ <summary>Interwiki Plugin Introduction The InterwikiPlugin links ExternalSite:Page text to a page on an external site based on aliases defined in the .InterWikis... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>TWikiSkins</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/TWikiSkins?t=2013-02-15T20:11:31Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/TWikiSkins</id>
+ <updated>2013-02-15T20:11:31Z</updated>
+ <summary>TWiki Skins A skin overlays regular templates to provide specific look and feel to TWiki screens. Overview TWiki uses TWikiTemplates files as the basis of all the... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>UsingMultipleDisks</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/UsingMultipleDisks?t=2012-11-22T04:22:04Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/UsingMultipleDisks</id>
+ <updated>2012-11-22T04:22:04Z</updated>
+ <summary>Using multiple disks for DataDir and PubDir Motivation A TWiki site may reach a point where a single disk drive cannot house all files. Having PubDir on a different... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarWIKILOGOALT</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarWIKILOGOALT?t=2012-11-15T07:39:11Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarWIKILOGOALT</id>
+ <updated>2012-11-15T07:39:11Z</updated>
+ <summary>WIKILOGOALT site logo tooltip message Syntax: % WIKILOGOALT% Expands to: Defined in: TWikiPreferences Category: AdministrationVariables, SystemInformationVar... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarREMOTEPORT</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarREMOTEPORT?t=2012-11-15T06:10:21Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarREMOTEPORT</id>
+ <updated>2012-11-15T06:10:21Z</updated>
+ <summary>REMOTE PORT environment variable Syntax: % REMOTE PORT% Expands to: Category: DevelopmentVariables, SystemInformationVariables Related: ENV... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarPLUGINDESCRIPTIONS</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarPLUGINDESCRIPTIONS?t=2012-11-15T05:58:40Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarPLUGINDESCRIPTIONS</id>
+ <updated>2012-11-15T05:58:40Z</updated>
+ <summary>PLUGINDESCRIPTIONS list of plugin descriptions Syntax: % PLUGINDESCRIPTIONS% Expands to: Category: AdministrationVariables, SystemInformationVariables... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarORANGE</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarORANGE?t=2012-11-15T05:56:47Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarORANGE</id>
+ <updated>2012-11-15T05:56:47Z</updated>
+ <summary>ORANGE start orange colored text ORANGE is one of the rendering shortcut settings predefined in TWikiPreferences. See the section rendering shortcut settings... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarLOGOUTURL</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarLOGOUTURL?t=2012-11-14T05:55:11Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarLOGOUTURL</id>
+ <updated>2012-11-14T05:55:11Z</updated>
+ <summary>LOGOUTURL present a logout link Present a logout link, regardless of the state of login Syntax: % LOGOUTURL% Expand to: Category: LinkingAndNavigationVariables... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>VarIF</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/VarIF?t=2012-11-13T09:01:25Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/VarIF</id>
+ <updated>2012-11-13T09:01:25Z</updated>
+ <summary>IF{`condition` ...} simple conditionals Evaluate a condition and show one text or another based on the result. See details in IfStatements Syntax: % IF... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>WorkflowAndAutomationVariables</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/WorkflowAndAutomationVariables?t=2012-11-11T09:07:03Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/WorkflowAndAutomationVariables</id>
+ <updated>2012-11-11T09:07:03Z</updated>
+ <summary> (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>ManagingUsers</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/ManagingUsers?t=2011-06-05T05:23:40Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/ManagingUsers</id>
+ <updated>2011-06-05T05:23:40Z</updated>
+ <summary>Manage Users Register users on your TWiki site; change/reset/install passwords; remove user accounts Some of the features below may be disabled, depending on your... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+<entry>
+ <title>WebNotify</title>
+ <link rel="alternate" type="text/html" href="https://www.linux4sam.org/bin/view/TWiki/WebNotify?t=2010-12-14T02:13:00Z"/>
+ <id>https://www.linux4sam.org/bin/view/TWiki/WebNotify</id>
+ <updated>2010-12-14T02:13:00Z</updated>
+ <summary>Web Notification This is a subscription service to be automatically notified by e mail when topics change in this TWiki web. This is a convenient service, so... (last changed by TWikiContributor)</summary>
+ <author>
+  <name>TWikiContributor</name></author>
+</entry>
+ <!-- <ul>
+<li> Set SKIN = rssatom
+</li></ul> 
+--></feed>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wiki="http://purl.org/rss/1.0/modules/wiki/" ><channel rdf:about="https://www.linux4sam.org/bin/view/TWiki">
+<title>TWiki's TWiki web</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki</link>
+  <description>The Documentation Web of TWiki. TWiki is an Enterprise Collaboration Platform.</description>
+<image rdf:resource="https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png" />
+  <dc:language>en-us</dc:language>
+  <dc:rights>Copyright 2021 by contributing authors</dc:rights>
+  <dc:publisher>TWiki Administrator [notice@noreply.at91.com]</dc:publisher>
+  <dc:creator>The contributing authors of TWiki</dc:creator>
+  <dc:source>TWiki</dc:source>
+  <items>
+    <rdf:Seq>
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/BreadCrumbsPlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiConfigureLoadDotPm" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/CustomUserGroupNotations" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/FormattedSearch" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TagMeDebugSearch" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiRegistration" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/RenameWeb" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/EditTablePlugin" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TWikiTip029" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarUSERNAME" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarQUERYSTRING" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarPLUGINVERSION" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarSET" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/VarENV" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/SystemInformationVariables" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/TWiki/TablesAndSpreadsheetsVariables" />
+    </rdf:Seq>
+  </items>
+</channel>
+<image rdf:about="https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png">
+  <title>Linux4SAM.TWiki</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki</link>
+  <url>https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png</url>
+</image>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/FilterPlugin">
+  <title>FilterPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/FilterPlugin</link>
+  <description>FilterPlugin Description This plugin allows to substitute and extract information from content by using regular expressions. There are three different types... (last changed by TWikiAdminUser)</description>
+  <dc:date>2015-07-17T04:32:28Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiAdminUser">
+      <rdf:value>admin</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/JQueryPlugin">
+  <title>JQueryPlugin</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/JQueryPlugin</link>
+  <description>JQuery Plugin Description This plugin packages the popular jQuery and jQuery UI JavaScript libraries. jQuery is a fast, small, and feature rich JavaScript... (last changed by TWikiContributor)</description>
+  <dc:date>2013-09-28T21:48:30Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiInstallationGuide">
+  <title>TWikiInstallationGuide</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiInstallationGuide</link>
+  <description>TWiki Installation Guide The following is installation instructions for the TWiki 5.1 production release on an Apache web server on Linux. Visit TWiki:TWiki.InstallingTWiki... (last changed by TWikiContributor)</description>
+  <dc:date>2013-08-30T06:03:16Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarCALC">
+  <title>VarCALC</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarCALC</link>
+  <description>CALC{`formula`} add spreadsheet calculations to tables The % CALC{formula variable is handled by the SpreadSheetPlugin. Over 100 functions are available, such... (last changed by TWikiContributor)</description>
+  <dc:date>2013-03-23T08:16:51Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiEditingShorthand">
+  <title>TWikiEditingShorthand</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiEditingShorthand</link>
+  <description>TWiki Editing Shorthand These instructions are for contributors who prefer to use the Raw Edit over the default WYSIWYG editor. Formatting Command: You write:... (last changed by TWikiContributor)</description>
+  <dc:date>2013-03-19T02:30:13Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/SearchResultsPagination">
+  <title>SearchResultsPagination</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/SearchResultsPagination</link>
+  <description>Search Results Pagination When a % SEARCH{... returns many results, you may want to paginate the results. Overview You can achieve search results pagination by... (last changed by TWikiContributor)</description>
+  <dc:date>2013-02-13T01:35:29Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/TWikiVariablesQuickStart">
+  <title>TWikiVariablesQuickStart</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/TWikiVariablesQuickStart</link>
+  <description>TWiki Variables Quickstart TWiki Variables are names enclosed in percent signs that are that are expanded to some other text when the topic is displayed. For example... (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-16T09:00:14Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarSLIDESHOWEND">
+  <title>VarSLIDESHOWEND</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarSLIDESHOWEND</link>
+  <description>SLIDESHOWEND end slideshow The % SLIDESHOWEND% variable is handled by the SlideShowPlugin Syntax: % SLIDESHOWEND% Example: See SLIDESHOWSTART... (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-15T06:26:34Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarSESSIONVARIABLE">
+  <title>VarSESSIONVARIABLE</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarSESSIONVARIABLE</link>
+  <description>SESSION VARIABLE get, set or clear a session variable Session variables are stored in a personal `persistent memory space` that is not lost until the web browser... (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-15T06:25:02Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarREMOTEADDR">
+  <title>VarREMOTEADDR</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarREMOTEADDR</link>
+  <description>REMOTE ADDR environment variable Syntax: % REMOTE ADDR% Expands to: Category: DevelopmentVariables, SystemInformationVariables Related:... (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-15T06:10:04Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarMAINWEB">
+  <title>VarMAINWEB</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarMAINWEB</link>
+  <description>MAINWEB synonym for USERSWEB Deprecated. Please use % USERSWEB% instead. Category: SystemInformationVariables Related: SYSTEMWEB, USERSWEB (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-14T09:28:03Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarLOGINURL">
+  <title>VarLOGINURL</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarLOGINURL</link>
+  <description>LOGINURL present a login link Present a login link, regardless of the state of login Syntax: % LOGINURL% Expand to: Category: LinkingAndNavigationVariables... (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-14T05:52:24Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/VarENDSECTION">
+  <title>VarENDSECTION</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/VarENDSECTION</link>
+  <description>ENDSECTION{`name`} marks the end of a named section within a topic Syntax: % ENDSECTION{`name` Syntax: % ENDSECTION{type `include` Syntax: % ENDSECTION... (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-12T08:21:27Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/AttachmentsAndFilesVariables">
+  <title>AttachmentsAndFilesVariables</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/AttachmentsAndFilesVariables</link>
+  <description> (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-11T09:07:03Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/SearchingAndListingVariables">
+  <title>SearchingAndListingVariables</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/SearchingAndListingVariables</link>
+  <description> (last changed by TWikiContributor)</description>
+  <dc:date>2012-11-11T09:07:03Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/TWiki/ViewTildeJsmith">
+  <title>ViewTildeJsmith</title>
+  <link>https://www.linux4sam.org/bin/view/TWiki/ViewTildeJsmith</link>
+  <description>bin/view/~jsmith redirected to bin/view/JaneSmith You can go to a user`s topic by ~loginname instead of /FirstLast. More specifically, if you open http://twiki... (last changed by TWikiContributor)</description>
+  <dc:date>2012-10-19T10:03:03Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiContributor">
+      <rdf:value>TWikiContributor</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<!-- <ul>
+<li> Set SKIN = rss
+</li></ul> 
+--></rdf:RDF>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PatchingDTinUboot?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; PatchingDTinUboot &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="How_to_patch_Device_Tree_Blob_in"></a> How to patch Device Tree Blob in U-boot using Overlays </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#How_to_patch_Device_Tree_Blob_in"> How to patch Device Tree Blob in U-boot using Overlays</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#How_it_works"> How it works</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#How_to_patch_Device_Tree_Blo_AN1"> How to patch Device Tree Blob in U-boot using Overlays</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Traditional_way_of_kernel_bootin"> Traditional way of kernel booting</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Loading_overlays_and_applying_th"> Loading overlays and applying them on top of the DTB</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<h2><a name="How_it_works"></a> How it works </h2>
+<p />
+<p />
+<p />
+<h3><a name="How_to_patch_Device_Tree_Blo_AN1"></a> How to patch Device Tree Blob in U-boot using Overlays </h3>
+<p />
+Starting from U-boot 2018.07 released in Linux4SAM6.0, we can use the feature of patching the Device Tree Blob (DTB) with additional Device Tree Overlays (DTBO).
+<p />
+<h4><a name="Traditional_way_of_kernel_bootin"></a> Traditional way of kernel booting </h4>
+<p />
+So far, to boot kernel with zImage and normal DTB, we would use a command like this:</br>
+<pre>
+fatload mmc 0:1 0x24000000 zImage; fatload mmc 0:1 0x21000000 board.dtb; bootz 0x24000000 - 0x21000000;
+</pre></br>
+We can see the DTB is passed as the third argument to the command.
+<p />
+<h4><a name="Loading_overlays_and_applying_th"></a> Loading overlays and applying them on top of the DTB </h4>
+<p />
+<p />
+To apply the DTBO on top of the DTB, we need following commands:</br>
+This will load the original DTB.</br>
+<p />
+<pre>
+setenv fdtaddr 0x21000000;
+fatload mmc 0:1 ${fdtaddr} board.dtb
+</pre></br>
+This will load the DTBO into memory</br>
+<pre>
+setenv fdtovaddr 0x23000000;
+fatload mmc 0:1 ${fdtovaddr} someoverlay.dtbo;
+</pre></br>
+This will configure the address for fdt operations (we set it to the DRAM address where we loaded the base DTB)</br>
+<pre>
+fdt addr ${fdtaddr}
+</pre></br>
+This will resize the original DTB to accommodate more space for the overlay</br>
+<pre>
+fdt resize 8192
+</pre></br>
+This will apply the DTBO loaded at <em>fdtovaddr</em> on top of the DTB at the address we configured with <strong>fdt</strong> <strong>addr</strong> </br>
+<pre>
+fdt apply ${fdtovaddr}
+</pre></br>
+This will boot the kernel with the DTB at <em>fdtaddr</em> which now includes both the original DTB and the applied DTBO
+<pre>
+bootz 0x24000000 - ${fdtaddr}
+</pre></br>
+<p /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PatchingDTinUboot?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:48 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

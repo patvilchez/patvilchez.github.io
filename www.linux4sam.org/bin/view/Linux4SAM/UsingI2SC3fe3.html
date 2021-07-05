@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingI2SC?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; UsingI2SC &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="Using_I2SC_Inter_IC_Sound_Contro"></a>  Using I2SC (Inter-IC Sound Controller) </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#MikroElektronika_PROTO_Audio_Cod"> MikroElektronika PROTO Audio Codec Board</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Prerequisites"> Prerequisites</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Wire_setup"> Wire setup</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Probing"> Probing</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Playback"> Playback</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Capture"> Capture</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+This page explains how to enable and configure I2SC from SAMA5D2 and SAM9X60 SoCs to an external codec, using MikroElektronika audio codec PROTO board as an example.
+<p />
+The Inter-IC Sound Controller (I2SC) provides a 5-wire, bidirectional, synchronous, digital audio link to external audio devices: I2SC_DI(ADCDAT), I2SC_DO(DACDAT), I2SC_WS(LRCLK), I2SC_CK(BCLK), and I2SC_MCK(MCLK) pins.
+<p />
+Characteristics: <ul>
+<li> Master, Slave, and Controller Modes <ul>
+<li> Slave: Data Received/Transmitted
+</li> <li> Master: Data Received/Transmitted And Clocks Generated
+</li> <li> Controller: Clocks Generated
+</li></ul> 
+</li> <li> Individual Enable and Disable of Receiver, Transmitter and Clocks
+</li> <li> Configurable Clock Generator Common to Receiver and Transmitter <ul>
+<li> Suitable for a Wide Range of Sample Frequencies (f s ), Including 32 kHz, 44.1 kHz, 48 kHz, 88.2 kHz, 96 kHz, and 192 kHz
+</li> <li> 32 f s to 1024 f s Master Clock Generated for External Oversampling Data Converters
+</li></ul> 
+</li> <li> Support for Multiple Data Formats <ul>
+<li> 32-, 24-, 20-, 18-, 16-, and 8-bit Mono or Stereo Format
+</li> <li> 16- and 8-bit Compact Stereo Format, with Left and Right Samples Packed in the Same Word to Reduce Data Transfers
+</li></ul> 
+</li> <li> DMA Controller Interfaces the Receiver and Transmitter to Reduce Processor Overhead <ul>
+<li> One DMA Controller Channel for Both Audio Channels
+</li></ul> 
+</li> <li> Smart Holding Registers Management to Avoid Audio Channels Mix After Overrun or Underrun
+</li> <li> For SAM9X60 only: <ul>
+<li> 1- to 8-channel Time Division Multiplexed (TDM) with Frame Synchronization
+</li></ul> 
+</li></ul> 
+<p />
+<h1><a name="MikroElektronika_PROTO_Audio_Cod"></a> MikroElektronika PROTO Audio Codec Board </h1>
+The PROTO board can be used to test capture and playback on I2SC. More details regarding this board can be found on <a href="https://www.mikroe.com/audio-codec-proto-board" target="_blank">https://www.mikroe.com/audio-codec-proto-board<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h2><a name="Prerequisites"></a> Prerequisites </h2>
+<p /> <ul>
+<li> Linux4sam 5.8 or newer or vanilla kernel 4.18 (driver only) or newer; <ul>
+<li> kernel must be compiled with SND_SOC_MIKROE_PROTO
+</li></ul> 
+</li> <li> available only on SAMA5D2 and SAM9X60 SoCs; <ul>
+<li> SAMA5D2 SoC can be tested with <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a> board:              <table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">      <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Controller </td>   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2S wire </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> board connector </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="5" valign="top"> i2s0 </td>   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SC_MCK </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 23 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2SC_CK </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 17 </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SC_WS </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 22 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2SC_DO </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 25 </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SC_DI </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 26 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" rowspan="5" valign="top"> i2s1 </td>   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2SC_MCK </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 4 </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SC_CK </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J17 - 5 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2SC_WS </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> J8 - 1 </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SC_DO </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J9 - 3 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> I2SC_DI </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> J9 - 2 </td>   </tr>   </table>
+</li> <li> SAM9X60 SoC can be tested with <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a> board:         <table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">      <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Controller </td>   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2S wire </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> board connector </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" rowspan="5" valign="top"> i2s </td>   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SMCC_MCK </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J16 - 7 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2SMCC_CK </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> J16 - 12 </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> I2SMCC_WS </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> J16 - 35 </td>   </tr>   <tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">   <td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> I2SMCC_DO </td>   <td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> J16 - 40 </td>   </tr>   <tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">   <td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> I2SMCC_DI </td>   <td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> J16 - 38 </td>   </tr>   </table>
+</li></ul> 
+</li></ul> 
+<p />
+<h2><a name="Wire_setup"></a> Wire setup </h2>
+<p />
+The I2SC pins must be connected to the codec in the following way:
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table3" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> I2SC </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> PROTO codec </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> I2SC_CK </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> SCK </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> I2SC_DI </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> MISO </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> I2SC_DO </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> MOSI </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> I2SC_WS </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> ADCL (for capture) </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> I2SC_WS </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> DACL (for playback) </td>
+</tr></table>
+<p />
+Also, you will need to connect PROTO SDA (Data Input) and SCL (Clock Input) pins to a TWI interface.
+<p />
+Bellow you can see a picture with the I2SC0 and I2C0 connected to the PROTO board:
+<center>
+<img src="../../../pub/Linux4SAM/UsingI2SC/20180917_164218.jpg" width="100%"/>
+</center>
+<p />
+On Linux4sam 6.0 release, the <a href="https://github.com/linux4sam/dt-overlay-at91/blob/master/sama5d2_xplained/sama5d2_xplained_i2s0_proto.dtso" target="_blank">i2s0_proto overlay<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> can be used for the setup in the picture. For this overlay, the PROTO SDA and SCL need to be connected to the board's <strong>i2c0</strong> bus:
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table4" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> PROTO codec </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> board connector </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SDA </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> J8 – 5 (A4) </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> SCL </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> J8 – 6 (A5) </td>
+</tr></table>
+<p />
+Boot with the following u-boot command:
+<pre>
+&#61;&#62; bootm 0x24000000#kernel&#95;dtb#i2s0&#95;proto
+## Loading kernel from FIT Image at 24000000 ...
+   Using &#39;kernel&#95;dtb&#39; configuration
+   Trying &#39;kernel&#39; kernel subimage
+     Description:  Linux4SAM Linux kernel
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x240000e0
+     Data Size:    3835928 Bytes &#61; 3.7 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x22000000
+     Entry Point:  0x22000000
+     Hash algo:    crc32
+     Hash value:   7fca0b0c
+     Hash algo:    sha1
+     Hash value:   45cbd1fe15c283ef26056917fb4e10e2ce6b30e4
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 24000000 ...
+   Using &#39;kernel&#95;dtb&#39; configuration
+   Trying &#39;base&#95;fdt&#39; fdt subimage
+     Description:  Flattened Device Tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x243a8a24
+     Data Size:    44591 Bytes &#61; 43.5 KiB
+     Architecture: ARM
+     Load Address: 0x23000000
+     Hash algo:    crc32
+     Hash value:   9c933a6d
+     Hash algo:    sha1
+     Hash value:   c249364df161f1158f084ab0191c034a519a9fdd
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x243a8a24 to 0x23000000
+## Loading fdt from FIT Image at 24000000 ...
+   Using &#39;i2s0&#95;proto&#39; configuration
+   Trying &#39;fdt&#95;i2s0&#95;proto&#39; fdt subimage
+     Description:  Device Tree blob PROTO Audio board overlay
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x243b9b64
+     Data Size:    1066 Bytes &#61; 1 KiB
+     Architecture: ARM
+     Load Address: 0x23170000
+     Hash algo:    crc32
+     Hash value:   38a511f6
+     Hash algo:    sha1
+     Hash value:   74d5c3996811a9307097969d8fe3c5e63b9973a0
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Loading fdt from 0x243b9b64 to 0x23170000
+   Booting using the fdt blob at 0x23000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 3fb47000, end 3fb54f5f ... OK
+
+Starting kernel ...
+</pre>
+<p />
+Make sure the output of the <strong>bootm</strong> command is the same as above and that <strong>fdt_i2s0_proto</strong> overlay is applied .
+<p />
+For SAM9X60, the overlay can be found at <a href="https://github.com/linux4sam/dt-overlay-at91/blob/master/sam9x60ek/sam9x60ek_i2s_proto.dtso" target="_blank">i2s_proto overlay<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, and <strong>#i2s_proto</strong> needs to be used instead. The PROTO SDA and SCL need to be connected to the board's <strong>i2c0</strong> bus:
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table5" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> PROTO codec </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> board connector </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SDA </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> J16 – 3 (PA0) </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> SCL </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> J16 – 5 (PA1) </td>
+</tr></table>
+<p />
+<h2><a name="Probing"></a> Probing </h2>
+<p />
+If everything works well, at linux boot look for:
+<pre>
+ALSA device list:
+&#91;...]
+#2: wm8731 &#64; sama5d2&#95;xplained
+</pre>
+<p />
+Another step to assure that we are using the right device is to search <em>/proc</em> file system:
+<pre>
+# cat /proc/asound/pcm &#124; grep -i wm8731
+02-00: WM8731 HiFi wm8731-hifi-0 :  : playback 1 : capture 1
+</pre>
+<p />
+These steps are necessary to see if the drivers probed and to get the ALSA device id. In both prints, it is the first number on the line: <strong>2</strong> in our example. Also, we will need to find our complete device name:
+<pre>
+# aplay -L
+&#91;...]
+sysdefault:CARD&#61;sama5d2xplain&#95;1
+wm8731 &#64; sama5d2&#95;xplained, 
+Default Audio Device
+</pre>
+<p />
+In this list, our board is the one with the wm8731 codec. In our case, the device’s name is: <strong>sysdefault:sama5d2xplain_1</strong>
+<p />
+<h2><a name="Playback"></a> Playback </h2>
+<p />
+First, we need to use <em>amixer</em> (or <em>alsamixer</em>) to enable the playback. We must enable 'Output Mixer HiFi Playback Switch' (replace <strong>–c 2</strong> with your <strong>–c &lt;ALSA device id&gt;</strong>):
+<pre>
+# amixer -c 2 cset name&#61;&#39;Output Mixer HiFi Playback Switch&#39; on
+</pre>
+And we should see:
+<pre>
+numid&#61;13,iface&#61;MIXER,name&#61;&#39;Output Mixer HiFi Playback Switch&#39;
+; type&#61;BOOLEAN,access&#61;rw------,values&#61;1
+: values&#61;on
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> Before starting the playback, make sure that the <strong>I2SC_WS</strong> pin is connected to the <strong>DACL</strong> pin.
+<p />
+Insert headphones in the playback jack and check sound on both channels (replace <strong>-Dsysdefault:sama5d2xplain_1</strong> with your device’s name):
+<pre>
+# speaker-test -Dsysdefault:sama5d2xplain&#95;1 -c 2
+</pre>
+<p />
+<h2><a name="Capture"></a> Capture </h2>
+<p />
+Use <em>amixer</em> (or <em>alsamixer</em>) to enable sound recording (replace <strong>–c 2</strong> with your <strong>–c &lt;ALSA device id&gt;</strong>):
+<pre>
+# amixer -c 2 cset name&#61;&#39;Input Mux&#39; 1
+numid&#61;14,iface&#61;MIXER,name&#61;&#39;Input Mux&#39;
+; type&#61;ENUMERATED,access&#61;rw------,values&#61;1,items&#61;2
+; Item #0 &#39;Line In&#39;
+; Item #1 &#39;Mic&#39;
+: values&#61;1# amixer -c 2 cset name&#61;&#39;Mic Capture Switch&#39; on
+numid&#61;6,iface&#61;MIXER,name&#61;&#39;Mic Capture Switch&#39;
+; type&#61;BOOLEAN,access&#61;rw------,values&#61;1
+: values&#61;on
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> Before starting the record, make sure that the <strong>I2SC_WS</strong> pin is connected to the <strong>ADCL</strong> pin.
+<p />
+Connect a PC or a low impedance microphone to the Mic jack and start recording (replace <strong>–Dplughw:2</strong> with your <strong>–Dplughw:&lt;ALSA device id&gt;</strong>):
+<pre>
+# arecord -Dplughw:2 -c 2 -f S16&#95;LE out.wav
+</pre>
+<p />
+Stop the recording after a few seconds and playback the resulting out.wav file. Make sure sound is on both channels (replace <strong>–Dplughw:2</strong> with your <strong>–Dplughw:&lt;ALSA device id&gt;</strong>)
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> Before starting the playback, make sure that the <strong>I2SC_WS</strong> pin is connected to the <strong>DACL</strong> pin
+<p />
+<pre>
+# aplay -Dplughw:2 out.wav
+</pre>
+<p />
+<p />
+For other questions regarding audio configurations and setup please see <a class="twikiLink" href="AudioFAQ.html">Audio FAQ</a>. 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingI2SC?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

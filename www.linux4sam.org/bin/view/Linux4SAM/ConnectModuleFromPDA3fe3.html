@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/ConnectModuleFromPDA?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:13:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; ConnectModuleFromPDA &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="ConnectModuleFromPDA"></a>  <a class="twikiCurrentTopicLink twikiLink" href="ConnectModuleFromPDA.html">ConnectModuleFromPDA</a> </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Connection_Summary"> Connection Summary</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Ribbon_Cable"> Ribbon Cable</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Configuration_of_Display_Module">  Configuration of Display Module</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#TM5000"> TM5000</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#On_SAMA5D2_Xplained_Board"> On SAMA5D2 Xplained Board</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#On_SAM9X60_EK_Board"> On SAM9X60-EK Board</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#TM43xx"> TM43xx</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#On_SAMA5D2_Xplained_Board_AN1"> On SAMA5D2 Xplained Board</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#TM7000"> TM7000</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#On_SAMA5D2_SAMA5D4_Xplained_Boar"> On SAMA5D2/SAMA5D4 Xplained Board &amp; SAMA5D27 SOM1 EK  &amp; SAMA5D27 WLSOM1 EK &amp; SAM9X60-EK</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#On_SAMA5D3_Xplained_Board"> On SAMA5D3 Xplained Board</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h1><a name="Connection_Summary"></a> Connection Summary </h1>
+There are multiple types of display modules used on the SAMA5D2, SAMA5D3, SAMA5D4 Xplained boards , SAMA5D27 SOM1 EK , SAMA5D27 WLSOM1 EK, SAM9X60-EK :  the <a href="http://www.pdaatl.com/doc/tm5000.pdf" target="_blank">TM5000<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> / <a href="http://www.microchip.com/Developmenttools/ProductDetails/PartNo/AC320005-5" target="_blank">AC320005-5<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the <a href="http://www.pdaatl.com/doc/tm4301.pdf" target="_blank">TM43xx<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> and the <a href="http://www.pdaatl.com/doc/tm7000.pdf" target="_blank">TM7000<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. 
+<p />
+Starting with the release linux4sam 6.0, we only support the official <strong>TM5000</strong> LCD screen. This screen is also known as <a href="http://www.microchip.com/Developmenttools/ProductDetails/PartNo/AC320005-5" target="_blank">AC320005-5<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> from Microchip Direct part number.<br /> 
+Information for the other screens is legacy and provided as-is. We continue to provide best effort support for these screens, and keep the information on this page, but we recommend using the new TM5000 LCD screen. TM4301, TM7000 are supported in previous linux4sam releases.
+<p />
+To get the correct color display on LCD, please use the connection in the following table.
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top">  </td>
+<th align="center" bgcolor="#687684" class="twikiTableCol1" valign="top"> <font color="#ffffff">TM43xx / <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/TM43xxB?topicparent=Linux4SAM.ConnectModuleFromPDA;nowysiwyg=1" rel="nofollow" title="TM43xxB (this topic does not yet exist; you can create it)">TM43xxB</a></span></font> </th>
+<th align="right" bgcolor="#687684" class="twikiTableCol2" valign="top"> <font color="#ffffff">TM7000 / <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/TM7000B?topicparent=Linux4SAM.ConnectModuleFromPDA;nowysiwyg=1" rel="nofollow" title="TM7000B (this topic does not yet exist; you can create it)">TM7000B</a></span></font> </th>
+<th bgcolor="#687684" class="twikiTableCol3 twikiLastCol" valign="top"> <font color="#ffffff">TM5000 / AC320005-5</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D2 SOM1 EK </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> <span style="color: #ff6600">TM7000 Adaptor Cable</span> <br/> Alternative Configuration </td>
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="right" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D2 WLSOM1 EK </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <span style="color: #ff6600">TM7000 Adaptor Cable</span> <br/> Alternative Configuration </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D2 Xplained </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> <span style="color: #ff6600">TM7000 Adaptor Cable</span> <br/> Alternative Configuration </td>
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="right" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D3 Xplained </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <span style="color: #0000ff">Directly Connect Cable</span> <br/> Default Configuration </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAMA5D4 Xplained </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> <span style="color: #ff6600">TM7000 Adaptor Cable</span> <br/> Alternative Configuration </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="right" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> SAM9X60-EK </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <span style="color: #ff6600">TM7000 Adaptor Cable</span> <br/> Alternative Configuration </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol twikiLast" valign="top"> <span style="color: #0000ff">Directly Connected Cable</span> </td>
+</tr></table>
+<p />
+<p />
+<h2><a name="Ribbon_Cable"></a> Ribbon Cable </h2>
+<p />
+We select one of the following ribbon cables to connect the display module to the board.  <ul>
+<li> <strong>Directly Connect Cable</strong> <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/Direct_Connect_Cable.png" alt="Direct_Connect_Cable.png" width="653" height="192" />
+</li> <li> <strong>TM7000 Adaptor Cable</strong>, aka Golden Ribbon Cable. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_Adaptor_Cable.png" alt="TM7000_Adaptor_Cable.png" width="653" height="192" /> <br /> For more details on this cable, please refer to <a href="https://www.linux4sam.org/pub/Linux4SAM/ConnectModuleFromPDA/TM7000_Adaptor_Cable_usage_info.pdf" target="_top">TM7000 Adaptor Cable</a>.
+</li></ul> 
+<p />
+<p />
+<h2><a name="Configuration_of_Display_Module"></a> Configuration of Display Module </h2>
+<p />
+<strong>TM7000</strong> has options to support two different 18 bits RGB parallel data interfaces:
+<p /> <ul>
+<li> <strong>Default Configuration</strong> <ul>
+<li> The default configuration of TM7000, where R46-R63 are populated with 0R resistors, and R27-R44 are left open. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/Default_Configuration_TM7000.png" alt="Default_Configuration_TM7000.png" width="347" height="260" /> 
+</li> <li> To be used with SAMA5D3 Xplained with the <strong>Directly Connect Cable</strong>.
+</li></ul> 
+</li> <li> <strong>Alternative Configuration</strong> <ul>
+<li> You need to change TM7000 by keep R46-R63 open, and R27-R44 are populated by 0R resistors.<br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/Alternative_Configuration_TM7000.png" alt="Alternative_Configuration_TM7000.png" width="347" height="260" /> 
+</li> <li> To be used with SAMA5D2, SAMA5D4 Xplained boards and SAMA5D27 SOM1 EK SAMA5D27 WLSOM1 EK SAM9X60-EK with the <strong>TM7000 Adaptor Cable</strong>.
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> <strong>Data BUS mapping and Power supply informations</strong> are available on  <a href="http://www.atmel.com/images/atmel-44019-cortex-a5-microcontroller-using-display-module-tm7000-on-sama5d4-xplained-ultra-board_application-note.pdf" target="_blank">Using Display Module TM7000 on SAMA5D4 Xplained Ultra Board<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h1><a name="TM5000"></a> TM5000 </h1>
+<p />
+The <a href="http://www.pdaatl.com/doc/tm5000.pdf" target="_blank">TM5000<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> / <a href="http://www.microchip.com/Developmenttools/ProductDetails/PartNo/AC320005-5" target="_blank">AC320005-5<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> display modules use a 5 VCC power supply. They have a 24-bit RGB parallel data interface, use the <strong>Directly Connected Cable</strong> to connect the board and the display module. 
+<p />
+The connection is identical for the SAMA5D2, SAMA5D3, SAMA5D4 Xplained boards, SAMA5D27 SOM1 EK, SAMA5D27 WLSOM1 EK and SAM9X60-EK. Here we take the SAMA5D2 Xplained board as an example.
+<p />
+<h2><a name="On_SAMA5D2_Xplained_Board"></a> On SAMA5D2 Xplained Board </h2>
+Please follow the following steps to connect the board and the display module. <ol>
+<li> When unboxing the TM5000, it's made of two PCBs, one holding the screen, and one adapter board attached with screws and a tiny Directly Connected Cable. <br />  <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0062.jpg" alt="IMG-0062.JPG" width="539" height="493" /><br />
+</li> <li>  One needs to unscrew the adapter board, and use the PCB with the screen with the included Directly Connected Cable (tiny), or another Directly Connected Cable as <a class="twikiCurrentTopicLink twikiAnchorLink" href="ConnectModuleFromPDA.html#Ribbon_Cable">presented in the photo above</a>, to connect the PDA screen to the AT91 board.
+</li> <li> For the stock ribbon, connect the Directly Connected Cable to the Host Interface(J1) on the TM5000. Note that connects on the cable face <strong><em>DOWN</em></strong> toward PCB.<br />  <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0056.jpg" alt="IMG-0056.JPG" width="539" height="493" /><br />
+</li> <li> Connect the Directly Connect Cable to SAMA5D2 Xplained LCD Connector (J2). Note that contacts on the cable face <strong><em>UP</em></strong> away from PCB.<br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/D2_Cable.png" alt="D2_Cable.png" width="539" height="493" /> <br />
+</li> <li> Re-position the setup with the TM5000 oriented as shown below. <br /><img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0057.jpg" alt="IMG-0057.JPG" width="539" height="493" /> <br /> 
+</li> <li>  <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> The Directly Connected Cable that connects the screen PCB and the adapter board has the pins opened on each side for each end, not on one side for both ends, like the stock ribbon cables. This can be used, but it's different from the stock ribbon cable.
+</li></ol> 
+Please see below photo about which is the correct position to connect this specific ribbon cable. <br />  <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0065.jpg" alt="IMG-0065.JPG" width="539" height="493" /><br />
+<p />
+<h2><a name="On_SAM9X60_EK_Board"></a> On SAM9X60-EK Board </h2>
+<p />
+You can deduce the connection procedure from the description above or follow the link to the FAQ page on Microchip help website: <a href="https://microchipdeveloper.com/32mpu:sam9x60-ek-tm5000" target="_blank">SAM9X60-EK -- Attaching the TM5000 WVGA Display<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h1><a name="TM43xx"></a> TM43xx </h1>
+<p />
+The TM43xx display module use a 5 VCC power supply. It has a 24-bit RGB parallel data interface, use the <strong>Directly Connect Cable</strong> to connect the board and the display module. 
+<p />
+The connection is identical for the SAMA5D2, SAMA5D3, SAMA5D4 Xplained boards and SAMA5D27 SOM1 EK SAMA5D27 WLSOM1 EK SAM9X60-EK. Here we take the SAMA5D2 Xplained board for example.
+<p />
+<h2><a name="On_SAMA5D2_Xplained_Board_AN1"></a> On SAMA5D2 Xplained Board </h2>
+Please follow the following steps to connect the board and the display module. <ol>
+<li> Connect the Directly Connected Cable to the Host Interface(J5) on the TM43xx. Note that connects on the cable face <strong><em>DOWN</em></strong> toward PCB.<br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM4301_Cable.png" alt="TM4301_Cable.png" width="539" height="493" /> <br /> 
+</li> <li> Connect the Directly Connect Cable to SAMA5D2 Xplained LCD Connector (J2). Note that contacts on the cable face <strong><em>UP</em></strong> away from PCB.<br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/D2_Cable.png" alt="D2_Cable.png" width="539" height="493" /> <br />
+</li> <li> Re-position the setup with the TM43xx oriented as shown below. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM4301_D2.png" alt="TM4301_D2.png" width="539" height="753" /> <br />
+</li></ol> 
+<p />
+<h1><a name="TM7000"></a> TM7000 </h1>
+<p />
+The TM7000 and <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/TM7000B?topicparent=Linux4SAM.ConnectModuleFromPDA;nowysiwyg=1" rel="nofollow" title="TM7000B (this topic does not yet exist; you can create it)">TM7000B</a></span> display modules use a 3.3 VCC power supply. They have 18-bit RGB parallel data interface. The pin assignment of the RGB bus of SAMA5D2 and SAMA5D4 is different from SAMA5D3. The connection of the board and the display module is different between the SAMA5D3 and the SAMA5D2, SAMA5D4 Xplained board. 
+<p />
+<p />
+<h2><a name="On_SAMA5D2_SAMA5D4_Xplained_Boar"></a> On SAMA5D2/SAMA5D4 Xplained Board &amp; SAMA5D27 SOM1 EK  &amp; SAMA5D27 WLSOM1 EK &amp; SAM9X60-EK </h2>
+<p />
+The connection is identical for the SAMA5D2, SAMA5D4 Xplained boards and SAMA5D27 SOM1 EK. Here, we take the SAMA5D2 Xplained board as the example.
+<p />
+We need to use TM7000 with the <strong>alternative configuration</strong> and the <strong>TM7000 Adaptor Cable</strong>. Please follow the following steps to connect the board and display module.
+<p /> <ol>
+<li> Connect the TM7000 Adaptor Cable to the Host Interface(J6) on the TM7000. Note that connects on the cable face <strong><em>DOWN</em></strong>  toward PCB, and make sure that LCD written on the ribbon cable silkscreen at the back of the TM7000 connector.<br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_Alt_Cable2.png" alt="TM7000_Alt_Cable2.png" width="583" height="499" /> <br />
+</li> <li> Connect the TM7000 Adaptor Cable to SAMA5D2 Xplained LCD Connector (J2). Note that contacts on the cable face <strong><em>UP</em></strong> away from PCB, you can see the ribbon cable silkscreen facing you with CPU written in front of the Xplained connector. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/D2_Alt_Cable.png" alt="D2_Alt_Cable.png" width="583" height="499" /> <br />
+</li> <li> Connect the AC Adapter to the TM7000 (J2). <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_AC_Adapter.png" alt="TM7000_AC_Adapter.png" width="583" height="499" /> <br />
+</li> <li> Re-position the setup with the TM7000 oriented as shown below. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_Alt_D2.png" alt="TM7000_Alt_D2.png" width="583" height="825" /> <br />
+</li></ol> 
+<p />
+<h2><a name="On_SAMA5D3_Xplained_Board"></a> On SAMA5D3 Xplained Board </h2>
+<p />
+Using TM7000 with the <strong>default configuration</strong> and the <strong>Directly Connect Cable</strong>, follow the following steps to connect the board and the display module.
+<p /> <ol>
+<li> Connect the Directly Connect Cable to the Host Interface(J6) on the Display Module. Note that connects on the cable face <strong><em>DOWN</em></strong> toward PCB. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_Cable.png" alt="TM7000_Cable.png" width="582" height="499" /> <br />
+</li> <li> Connect the Directly Connect Cable to SAMA5D3 Xplained LCD Connector (J22). Note that contacts on the cable face <strong><em>UP</em></strong> away from PCB. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/D3_Cable.png" alt="D3_Cable.png" width="583" height="499" /> <br />
+</li> <li> Connect the AC Adapter to the TM7000 (J2). <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_Cable_AC.png" alt="TM7000_Cable_AC.png" width="583" height="499" /> <br />
+</li> <li> Re-position the setup with the TM7000 oriented as shown below. <br /> <img src="../../../pub/Linux4SAM/ConnectModuleFromPDA/TM7000_D3.png" alt="TM7000_D3.png" width="583" /> <br />
+</li></ol> 
+<p />
+<p /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments"> <div class="twikiAttachments">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="ConnectModuleFromPDA2909.html?skin=print.myskin;sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">I</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="ConnectModuleFromPDA0ef1.html?skin=print.myskin;sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Attachment</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="ConnectModuleFromPDA2f98.html?skin=print.myskin;sortcol=2;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Action</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="ConnectModuleFromPDAc856.html?skin=print.myskin;sortcol=3;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Size</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="ConnectModuleFromPDAe805.html?skin=print.myskin;sortcol=4;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Date</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="ConnectModuleFromPDA1ee1.html?skin=print.myskin;sortcol=5;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Who</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="ConnectModuleFromPDAc0bc.html?skin=print.myskin;sortcol=6;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0056.jpg">IMG-0056.JPG</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/ConnectModuleFromPDA?filename=IMG-0056.JPG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 1916.6&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2018-10-12 - 11:03</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> TM5000_0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0057.jpg">IMG-0057.JPG</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/ConnectModuleFromPDA?filename=IMG-0057.JPG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> 2126.2&nbsp;K </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2018-10-12 - 11:00</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> TM5000_1 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0062.jpg">IMG-0062.JPG</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/ConnectModuleFromPDA?filename=IMG-0062.JPG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 1498.8&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2018-10-12 - 13:43</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> TM5000_2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/ConnectModuleFromPDA/IMG-0065.jpg">IMG-0065.JPG</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/ConnectModuleFromPDA?filename=IMG-0065.JPG;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol3 twikiLast" valign="top"> 2322.1&nbsp;K </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2018-10-12 - 13:43</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> TM5000_3 </td>
+</tr></table>
+</div> </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/ConnectModuleFromPDA?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:13:10 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

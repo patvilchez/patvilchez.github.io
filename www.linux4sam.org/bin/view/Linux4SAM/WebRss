@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wiki="http://purl.org/rss/1.0/modules/wiki/" ><channel rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM">
+<title>TWiki's Linux4SAM web</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM</link>
+  <description>The Linux4SAM web of TWiki. TWiki is a Web-Based Collaboration Platform for the Enterprise.</description>
+<image rdf:resource="https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png" />
+  <dc:language>en-us</dc:language>
+  <dc:rights>Copyright 2021 by contributing authors</dc:rights>
+  <dc:publisher>TWiki Administrator [notice@noreply.at91.com]</dc:publisher>
+  <dc:creator>The contributing authors of TWiki</dc:creator>
+  <dc:source>TWiki</dc:source>
+  <items>
+    <rdf:Seq>
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/UsingIsi6" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/HasherrorwhenbootingFITimage" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/UsingI2SC" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/WilcFaq" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/DTOverlaySubsections" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/UsingFITwithOverlays" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/OpenWrt" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/BluetoothHeartRateProfile" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/WiFiProvisioningOverBLE" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/BleTransparentService" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/WebLeftBar" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/LinksToCommunities" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/WebHome" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/WebPreferences" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/WebBasedWiFiProvisioning" />
+      <rdf:li rdf:resource="https://www.linux4sam.org/bin/view/Linux4SAM/BuildLinuxSsl" />
+    </rdf:Seq>
+  </items>
+</channel>
+<image rdf:about="https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png">
+  <title>Linux4SAM.Linux4SAM</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM</link>
+  <url>https://www.linux4sam.org/pub/Main/TWikiPreferences/tux2_atmel_header.png</url>
+</image>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/UsingIsi6">
+  <title>UsingIsi6</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/UsingIsi6</link>
+  <description>Using ISI (Image Sensor Interface) in Linux4SAM 6.0 and later Introduction This page is mainly about how to enable and configure the ISI in AT91SAM SoCs for different... (last changed by EugenHristev)</description>
+  <dc:date>2021-07-01T11:19:42Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.EugenHristev">
+      <rdf:value>EugenHristev</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/HasherrorwhenbootingFITimage">
+  <title>HasherrorwhenbootingFITimage</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/HasherrorwhenbootingFITimage</link>
+  <description>Hash error when booting FIT image How does the issue manifest Starting from U boot 2021.04 released in Linux4SAM 2021.04, you could notice the following error when... (last changed by EugenHristev)</description>
+  <dc:date>2021-06-25T11:38:19Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.EugenHristev">
+      <rdf:value>EugenHristev</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/UsingI2SC">
+  <title>UsingI2SC</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/UsingI2SC</link>
+  <description>Using I2SC (Inter IC Sound Controller) Introduction This page explains how to enable and configure I2SC from SAMA5D2 and SAM9X60 SoCs to an external codec, using... (last changed by EugenHristev)</description>
+  <dc:date>2021-06-25T08:32:52Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.EugenHristev">
+      <rdf:value>EugenHristev</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/WilcFaq">
+  <title>WilcFaq</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/WilcFaq</link>
+  <description> How to use WILC3000 on SAM development boards Introduction This page describes how WILC3000 devices could be used on SAM development boards. Supported devices... (last changed by EugenHristev)</description>
+  <dc:date>2021-06-25T08:32:11Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.EugenHristev">
+      <rdf:value>EugenHristev</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/DTOverlaySubsections">
+  <title>DTOverlaySubsections</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/DTOverlaySubsections</link>
+  <description>You can easily download DT Overlay source code from GitHub DT Overlays repository: clone the Linux4sam GitHub DT Overlay repository $ git clone git://github... (last changed by EugenHristev)</description>
+  <dc:date>2021-06-25T08:31:21Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.EugenHristev">
+      <rdf:value>EugenHristev</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/UsingFITwithOverlays">
+  <title>UsingFITwithOverlays</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/UsingFITwithOverlays</link>
+  <description>Using FIT image and Device Tree Overlays How it works Using FIT with overlays Since U boot 2018.07, released with linux4sam 6.0, we have the feature of adding Device... (last changed by EugenHristev)</description>
+  <dc:date>2021-06-25T08:28:49Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.EugenHristev">
+      <rdf:value>EugenHristev</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/OpenWrt">
+  <title>OpenWrt</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/OpenWrt</link>
+  <description>OpenWrt Introduction OpenWrt is an open source project for embedded operating system based on Linux, primarily used on embedded devices to route network traffic... (last changed by ClaudiuBeznea)</description>
+  <dc:date>2021-06-17T09:11:31Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.ClaudiuBeznea">
+      <rdf:value>ClaudiuBeznea</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/BluetoothHeartRateProfile">
+  <title>BluetoothHeartRateProfile</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/BluetoothHeartRateProfile</link>
+  <description>BluetoothHeartRateProfile This demo application provides experience to user for heart rate profile of Bluetooth Low Energy (BLE). Application sends the data over... (last changed by HemanthTenkod)</description>
+  <dc:date>2021-06-01T16:30:20Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.HemanthTenkod">
+      <rdf:value>HemanthTenkod</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/WiFiProvisioningOverBLE">
+  <title>WiFiProvisioningOverBLE</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/WiFiProvisioningOverBLE</link>
+  <description>WiFiProvisioningOverBLE This demo application provides demo to user on how to provision Wi Fi credentials of the Home AP via the Bluetooth low energy (BLE). This... (last changed by HemanthTenkod)</description>
+  <dc:date>2021-06-01T16:29:56Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.HemanthTenkod">
+      <rdf:value>HemanthTenkod</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/BleTransparentService">
+  <title>BleTransparentService</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/BleTransparentService</link>
+  <description>BleTransparentService This demo application demonstrates to user on how to use transparent service of Bluetooth Low Energy (BLE). This is a custom/user defined profile... (last changed by HemanthTenkod)</description>
+  <dc:date>2021-06-01T16:29:28Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.HemanthTenkod">
+      <rdf:value>HemanthTenkod</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/WebLeftBar">
+  <title>WebLeftBar</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/WebLeftBar</link>
+  <description>Linux4SAM Software tools AT91Bootstrap U Boot Linux Kernel DT Overlay Open source solutions Yocto Project Buildroot OpenWrt Applications... (last changed by NicolasFerre)</description>
+  <dc:date>2021-03-17T13:47:51Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.NicolasFerre">
+      <rdf:value>NicolasFerre</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/LinksToCommunities">
+  <title>LinksToCommunities</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/LinksToCommunities</link>
+  <description>LinksToCommunities This topic aggregates the contact informations from open source communities that are represented on this website. In order not to duplicate... (last changed by NicolasFerre)</description>
+  <dc:date>2021-03-17T12:58:23Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.NicolasFerre">
+      <rdf:value>NicolasFerre</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/WebHome">
+  <title>WebHome</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/WebHome</link>
+  <description>Welcome to 1 Welcome to the main starting point for Linux OS on Microchip Microprocessors. Its aim is to centralize information about Linux kernel and open source... (last changed by TWikiAdminUser)</description>
+  <dc:date>2021-03-17T12:50:55Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiAdminUser">
+      <rdf:value>admin</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/WebPreferences">
+  <title>WebPreferences</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/WebPreferences</link>
+  <description>Linux4SAM Web Preferences The following settings are web preferences of the Linux4SAM web. These preferences overwrite the site level preferences in... (last changed by TWikiAdminUser)</description>
+  <dc:date>2021-03-17T11:34:37Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.TWikiAdminUser">
+      <rdf:value>admin</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/WebBasedWiFiProvisioning">
+  <title>WebBasedWiFiProvisioning</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/WebBasedWiFiProvisioning</link>
+  <description>WebBasedWiFiProvisioning The SAMA5D27 WLSOM1 EK boards enables to configure the WiFi credentials over the HTML based webpage. The WILC module comes up as a Access... (last changed by HemanthTenkod)</description>
+  <dc:date>2021-03-03T18:58:16Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.HemanthTenkod">
+      <rdf:value>HemanthTenkod</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<item rdf:about="https://www.linux4sam.org/bin/view/Linux4SAM/BuildLinuxSsl">
+  <title>BuildLinuxSsl</title>
+  <link>https://www.linux4sam.org/bin/view/Linux4SAM/BuildLinuxSsl</link>
+  <description>Compiling Linux Kernel fails looking at OpenSSL header files Description While compiling the Linux kernel, some error described below are met with the scripts/sign... (last changed by NicolasFerre)</description>
+  <dc:date>2021-02-26T16:25:33Z</dc:date>
+  <dc:contributor>
+    <rdf:Description link="https://www.linux4sam.org/bin/view?topic=Main.NicolasFerre">
+      <rdf:value>NicolasFerre</rdf:value>
+    </rdf:Description>
+  </dc:contributor>
+</item>
+<!-- <ul>
+<li> Set SKIN = rss
+</li></ul> 
+--></rdf:RDF>

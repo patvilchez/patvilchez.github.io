@@ -1,0 +1,1121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/LinuxKernel by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:56:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> LinuxKernel &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/LinuxKernel?t=1625510736" type="application/x-wiki" title="Edit LinuxKernel" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/LinuxKernel?t=1625510736" title="Edit LinuxKernel" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_table1 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#table1 td.twikiTableCol0 {width:20%;}
+.twikiTable#table1 th.twikiTableCol0 {width:20%;}
+.twikiTable#table1 td.twikiTableCol1 {width:60%;}
+.twikiTable#table1 th.twikiTableCol1 {width:60%;}
+.twikiTable#table1 td.twikiTableCol2 {width:10%;}
+.twikiTable#table1 th.twikiTableCol2 {width:10%;}
+.twikiTable#table1 td.twikiTableCol3 {width:10%;}
+.twikiTable#table1 th.twikiTableCol3 {width:10%;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="LinuxKernel.html">LinuxKernel</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="Linux_Kernel"></a> Linux Kernel </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="#Ecosystem"> Ecosystem</a>
+</li> <li> <a href="#Changes_introduced_by_Device_Tre"> Changes introduced by Device Tree support</a>
+</li> <li> <a href="#Linux_for_AT91_source_code"> Linux for AT91 source code</a> <ul>
+<li> <a href="#Branches"> Branches</a>
+</li> <li> <a href="#Tags"> Tags</a> <ul>
+<li> <a href="#linux4sam_2020_10_tag"> linux4sam-2020.10 tag</a>
+</li> <li> <a href="#linux4sam_2020_04_tag"> linux4sam-2020.04 tag</a>
+</li> <li> <a href="#linux4sam_6_2_icp_tag"> linux4sam_6.2-icp tag</a>
+</li> <li> <a href="#linux4sam_6_2_tag"> linux4sam_6.2 tag</a>
+</li> <li> <a href="#linux4sam_6_1_tag"> linux4sam_6.1 tag</a>
+</li> <li> <a href="#linux4sam_6_0_tag"> linux4sam_6.0 tag</a>
+</li> <li> <a href="#linux4sam_5_8_tag"> linux4sam_5.8 tag</a>
+</li> <li> <a href="#linux4sam_5_7_tag"> linux4sam_5.7 tag</a>
+</li> <li> <a href="#linux4sam_5_6_tag"> linux4sam_5.6 tag</a>
+</li> <li> <a href="#linux4sam_5_5_tag"> linux4sam_5.5 tag</a>
+</li> <li> <a href="#linux4sam_5_4_tag"> linux4sam_5.4 tag</a>
+</li> <li> <a href="#linux4sam_5_3_tag"> linux4sam_5.3 tag</a>
+</li> <li> <a href="#linux4sam_5_2_tag"> linux4sam_5.2 tag</a>
+</li> <li> <a href="#linux4sam_5_1_tag"> linux4sam_5.1 tag</a>
+</li> <li> <a href="#linux4sam_5_0_tag"> linux4sam_5.0 tag</a>
+</li> <li> <a href="#linux4sam_5_0_alpha7_tag"> linux4sam_5.0-alpha7 tag</a>
+</li> <li> <a href="#linux4sam_4_7_tag"> linux4sam_4.7 tag</a>
+</li> <li> <a href="#linux4sam_4_6_tag"> linux4sam_4.6 tag</a>
+</li> <li> <a href="#linux4sam_4_5_tag"> linux4sam_4.5 tag</a>
+</li> <li> <a href="#linux4sam_4_2_tag"> linux4sam_4.2 tag</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Build_Linux_for_AT91"> Build Linux for AT91</a> <ul>
+<li> <a href="#Getting_Kernel_sources"> Getting Kernel sources</a>
+</li> <li> <a href="#Configure_and_Build_the_Linux_ke"> Configure and Build the Linux kernel</a>
+</li></ul> 
+</li> <li> <a href="#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<p />
+<h2><a name="Ecosystem"></a> Ecosystem </h2>
+<p />
+<a href="http://www.kernel.org/" target="_blank">Linux Kernel Archives<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is the primary site for the Linux kernel source. All Linux kernel versions, including latest snapshot or "release candidate" (-rc) can be easily found here.
+<p />
+<a href="http://www.arm.linux.org.uk/" target="_blank">The ARM Linux Project<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> lead by Russell King. Russell is in charge to ensure the ARM core support in the Kernel mainline.
+<p />
+<a href="http://git.kernel.org/?p=linux/kernel/git/arm/arm-soc.git" target="_blank">The ARM-SOC git tree<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> lead by Arnd Bergmann, Olof Johansson and Kevin Hilman. It is the initiative that managed to unify the work being done on ARM-based System on Chip (SoC) by different vendors. This git tree is the natural way to send AT91-related material upstream.
+<p />
+<a href="http://lists.infradead.org/pipermail/linux-arm-kernel/" target="_blank">The Linux-arm-kernel Mailing lists<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is where the work is actually being done. Discussions, bug reports and patches must be posted there.
+<p />
+<p />
+<h2><a name="Changes_introduced_by_Device_Tre"></a> Changes introduced by Device Tree support </h2>
+<p />
+The Device Tree is a binary file containing the description of your SoC and your board. Before this move to Device Tree, the information was stored in several C files directly in the Linux kernel code. The number of ARM-based SoC growing rapidly it has become clear that the amount of C code could not follow this pace. In addition to consolidating the ARM related kernel code, allowing the common code to be centralized and better maintained, the Device Tree also bring the possibility to run the same kernel binary on several platforms sharing the same ARM instruction set. This single zImage initiative allow the use of the same Linux kernel binary, without having the need for recompiling it, on another SoC, by just providing the proper Device Tree Binary file (<code>.dtb</code>).
+<p />
+Now the boot process has to deal with two Linux files instead of one: the Device Tree Binary file and the kernel image itself. It mainly involves changes for the U-Boot booting command. If you don't want to care about this new file, there is an Linux kernel option to append the Device Tree Binary at the end of the kernel image.
+<p />
+Useful documentation:
+<p /> <ul>
+<li> Getting started information: <ol>
+<li> <a href="http://elinux.org/Device_Trees" target="_blank">http://elinux.org/Device_Trees<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://events.linuxfoundation.org/images/stories/pdf/lf_elc12_abraham.pdf" target="_blank">Linaro DT presentation<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://lwn.net/Articles/448502/" target="_blank">Platform devices and device trees<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> introduction article on LWN
+</li> <li> <a href="http://xillybus.com/tutorials/device-tree-zynq-1" target="_blank">A Tutorial on the Device Tree (part 1, 2, 3, 4 and 5)<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://www.slideshare.net/softpapa/device-tree-support-on-arm-linux-8930303" target="_blank">Device Tree support on ARM Linux<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> slides
+</li></ol> 
+</li></ul> 
+<p /> <ul>
+<li> References <ul>
+<li> <a href="http://www.power.org/resources/downloads/Power_ePAPR_APPROVED_v1.0.pdf" target="_blank">ePAPR specification<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://lwn.net/Articles/414016/" target="_blank">Grant Likely article<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> on LWN
+</li> <li> Device Tree main website<br />  <a href="http://devicetree.org/Main_Page" target="_blank">http://devicetree.org/Main_Page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a><br />  <a href="http://devicetree.org/Device_Tree_Usage" target="_blank">http://devicetree.org/Device_Tree_Usage<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Linux kernel documentation: <a href="https://github.com/linux4sam/linux-at91/blob/master/Documentation/devicetree/booting-without-of.txt" target="_blank">Documentation/devicetree/booting-without-of.txt<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+</li></ul> 
+<p />
+<h2><a name="Linux_for_AT91_source_code"></a> Linux for AT91 source code </h2>
+<p />
+The Linux kernel for Microchip / Atmel ARM-based SoC (aka AT91) is distributed as a GIT tree hosted on GitHub as a fork of the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux.git" target="_blank">official Linus Torvalds' git tree<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. The objective of the Atmel Linux team is to integrate all the AT91-related material in the official Linux Kernel.<br /> 
+Before completing this inclusion process, which can take time, this website provides the Linux4SAM Linux Kernel git tree for AT91 devices at:<br /> 
+<p />
+<a href="https://github.com/linux4sam/linux-at91" target="_blank">https://github.com/linux4sam/linux-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h3><a name="Branches"></a> Branches </h3>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> <font color="#ffffff">Name</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="60%"> <font color="#ffffff">Board Supported</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Comment</font> </th>
+<th bgcolor="#687684" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <font color="#ffffff">Related Tags</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-5.4-at91" target="_blank">linux-5.4-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_5_4.html">LinuxKernel_5_4</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a>,  <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a>,  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2 ICP</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>, </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Maintained, <strong>stable</strong> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_2020_10_tag">linux4sam-2020.10</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-5.4-at91" target="_blank">linux-5.4-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_5_4.html">LinuxKernel_5_4</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a>,  <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a>,  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2 ICP</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Maintained, <strong>stable</strong> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_2020_4_tag">linux4sam-2020.04</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.19-at91" target="_blank">linux-4.19-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_19.html">LinuxKernel_4_19</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> SAMA5D2 ICP board supported <br /> SAMA5D2 ICP board using Device Tree <br />  Board with demo available:  <a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2 ICP</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Maintained, <strong>stable</strong> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_6_2_tag_icp">linux4sam_6.2-icp</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.19-at91" target="_blank">linux-4.19-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_19.html">LinuxKernel_4_19</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a>,  <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a>,  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Maintained, <strong>stable</strong> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_6_2_tag">linux4sam_6.2</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.19-at91" target="_blank">linux-4.19-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_19.html">LinuxKernel_4_19</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91SAM9X5-EK</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Maintained, <strong>stable</strong> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_6_1_tag">linux4sam_6.1</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.14-at91" target="_blank">linux-4.14-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_14.html">LinuxKernel_4_14</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91SAM9X5-EK</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Not recommended for new developments </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_6_0_tag">linux4sam_6.0</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.9-at91" target="_blank">linux-4.9-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_9.html">LinuxKernel_4_9</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>,  <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a>,  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91SAM9X5-EK</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Not recommended for new developments </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_6_tag">linux4sam_5.6</a> <br /> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_7_tag">linux4sam_5.7</a> <br /> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_8_tag">linux4sam_5.8</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.4-at91" target="_blank">linux-4.4-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_4.html">LinuxKernel_4_4</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91SAM9X5-EK</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_4_tag">linux4sam_5.4</a> <br /> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_5_tag">linux4sam_5.5</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-4.1-at91" target="_blank">linux-4.1-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_4_1.html">LinuxKernel_4_1</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_0_tag">linux4sam_5.0</a> <br />  <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_1_tag">linux4sam_5.1</a> <br />  <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_2_tag">linux4sam_5.2</a> <br />  <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_3_tag">linux4sam_5.3</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-3.18-at91" target="_blank">linux-3.18-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_3_18.html">LinuxKernel_3_18</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  All boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>,  <a class="twikiLink" href="Sama5d3xekMainPage.html">SAMA5D3-EK</a>,  <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="Sama5d4ekMainPage.html">SAMA5D4-EK</a>,  <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_5_0_alpha7_tag">linux4sam_5.0-alpha7</a> <br />  <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_4_7_tag">linux4sam_4.7</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-3.10-at91" target="_blank">linux-3.10-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />   wiki page: <a class="twikiLink" href="LinuxKernel_3_10.html">LinuxKernel_3_10</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="60%"> All Atmel boards supported <br />  Some boards using Device Tree <br />  Boards with demo available:  <a class="twikiLink" href="GettingStarted_a5d3xek.html">SAMA5D3-EK</a>,  <a class="twikiLink" href="GettingStarted_a5d3_xplained.html">SAMA5D3 Xplained</a>,  <a class="twikiLink" href="GettingStarted_a5d4ek.html">SAMA5D4-EK</a>,  <a class="twikiLink" href="GettingStarted_a5d4_xplained.html">SAMA5D4 Xplained</a>,  <a class="twikiLink" href="GettingStarted_9x5.html">AT91SAM9X5-EK</a>,  <a class="twikiLink" href="GettingStarted_9n12.html">AT91SAM9N12</a>,  <a class="twikiLink" href="GettingStarted.html">Legacy</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> Not recommended for new developments </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_4_6_tag">linux4sam_4.6</a> <br />  <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#linux4sam_4_5_tag">linux4sam_4.5</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-3.6.9-at91" target="_blank">linux-3.6.9-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a><br />   wiki page: <a class="twikiLink" href="LinuxKernel_legacy.html">LinuxKernel_legacy</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="60%"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> Old branch<br />  don't use for new developments </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top" width="10%"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="20%"> github sources: <a href="https://github.com/linux4sam/linux-at91/tree/linux-2.6.39-at91" target="_blank">linux-2.6.39-at91<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a><br />   wiki page: <a class="twikiLink" href="LinuxKernel_legacy.html">LinuxKernel_legacy</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="60%"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> Legacy branch<br />  don't use for new developments </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol twikiLast" valign="top" width="10%"> &nbsp; </td>
+</tr></table>
+<p />
+<p />
+<h3><a name="Tags"></a> Tags </h3>
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_2020_10_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam-2020.10" target="_blank">linux4sam-2020.10 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v5.4</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v5.4.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p />
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v5.4.81</strong>
+</li> <li> Update WILC driver &amp; firmware to <strong>15.4.1</strong>
+</li> <li> QSPI: big performance improvement by using enhanced memory accesses (~ 4 x read speed improvement)
+</li> <li> ISC / Camera sensor: align with Mainline
+</li> <li> KSZ8563: Fix number of ports and convert to phylink
+</li> <li> Sam9x60: support for different System-In-Package (SiP) identifications
+</li> <li> Sam9x60: align clock sub-system with Mainline and add fractional PLL support
+</li> <li> Fix CAN message SRAM configuration
+</li> <li> Sama5d2: Fix securam accesses
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_2020_04_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam-2020.04" target="_blank">linux4sam-2020.04 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v5.4</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v5.4.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v5.4.41</strong>
+</li> <li> Update WILC driver &amp; firmware to 15.4.
+</li> <li> Integration of SAMA5D2-ICP board in the release
+</li> <li> Implement I2C bus recovery mechanism
+</li> <li> Allow using more than 4 GPIOs as CS in atmel-spi driver
+</li> <li> Add support for phylink in MACB driver
+</li> <li> Master clock register offset fixes for SAM9X60 in shutdown, reset controller and PM SoC drivers
+</li> <li> Improve power saving modes by disabling CPU PLL for SAM9X60
+</li> <li> Add SAMA5D2-ADC additional software trigger support (for example, sysfs trigger) 
+</li> <li> Add real time timer (RTT) driver for SAM9X60
+</li> <li> Fix fast drop of VDDCORE on shutdown operations for SAM9X60
+</li> <li> Refactor reset controller driver
+</li> <li> Switch the AES and TDES crypto drivers to the skcipher API. Clean the drivers and add various fixes.
+</li> <li> Mainline SAM9x60 HWRNG support
+</li> <li> Add support for SHA204A (I2C) random number generator
+</li> <li> DMA drivers locking improvement and deadlock fixes
+</li> <li> Fix possible MMIO window size overrun in QSPI driver
+</li> <li> USB device controller (gadget) driver cleanup &amp; fix for Vbus disconnect DMA issue.
+</li> <li> Add support for Micron/Aptina MT9V022 monochrome camera sensor for both ISC-based MPUs and ISI-based MPUs. 
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_6_2_icp_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_6.2-icp" target="_blank">linux4sam_6.2-icp tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.19</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.19.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.19.78</strong>
+</li> <li> Added support for SAMA5D2-ICP board
+</li> <li> SAMA5D2 ICP drivers: <ul>
+<li> MCP16502 PMIC driver 
+</li> <li> KSZ 8563 ethernet switch driver
+</li> <li> USB 2534 hub generic driver
+</li> <li> LAN7850 driver with suspend / resume fix
+</li> <li> Driver for the WILC3000 and WILC1000 release 15.2 in place in the Linux4SAM kernel and ready to use
+</li></ul> 
+</li></ul> 
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_6_2_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_6.2" target="_blank">linux4sam_6.2 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.19</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.19.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.19.78</strong>
+</li> <li> Added support for <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a> board
+</li> <li> Added support for <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60 EK</a> board
+</li></ul> 
+<p /> <ul>
+<li> SAM9X60 SoC drivers: <ul>
+<li> PLL Fractional support
+</li> <li> PIT64 driver used for clock event
+</li> <li> PIO drive strength and slew rate support
+</li> <li> PWM support
+</li> <li> QSPI controller support
+</li> <li> NAND controller support
+</li> <li> ISI support
+</li> <li> ADC support
+</li> <li> Reworked USB gadget driver. Updated endpoint allocation scheme. Fixed driver when working in FIFO mode only
+</li> <li> <a class="twikiLink" href="UsingI2SC.html">I2S Multi Channel</a> driver with support of up to 8 channels in TDM mode
+</li> <li> Power management: ULP0 PM and Idle
+</li> <li> Watchdog support
+</li> <li> TRNG support
+</li> <li> RTC support
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> SAMA5D27 WLSOM1 drivers: <ul>
+<li> Backup and self-refresh support for LPDDR2
+</li> <li> <a class="twikiLink" href="UsingPTC.html">PTC</a> support for QT1 Mutual/Self Capacitance and Q2 wings
+</li></ul> 
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_6_1_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_6.1" target="_blank">linux4sam_6.1 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.19</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.19.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.19.56</strong>
+</li> <li> Redesign of the <a class="twikiLink" href="UsingISC.html">Image Sensor Controller (ISC)</a> driver with new <a class="twikiLink" href="ISCWhiteBalanceFeatures.html">White balance enhanced features</a>.
+</li> <li> Driver for the WILC3000 and WILC1000 release 15.2 in place in the Linux4SAM kernel and ready to use
+</li> <li> TWI hardware filters support that filter out possible glitches on the TWI wires for both <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> and <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a>
+</li> <li> Add <a href="https://github.com/linux4sam/9bit" target="_blank">9bit/Multidrop<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> support in USART driver
+</li> <li> PIOBU pin controller driver
+</li> <li> MCP16502 PMIC driver 
+</li> <li> ACT8945A: PM support (integrated in mainline)
+</li> <li> Ethernet: add runtime PM support (integrated in mainline)
+</li> <li> Ethernet: add backup and self-refresh support (integrated in mainline)
+</li> <li> Ethernet: use of NAPI GRO helpers to improve RX performance
+</li> <li> QSPI: move driver under the SPI-MEM interface. The controller can be used with NAND or NOR flashes.
+</li> <li> Support for Omnivision ov5640 now available for both <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a> and <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a>
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_6_0_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_6.0" target="_blank">linux4sam_6.0 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.14</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.14.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.14.73</strong>
+</li> <li> Support for PDA 5" screen as the default display
+</li> <li> Added video decoder driver for SAMA5D4
+</li> <li> Added multidrop support for serial controllers 
+</li> <li> Added ISO 7816 driver
+</li> <li> Ethernet - retrieve MAC address from provided NVMEM
+</li> <li> Ethernet hardware RX queues , RX hardware filtering, queue statistics 
+</li> <li> PHY-handle device tree support
+</li> <li> Ethernet padding and FCS enhancement
+</li> <li> Ethernet re-factor power management suspend/resume
+</li> <li> Power management support for backup and self-refresh: QSPI, FLEXCOM, TCB-PWM, programmable clocks.
+</li> <li> Updated SPI-NOR non uniform erase support
+</li> <li> Added USART SPI driver
+</li> <li> ADC DMA support on SAMA5D2
+</li> <li> ADC resistive touch screen support for SAMA5D2
+</li> <li> Mikroelectronika audio codec board driver
+</li> <li> Rework I2S clock driver on SAMA5D2
+</li> <li> fixes: Ethernet TX DMA descriptors processing, shutdown controller register corruption while shutting down.
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_8_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.8" target="_blank">linux4sam_5.8 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.9</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.9.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.9.87</strong>
+</li> <li> Addition of the Peripheral Touch Controller (PTC) input driver with firmware and configuration files management
+</li> <li> Addition of the new SAMA5D2 PTC EK board
+</li> <li> Use of bounce buffer with SPI on ARM9 SoCs
+</li> <li> fix SMC register offset for SAMA5D2
+</li> <li> fix 10/100 Ethernet macb settings for SAMA5D3 by removing support for scatter-gather
+</li></ul> 
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_7_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.7" target="_blank">linux4sam_5.7 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.9.52</strong>
+</li> <li> Support for low power <strong>Backup+Self-Refresh</strong> mode for SAMA5D2 and the SAMA5D2 Xplained board
+</li> <li> SAMA5D2: most of the driver converted to support the Backup+Self-Refresh mode
+</li> <li> Low power modes: use of kernel command line parameters to choose the Power Management scheme (ULP0, ULP1, Backup+Self-Refresh)
+</li> <li> Addition of the new SAMA5D27 SOM1 EK board containing the SAMA5D27 SiP
+</li> <li> SAMA5D4: addition of the G1 Video Decoder (Vdec) drivers
+</li> <li> Kernel configuration: Use of the High resolution timers option by default
+</li> <li> Kernel configuration: Use of the tick-less system configuration by default
+</li> <li>  Kernel configuration: Use of CONFIG_JUMP_LABEL for improving network performance
+</li> <li> SAMA5D2: ADC add hardware trigger and buffer support
+</li> <li> SAMA5D2: ISC: format configuration enhancement
+</li> <li> Addition of another camera sensor: the ov7670
+</li> <li> Addition of several peripherals in device tree: CAN, PWM for instance
+</li> <li> fixes: SAMA5D4-compatible watchdog, SAMAD2 LCD drive strength on base signals, use of CPU I/O for SAM9 SPI controller, USB host vbus on SAMA5D2
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_6_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.6" target="_blank">linux4sam_5.6 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.9.30</strong>
+</li> <li> SAMA5D2: QSPI: enhancement with 4-bit addressing and Serial Flash Discoverable Parameters (SFDP) tables
+</li> <li> SAMA5D2: CAN driver support for latest CAN_FD IP enhancements
+</li> <li> SAMA5D2: Ultra Low Power mode ULP1 support
+</li> <li> SAMA5D2: PWM driver
+</li> <li> SAMA5D2: Audio PLL and ClassD audio amplifier drivers
+</li> <li> SAMA5D2: I2S driver
+</li> <li> pinctrl driver: add support for OUTPUT config
+</li> <li> PWM: switch to atomic PWM
+</li> <li> Hardware Crypto accelerators: SHA and AES: add support to hmac(shaX) and authenc(hmac(shaX), Y(aes)) modes
+</li> <li> ISI and ISC with camera sensors are now all compatible with the V4L2 API
+</li> <li> maXTouch driver: stabilize and integrate driver enhancements from <a href="http://github.com/atmel-maxtouch" target="_blank">atmel-maxtouch github repository<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> fixes: cpuIDLE, serial driver with DMA
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_5_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.5" target="_blank">linux4sam_5.5 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.4</strong> Linux kernel tag. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.4.x</strong> version is merged in our branch. Here is a little summary of the main enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.4.26</strong>
+</li> <li> SAMA5D2: ISC and camera sensors enhancements (ov7740) to be compatible with V4L2
+</li> <li> SAMA5D2: ADC driver backport from Linux Mainline
+</li> <li> SAMA5D2: add FIFO configuration for I2C
+</li> <li> WILC1000 WIFI driver backport from a recent Linux "staging" directory content
+</li> <li> HDMI on SAMA5D4 Xplained: verified functioning sii902x driver
+</li> <li> maXTouch driver: stabilize and integrate driver enhancements from <a href="http://github.com/atmel-maxtouch" target="_blank">atmel-maxtouch github repository<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> fixes: LCD driver vertical scaling, OHCI power consumption, SDHCI non-removable devices handling
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_4_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.4" target="_blank">linux4sam_5.4 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p /> <ul>
+<li> SAMA5D2: chipID, LED, push button, shutdown controller, TRNG
+</li> <li> SAMA5D2: NAND driver enhancements (32 bits ECC)
+</li> <li> SAMA5D2: new I2S driver
+</li> <li> ISI and camera sensors enhancements
+</li> <li> adaptation and use of the Bosch M_CAN device driver
+</li> <li> audio PLL clock driver
+</li> <li> PMIC and charger ACT8945A driver
+</li> <li> crypto engines enhancement
+</li> <li> quad-SPI support: QSPI
+</li> <li> power management: support for ULP1 mode
+</li> <li> support for PDA 4.3", 7" screens
+</li> <li> HDMI on sama5d4 Xplained:  add sii902x driver
+</li> <li> USART fractional baud rate support
+</li> <li> fixes: DMA residue computation, HSMCI regulator, i2c hold time
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_3_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.3" target="_blank">linux4sam_5.3 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p /> <ul>
+<li> add the drm bridge driver for HDMI encoder silicon image: sii902x that is present on SAMA5D4 Xplained board
+</li> <li> several LCD enhancements: <ul>
+<li> extended timings rage for SAMA5D2 and SAMA5D4
+</li> <li> optimize AHB master DMA interface by choosing the less used one for a particular overlay
+</li> <li> add access to GEM for using overlay for video decoding via gstreamer
+</li></ul> 
+</li> <li> QSPI: add support for FLASH &gt;16MiB : 4byte address mode
+</li> <li> QSPI: add support for Macronix mx25l25635e that is present on sama5d2 Xplained board
+</li> <li> fixes for QSPI, PMIC drivers
+</li> <li> Regulator/SDHCI: strengthen support for SD card insertion/removal
+</li></ul> 
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_2_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.2" target="_blank">linux4sam_5.2 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p /> <ul>
+<li> SAMA5D4 Demo updated together with the other Xplained board demos
+</li> <li> SAMA5D4 Video Decoder driver
+</li> <li> Move to the Ultra-Low-Power mode ULP1 for suspend/resume power management <ul>
+<li> for more information on this mode, read chapter "62.5.3: Ultra Low-power (ULP) Mode" and the corresponding table "Table 62.5 Low-power Mode Configuration Summary"
+</li> <li> suspend/resume ULP1 mode wake-up sources are <strong>wakeup button</strong> and <strong>RTC</strong>
+</li> <li> gain better consumption numbers due to the stop of most of the clocks while entering this mode
+</li> <li> fast resume time
+</li></ul> 
+</li> <li> <strong>WIFI WILC1000</strong> driver integrated from the latest source code submitted to the Linux Mainline staging directory
+</li></ul> 
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_1_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.1" target="_blank">linux4sam_5.1 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p /> <ul>
+<li> Addition of <a href="http://www.pdaatl.com/" target="_blank">PDA inc<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> 4.3" and 7" screens: TM430x and TM7000/7000B
+</li> <li> New Pulse Density Modulation Interface Controller (PDMIC) for SAMA5D2 PDM microphone interface
+</li> <li> New SAMA5D2 ADC driver: using the IIO sub-system, software trigger supported
+</li> <li> fixes for: QSPI, XDMA, RTC for suspend/resume, phy interface for suspend/resume, SHA driver
+</li></ul> 
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_0_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.0" target="_blank">linux4sam_5.0 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p />
+<p />
+As a updated kernel revision this branch contains all the enhancements already found on the  the <a class="twikiLink" href="LinuxKernel_3_18.html">Atmel linux-3.18-at91 branch</a>.
+<p />
+Here is a little summary of the enhancements added on top of the official <strong>v4.1</strong> Linux kernel tag: <ul>
+<li> all Atmel material included in the following 4.2 kernel: <ul>
+<li> addition of newer AT91 boards
+</li> <li> AT91SAM9x5: pwm0 pinctrl definition
+</li> <li> SAMA5D4: more peripherals: usarts, uarts, spi, pioD access
+</li> <li> SAMA5D3: phy address for gmac
+</li> <li> regulator additions for the SD/MMC
+</li> <li> rtc node for AT91SAM9RL/AT91SAM9RL-EK
+</li></ul> 
+</li> <li> addition of the new SAMA5D2 SoC and associated SAMA5D2 Xplained board
+</li> <li> DMA: interleaved, memset and scatter-gathered memset offload operations
+</li> <li> flexcom: serial, I2C and SPI: new FIFO and DMA modes for SAMA5D2
+</li> <li> SDHCI driver (SD/MMC) for SAMA5D2
+</li> <li> ClassD audio output driver for SAMA5D2
+</li> <li> Image Sensor: <ul>
+<li> ISC: support YUV sensor output ; support RGB output format
+</li> <li> ISI enhancement: add RGB565, GREY, SGRBG, SBGGR (Bayer) support 
+</li></ul> 
+</li> <li> new shutdown controller driver for SAMA5D2
+</li> <li> new I2S controller driver for audio on SAMA5D2
+</li> <li> CAN controller for SAMA5D2
+</li> <li> new watchdog driver for SAMA5D4 &amp; SAMA5D2 SoCs
+</li> <li> generated and audio PLL clocks for SAMA5D2
+</li> <li> support for act8865 PMIC
+</li> <li> LCD specification to the at91sam9x5 series and associated boards
+</li> <li> fixes for USB, AES dma configuration
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_5_0_alpha7_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_5.0-alpha7" target="_blank">linux4sam_5.0-alpha7 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p /> <ul>
+<li> support for new SAMA5D2 SoC and the associated sama5d2 Xplained board <ul>
+<li> QSPI with DMA (disabled in Device Tree by default)
+</li> <li> Flexcom with FIFO &amp; DMA <ul>
+<li> USART interface
+</li> <li> I2C interface
+</li> <li> SPI interface
+</li></ul> 
+</li> <li> SD/MMC interface (SDHCI) + on-board eMMC
+</li> <li> Audio using Class D amplifier
+</li> <li> ISC <ul>
+<li> support YUV sensor output
+</li> <li> support RGB output format
+</li></ul> 
+</li> <li> Crypto engines <ul>
+<li> AEAD support for IPSec
+</li></ul> 
+</li></ul> 
+</li> <li> fix residue computation for HDMA
+</li> <li> ISI: add RGB565, GREY, SGRBG, SBGGR (Bayer) support     
+</li> <li> runtime PM: added the ISI driver, modifications to the HLCD DRM driver
+</li></ul> 
+<p />
+<strong>And the enhancements from linux4sam_4.7 tag below</strong> <br /> 
+<p />
+<p />
+<h4><a name="linux4sam_4_7_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_4.7" target="_blank">linux4sam_4.7 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4>
+<p /> <ul>
+<li> Based on 3.18 linux kernel
+</li> <li> Update atmel hlcdc driver to DRM driver.
+</li> <li> Totally support devicetree. Remove the temperory code which not support devicetree.
+</li> <li> SAMA5 series boards support
+</li> <li> HDMI driver for SiI902x component on SAMA5D4-EK and SAMA5D4 Xplained boards
+</li> <li> add LCD driver entries in at91sam9x5 and at91sam9n12 DT (HLCD DRM driver)
+</li> <li> Power management enhancements
+</li> <li> Power management states on pin configuration (pinctrl OUTPUT configuration)
+</li> <li> Power management pin states for: SPI, i2c, MMC, serial, LCD, SSC, IIO (ADC), ETH, NAND, CAN
+</li> <li> Serial RX &amp; TX DMA support
+</li> <li> Serial fixes and enhancements
+</li> <li> updated clock management for USB (OHCI and EHCI)
+</li></ul> 
+<p />
+<p />
+<p />
+<h4><a name="linux4sam_4_6_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_4.6" target="_blank">linux4sam_4.6 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> SAMA5D4 Xplained board support
+</li> <li> HDMI driver for SiI902x component on SAMA5D4-EK and SAMA5D4 Xplained boards
+</li> <li> Power management enhancements
+</li> <li> Power management states on pin configuration (pinctrl OUTPUT configuration)
+</li> <li> Power management pin states for: SPI, i2c, MMC, serial, LCD, SSC, IIO (ADC), ETH, NAND, CAN
+</li> <li> Serial RX &amp; TX DMA support
+</li> <li> Serial fixes and enhancements
+</li> <li> And of course <strong>everything listed below</strong>
+</li></ul> 
+<p />
+<h4><a name="linux4sam_4_5_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_4.5" target="_blank">linux4sam_4.5 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> ARM Cortex-A5 support (include SAMA5D4 chip family support)
+</li> <li> VFP + NEON support
+</li> <li> L2 Cache for SAMA5D4 family
+</li> <li> Linux drivers for Hardware Video Decoder
+</li> <li> Ethernet driver enhancements for both 10/100 and Gigabit Ethernet
+</li> <li> Power management enhancement
+</li> <li> PWM interface
+</li></ul> 
+<p />
+<p />
+<h4><a name="linux4sam_4_2_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_4.2" target="_blank">linux4sam_4.2 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h4> <ul>
+<li> ARM Cortex-A5 support (include SAMA5D36 chip support)
+</li> <li> VFP support
+</li> <li> Timer Counter
+</li> <li> Watchdog (beware, can be deactivated by AT91Bootstrap)
+</li> <li> RTC
+</li> <li> Serial driver with DMA support
+</li> <li> I2C interface with DMA support
+</li> <li> SPI interface with DMA support
+</li> <li> CAN
+</li> <li> ADC (with 12 bits support)
+</li> <li> ISI interface (support OV2640, OV2643 and OV5640)
+</li> <li> MCI interface with DMA support
+</li> <li> NAND flash with hadware ECC and DMA support
+</li> <li> serial flash (SPI - at25)
+</li> <li> Enhanced Ethernet drivers &amp; Enhanced Gigabit Ethernet drivers
+</li> <li> USB: host (OHCI &amp; EHCI)
+</li> <li> USB: device/gadget high speed
+</li> <li> LCD base layer / LCD overlay 1, 2 / LCD High End Overlay
+</li> <li> Crypto engines (AES, DES/TDES, SHA) with DMA support
+</li> <li> Pinctrl (PIO muxing, PIO control and configuration)
+</li> <li> Resistive touchscreen
+</li> <li> Capacitive touchscreen maXTouch - PDA module
+</li> <li> Touch button QT1070
+</li> <li> LEDs
+</li> <li> Audio using SSC/I2S - wm8904 codec
+</li> <li> Power management
+</li></ul> 
+<p />
+<p />
+<h2><a name="Build_Linux_for_AT91"></a> Build Linux for AT91 </h2>
+Following sections will show you how to build Linux Kernel for AT91.
+<p />
+<p />
+<p />
+<h3><a name="Getting_Kernel_sources"></a> Getting Kernel sources </h3>
+<p />
+To get the source code, you have to clone the repository:
+<p />
+<pre>
+$ git clone git://github.com/linux4sam/linux-at91.git
+Cloning into &#39;linux-at91&#39;...
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100&#37; (50/50), done.
+remote: Compressing objects: 100&#37; (44/44), done.
+remote: Total 7282027 (delta 24), reused 17 (delta 6), pack-reused 7281977
+Receiving objects: 100&#37; (7282027/7282027), 2.09 GiB &#124; 15.93 MiB/s, done.
+Resolving deltas: 100&#37; (6114478/6114478), done.
+Checking out files: 100&#37; (61813/61813), done.
+$ cd linux-at91
+</pre>
+<p />
+The source code has been taken from the master branch which is pointing on the latest branch we use.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Note that you can also add this Linux4SAM repository as a <a href="http://git-scm.com/book/en/Git-Basics-Working-with-Remotes" target="_blank">remote GIT repository<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> to your usual Linux git tree. It will save you a lot of bandwidth and download time: 
+<p />
+<pre>
+$ git remote add linux4sam git://github.com/linux4sam/linux-at91.git
+$ git remote update linux4sam
+Fetching linux4sam
+From git://github.com/linux4sam/linux-at91
+ &#42; &#91;new branch]                linux-2.6.39-at91 -&#62; linux4sam/linux-2.6.39-at91
+ &#42; &#91;new branch]                linux-3.10-at91 -&#62; linux4sam/linux-3.10-at91
+ &#42; &#91;new branch]                linux-3.15-at91 -&#62; linux4sam/linux-3.15-at91
+ &#42; &#91;new branch]                linux-3.18-at91 -&#62; linux4sam/linux-3.18-at91
+ &#42; &#91;new branch]                linux-3.4.9-at91 -&#62; linux4sam/linux-3.4.9-at91
+ &#42; &#91;new branch]                linux-3.6.9-at91 -&#62; linux4sam/linux-3.6.9-at91
+ &#42; &#91;new branch]                linux-4.1-at91 -&#62; linux4sam/linux-4.1-at91
+ &#42; &#91;new branch]                linux-4.4-at91 -&#62; linux4sam/linux-4.4-at91
+ &#42; &#91;new branch]                linux-4.9-at91 -&#62; linux4sam/linux-4.9-at91
+ &#42; &#91;new branch]                linux-4.14-at91 -&#62; linux4sam/linux-4.14-at91
+ &#42; &#91;new branch]                linux-4.19-at91 -&#62; linux4sam/linux-4.19-at91
+ &#42; &#91;new branch]                linux-5.4-at91 -&#62; linux4sam/linux-5.4-at91
+ &#42; &#91;new branch]                master     -&#62; linux4sam/master
+</pre>
+<p />
+If you want to use an other branch, you can list them and use one of them by doing this:
+<p />
+<pre>
+$ git branch -r
+  origin/HEAD -&#62; origin/master
+  origin/linux-2.6.39-at91
+  origin/linux-3.10-at91
+  origin/linux-3.15-at91
+  origin/linux-3.18-at91
+  origin/linux-3.4.9-at91
+  origin/linux-3.6.9-at91
+  origin/linux-4.1-at91
+  origin/linux-4.4-at91
+  origin/linux-4.9-at91
+  origin/linux-4.14-at91
+  origin/linux-4.19-at91
+  origin/linux-5.4-at91
+  origin/master
+$ git checkout origin/linux-5.4-at91 -b linux-5.4-at91
+Branch linux-5.4-at91 set up to track remote branch linux-5.4-at91 from origin.
+Switched to a new branch &#39;linux-5.4-at91&#39;
+</pre>
+<p />
+<h3><a name="Configure_and_Build_the_Linux_ke"></a> Configure and Build the Linux kernel </h3>
+Now you have to configure the Linux kernel according to your hardware. We have two default configuration at91 SoC in <code>arch/arm/configs</code>
+<pre>
+arch/arm/configs/at91&#95;dt&#95;defconfig
+arch/arm/configs/sama5&#95;defconfig
+</pre>
+<p /> <ul>
+<li> <code>at91_dt_defconfig</code>: for SAM9 (ARM926) series chips
+</li> <li> <code>sama5_defconfig</code>: for SAMA5 series chips
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+Now we Configure and Build kernel for  board:
+<p />
+<pre>
+$ make ARCH&#61;arm sama5&#95;defconfig
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+</pre>
+<p />
+<p />
+<p />
+At this step, you can modify default configuration using the <code>menuconfig</code>
+<pre>
+$ make ARCH&#61;arm menuconfig
+</pre>
+Now, in the menuconfig dialog, you can easily add or remove some features. Once done, Move to <code>&lt;Exit&gt;</code> with arrows and press this button hitting the <code>Enter</code> key to exit from this screen.
+<p />
+Build the Linux kernel image, before you build you need set up the cross compile toolchain, check <a class="twikiCurrentTopicLink twikiAnchorLink" href="LinuxKernel.html#Setup_ARM_Cross_Compiler">this section</a>.
+<p />
+<pre>
+$ make ARCH&#61;arm
+
+&#91;..]
+
+  Kernel: arch/arm/boot/Image is ready
+  Kernel: arch/arm/boot/zImage is ready
+</pre>
+<p />
+Now you have an usable compressed kernel image <code>zImage</code>.
+<p />
+If you need an uImage you can run this additional step:
+<p />
+<pre>
+make ARCH&#61;arm uImage LOADADDR&#61;0x20008000
+
+&#91;..]
+
+  Kernel: arch/arm/boot/zImage is ready
+  UIMAGE  arch/arm/boot/uImage
+Image Name:   Linux-4.1.0-linux4sam&#95;5.3+
+Created:      Fri Sep  9 17:02:45 2016
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    3441072 Bytes &#61; 3360.42 kB &#61; 3.28 MB
+Load Address: 20008000
+Entry Point:  20008000
+  Image arch/arm/boot/uImage is ready
+
+</pre>
+<p />
+<pre>
+make ARCH&#61;arm dtbs
+
+&#91;..]
+  DTC     arch/arm/boot/dts/at91-kizbox2.dtb
+  DTC     arch/arm/boot/dts/at91-nattis-2-natte-2.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d27&#95;som1&#95;ek.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d2&#95;ptc&#95;ek.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d2&#95;xplained.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d3&#95;xplained.dtb
+  DTC     arch/arm/boot/dts/at91-tse850-3.dtb
+  DTC     arch/arm/boot/dts/sama5d31ek.dtb
+  DTC     arch/arm/boot/dts/sama5d33ek.dtb
+  DTC     arch/arm/boot/dts/sama5d34ek.dtb
+  DTC     arch/arm/boot/dts/sama5d35ek.dtb
+  DTC     arch/arm/boot/dts/sama5d36ek.dtb
+  DTC     arch/arm/boot/dts/sama5d36ek&#95;cmp.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4&#95;ma5d4evk.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4&#95;xplained.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4ek.dtb
+  DTC     arch/arm/boot/dts/at91-sama5d4ek&#95;isi.dtb
+  DTC     arch/arm/boot/dts/at91-vinco.dtb
+&#91;..]
+</pre>
+<p />
+If the building process is successful, the final images can be found under <em>arch/arm/boot/</em> directory.
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Recent_FAQ"></a> Recent FAQ </h2>
+<p />
+<p /> <dl>
+<dt> <a class="twikiCurrentTopicLink twikiLink" href="LinuxKernel.html">Kernel</a> </dt><dd> <br />&#8226; <a href="UsingIsi6.html" >Using Isi 6</a>: Using ISI with Linux4sam 6.0 and Kernel 4.14 and later. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="UsingI2SC.html" >Using I 2 SC</a>: How to use I2SC. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="WilcFaq.html" >Wilc Faq</a>: How to use WILC3000 on SAM development boards. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>) <br />&#8226; <a href="UsingFITwithOverlays.html" >Using FITwith Overlays</a>: How to use U-boot with FIT image to load overlays. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>) <br />&#8226; <a href="BuildLinuxSsl.html" >Build Linux Ssl</a>: Kernel Compilation Error related to OpenSSL. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>, <a class="twikiLink" href="GettingStarted.html">other AT91SAM9 boards</a>) <br />&#8226; <a href="ConnectModuleFromPDA.html" >Connect Module From PDA</a>: How to connect LCD module from PDA to the Boards. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>) <br />&#8226; <a href="Sam9x60EkAttachingTm5000Display.html" >Sam 9 x 60 Ek Attaching Tm 5000 Display</a>: Addition to the other generic FAQ about LCD displays: <a class="twikiLink" href="ConnectModuleFromPDA.html">ConnectModuleFromPDA</a>. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>) <br />&#8226; <a href="UsingSAMA5D2ResistiveTouchscreen.html" >Using SAMA 5 D 2 Resistive Touchscreen</a>: Guide for SAMA5D2 Resistive Touchscreen. (<a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="BootLogo.html" >Boot Logo</a>: Boot Logo for At91 SOC's. (<a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>) <br />&#8226; <a href="IioAdcDriver.html" >Iio Adc Driver</a>: Adc IIO driver introduction. (<a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>, <a class="twikiLink" href="GettingStarted.html">other AT91SAM9 boards</a>) <br />&#8226; <a href="SOM1EKeMMCSupport.html" >SOM 1 EKe MMCSupport</a>: . (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>) <br />&#8226; <a href="ISCWhiteBalanceFeatures.html" >ISCWhite Balance Features</a>: White balance features of the Image sensor controller.. (<a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="UsingPTC.html" >Using PTC</a>: How to use PTC. (<a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>) <br />&#8226; <a href="UsingMaxTouch.html" >Using Max Touch</a>: Introduction for how to use <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/MaxTouch?topicparent=Linux4SAM.LinuxKernel;nowysiwyg=1" rel="nofollow" title="MaxTouch (this topic does not yet exist; you can create it)">MaxTouch</a></span>. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="UsingSAMA5D2ADCDevice.html" >Using SAMA 5 D 2 ADCDevice</a>: Using the SAMA5D2-compatible ADC device. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="ExternalComponentOnEBI.html" >External Component On EBI</a>: Connecting an external component on the External Bus Interface. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="UsingAtmelDRMDriver.html" >Using Atmel DRMDriver</a>: Using Atmel KMS/DRM LCD driver. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="PwmFaq.html" >Pwm Faq</a>: PWM Driver. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="USBGadgetConfig.html" >USBGadget Config</a>: Configure AT91 USB Gadget on Linux and Endpoint order management (composite USB). (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>, <a class="twikiLink" href="GettingStarted.html">other AT91SAM9 boards</a>) <br />&#8226; <a href="CryptoConfig.html" >Crypto Config</a>: How to configure Crypto driver. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="UsingISC.html" >Using ISC</a>: How to use the Image Sensor Controller. (<a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="PatchingDTinUboot.html" >Patching DTin Uboot</a>: How to apply DTBOs in U-boot. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="UsingUltraLowPowerMode1.html" >Using Ultra Low Power Mode 1</a>: Using Ultra Low Power mode 1 (ULP1). (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="SelectingPDAatBoot.html" >Selecting PDAat Boot</a>: How to manually select PDA in U-boot. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="ShutdownWakeUp.html" >Shutdown Wake Up</a>: Use the Wakeup Feature of the Shutdown Controller.. (<a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>) <br />&#8226; <a href="PDMICAudioRecord.html" >PDMICAudio Record</a>: Using the PDMIC to record audio stream. (<a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>) <br />&#8226; <a href="UsingIsi.html" >Using Isi</a>: How to use the Image Sensor Interface. (<a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="ConsoleNoLongerReceivesCharacters.html" >Console No Longer Receives Characters</a>: Can't interact with the console. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>) <br />&#8226; <a href="RealTime.html" >Real Time</a>: Enable Real Time support for AT91SAM9 Soc. (<a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>, <a class="twikiLink" href="GettingStarted.html">other AT91SAM9 boards</a>)
+</dd></dl>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r93 - 19 Jan 2021 - 18:21:53 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiCurrentTopicLink twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/LinuxKernel"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="LinuxKernel3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/LinuxKernel by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 18:56:27 GMT -->
+</html>
