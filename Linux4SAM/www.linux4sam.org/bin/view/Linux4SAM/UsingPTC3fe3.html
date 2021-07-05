@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingPTC?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; UsingPTC &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="Using_PTC_Peripheral_Touch_Contr"></a> Using PTC (Peripheral Touch Controller) </h1>
+<p />
+The QTouch Peripheral Touch Controller (PTC) subsystem offers built-in hardware for capacitive touch measurement on sensors that function as buttons, sliders and wheels. The PTC subsystem supports both mutual and self-capacitance measurement without the need for any external component. It offers sensitivity and noise tolerance, as well as self-calibration, and minimizes the sensitivity tuning effort by the user.
+<p />
+For more details regarding the PTC please check the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/SAMA5D2-Series-Data-Sheet-DS60001476C.pdf" target="_blank">SAMA5D2 Datasheet<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h2><a name="Probing"></a> Probing </h2>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" alt="ALERT!" title="ALERT!" width="16" height="16" border="0" /> Starting with release Linux4sam 6.0, the <a href="https://github.com/linux4sam/dt-overlay-at91/blob/master/sama5d2_ptc_ek/sama5d2_ptc_ek_ptc.dtso" target="_blank">ptc overlay<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (<strong>#ptc</strong>) must be applied, in order to enable the PTC. For more details on how to apply device-tree overlays, please see <a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a>.
+<p />
+<h2><a name="Play_with_the_demo"></a> Play with the demo </h2>
+<p />
+<p />
+First of all, don't be worried by the following logs:
+<pre>
+atmel&#95;ptc 800000.ptc: Loading configuration: microchip/ptc&#95;cfg.bin
+atmel&#95;ptc 800000.ptc: Direct firmware load for microchip/ptc&#95;cfg.bin failed with error -2
+atmel&#95;ptc 800000.ptc: Can&#39;t load configuration microchip/ptc&#95;cfg.bin
+atmel&#95;ptc: probe of 800000.ptc failed with error -2
+</pre>
+<p />
+It happens only because the <code>ptc_cfg.bin</code> file is missing. It is the configuration file loaded by default. As we don't know which wing you are going to use there is no default configuration file provided. If you want to use a specific configuration file, you can use the PTC driver parameter <code>configuration_file</code>.
+<p />
+Helper scripts are provided in the home directory to remove the atmel_ptc module as it has not been probed successfully during the boot time and to insert the module with the appropriate configuration file:
+<pre>
+# ls
+start&#95;ptc&#95;qt1&#95;mutual&#95;demo  start&#95;ptc&#95;qt2&#95;mutual&#95;demo
+start&#95;ptc&#95;qt1&#95;self&#95;demo    start&#95;ptc&#95;qt6&#95;mutual&#95;demo
+</pre>
+<p />
+Launch the script matching the QT wing you are using. For instance, for the QT1 Mutual Capacitance, do:
+<pre>
+# ./start&#95;ptc&#95;qt1&#95;mutual&#95;demo
+remove atmel&#95;ptc driver...
+load atmel&#95;ptc module with ptc&#95;cfg&#95;qt1&#95;mutual configuration...
+atmel&#95;ptc 800000.ptc: Loading configuration: microchip/ptc&#95;cfg&#95;qt1&#95;mutual.bin
+atmel&#95;ptc 800000.ptc: firmware version: PPP&#95;VER&#95;006.004, tool version: MQC&#95;VER&#95;102
+atmel&#95;ptc 800000.ptc: date: 201802221828, description: qt1mc parameters
+input: atmel&#95;ptc&#95;buttons as /devices/platform/ahb/ahb:apb/800000.ptc/input/input3
+input: atmel&#95;ptc&#95;slider as /devices/platform/ahb/ahb:apb/800000.ptc/input/input1
+input: atmel&#95;ptc&#95;wheel as /devices/platform/ahb/ahb:apb/800000.ptc/input/input2
+start ptc&#95;qt1&#95;mutual&#95;demo...
+demo running...
+</pre>
+<p />
+Then you can play with the wing. Hit Ctrl-C to stop the demo.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" alt="ALERT!" title="ALERT!" width="16" height="16" border="0" /> If you want to switch to another wing, please reboot the board.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" alt="ALERT!" title="ALERT!" width="16" height="16" border="0" /> Because of pinmuxing constraints, some LEDs or sensors are not working, it's not a bug!
+<p />
+You can find the source code of the PTC examples here:  <a href="https://github.com/linux4sam/ptc_examples/" target="_blank">ptc_examples page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingPTC?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/SOM1EKeMMCSupport?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; SOM1EKeMMCSupport &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_table1 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#table1 {width:100%;}
+.twikiTable#table1 td.twikiTableCol0 {width:8%;}
+.twikiTable#table1 th.twikiTableCol0 {width:8%;}
+.twikiTable#table1 td.twikiTableCol1 {width:8%;}
+.twikiTable#table1 th.twikiTableCol1 {width:8%;}
+.twikiTable#table1 td.twikiTableCol2 {width:8%;}
+.twikiTable#table1 th.twikiTableCol2 {width:8%;}
+.twikiTable#table1 td.twikiTableCol3 {width:8%;}
+.twikiTable#table1 th.twikiTableCol3 {width:8%;}
+.twikiTable#table1 td.twikiTableCol4 {width:20%;}
+.twikiTable#table1 th.twikiTableCol4 {width:20%;}
+.twikiTable#table1 td.twikiTableCol5 {width:33%;}
+.twikiTable#table1 th.twikiTableCol5 {width:33%;}
+</style></head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="eMMC_support_for_SAMA5D27_SOM1_E"></a>  eMMC support for <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/SAMA5D27?topicparent=Linux4SAM.SOM1EKeMMCSupport;nowysiwyg=1" rel="nofollow" title="SAMA5D27 (this topic does not yet exist; you can create it)">SAMA5D27</a></span> SOM1 EK board </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Drive_strength_configuration"> Drive strength configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#AT91Bootstrap_modifications"> AT91Bootstrap modifications</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Tested_eMMCs"> Tested eMMCs </a>
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+<p />
+This page represents a summary of tested eMMC devices with our <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a> .
+<p />
+The eMMC are of different versions and different vendors. Our software support tries to accommodate with best effort all the possible vendors and versions, capacities that are present on the market.
+<p />
+<h1><a name="Drive_strength_configuration"></a> Drive strength configuration </h1>
+<p />
+The <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/SOM1EK?topicparent=Linux4SAM.SOM1EKeMMCSupport;nowysiwyg=1" rel="nofollow" title="SOM1EK (this topic does not yet exist; you can create it)">SOM1EK</a></span> board comes by default with a standard medium drive strength for the SDMMC0 lines. This means that there is a standard current consumption, EMI (ElectroMagnetic Interference), according to the datasheet, as specified in the Electric Characteristics chapter.
+<p />
+Because some of the eMMC boards come with adapters to SD-Cards or are soldered directly on custom PCBs, the medium default drive strength might not be enough to drive the lines from the MPU, SOM board, EK board, SD-Card slot, additional PCB and wiring, to the memory.
+<p />
+In this case the MPU can be configured to increase the drive strength on the lines, to ensure the signal integrity, power loss or other reasons.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />  Increasing drive strength also increases ElectroMagnetic Interference and current consumption
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" />  Whether or not the increase of drive strength is needed or not, depends on the adapter board. Some adapter boards have a higher capacitance. The standard imposes that the total capacitance of the Host + Device + Bus does not exceed 20 pF. If this capacitance is exceeded, higher drive strength is required in order to accommodate the loss in signal integrity. 
+<p />
+By <a class="twikiLink" href="PatchingDTinUboot.html">patching the device tree in U-boot</a>, the user can select an overlay that will increase the drive strength and apply it over the stock device tree when booting Linux. This means that only by a single command, the drive strength can be increased or restored, at boot time.
+<p />
+To achieve this, the bootm command in U-boot must be altered to add the <strong>sdmmc0_hi</strong> overlay , as in the example below:
+<pre>
+bootm 0x24000000#kernel&#95;dtb${at91&#95;overlays&#95;config}#sdmmc0&#95;hi
+</pre>
+<p />
+We provide an out-of-tree overlay for this specific purpose. The overlay needs to be applied to our <a class="twikiLink" href="DT-Overlay.html">dt-overlay-at91</a> tree. The overlay is provided on this page as a patch  here</br>
+  * <a href="https://www.linux4sam.org/pub/Linux4SAM/SOM1EKeMMCSupport/0001-sama5d27_som1_ek-add-overlay-for-high-drive-strength.patch" target="_top">0001-sama5d27_som1_ek-add-overlay-for-high-drive-strength.patch</a>: overlay for high drive strength for sdmmc0. 
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> This overlay is <strong>not available in Linux4SAM release</strong> and also <strong>not available in any git trees</strong> that we provide. Only on this page as an attached patch.
+<p />
+For more information about FIT image and how to use it in U-boot, follow <a class="twikiLink" href="UsingFITwithOverlays.html">this link</a> . This overlay is named <strong>sdmmc0_hi</strong> and it can be added manually per user's desire from the U-boot prompt whenever needed.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> needs to have the SDMMC0 lines configured with a high drive strength if we plan to use <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> to load the U-boot image from the same eMMC. <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> provides a board file where the PIO controller is configured for SDMMC0 and the drive strength is selected. Please take notice of the <a class="twikiCurrentTopicLink twikiAnchorLink" href="SOM1EKeMMCSupport.html#AT91Bootstrap_modifications">section below</a>.
+<p />
+<p />
+<h1><a name="AT91Bootstrap_modifications"></a> <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> modifications </h1>
+<p />
+In <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>, the drive strength may need modifications.
+<p />
+Here is an example on how to set the drive strength for the SDMMC0 pins to High. Regarding drive strength and when it's required, please check <a class="twikiCurrentTopicLink twikiAnchorLink" href="SOM1EKeMMCSupport.html#Drive_strength_configuration">above section</a>.
+<p />
+<pre>
+diff --git a/board/sama5d27&#95;som1&#95;ek/sama5d27&#95;som1&#95;ek.c b/board/sama5d27&#95;som1&#95;ek/sama5d27&#95;som1&#95;ek.c
+index 0297eed..7ee184a 100644
+--- a/board/sama5d27&#95;som1&#95;ek/sama5d27&#95;som1&#95;ek.c
++++ b/board/sama5d27&#95;som1&#95;ek/sama5d27&#95;som1&#95;ek.c
+&#64;&#64; -517,16 +517,16 &#64;&#64; void at91&#95;sdhc&#95;hw&#95;init(void)
+ 
+ #ifdef CONFIG&#95;SDHC0
+        const struct pio&#95;desc sdmmc&#95;pins&#91;] &#61; {
+-               {&#34;SDMMC0&#95;CK&#34;,   AT91C&#95;PIN&#95;PA(0), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;CMD&#34;,  AT91C&#95;PIN&#95;PA(1), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT0&#34;, AT91C&#95;PIN&#95;PA(2), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT1&#34;, AT91C&#95;PIN&#95;PA(3), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT2&#34;, AT91C&#95;PIN&#95;PA(4), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT3&#34;, AT91C&#95;PIN&#95;PA(5), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT4&#34;, AT91C&#95;PIN&#95;PA(6), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT5&#34;, AT91C&#95;PIN&#95;PA(7), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT6&#34;, AT91C&#95;PIN&#95;PA(8), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+-               {&#34;SDMMC0&#95;DAT7&#34;, AT91C&#95;PIN&#95;PA(9), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;CK&#34;,   AT91C&#95;PIN&#95;PA(0), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;CMD&#34;,  AT91C&#95;PIN&#95;PA(1), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT0&#34;, AT91C&#95;PIN&#95;PA(2), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT1&#34;, AT91C&#95;PIN&#95;PA(3), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT2&#34;, AT91C&#95;PIN&#95;PA(4), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT3&#34;, AT91C&#95;PIN&#95;PA(5), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT4&#34;, AT91C&#95;PIN&#95;PA(6), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT5&#34;, AT91C&#95;PIN&#95;PA(7), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT6&#34;, AT91C&#95;PIN&#95;PA(8), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
++               {&#34;SDMMC0&#95;DAT7&#34;, AT91C&#95;PIN&#95;PA(9), 0, PIO&#95;DRVSTR&#95;HI, PIO&#95;PERIPH&#95;A},
+                {&#34;SDMMC0&#95;RSTN&#34;, AT91C&#95;PIN&#95;PA(10), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+                {&#34;SDMMC0&#95;VDDSEL&#34;, AT91C&#95;PIN&#95;PA(11), 0, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+                {&#34;SDMMC0&#95;WP&#34;,   AT91C&#95;PIN&#95;PA(12), 1, PIO&#95;DEFAULT, PIO&#95;PERIPH&#95;A},
+</pre>
+<p />
+<h1><a name="Tested_eMMCs"></a> Tested eMMCs </h1>
+<p />
+For the below memories, we test booting with <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>, which will auto detect the bus width (8 bit, 4 bit or 1 bit) and enable DDR if possible. 
+<p />
+Next, we test linux to enable DDR mode if possible and display information.
+<p />
+We create a 100 Mbyte file and read it from the eMMC and display the required time in Linux.
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="8%"> <font color="#ffffff">Manufacturer</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="8%"> <font color="#ffffff">Capacity</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="8%"> <font color="#ffffff">eMMC version</font> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top" width="8%"> <font color="#ffffff">Part number</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top" width="20%"> AT91Bootstrap log </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top" width="33%"> Linux kernel log </td>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <font color="#ffffff">Performance test</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="8%"> Toshiba </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="8%"> 14.7 GBytes </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="8%"> v5.0/v5.01 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="8%"> THGBMFG7C1LBA1L </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top" width="20%"> MMC: Specification Version 4.0 or higher</br>MMC: v5.0/5.01 detected</br>MMC: highspeed supported</br>MMC: Dual Data Rate supported</br>MMC: detecting buswidth...</br>MMC: 8-bit bus width detected</br>SD/MMC: Done to load image </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top" width="33%"> mmc0: new DDR MMC card at address 0001</br>mmcblk0: mmc0:0001 016G70 14.7 GiB </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> real    0m1.761s</br>user    0m0.000s</br>sys     0m1.120s </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="8%"> Samsung </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="8%"> 14.6 GBytes </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="8%"> v5.1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="8%"> KLMAG1JENB B041</br> <em>adapter</em> <em>only</em> <em>has</em> <em>4</em> <em>data</em> <em>lines</em> </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top" width="20%"> MMC: Specification Version 4.0 or higher</br>MMC: v5.1 detected</br>MMC: highspeed supported</br>MMC: Dual Data Rate supported</br>MMC: detecting buswidth...</br>MMC: 4-bit bus width detected</br>SD/MMC: Done to load image </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top" width="33%"> mmc0: switch to bus width 8 failed</br>mmc0: new DDR MMC card at address 0001</br>mmcblk0: mmc0:0001 AJNB4R 14.6 GiB </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> real    0m2.418s</br>user    0m0.010s</br>sys     0m1.150s </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="8%"> Kingston </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="8%"> 14.6 GBytes </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="8%"> v5.0/v5.01 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="8%"> EMMC16G-S100 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top" width="20%"> MMC: Specification Version 4.0 or higher</br>MMC: v5.0/5.01 detected</br>MMC: highspeed supported</br>MMC: Dual Data Rate supported</br>MMC: detecting buswidth...</br>MMC: 8-bit bus width detected</br>SD/MMC: Done to load image </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top" width="33%"> mmc0: new DDR MMC card at address 0001</br>mmcblk0: mmc0:0001 S10016 14.6 GiB </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> real    0m1.758s</br>user    0m0.010s</br>sys     0m1.120s </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="8%"> Kingston </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="8%"> 14.3 GBytes </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="8%"> v5.0/v5.01 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="8%"> EMMC16G-S110 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top" width="20%"> MMC: Specification Version 4.0 or higher</br>MMC: v5.0/5.01 detected</br>MMC: highspeed supported</br>MMC: Dual Data Rate supported</br>MMC: detecting buswidth...</br>MMC: 8-bit bus width detected</br>SD/MMC: Done to load image </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top" width="33%"> mmc0: new DDR MMC card at address 0001</br>mmcblk0: mmc0:0001 S11016 14.3 GiB </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> real    0m1.757s</br>user    0m0.030s</br>sys     0m1.090s </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top" width="8%"> Micron </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top" width="8%"> 14.6 GBytes </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="8%"> v5.0/v5.01 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="8%"> N2M400HDB321A3C </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top" width="20%"> MMC: Specification Version 4.0 or higher</br>MMC: v5.0/5.01 detected</br>MMC: highspeed supported</br>MMC: Dual Data Rate supported</br>MMC: detecting buswidth...</br>MMC: 8-bit bus width detected</br>SD/MMC: Done to load image </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top" width="33%"> mmc0: new high speed MMC card at address 0001</br>mmcblk0: mmc0:0001 MMC16G 14.6 GiB</br>During tests there were transfer errors in DDR mode. This can be due to signal integrity.</br>The card was forced into high speed mode only, 8 bit bus, 52 Mhz. </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> real    0m2.755s</br>user    0m0.010s</br>sys     0m1.060s </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="8%"> Kingston </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="8%"> 7.20 GBytes </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="8%"> v4.5/v4.51 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="8%"> KE4CN3K6A </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top" width="20%"> MMC: Specification Version 4.0 or higher</br>MMC: v4.5/v4.51 detected</br>MMC: highspeed supported</br>MMC: Dual Data Rate supported</br>MMC: detecting buswidth...</br>MMC: 8-bit bus width detected</br>SD/MMC: Done to load image </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top" width="33%"> mmc0: new DDR MMC card at address 0001</br>mmcblk0: mmc0:0001 MMC08G 7.20 GiB </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> Failing in Linux with current adapter. Failures detected when connected to laptop connector. TBD </td>
+</tr></table>
+<p />
+<p /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments"> <div class="twikiAttachments">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="SOM1EKeMMCSupport2909.html?skin=print.myskin;sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">I</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="SOM1EKeMMCSupport0ef1.html?skin=print.myskin;sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Attachment</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="SOM1EKeMMCSupport2f98.html?skin=print.myskin;sortcol=2;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Action</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="SOM1EKeMMCSupportc856.html?skin=print.myskin;sortcol=3;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Size</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="SOM1EKeMMCSupporte805.html?skin=print.myskin;sortcol=4;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Date</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="SOM1EKeMMCSupport1ee1.html?skin=print.myskin;sortcol=5;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Who</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="SOM1EKeMMCSupportc0bc.html?skin=print.myskin;sortcol=6;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">patch</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/SOM1EKeMMCSupport/0001-sama5d27_som1_ek-add-overlay-for-high-drive-strength.patch">0001-sama5d27_som1_ek-add-overlay-for-high-drive-strength.patch</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/SOM1EKeMMCSupport?filename=0001-sama5d27_som1_ek-add-overlay-for-high-drive-strength.patch;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 2.4&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2019-08-20 - 07:07</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> overlay for high drive strength for sdmmc0 </td>
+</tr></table>
+</div> </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/SOM1EKeMMCSupport?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

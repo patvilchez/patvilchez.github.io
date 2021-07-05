@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PDADetectionAtBoot?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; PDADetectionAtBoot &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="PDA_detection_at_boot_time"></a> PDA detection at boot time </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#PDA_detection_at_boot_time"> PDA detection at boot time</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#How_it_works"> How it works</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#PDA_detection_at_boot"> PDA detection at boot</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#One_wire_EEPROM"> One wire EEPROM</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#U_boot_behavior"> U-boot behavior</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Example"> Example</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+Starting with U-boot 2018.07, U-boot can autodetect which PDA screen is connected (if any is connected).
+<p />
+<h2><a name="How_it_works"></a> How it works </h2>
+<p />
+<p />
+<p />
+<h3><a name="PDA_detection_at_boot"></a> PDA detection at boot </h3>
+<p />
+Since U-boot 2018.07, released with linux4sam_6.0, we have the feature of auto detection of the connected PDA screen 
+<p />
+<h4><a name="One_wire_EEPROM"></a> One wire EEPROM </h4>
+The PDAs have a 512-byte Maxim DS24 1wire EEPROM which is available on the pin 1 of the LCD connector. This memory holds the specific information for the PDA type.
+<p />
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>Not all evaluation kits have the pin 1 of the LCD connector properly connected to the SAMA5 SoC.</strong> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" />
+<p />
+Please check below table for information and hardware required adjustments:
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Board name </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> Hardware changes required </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a> </td>
+<th bgcolor="#687684" class="twikiTableCol1 twikiLastCol" valign="top"> <font color="#ffffff">R32 must be moved to position R33</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a> </td>
+<th bgcolor="#687684" class="twikiTableCol1 twikiLastCol" valign="top"> <font color="#ffffff">R95 must be populated</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D2 SOM1 EK</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D2 WLSOM1 EK</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> None </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> None </td>
+</tr></table>
+<p />
+<p />
+<p />
+<h4><a name="U_boot_behavior"></a> U-boot behavior </h4>
+At boot time, U-boot will:
+<p /> <ul>
+<li>  Initialize 1wire bus and protocol on the GPIO connected on pin 1 of the LCD connector
+</li> <li>  Read the EEPROM memory of the PDA
+</li> <li>  Copy the contents of the PDA memory at the offset where the screen type is stored into an environment variable called 'pda'
+</li> <li>  Print an information message in the booting log with the detected PDA
+</li></ul> 
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong>  <strong>Any</strong> potential PDA can be detected, as long as it respects the same memory map for the connected EEPROM. U-boot will automatically copy the information from EEPROM in the <strong>pda</strong> environment variable.
+</br>
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong>  By default in Linux4SAM 6.0 and later, U-boot comes with an environment that will take this information into account and select a specific PDA overlay to boot Linux with. For more information visit <a class="twikiLink" href="SelectingPDAatBoot.html">how to manually select your PDA at boot</a> and  <a class="twikiLink" href="UsingFITwithOverlays.html">how to use FIT image and the U-boot environment explained</a>
+<p />
+<h4><a name="Example"></a> Example </h4>
+<pre>
+U-Boot 2018.07-linux4sam&#95;6.0 (Oct 03 2018 - 16:03:04 +0000)
+
+CPU: SAMA5D27-CU
+Crystal frequency:       12 MHz
+CPU clock        :      498 MHz
+Master clock     :      166 MHz
+DRAM:  512 MiB
+MMC:   sdio-host&#64;a0000000: 0, sdio-host&#64;b0000000: 1
+Loading Environment from SPI Flash... SF: Detected at25df321a with page size 256 Bytes, erase size 4 KiB, total 4 MiB
+OK
+In:    serial&#64;f8020000
+Out:   serial&#64;f8020000
+Err:   serial&#64;f8020000
+PDA TM5000 detected
+Net:   eth0: ethernet&#64;f8008000
+Hit any key to stop autoboot:  0
+</pre>
+<p />
+In this example we can see that PDA TM5000 was detected.
+<p />
+Further more, if we inspect the U-boot environment:
+<pre>
+&#61;&#62; print
+baudrate&#61;115200
+bootargs&#61;console&#61;ttyS0,115200 root&#61;/dev/mmcblk0p1 rw rootfstype&#61;ext4 rootwait atmel.pm&#95;modes&#61;standby,ulp1
+bootcmd&#61;ext4load mmc 0 0x24000000 boot/sama5d2&#95;xplained.itb; bootm 0x24000000#kernel&#95;dtb
+bootdelay&#61;1
+ethaddr&#61;fc:c2:3d:0d:1f:4b
+fdtcontroladdr&#61;3fb773c8
+pda&#61;5000
+stderr&#61;serial&#64;f8020000
+stdin&#61;serial&#64;f8020000
+stdout&#61;serial&#64;f8020000
+</pre>
+<p />
+We can see that the variable 'pda' was configured. This can be used in the booting mechanism to inform the OS that the PDA is connected.</br>
+<p /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PDADetectionAtBoot?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:45 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

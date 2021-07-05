@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingIsi6 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:05:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> UsingIsi6 &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/UsingIsi6?t=1625510926" type="application/x-wiki" title="Edit UsingIsi6" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/UsingIsi6?t=1625510926" title="Edit UsingIsi6" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="UsingIsi6.html">UsingIsi6</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="Using_ISI_Image_Sensor_Interface"></a>  Using ISI (Image Sensor Interface) in <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/Linux4SAM?topicparent=Linux4SAM.UsingIsi6;nowysiwyg=1" rel="nofollow" title="Linux4SAM (this topic does not yet exist; you can create it)">Linux4SAM</a></span> 6.0 and later </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#Prerequisites"> Prerequisites</a>
+</li> <li> <a href="#Detail_description_of_software"> Detail description of software</a> <ul>
+<li> <a href="#ISI_driver_in_Linux_kernel"> ISI driver in Linux kernel</a>
+</li> <li> <a href="#User_Applications_to_try_ISI_fun"> User Applications to try ISI functionality</a> <ul>
+<li> <a href="#fswebcam"> fswebcam</a>
+</li> <li> <a href="#FFmpeg"> FFmpeg</a>
+</li> <li> <a href="#GStreamer"> GStreamer</a>
+</li> <li> <a href="#ZXing_barcode_reader"> ZXing barcode reader</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#FAQ"> FAQ</a> <ul>
+<li> <a href="#Q_How_to_check_the_ISI_is_probed"> Q: How to check the ISI is probed in my board?</a>
+</li> <li> <a href="#Q_If_the_ISI_cannot_be_probed_in"> Q: If the ISI cannot be probed in my board, what should I do?</a>
+</li></ul> 
+</li> <li> <a href="#Reference"> Reference</a>
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+This page is mainly about how to enable and configure the ISI in AT91SAM SoCs for different image sensors, in our <strong>Linux4SAM 6.0 and later releases</strong>. </br>
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" />  For older releases and older kernel, check <a class="twikiLink" href="UsingIsi.html">this page</a>.
+<p />
+The Image Sensor Interface (ISI) connects a CMOS-type image sensor to the processor and provides image capture in various formats from sensor side.</br>
+ISI uses H/VSYNC signal for synchronization or EAV/SAV. </br>
+ISI supports the following sensor input formats : YCbCr422, RGB565, RGB888 and grayscale raw data. </br>
+<p />
+ISI supports the following output formats: <ul>
+<li> ISI has two paths (Preview path and Codec path) for the output. <ul>
+<li> Preview path will output RGB data with different format. <ul>
+<li> Can convert YCbCr or YUV to RGB. <ul>
+<li> Support downscale and decimation.
+</li> <li> Max output solution is 640x480.
+</li></ul> 
+</li></ul> 
+</li> <li> Codec path will output YUV data with different orders.  <ul>
+<li> Can convert RGB to YCrCb.
+</li> <li> Max output solution is 2048x2048. 
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<p />
+<h1><a name="Prerequisites"></a> Prerequisites </h1> <ul>
+ <li>
+ <ul>
+<li> In SAMA5D3x-EK boards: <ul>
+<li> J11's <strong>PIN29</strong> need to be <strong>disconnected</strong> when insert ISI module board. Since PIN29 is connected to ISI_D11 (pin mux as TWD1).
+</li> <li> TWI0 (i2c0)'s TWD0 &amp; TWCK0 signals are using same pins as ISI_VSYNC &amp; ISI_HSYNC. So need to disable i2c0 when you enable ISI.
+</li> <li> TWI1 (i2c1)'s TWD1 &amp; TWCK1 signals are using same pins as ISI_D11 &amp; ISI_D10. So it <strong>cannot</strong> support 12bit data input.
+</li> <li> Led d3 should be disable as well as it conflict with camera sensor's reset pin PE24.
+</li> <li> <strong>These products have been deprecated in linux4sam releases.</strong>
+</li></ul> 
+</li> <li> The main board for ISI feature display is <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a> with the SAM9X60 MPU.
+</li> <li> Other MPUs or other boards do not support ISI or have been deprecated in linux4sam.
+</li> <li> Supported CMOS sensors: Omivision OV2640 , Omnivision OV7740 and Micron/Aptina monochrome sensor MT9V022
+</li></ul> 
+</li></ul> 
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips :</em></strong> The ISI Device Tree support is added as an overlay in our dt-overlay-at91 tree. For any questions check our <a class="twikiLink" href="DT-Overlay.html">DT-overlay page</a> .
+<p />
+<h1><a name="Detail_description_of_software"></a> Detail description of software </h1>
+<h2><a name="ISI_driver_in_Linux_kernel"></a> ISI driver in Linux kernel </h2>
+ISI driver is part of the media platform drivers, and it supports the standard v4L2 APIs. </br>
+Current supported sensors: Omivision OV2640 , Omnivision OV7740 and Micron/Aptina monochrome sensor MT9V022. </br>
+It's easy to support a sensor if the sensor is using DVP interface connection. This means it uses H/VSYNC signals. Sensors with <strong>serial</strong> interface are not supported, only <strong>parallel</strong>. </br>
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" />   soc-camera framework was deprecated. There are still sensors in soc_camera, but most sensors were ported to the platform camera framework. Thus we do not recommend using soc_camera sensors. </br>
+Supported sensors are available in platform camera framework. You can find all camera supported platform sensors in Kernel menuconfig by: <ul>
+<li> select the menu: <code>"Device Drivers -&gt; Multimedia support -&gt; Media Controller API"</code>
+</li> <li> select the menu: <code>"Device Drivers -&gt; Multimedia support -&gt; V4L2 sub-device userspace API"</code>
+</li> <li> deselect the menu: <code>"Device Drivers -&gt; Multimedia support -&gt; Autoselect ancillary drivers (tuners, sensors, i2c, frontends)"</code> <ul>
+<li> <img src="../../../pub/Linux4SAM/UsingIsi6/Screenshot_from_2018-11-14_13-26-01.png" alt="Screenshot_from_2018-11-14_13-26-01.png" width="952" height="582" />
+</li></ul> 
+</li> <li> Then all support sensors can be found in the menu: <code>"Device Drivers -&gt; Multimedia support -&gt; <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/I2C?topicparent=Linux4SAM.UsingIsi6;nowysiwyg=1" rel="nofollow" title="I2C (this topic does not yet exist; you can create it)">I2C</a></span> Encoders, decoders, sensors and other helper chips"</code> <ul>
+<li> <img src="../../../pub/Linux4SAM/UsingIsi6/Screenshot_from_2018-11-14_13-28-44.png" alt="Screenshot_from_2018-11-14_13-28-44.png" width="955" height="586" />
+</li></ul> 
+</li></ul> 
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> to add a new sensor support, you need to create a Device Tree Overlay file to add the sensor remote port. The <a class="twikiLink" href="DT-Overlay.html">DT-overlay page</a> provides more information. Our public Github repository will gladly accept patches.
+<p />
+<h2><a name="User_Applications_to_try_ISI_fun"></a> User Applications to try ISI functionality </h2>
+<p />
+<h3><a name="fswebcam"></a> <a href="http://www.firestorm.cx/fswebcam" target="_blank">fswebcam<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h3>
+fswebcam is a neat and simple webcam app. It captures images from a V4L1/V4L2 compatible device or file, averages them to reduce noise and draws a caption using the GD Graphics Library which also handles compressing the image to PNG or JPEG. The resulting image is saved to a file or sent to stdio where it can be piped to something like ncftpput or scp.
+<p /> <ul>
+<li> Add <strong>fswebcam</strong> in Buildroot <ul>
+<li> Select <code>"Package Selection for the target -&gt; Graphic libraries and applications -&gt; fswebcam"</code>.
+</li></ul> 
+</li> <li> Use <strong>fswebcam</strong> to capture a image.   <pre>
+#!/bin/sh
+
+VIDEO_DEV=/dev/video0
+SKIP_FRAMES=20
+
+# test preview channel
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p RGB565 -r 640x480 rgb565.jpg
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p RGB565 -r 320x240 rgb565_defactor.jpg
+
+# test codec channel
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p YUYV -r 640x480 yuyv.jpg
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p YUYV -r 800x600 yuyv_800x600.jpg
+
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p UYVY -r 640x480 uyvy.jpg
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p UYVY -r 800x600 uyvy_800x600.jpg
+
+# test codec channel, without any processing, GREY, or Bayer RGB.
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p BAYER -r 640x480 bayer_bggr8.jpg
+fswebcam -S ${SKIP_FRAMES} -d ${VIDEO_DEV} -p SGRBG8 -r 640x480 bayer_grbg8.jpg
+
+   </pre> <ul>
+<li> <code>-S</code>: frames that need to skip.
+</li> <li> <code>-d /dev/video0</code>: specify the ISI as the input source.
+</li> <li> <code>-p</code>: pixel format, can be RGB565, YUYV, UYVY, BAYER, SGRBGB8 and etc.
+</li> <li> <code>-r</code>: resolution.
+</li></ul> 
+</li></ul> 
+<p />
+<h3><a name="FFmpeg"></a> <a href="http://www.ffmpeg.org/" target="_blank">FFmpeg<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h3>
+FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It supports video4linux2 in Linux.
+<p /> <ul>
+<li> Add <strong>FFmpeg</strong> in Buildroot (It's already included in the Linux4SAM buildroot demo). <ul>
+<li> Select <code>"Package Selection for the target -&gt; Audio and video applications -&gt; ffmpeg"</code>.
+</li></ul> 
+</li> <li> Use <strong>FFmpeg</strong> to capture a mpeg4 video clip.   <pre>
+   ffmpeg -r 25 -s vga -t 20 -pix_fmt yuyv422 -f video4linux2 -i /dev/video0 video.avi
+   </pre> <ul>
+<li> <code>-r</code>: frame rate
+</li> <li> <code>-s</code>: resolution, it can be <code>qcif, cif, qvga, vga, svga, xga, uxga</code>.
+</li> <li> <code>-t</code>: time duration in second.
+</li> <li> <code>-pix_fmt</code>: pixel format, only support yuyv422.
+</li> <li> <code>-f video4linux2</code>: specify the format.  Use <code>ffmpeg -formats</code> will show all supported formats.
+</li> <li> <code>-i /dev/video0</code>: specify the ISI as the input source. Run following command to check the source name:         <pre>
+# cat /sys/class/video4linux/video0/name
+isi-camera
+         </pre> 
+</li> <li> <code>video.avi</code>: output video file name
+</li></ul> 
+</li></ul> 
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> As no <code>vcodec</code> specified, it use <code>mpeg4</code> as default.
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong>  Run <code>ffmpeg -pix_fmts</code> can show all the supported pixel formats.
+<p /> <ul>
+<li> Use <strong>FFmpeg</strong> application to capture images.   <pre>
+   ffmpeg -f video4linux2 -r 1 -s vga -t 4 -i /dev/video0 -pix_fmt yuyv422 -f image2 -vcodec png image%d.png
+   </pre> <ul>
+<li> <code>-r</code>: frame rate
+</li> <li> <code>-s</code>: resolution, it can be <code>qcif, cif, qvga, vga, svga, xga, uxga</code>.
+</li> <li> <code>-t</code>: time duration in second.
+</li> <li> <code>-i /dev/video0</code>: specify the ISI as the input source. Run following command to check the source name:         <pre>
+# cat /sys/class/video4linux/video0/name
+isi-camera
+         </pre> 
+</li> <li> <code>-pix_fmt</code>: pixel format, only support yuyv422.
+</li> <li> <code>-f image2</code>: image2 sequence format. Use <code>ffmpeg -formats</code> will show all supported formats.
+</li> <li> <code>-vcodec png</code>: specify output format is png.  Use <code>ffmpeg -codecs</code> will show all supported codec.
+</li> <li> <code>image%d.png</code>: output file name is image1.png, image2.png and etc.
+</li></ul> 
+</li></ul> 
+<p />
+<h3><a name="GStreamer"></a> <a href="http://gstreamer.freedesktop.org/" target="_blank">GStreamer<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h3>
+GStreamer is a library for constructing graphs of media-handling components. The applications it supports range from simple Ogg/Vorbis playback, audio/video streaming to complex audio (mixing) and video (non-linear editing) processing.
+<p />
+GStreamer has been ported to a wide range of operating systems, processors and compilers.
+<p /> <ul>
+<li> Add GStreamer in Buildroot (It's already included in the Linux4SAM Buildroot demo). <ul>
+<li> Select <code>"Package Selection for the target -&gt; Audio and video applications -&gt; gstreamer"</code> and the plugins that you needed.
+</li></ul> 
+</li> <li> Use <strong>GStreamer</strong> to preview on LCD.   <pre>
+   # gstreamer 1.0
+   gst-launch-1.0 v4l2src device="/dev/video1" ! video/x-raw,width=640,height=480 ! videoconvert ! kmssink
+   </pre> <ul>
+<li> <code>v4l2src</code>: a plugin to support v4l2 device as a source <ul>
+<li> <code>device="/dev/video1"</code>: specify the ISI as the v4l2 input device.  <ul>
+<li> You can check the device name by run command: <code>cat /sys/class/video4linux/video1/name</code>
+</li></ul> 
+</li> <li> <code>video/x-raw,width=640,height=480</code>: For gstreamer 1.0, specify the v4l2 output video format and size.
+</li></ul> 
+</li>  </ul><dl>
+<dt> *=videoconvert=</dt><dd> a plugin to convert from one color space to another
+</dd>  </dl><ul>
+<li> <code>kmssink</code>: a plugin to render to KMS (kernel mode setting) device
+</li></ul> 
+</li></ul> 
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> run <code>gst-inspect</code> will show all installed plugins.
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> run <code>gst-inspect [plugin name]</code> will show all supported parameters for this plugins.
+<p />
+     <img src="../../../pub/Linux4SAM/UsingIsi6/isi-gstreamer.png" alt="isi-gstreamer.png" width="893" height="391" />
+<p />
+<h3><a name="ZXing_barcode_reader"></a> ZXing barcode reader </h3>
+ZXing is an open-source, multi-format 1D/2D barcode image processing library implemented in Java, with ports to other languages. The project also includes a barcode reader example.
+<p /> <ul>
+<li> Add the ZXing barcode reader application in Buildroot. <ul>
+<li> Add ZXing libary in Buildroot (The Linux4SAM buildroot demo already include it). <ul>
+<li> Select <code>"Package Selection for the target -&gt; Libraries -&gt; Graphics -&gt; zxing"</code>.
+</li></ul> 
+</li> <li> Apply <a href="https://www.linux4sam.org/pub/Linux4SAM/UsingIsi6/0001-zxing-change-the-makefile-to-compile-the-barcode-rea.patch" target="_top">attached patch</a> on top of the buildroot-2012.11.1-at91. <ul>
+<li> This patch will change the <strong>zxing</strong> project's Makefile to generate not only zxing library but also the barcode reader example.
+</li></ul> 
+</li> <li> Run command <code>make zxing</code> to generate the barcode application: <code>zxing_barcode</code>. <ul>
+<li> <code>zxing_barcode</code> is located on <code>outpout/target/use/bin/</code>.
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Read barcode from the image by using ZXing barcode reader. <ul>
+<li> Get an picture which include a barcode. <ul>
+<li> Please refer to <strong>FFmpeg</strong> section for the image capture.
+</li></ul> 
+</li> <li> Run following command to reader the barcode.         <pre>zxing_barcode *.jpg</pre>
+</li></ul> 
+</li></ul> 
+<p />
+<h1><a name="FAQ"></a> FAQ </h1>
+<h2><a name="Q_How_to_check_the_ISI_is_probed"></a> Q: How to check the ISI is probed in my board? </h2> <ol>
+<li> Check the boot message whether there is an information about sensor probe.      <pre>
+
+i2c i2c-0: OV2640 Probed
+...
+ov5642 0-003c: reg_read: i2c read error, reg: 300a
+ov5642: probe of 0-003c failed with error -121
+      </pre>      In above example, the message shows an OV2640 sensor is probed. But probe of OV5642 failed as we only support one camera module slot in the board.
+</li> <li> Print all the v4L2 device in system to check that ISI device exists?    <pre>
+# ls /sys/class/video4linux/video*
+/sys/class/video4linux/video0:
+debug      dev        index      name       power      subsystem  uevent
+
+/sys/class/video4linux/video1:
+debug      device     name       subsystem
+dev        index      power      uevent
+# cat /sys/class/video4linux/video0/name
+
+# cat /sys/class/video4linux/video1/name
+isi-camera
+    </pre>      In above example, we can find the <code>video1</code> is the <code>isi-camera</code> device.
+</li></ol> 
+<p />
+<h2><a name="Q_If_the_ISI_cannot_be_probed_in"></a> Q: If the ISI cannot be probed in my board, what should I do? </h2> <ol>
+<li> Check the kernel boot message to see if there is any error message about ISI and sensor
+</li> <li> Following the below check list to troubleshoot above errors. <ul>
+<li> Check the kernel config file: <ul>
+<li> Is the ISI driver and the sensor driver enabled?
+</li></ul> 
+</li> <li> Check your board's device tree files and overlays (<code>.dts, .dtsi .dtso</code>): <ul>
+<li> Is the ISI device node is enabled? 
+</li> <li> Are the ISI pins are configured correctly?
+</li> <li> Is the sensor's i2c info correct?
+</li> <li> Is the sensor's power/reset pin correct?
+</li> <li> Is the PCK correct?
+</li></ul> 
+</li></ul> 
+</li></ol> 
+<p />
+<h1><a name="Reference"></a> Reference </h1> <ul>
+<li> <a href="http://linuxtv.org/docs.php" target="_blank">V4L2 documentation<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://code.google.com/p/zxing/" target="_blank">ZXing project page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://www.ffmpeg.org/" target="_blank">FFmpeg home page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://gstreamer.freedesktop.org/" target="_blank">GStreamer home page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiForm">
+<table class='twikiFormTable' border='1'><tr><th class='twikiFormTableHRow twikiFirstCol' colspan='2'>
+<a class="twikiLink" href="WebFaqBaseForm.html">WebFaqBaseForm</a>
+</th></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Boards </td><td>
+<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Components </td><td>
+<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Summary </td><td>
+Using ISI with Linux4sam 6.0 and Kernel 4.14 and later
+</td></tr></table>
+</div><!-- /twikiForm --><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="UsingIsi633a1.html?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="UsingIsi644bd.html?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="UsingIsi676e2.html?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="UsingIsi6b21c.html?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="UsingIsi6d1c3.html?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="UsingIsi6e84d.html?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="UsingIsi6bf07.html?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/UsingIsi6/Screenshot_from_2018-11-14_13-26-01.png">Screenshot_from_2018-11-14_13-26-01.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/UsingIsi6?filename=Screenshot_from_2018-11-14_13-26-01.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 89.0&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2018-11-14 - 11:30</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> ISI_menuconfig_1 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/UsingIsi6/Screenshot_from_2018-11-14_13-28-44.png">Screenshot_from_2018-11-14_13-28-44.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/UsingIsi6?filename=Screenshot_from_2018-11-14_13-28-44.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 100.5&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2018-11-14 - 11:33</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> ISI_menuconfig_2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/UsingIsi6/isi-gstreamer.png">isi-gstreamer.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/UsingIsi6?filename=isi-gstreamer.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 26.4&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2018-11-14 - 12:00</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> isi_gstreamer </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r10 - 01 Jul 2021 - 11:19:42 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/UsingIsi6"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="UsingIsi63fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingIsi6 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:06:12 GMT -->
+</html>

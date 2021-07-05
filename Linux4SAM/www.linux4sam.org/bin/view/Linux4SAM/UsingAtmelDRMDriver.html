@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingAtmelDRMDriver by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:07:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> UsingAtmelDRMDriver &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/UsingAtmelDRMDriver?t=1625510952" type="application/x-wiki" title="Edit UsingAtmelDRMDriver" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/UsingAtmelDRMDriver?t=1625510952" title="Edit UsingAtmelDRMDriver" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style>
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="TipsNTricks.html">TipsNTricks</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="UsingAtmelDRMDriver.html">UsingAtmelDRMDriver</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="How_to_use_the_Atmel_KMS_DRM_LCD"></a>  How to use the Atmel KMS/DRM LCD driver </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#The_atmel_hlcdc_driver"> The atmel-hlcdc driver</a>
+</li> <li> <a href="#Using_modetest"> Using modetest</a> <ul>
+<li> <a href="#modetest_output"> modetest output</a>
+</li> <li> <a href="#Some_modetest_commands"> Some modetest commands</a>
+</li></ul> 
+</li> <li> <a href="#DRM_Library"> DRM Library</a>
+</li> <li> <a href="#Adapt_to_a_new_LCD_panel"> Adapt to a new LCD panel </a>
+</li> <li> <a href="#Use_of_the_legacy_fbdev_emulatio"> Use of the legacy fbdev emulation</a> <ul>
+<li> <a href="#Choose_supported_modes"> Choose supported modes</a>
+</li> <li> <a href="#Set_mode_before_using_the_fbdev"> Set mode before using the fbdev</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+Since <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, the recent Atmel SoCs have a new LCD driver that is based on the Linux KMS/DRM sub-system. As the old fbdev (framebuffer) subsystem is being deprecated and is certainly limited, we decided to move to a more future proof infrastructure.
+<p />
+This driver can be found in the <a href="https://github.com/linux4sam/linux-at91/tree/master/drivers/gpu/drm/atmel-hlcdc" target="_blank">drivers/gpu/drm/atmel-hlcdc/ directory<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h2><a name="The_atmel_hlcdc_driver"></a> The atmel-hlcdc driver </h2>
+<p />
+A good introduction to this driver by its author is the paper that Boris Brezillon wrote for Embedded Linux Conference Europe 2014: <a href="http://events.linuxfoundation.org/sites/events/files/slides/brezillon-drm-kms.pdf" target="_blank">The DRM/KMS subsystem from a newbie's point of view<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+The atmel-hlcdc driver supports: <ul>
+<li> base layer
+</li> <li> overlays (planes in DRM words)
+</li> <li> alpha channel blending of overlays
+</li> <li> color space conversion: RGB (different formats), YUV (different formats as well)
+</li> <li> panning
+</li> <li> rotation
+</li> <li> scaling / upsampling
+</li> <li> hardware cursor (when supported by hardware)
+</li></ul> 
+<p />
+<h2><a name="Using_modetest"></a> Using modetest </h2>
+<p />
+Modetest is the testing tool for a DRM driver. It uses native DRM commands.
+<p />
+<h3><a name="modetest_output"></a> modetest output </h3>
+<p />
+Example on a SAMA5D4-EK with an HDMI monitor connected.
+<p />
+<pre>
+root&#64;sama5d4ek:~# ./modetest 
+trying to open device &#39;i915&#39;...failed.
+trying to open device &#39;radeon&#39;...failed.
+trying to open device &#39;nouveau&#39;...failed.
+trying to open device &#39;vmwgfx&#39;...failed.
+trying to open device &#39;omapdrm&#39;...failed.
+trying to open device &#39;exynos&#39;...failed.
+trying to open device &#39;tilcdc&#39;...failed.
+trying to open device &#39;msm&#39;...failed.
+trying to open device &#39;sti&#39;...failed.
+trying to open device &#39;tegra&#39;...failed.
+trying to open device &#39;imx-drm&#39;...failed.
+trying to open device &#39;atmel-hlcdc&#39;...success.
+Raw EDID:
+    ff ff ff ff ff ff 00 10 ac 42 f0 53 33 37 43 20
+    17 01 03 80 2f 1e 78 ea 23 c5 a5 57 4f 9e 26 0f
+    50 54 a5 4b 00 71 4f 81 80 b3 00 01 01 01 01 01
+    01 01 01 01 01 21 39 90 30 62 1a 27 40 68 b0 36
+    00 d9 28 11 00 00 1c 00 00 00 ff 00 34 34 46 47
+    59 33 38 38 43 37 33 53 0a 00 00 00 fc 00 44 45
+    4c 4c 20 50 32 32 31 33 0a 20 20 00 00 00 fd 00
+    38 4b 1e 53 10 00 0a 20 20 20 20 20 20 00 b9 0e
+Encoders:
+id   crtc   type   possible crtcs   possible clones   
+5   15   TMDS   0x00000001   0x00000000
+7   0   LVDS   0x00000001   0x00000000
+
+Connectors:
+id   encoder   status      type   size (mm)   modes   encoders
+6   5   connected   HDMI-A   470x300      11   5
+  modes:
+   name refresh (Hz) hdisp hss hse htot vdisp vss vse vtot)
+  1680x1050 60 1680 1784 1960 2240 1050 1053 1059 1089 flags: nhsync, pvsync; type: preferred, driver
+  1280x1024 75 1280 1296 1440 1688 1024 1025 1028 1066 flags: phsync, pvsync; type: driver
+  1280x1024 60 1280 1328 1440 1688 1024 1025 1028 1066 flags: phsync, pvsync; type: driver
+  1152x864 75 1152 1216 1344 1600 864 865 868 900 flags: phsync, pvsync; type: driver
+  1024x768 75 1024 1040 1136 1312 768 769 772 800 flags: phsync, pvsync; type: driver
+  1024x768 60 1024 1048 1184 1344 768 771 777 806 flags: nhsync, nvsync; type: driver
+  800x600 75 800 816 896 1056 600 601 604 625 flags: phsync, pvsync; type: driver
+  800x600 60 800 840 968 1056 600 601 605 628 flags: phsync, pvsync; type: driver
+  640x480 75 640 656 720 840 480 481 484 500 flags: nhsync, nvsync; type: driver
+  640x480 60 640 656 752 800 480 490 492 525 flags: nhsync, nvsync; type: driver
+  720x400 70 720 738 846 900 400 412 414 449 flags: nhsync, pvsync; type: driver
+  props:
+   1 EDID:
+      flags: immutable blob
+      blobs:
+
+      value:
+         00ffffffffffff0010ac42f053333743
+         20170103802f1e78ea23c5a5574f9e26
+         0f5054a54b00714f8180b30001010101
+         01010101010121399030621a274068b0
+         3600d9281100001c000000ff00343446
+         4759333838433733530a000000fc0044
+         454c4c2050323231330a2020000000fd
+         00384b1e5310000a20202020202000b9
+   2 DPMS:
+      flags: enum
+      enums: On&#61;0 Standby&#61;1 Suspend&#61;2 Off&#61;3
+      value: 0
+8   0   connected   LVDS   152x91      1   7
+  modes:
+   name refresh (Hz) hdisp hss hse htot vdisp vss vse vtot)
+  800x480 60 800 801 865 929 480 481 504 526 flags: ; type: 
+  props:
+   1 EDID:
+      flags: immutable blob
+      blobs:
+
+      value:
+   2 DPMS:
+      flags: enum
+      enums: On&#61;0 Standby&#61;1 Suspend&#61;2 Off&#61;3
+      value: 0
+
+CRTCs:
+id   fb   pos   size
+15   31   (0,0)   (1680x1050)
+  1680x1050 60 1680 1784 1960 2240 1050 1053 1059 1089 flags: nhsync, pvsync; type: preferred, driver
+  props:
+
+Planes:
+id   crtc   fb   CRTC x,y   x,y   gamma size   possible crtcs
+11   15   31   0,0      0,0   0          0x00000001
+  formats: XR12 AR12 RA12 AR15 RG16 RG24 XR24 AR24 RA24
+  props:
+   4 type:
+      flags: immutable enum
+      enums: Overlay&#61;0 Primary&#61;1 Cursor&#61;2
+      value: 1
+   10 rotation:
+      flags: bitmask
+      values: rotate-0&#61;0x1 rotate-90&#61;0x2 rotate-180&#61;0x4 rotate-270&#61;0x8
+      value: 1
+12   0   0   0,0      0,0   0          0x00000001
+  formats: XR12 AR12 RA12 AR15 RG16 RG24 XR24 AR24 RA24
+  props:
+   4 type:
+      flags: immutable enum
+      enums: Overlay&#61;0 Primary&#61;1 Cursor&#61;2
+      value: 0
+   9 alpha:
+      flags: range
+      values: 0 255
+      value: 255
+   10 rotation:
+      flags: bitmask
+      values: rotate-0&#61;0x1 rotate-90&#61;0x2 rotate-180&#61;0x4 rotate-270&#61;0x8
+      value: 1
+13   0   0   0,0      0,0   0          0x00000001
+  formats: XR12 AR12 RA12 AR15 RG16 RG24 XR24 AR24 RA24
+  props:
+   4 type:
+      flags: immutable enum
+      enums: Overlay&#61;0 Primary&#61;1 Cursor&#61;2
+      value: 0
+   9 alpha:
+      flags: range
+      values: 0 255
+      value: 255
+   10 rotation:
+      flags: bitmask
+      values: rotate-0&#61;0x1 rotate-90&#61;0x2 rotate-180&#61;0x4 rotate-270&#61;0x8
+      value: 1
+14   0   0   0,0      0,0   0          0x00000001
+  formats: XR12 AR12 RA12 AR15 RG16 RG24 XR24 AR24 RA24 AYUV YUYV UYVY YVYU VYUY NV21 NV61 YU16 YU12
+  props:
+   4 type:
+      flags: immutable enum
+      enums: Overlay&#61;0 Primary&#61;1 Cursor&#61;2
+      value: 0
+   9 alpha:
+      flags: range
+      values: 0 255
+      value: 255
+   10 rotation:
+      flags: bitmask
+      values: rotate-0&#61;0x1 rotate-90&#61;0x2 rotate-180&#61;0x4 rotate-270&#61;0x8
+      value: 1
+
+Frame buffers:
+id   size   pitch
+</pre>
+<p />
+<h3><a name="Some_modetest_commands"></a> Some modetest commands </h3>
+<p />
+Here are some useful commands:
+<p />
+Display a basic test pattern with selected geometry (Don't press "enter" again until you're done) on the HDMI monitor:
+<pre>
+modetest -M atmel-hlcdc -s 6&#64;15:1024x768
+</pre>
+<p />
+Larger resolution if the HDMI connected monitor supports it:
+<pre>
+modetest -M atmel-hlcdc -s 6&#64;15:1680x1050
+</pre>
+<p />
+Now same test patern on the LCD PDA 7" display:
+<pre>
+modetest -M atmel-hlcdc -s 8&#64;15:800x480
+</pre>
+<p />
+or (if the HDMI cable is not connected):
+<p />
+<pre>
+modetest -M atmel-hlcdc -s 6&#64;14:800x480
+</pre>
+<p />
+A test patern for background + a 300x200 overlay at 150 and 50 location:
+<pre>
+modetest -M atmel-hlcdc -s 8&#64;15:800x480 -P 15:300x200+150+50
+</pre>
+<p />
+<img src="../../../pub/Linux4SAM/UsingAtmelDRMDriver/modetest_overlay.jpg" border="0" alt="modetest output with base layer plus overlay" />
+<p />
+Here is the output of this last command (HDMI screen unplugged):
+<pre>
+root&#64;sama5d4ek:~# modetest -M atmel-hlcdc -s 8&#64;15:800x480 -P 15:300x200+150+50
+setting mode 800x480&#64;XR24 on connectors 8, crtc 15
+testing 300x200&#64;XR24 overlay plane 12
+</pre>
+<p />
+PDA 4" on sama5d2:
+<pre>
+modetest -M atmel-hlcdc -s 6&#64;13:480x272
+</pre>
+<p />
+<p />
+<h2><a name="DRM_Library"></a> DRM Library </h2>
+<p />
+The different features are supported and accessible in the Linux kernel. The constrain is to use the libdrm to access them and the proper call to our KMS/DRM driver named atmel-hlcdc. Note that these feature are not reachable using the fbdev emulation.
+<p />
+Here are some two more links detailing simple use cases: <ul>
+<li> <a href="https://dvdhrm.wordpress.com/2012/09/13/linux-drm-mode-setting-api/" target="_blank">https://dvdhrm.wordpress.com/2012/09/13/linux-drm-mode-setting-api/<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://dvdhrm.wordpress.com/2012/12/21/advanced-drm-mode-setting-api/" target="_blank">https://dvdhrm.wordpress.com/2012/12/21/advanced-drm-mode-setting-api/<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<a href="http://cgit.freedesktop.org/mesa/drm/" target="_blank">Home of libdrm<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> and the <a href="http://cgit.freedesktop.org/mesa/drm/tree/tests/modetest" target="_blank">modetest tool source code<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is actually part of libdrm.
+<p />
+<p />
+<h2><a name="Adapt_to_a_new_LCD_panel"></a> Adapt to a new LCD panel </h2>
+<p />
+Panel definitions are stored in C code and called from DT by the simple-panel.
+<p />
+So, you can store your panel definition here: drivers/gpu/drm/panel/panel-simple.c
+<p />
+Here is an example of the definition structure for the PDA 4.3" equipped with a Innolux at043tn24 LCD. The geometry is thus described like this:
+<pre>
+static const struct drm&#95;display&#95;mode innolux&#95;at043tn24&#95;mode &#61; {
+        .clock &#61; 9000,
+        .hdisplay &#61; 480,
+        .hsync&#95;start &#61; 480 + 2,
+        .hsync&#95;end &#61; 480 + 2 + 41,
+        .htotal &#61; 480 + 2 + 41 + 2,
+        .vdisplay &#61; 272,
+        .vsync&#95;start &#61; 272 + 2,
+        .vsync&#95;end &#61; 272 + 2 + 11,
+        .vtotal &#61; 272 + 2 + 11 + 2,
+        .vrefresh &#61; 60,
+        .flags &#61; DRM&#95;MODE&#95;FLAG&#95;NHSYNC &#124; DRM&#95;MODE&#95;FLAG&#95;NVSYNC,
+};
+
+static const struct panel&#95;desc innolux&#95;at043tn24 &#61; {
+        .modes &#61; &#38;innolux&#95;at043tn24&#95;mode,
+        .num&#95;modes &#61; 1,
+        .bpc &#61; 8,
+        .size &#61; {
+                .width &#61; 95,
+                .height &#61; 54,
+        },
+        .bus&#95;format &#61; MEDIA&#95;BUS&#95;FMT&#95;RGB888&#95;1X24,
+};
+
+&#91;..]
+
+static const struct of&#95;device&#95;id platform&#95;of&#95;match&#91;] &#61; {
+        {
+
+&#91;..]
+        }, {   
+                .compatible &#61; &#34;innolux,at043tn24&#34;,
+                .data &#61; &#38;innolux&#95;at043tn24,
+        }, {   
+&#91;..]
+        }, {
+                /&#42; sentinel &#42;/
+        }
+};
+MODULE&#95;DEVICE&#95;TABLE(of, platform&#95;of&#95;match);
+</pre>
+<p />
+And here is the DT description that links to this panel:
+<pre>
+        panel: panel {
+                compatible &#61; &#34;innolux,at043tn24&#34;, &#34;simple-panel&#34;;
+                backlight &#61; &#60;&#38;backlight&#62;;
+                power-supply &#61; &#60;&#38;panel&#95;reg&#62;;
+                #address-cells &#61; &#60;1&#62;;
+                #size-cells &#61; &#60;0&#62;;
+                status &#61; &#34;okay&#34;;
+
+                port&#64;0 {
+                        reg &#61; &#60;0&#62;;
+                        #address-cells &#61; &#60;1&#62;;
+                        #size-cells &#61; &#60;0&#62;;
+
+                        panel&#95;input: endpoint&#64;0 {
+                                reg &#61; &#60;0&#62;;
+                                remote-endpoint &#61; &#60;&#38;hlcdc&#95;panel&#95;output&#62;;
+                        };
+                };
+        };
+</pre>
+<p />
+<h2><a name="Use_of_the_legacy_fbdev_emulatio"></a> Use of the legacy fbdev emulation </h2>
+<p />
+For DRM drivers, you can use the old fbdev emulation. It is somehow a temporary workaround for software that still uses the fbdev interface. The preferred way of taking advantage of this driver is to use the DRM kernel API.
+<p />
+Anyway, if you still need this emulated fbdev interface, you can use the following instructions.
+<p />
+<h3><a name="Choose_supported_modes"></a> Choose supported modes </h3>
+<p />
+By default, the fbdev emulation on top of DRM driver is in 24 bits (RGB888).<br /> 
+For changing the the <strong>fbdev emulation</strong> color mode to 16 bits (RGB565) on top of DRM driver, you <strong>must</strong> choose the mode at boot time on the Linux command line.
+<p />
+So, you can add to the cmdline:
+<p />
+for PDA7" 16 bits color mode:
+<p />
+<pre>
+video&#61;Unknown-1:800x480-16
+</pre>
+<p />
+or for PDA4.3" 16 bits color mode:
+<pre>
+video&#61;Unknown-1:480x272-16
+</pre>
+<p />
+<p />
+For HDMI, here are some tricks as we have 2 different connectors:
+<p />
+For HDMI only: disable LCD:
+<pre>
+video&#61;HDMI-A-1:800x600-16 video&#61;Unknown-1:d
+</pre>
+<p />
+For only screen and disabling HDMI output if it's connected:
+<pre>
+video&#61;HDMI-A-1:d video&#61;Unknown-1:800x480-16
+</pre>
+<p />
+<p />
+<h3><a name="Set_mode_before_using_the_fbdev"></a> Set mode before using the fbdev </h3>
+<p />
+For fbdev emulation of DRM drivers, we <strong>must</strong> set the mode the fb0 need to use.
+<p />
+Example for <code>/dev/fb0</code> and PDA7" LCD screen:
+<p />
+<pre>
+echo U:800x480p-0 &#62; /sys/class/graphics/fb0/mode
+</pre>
+or for <code>/dev/fb0</code> and PDA4.3" LCD screen:
+<pre>
+echo U:480x272p-0 &#62; /sys/class/graphics/fb0/mode
+</pre>
+<p />
+Note that you can check available modes in the file:
+<pre>
+$ cat /sys/class/graphics/fb0/modes 
+U:480x272p-0
+</pre>
+<p />
+The easies way to do so is to run:
+<pre>
+head -1 /sys/class/graphics/fb0/modes &#62; /sys/class/graphics/fb0/mode
+</pre>
+<p />
+You can also use fbset:
+<p />
+<pre>
+fbset -g 800 480 800 480 16
+</pre>
+<p />
+You may also need to disable the blanking of the LCD:
+<pre>
+echo 0 &#62; /sys/class/graphics/fb0/blank
+</pre> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiForm">
+<table class='twikiFormTable' border='1'><tr><th class='twikiFormTableHRow twikiFirstCol' colspan='2'>
+<a class="twikiLink" href="WebFaqBaseForm.html">WebFaqBaseForm</a>
+</th></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Boards </td><td>
+<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Components </td><td>
+<a class="twikiLink" href="LinuxKernel.html">Kernel</a>, <a class="twikiLink" href="LinuxKernel_3_18.html">linux-3.18-at91</a>, <a class="twikiLink" href="LinuxKernel_4_1.html">linux-4.1-at91</a>, <a class="twikiLink" href="LinuxKernel_4_4.html">linux-4.4-at91</a>, <a class="twikiLink" href="LinuxKernel_4_9.html">linux-4.9-at91</a>, <a class="twikiLink" href="LinuxKernel_4_14.html">linux-4.14-at91</a>, <a class="twikiLink" href="LinuxKernel_4_19.html">linux-4.19-at91</a>, <a class="twikiLink" href="LinuxKernel_5_4.html">linux-5.4-at91</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Summary </td><td>
+Using Atmel KMS/DRM LCD driver
+</td></tr></table>
+</div><!-- /twikiForm --><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="UsingAtmelDRMDriver33a1.html?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="UsingAtmelDRMDriver44bd.html?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="UsingAtmelDRMDriver76e2.html?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="UsingAtmelDRMDriverb21c.html?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="UsingAtmelDRMDriverd1c3.html?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="UsingAtmelDRMDrivere84d.html?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="UsingAtmelDRMDriverbf07.html?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/UsingAtmelDRMDriver/modetest_overlay.jpg">modetest_overlay.jpg</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/UsingAtmelDRMDriver?filename=modetest_overlay.jpg;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 72.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2018-08-13 - 15:38</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> &nbsp; </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r15 - 02 Jun 2020 - 06:38:21 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/UsingAtmelDRMDriver"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="UsingAtmelDRMDriver3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingAtmelDRMDriver by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:07:31 GMT -->
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PwmFaq?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:12:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; PwmFaq &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="How_to_use_Pulse_Width_Modulatio"></a>  How to use Pulse Width Modulation driver </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Supported_devices"> Supported devices</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Kernel_support"> Kernel support</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#PWM_configurations"> PWM configurations</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#General">General</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Available_PWM_channels">Available PWM channels</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#PWM_channel_export">PWM channel export</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Period_configuration">Period configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Duty_cycle_configuration">Duty cycle configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Polarity_configuration">Polarity configuration</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Enable_Disable_PWM_channels">Enable/Disable PWM channels</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Configuring_PWM_channels_via_dev">Configuring PWM channels via device tree</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Debugging_PWM">Debugging PWM</a>
+</li></ul> 
+</div>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+This page describes how PWM could be configured, debugged and used on SAMA5D2 devices. Since <code>linux-4.9-at91</code> the PWM could be configured using the new Linux PWM framework support called atomic PWM. This allow changing the PWM parameters without the need of disable and re-enable the correspondent PWM channel.
+<h2><a name="Supported_devices"></a> Supported devices </h2>
+The following table specifies the pins on different boards which could be used as PWM outputs and the correspondent Linux PWM channels.
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <b>Board Name</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <b>Connector</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <b>Connector Pin</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <b>PWM Signal</b> </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" valign="top"> <b>Linux Channel</b> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> SAM9X60 EK </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> J14 (mikroBUS) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 16 (PWM) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWM2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" valign="top"> 2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top"> SAMA5D27 WLSOM1 EK </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> J19 (mikroBUS 1) </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 16 (PWM) </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH0 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 0 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> J20 (mikroBUS 2) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 16 (PWM) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top"> SAMA5D27 SOM1 EK </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> J25 (mikroBUS 1) </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 1 (PWM) </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" valign="top"> 1 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> J30 (mikroBUS 2) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 1 (PWM) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML0 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" valign="top"> 0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="4" valign="top"> SAMA5D2 Xplained </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top"> J20 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML2 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="4" valign="top"> 2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWMH2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top"> J26 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 8 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 7 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWMH2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="6" valign="top"> SAMA5D3 Xplained </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="6" valign="top"> J19 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> PA21 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML0 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 0 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> PA20 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWMH0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> PA23 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" rowspan="2" valign="top"> PWML1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="4" valign="top"> 1 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> PA31 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> PB27 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" rowspan="2" valign="top"> PWMH1 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> PA22 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" rowspan="25" valign="top"> SAMA5D4 Xplained </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="4" valign="top"> J7 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 2 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML0 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 0 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 5 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWMH0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 1 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 6 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWMH1 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="7" valign="top"> J8 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 8 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML0 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="3" valign="top"> 0 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 7 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" rowspan="2" valign="top"> PWMH0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 3 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" rowspan="2" valign="top"> PWML1 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 1 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 4 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 6 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 5 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="5" valign="top"> J15 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 4 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML0 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" valign="top"> 0 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 26 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" valign="top"> 1 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 10 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 9 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 33 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML3 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" valign="top"> 3 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> J17 </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 4 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWML3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" valign="top"> 3 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="2" valign="top"> J18 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 4 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 8 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH2 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="2" valign="top"> J19 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 7 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML3 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 3 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 8 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH3 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="2" valign="top"> J22 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 8 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML3 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top"> 3 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> 7 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> PWMH3 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" rowspan="2" valign="top"> J23 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> 8 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> PWML2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol twikiLast" rowspan="2" valign="top"> 2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> 7 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> PWMH2 </td>
+</tr></table>
+<h2><a name="Kernel_support"></a> Kernel support </h2>
+To enable the Linux kernel PWM support just enable the CONFIG_PWM flag:
+<pre>
+make menuconfig
+
+Device drivers -&#62;
+   Pulse-Width Modulation (PWM) Support
+</pre>
+To enable the SAMA5D2 PWM driver just enable the CONFIG_PWM_ATMEL flag:
+<pre>
+make menuconfig
+
+Device drivers -&#62; 
+   Pulse-Width Modulation (PWM) Support -&#62; 
+      Atmel PWM support
+</pre>
+<h2><a name="PWM_configurations"></a> PWM configurations </h2>
+<h3><a name="General"></a> General </h3>
+Current Linux implementation supports changing of 3 PWM  parameters (signal period, signal duty cycle, signal polarity) and to change PWM channel state (enable/disable).
+The Linux sysfs interface which could be used to configure the PWM parameters is located at:
+<pre>
+/sys/class/pwm/&#42;
+</pre>
+The PWM chips which are present in the system are listed in <code>/sys/class/pwm</code>
+<pre>
+root&#64;sama5d2-xplained:~# ls -l /sys/class/pwm/    
+total 0
+lrwxrwxrwx 1 root root 0 Jun  6 16:06 pwmchip0 -&#62; ../../devices/platform/ahb/ahb:apb/f802c000.pwm/pwm/pwmchip0
+</pre>
+The presence of <code>pwmchip0</code> suggest that there is one PWM chip on the system.
+<h3><a name="Available_PWM_channels"></a> Available PWM channels </h3>
+To check how many PWM channels could be configured the <code>npwm</code> file could be used.
+For instance, to check how many PWM channels supports PWM chip <code>pwmchip0</code> above the following command could be used:
+<pre>
+root&#64;sama5d2-xplained:~# cat /sys/class/pwm/pwmchip0/npwm 
+4
+</pre>
+This means <code>pwmchip0</code> supports 4 PWM channels.
+<h3><a name="PWM_channel_export"></a> PWM channel export </h3>
+To configure a PWM channel, fist, the PWM channel needs to be exported.
+To export a PWM channel the number of the channel needs to be written in <code>/sys/class/pwm/pwmchipX/export</code> file.
+<pre>
+root&#64;sama5d2-xplained:~# echo 2 &#62; /sys/class/pwm/pwmchip0/export
+</pre> 
+After that, the PWM 2 channel is exported in sysfs and it’s parameters could be changed.
+<pre>
+root&#64;sama5d2-xplained:~# ls -l /sys/class/pwm/pwmchip0/
+total 0
+lrwxrwxrwx 1 root root    0 Jun  6 15:17 device -&#62; ../../../f802c000.pwm
+--w------- 1 root root 4096 Jun  6 15:16 export
+-r--r--r-- 1 root root 4096 Jun  6 15:17 npwm
+drwxr-xr-x 2 root root    0 Jun  6 15:17 power
+drwxr-xr-x 3 root root    0 Jun  6 15:17 pwm2
+lrwxrwxrwx 1 root root    0 Jun  6 15:17 subsystem -&#62; ../../../../../../../class/pwm
+-rw-r--r-- 1 root root 4096 Jun  6 15:15 uevent
+--w------- 1 root root 4096 Jun  6 15:17 unexport
+
+root&#64;sama5d2-xplained:~# ls -l /sys/class/pwm/pwmchip0/pwm2/  
+total 0
+-r--r--r-- 1 root root 4096 Jun  6 15:18 capture
+-rw-r--r-- 1 root root 4096 Jun  6 15:18 duty&#95;cycle
+-rw-r--r-- 1 root root 4096 Jun  6 15:18 enable
+-rw-r--r-- 1 root root 4096 Jun  6 15:18 period
+-rw-r--r-- 1 root root 4096 Jun  6 15:18 polarity
+drwxr-xr-x 2 root root    0 Jun  6 15:18 power
+-rw-r--r-- 1 root root 4096 Jun  6 15:18 uevent
+</pre>
+A new fresh exported signal has the following parameters: <br />  
+<code>period = 0</code> <br /> 
+<code>duty_cycle = 0</code> <br /> 
+<code>polarity = normal</code> <br /> 
+<code>enable = 0</code> <br /> 
+A <code>cat</code> on the files from <code>/sys/class/pwm/pwmchipX/pwmY</code> will print these values.
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> TIPS:</em></strong>: The <code>capture</code> file could be used to capture the PWM signal. The Atmel products doesn’t support this feature.
+<h3><a name="Period_configuration"></a> Period configuration </h3>
+To configure period parameter for a PWM channel write the desired period value, in nanoseconds, in <code>period</code> file.
+For instance, to configure a 0.5 seconds period for PWM 2 channel use the following command:
+<pre>
+echo 500000000 &#62; /sys/class/pwm/pwmchip0/pwm2/period
+</pre>
+<h3><a name="Duty_cycle_configuration"></a> Duty cycle configuration </h3>
+To configure duty cycle parameter for a PWM channel write the desired duty cycle value, in nanoseconds, in <code>duty_cycle</code> file.
+For instance, to configure a 0.25 seconds duty cycle for PWM 2 channel use the following command:
+<pre>
+echo 250000000 &#62; /sys/class/pwm/pwmchip0/pwm2/duty&#95;cycle
+</pre>
+<h3><a name="Polarity_configuration"></a> Polarity configuration </h3>
+Linux PWM implementation defines <code>normal</code> and <code>inversed</code> polarities for PWM signals.
+To configure signal polarity for a PWM channel write one of these strings to <code>polarity</code> file.
+For instance, to configure <code>inversed</code> polarity for PWM 2 channel use the following command:
+<pre>
+echo inversed &#62; /sys/class/pwm/pwmchip0/pwm2/polarity
+</pre>
+<h3><a name="Enable_Disable_PWM_channels"></a> Enable/Disable PWM channels </h3>
+To enable or disable a PWM channel write a <code>1</code> or a <code>0</code> in the enable file.
+For instance, to enable PWM 2 channel use the following command:
+<pre>
+echo 1 &#62; /sys/class/pwm/pwmchip0/pwm2/enable
+</pre>
+Below is a picture with PWM signals (PWMH and PWML) on PWM channel 2, configured with above parameters, on SAMA5D2 Xplained board:
+<p />
+<img src="../../../pub/Linux4SAM/PwmFaq/linux4sam-pwm-documentation-pwm-signal-example.jpg" width="100%">
+<p />
+After a channel was exported and configured its parameters could be changed.
+Starting with <code>linux-4.9-at91</code> the parameters could be changed on the fly. With version below <code>linux-4.9-at91</code>, if a PWM channel was exported and configured a new configuration imply to first disable the channel, reconfigure and then re-enable it.
+<h3><a name="Configuring_PWM_channels_via_dev"></a> Configuring PWM channels via device tree </h3>
+Besides the sysfs, a Linux PWM channel could be requested by other drivers (e.g. regulators, leds or backlight drivers) with a set of default parameters. This is done using the <code>pwms</code> binding.
+For instance, the PWM regulator could request PWM channel 2 using the following device tree bindings:
+<pre>
+   pwm&#95;regulator {
+      compatible &#61; &#34;pwm-regulator&#34;;
+      pwms &#61; &#60;&#38;pwm0 2 500000000 0&#62;;
+      regulator-name &#61; &#34;PWM&#95;REGULATOR&#34;;
+      regulator-min-microvolt &#61; &#60;0&#62;;
+      regulator-max-microvolt &#61; &#60;3300000&#62;;
+      regulator-always-on;
+   };
+</pre>
+- the first parameter of <code>pwms</code> binding specify the label of PWM controller in device tree <br /> 
+- the second parameter specifies the PWM channel to be requested by PWM regulator driver <br /> 
+- the third parameter specifies the PWM signal period (in nanoseconds) <br /> 
+- the fourth parameter specifies the PWM signal polarity (<code>0 = normal</code>, <code>1 = inversed</code>) <br /> 
+<h2><a name="Debugging_PWM"></a> Debugging PWM </h2>
+Linux offers a file in <code>/sys/kernel/debug</code> which could be used to see the state of PWM channels.
+<pre>
+root&#64;sama5d2-xplained:~# cat /sys/kernel/debug/pwm 
+platform/f802c000.pwm, 4 PWM devices
+ pwm-0   ((null)              ): period: 0 ns duty: 0 ns polarity: normal mode: complementary trigger: none
+ pwm-1   ((null)              ): period: 0 ns duty: 0 ns polarity: normal mode: complementary trigger: none
+ pwm-2   (sysfs               ): requested enabled period: 500000000 ns duty: 250000000 ns polarity: normal
+ pwm-3   ((null)              ): period: 0 ns duty: 0 ns polarity: normal mode: complementary trigger: none
+</pre>
+<p />
+-- <style> .userReportsSig { display: inline-block; white-space: nowrap; padding: 0 2px 0 0; border: 1px solid #e8e8eb; background-color: #f4f4fa; -moz-box-shadow: 1px 1px 2px #e8e8e8; -webkit-box-shadow: 1px 1px 2px #e8e8e8; box-shadow: 1px 1px 2px #e8e8e8; -moz-border-radius: 4px; border-radius: 4px; } .userReportsSig a:link { border: 0 none; } .userReportsSig img { vertical-align: middle; } .userReportsBubble { position: absolute; background-image: url(../../../pub/TWiki/UserReports/faded-bubble.png); background-repeat: no-repeat; margin-top: -57px; margin-left: -18px; width: 920px; height: 90px; z-index: -1; } </style><span class="userReportsSig"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/ClaudiuBeznea?origurl=/bin/view/Main/ClaudiuBeznea"><img src="../../../pub/Main/UserProfileHeader/default-user-profile.jpg" height="24" alt="" /> Claudiu Beznea  - 2017-07-03</a> </span> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments"> <div class="twikiAttachments">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="PwmFaq2909.html?skin=print.myskin;sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">I</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="PwmFaq0ef1.html?skin=print.myskin;sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Attachment</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="PwmFaq2f98.html?skin=print.myskin;sortcol=2;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Action</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="PwmFaqc856.html?skin=print.myskin;sortcol=3;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Size</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="PwmFaqe805.html?skin=print.myskin;sortcol=4;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Date</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="PwmFaq1ee1.html?skin=print.myskin;sortcol=5;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Who</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="PwmFaqc0bc.html?skin=print.myskin;sortcol=6;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/PwmFaq/linux4sam-pwm-documentation-pwm-signal-example.jpg">linux4sam-pwm-documentation-pwm-signal-example.jpg</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/PwmFaq?filename=linux4sam-pwm-documentation-pwm-signal-example.jpg;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 259.3&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2017-07-03 - 09:57</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/ClaudiuBeznea?origurl=/bin/view/Main/ClaudiuBeznea">ClaudiuBeznea</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> linux4sam pwm output </td>
+</tr></table>
+</div> </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PwmFaq?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:12:44 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

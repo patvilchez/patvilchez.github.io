@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/DemoArchive6_2?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; DemoArchive6_2 &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_table2 --> <style type="text/css" media="all">
+.twikiTable#table2 {width:100%;}
+.twikiTable#table2 td.twikiTableCol0 {width:10%;}
+.twikiTable#table2 th.twikiTableCol0 {width:10%;}
+.twikiTable#table2 td.twikiTableCol1 {width:10%;}
+.twikiTable#table2 th.twikiTableCol1 {width:10%;}
+.twikiTable#table2 td.twikiTableCol2 {width:10%;}
+.twikiTable#table2 th.twikiTableCol2 {width:10%;}
+.twikiTable#table2 td.twikiTableCol3 {width:35%;}
+.twikiTable#table2 th.twikiTableCol3 {width:35%;}
+.twikiTable#table2 td.twikiTableCol4 {width:30%;}
+.twikiTable#table2 th.twikiTableCol4 {width:30%;}
+</style>
+<!-- TABLEPLUGIN_table1 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#table1 {width:100%;}
+.twikiTable#table1 td.twikiTableCol0 {width:10%;}
+.twikiTable#table1 th.twikiTableCol0 {width:10%;}
+.twikiTable#table1 td.twikiTableCol1 {width:10%;}
+.twikiTable#table1 th.twikiTableCol1 {width:10%;}
+.twikiTable#table1 td.twikiTableCol2 {width:10%;}
+.twikiTable#table1 th.twikiTableCol2 {width:10%;}
+.twikiTable#table1 td.twikiTableCol3 {width:35%;}
+.twikiTable#table1 th.twikiTableCol3 {width:35%;}
+.twikiTable#table1 td.twikiTableCol4 {width:30%;}
+.twikiTable#table1 th.twikiTableCol4 {width:30%;}
+</style>
+<!-- TABLEPLUGIN_table7 --> <style type="text/css" media="all">
+.twikiTable#table7 {width:100%;}
+.twikiTable#table7 td.twikiTableCol0 {width:10%;}
+.twikiTable#table7 th.twikiTableCol0 {width:10%;}
+.twikiTable#table7 td.twikiTableCol1 {width:10%;}
+.twikiTable#table7 th.twikiTableCol1 {width:10%;}
+.twikiTable#table7 td.twikiTableCol2 {width:10%;}
+.twikiTable#table7 th.twikiTableCol2 {width:10%;}
+.twikiTable#table7 td.twikiTableCol3 {width:35%;}
+.twikiTable#table7 th.twikiTableCol3 {width:35%;}
+.twikiTable#table7 td.twikiTableCol4 {width:30%;}
+.twikiTable#table7 th.twikiTableCol4 {width:30%;}
+</style>
+<!-- TABLEPLUGIN_table4 --> <style type="text/css" media="all">
+.twikiTable#table4 {width:100%;}
+.twikiTable#table4 td.twikiTableCol0 {width:10%;}
+.twikiTable#table4 th.twikiTableCol0 {width:10%;}
+.twikiTable#table4 td.twikiTableCol1 {width:10%;}
+.twikiTable#table4 th.twikiTableCol1 {width:10%;}
+.twikiTable#table4 td.twikiTableCol2 {width:10%;}
+.twikiTable#table4 th.twikiTableCol2 {width:10%;}
+.twikiTable#table4 td.twikiTableCol3 {width:35%;}
+.twikiTable#table4 th.twikiTableCol3 {width:35%;}
+.twikiTable#table4 td.twikiTableCol4 {width:30%;}
+.twikiTable#table4 th.twikiTableCol4 {width:30%;}
+</style>
+<!-- TABLEPLUGIN_table3 --> <style type="text/css" media="all">
+.twikiTable#table3 {width:100%;}
+.twikiTable#table3 td.twikiTableCol0 {width:10%;}
+.twikiTable#table3 th.twikiTableCol0 {width:10%;}
+.twikiTable#table3 td.twikiTableCol1 {width:10%;}
+.twikiTable#table3 th.twikiTableCol1 {width:10%;}
+.twikiTable#table3 td.twikiTableCol2 {width:10%;}
+.twikiTable#table3 th.twikiTableCol2 {width:10%;}
+.twikiTable#table3 td.twikiTableCol3 {width:35%;}
+.twikiTable#table3 th.twikiTableCol3 {width:35%;}
+.twikiTable#table3 td.twikiTableCol4 {width:30%;}
+.twikiTable#table3 th.twikiTableCol4 {width:30%;}
+</style>
+<!-- TABLEPLUGIN_table5 --> <style type="text/css" media="all">
+.twikiTable#table5 {width:100%;}
+.twikiTable#table5 td.twikiTableCol0 {width:10%;}
+.twikiTable#table5 th.twikiTableCol0 {width:10%;}
+.twikiTable#table5 td.twikiTableCol1 {width:10%;}
+.twikiTable#table5 th.twikiTableCol1 {width:10%;}
+.twikiTable#table5 td.twikiTableCol2 {width:10%;}
+.twikiTable#table5 th.twikiTableCol2 {width:10%;}
+.twikiTable#table5 td.twikiTableCol3 {width:35%;}
+.twikiTable#table5 th.twikiTableCol3 {width:35%;}
+.twikiTable#table5 td.twikiTableCol4 {width:30%;}
+.twikiTable#table5 th.twikiTableCol4 {width:30%;}
+</style>
+<!-- TABLEPLUGIN_table6 --> <style type="text/css" media="all">
+.twikiTable#table6 {width:100%;}
+.twikiTable#table6 td.twikiTableCol0 {width:10%;}
+.twikiTable#table6 th.twikiTableCol0 {width:10%;}
+.twikiTable#table6 td.twikiTableCol1 {width:10%;}
+.twikiTable#table6 th.twikiTableCol1 {width:10%;}
+.twikiTable#table6 td.twikiTableCol2 {width:10%;}
+.twikiTable#table6 th.twikiTableCol2 {width:10%;}
+.twikiTable#table6 td.twikiTableCol3 {width:35%;}
+.twikiTable#table6 th.twikiTableCol3 {width:35%;}
+.twikiTable#table6 td.twikiTableCol4 {width:30%;}
+.twikiTable#table6 th.twikiTableCol4 {width:30%;}
+</style></head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#linux4sam_6_2_tag"> linux4sam_6.2 tag</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Kernel"> Kernel</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Pre_built_Demo"> Pre-built Demo</a>
+</li></ul> 
+</div>
+<p />
+<a name="DemoArchiveBinaries"></a>
+<p />
+<p />
+<h2><a name="linux4sam_6_2_tag"></a> <a href="https://github.com/linux4sam/linux-at91/commits/linux4sam_6.2" target="_blank">linux4sam_6.2 tag<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </h2>
+<h3><a name="Kernel"></a> Kernel </h3>
+<p />
+<p />
+Enhancements are added on top of the official <strong>v4.19</strong> Linux kernel tag where most of the Microchip SoC features are already supported. Note as well that we re-integrate each and every <strong>stable</strong> kernel release on top of this Long Term Support (LTS) kernel revision. This means that each <strong>v4.19.x</strong> version is merged in our branch.
+<p />
+Here is a little summary of the main additional enhancements:
+<p /> <ul>
+<li> Integration of stable kernel updates up to <strong>v4.19.78</strong>
+</li> <li> Added support for <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a> board
+</li> <li> Added support for <a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60 EK</a> board
+</li></ul> 
+<p /> <ul>
+<li> SAM9X60 SoC drivers: <ul>
+<li> PLL Fractional support
+</li> <li> PIT64 driver used for clock event
+</li> <li> PIO drive strength and slew rate support
+</li> <li> PWM support
+</li> <li> QSPI controller support
+</li> <li> NAND controller support
+</li> <li> ISI support
+</li> <li> ADC support
+</li> <li> Reworked USB gadget driver. Updated endpoint allocation scheme. Fixed driver when working in FIFO mode only
+</li> <li> <a class="twikiLink" href="UsingI2SC.html">I2S Multi Channel</a> driver with support of up to 8 channels in TDM mode
+</li> <li> Power management: ULP0 PM and Idle
+</li> <li> Watchdog support
+</li> <li> TRNG support
+</li> <li> RTC support
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> SAMA5D27 WLSOM1 drivers: <ul>
+<li> Backup and self-refresh support for LPDDR2
+</li> <li> <a class="twikiLink" href="UsingPTC.html">PTC</a> support for QT1 Mutual/Self Capacitance and Q2 wings
+</li></ul> 
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Pre_built_Demo"></a> Pre-built Demo </h2>
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demo9x60ek"></a> NAND Flash </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAM9X60-EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sam9x60ek-headless-6.2.zip" target="_blank">linux4sam-poky-sam9x60ek-headless-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 96 MB) <br />md5: d6bad3e60d312e22c27abcfeb5404549 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Flash_the_demo">#Flash_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sam9x60ek-graphics-6.2.zip" target="_blank">linux4sam-poky-sam9x60ek-graphics-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 251 MB) <br />md5: 041f68892bc552a812f6a0479201f958 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAM9X60-EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sam9x60ek-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sam9x60ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 75 MB) <br />md5: cd45e6dd6a9b97b736078e331353cd2c </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sam9x60ek-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sam9x60ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 206 MB) <br />md5: bb0fd7ddbf1680dbb5a19a6b0b8a4232 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAM9X60-EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sam9x60ek-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sam9x60ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 39 MB) <br />md5: f7f482ff4dc574fdba3acb76c9209f78 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sam9x60ek-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sam9x60ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 232 MB) <br />md5: 10821ff945f749766bd29fce9cb88bf7 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAM9X60-EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-openwrt-sam9x60ek-headless-6.2.img.gz" target="_blank">linux4sam-openwrt-sam9x60ek-headless-6.2.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 16 MB) <br />md5: d439ab3997e7193b2d900211a76ac4cf </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demoa5d2xplained"></a> Boot on SPI Flash<br /> + rootfs on eMMC </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_xplained-headless-6.2.zip" target="_blank">linux4sam-poky-sama5d2_xplained-headless-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 101 MB) <br />md5: 216eed938cb426b083bf2abccf8f1d50 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Flash_the_demo">#Flash_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_xplained-graphics-6.2.zip" target="_blank">linux4sam-poky-sama5d2_xplained-graphics-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 216 MB) <br />md5: f63eba6573bfa03f3195f983acc6ccdc </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_xplained-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d2_xplained-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 92 MB) <br />md5: 5e903d74a3538721303e36f81dabf279 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_xplained-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d2_xplained-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 201 MB) <br />md5: f08a048a8029c6bbcf9ced75d481b34e </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d2_xplained-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d2_xplained-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 46 MB) <br />md5: a8a649073378967a80660e7f0864833e </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d2_xplained-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d2_xplained-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 238 MB) <br />md5: 12dcd93ba30793b3729b32511be15e0d </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAMA5D2 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-openwrt-sama5d2_xplained-headless-6.2.img.gz" target="_blank">linux4sam-openwrt-sama5d2_xplained-headless-6.2.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 17 MB) <br />md5: 59b2e549c00d638780a1aa7703d9816a </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table3" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <a name="Demoa5d3xplained"></a> NAND Flash </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top" width="10%"> SAMA5D3 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d3_xplained-headless-6.2.zip" target="_blank">linux4sam-poky-sama5d3_xplained-headless-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 116 MB) <br />md5: 47d161e36222c1221da3e716c75ea3a3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Flash_the_demo">#Flash_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D3 Xplained </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d3_xplained-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d3_xplained-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 92 MB) <br />md5: c8c43385cee83abac02b92b8fa8ed91b </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d3_xplained-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d3_xplained-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 201 MB) <br />md5: 8ad755b20cb168c5026b4145322146fb </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D3 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d3_xplained-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d3_xplained-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 41 MB) <br />md5: 9062ed870e982bfcf8dfcb4cfc850b9b </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d3_xplained-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d3_xplained-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 235 MB) <br />md5: ea3e36dba1fe664a2a14493744d190a2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAMA5D3 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-openwrt-sama5d3_xplained-headless-6.2.img.gz" target="_blank">linux4sam-openwrt-sama5d3_xplained-headless-6.2.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 17 MB) <br />md5: 8862abd6a532099bb8baff2ed52b66a0 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table4" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demoa5d4xplained"></a> NAND Flash </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D4 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d4_xplained-headless-6.2.zip" target="_blank">linux4sam-poky-sama5d4_xplained-headless-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 116 MB) <br />md5: 880c5b4c865db6d9821a92f0d214e810 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Flash_the_demo">#Flash_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d4_xplained-graphics-6.2.zip" target="_blank">linux4sam-poky-sama5d4_xplained-graphics-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 236 MB) <br />md5: b2663641d1f4590190e3608eed874a4a </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D4 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d4_xplained-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d4_xplained-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 92 MB) <br />md5: fdc721a20dad42fed91d7472a1b744f2 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d4_xplained-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d4_xplained-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 201 MB) <br />md5: 999c63c8d8ae30b26c021c8017a32e95 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D4 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d4_xplained-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d4_xplained-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 41 MB) <br />md5: dc8f4075327c008db43e19fb2d8121ff </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d4_xplained-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d4_xplained-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 227 MB) <br />md5: 5d4b700cacf67336262c33ba765d63b7 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAMA5D4 Xplained </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-openwrt-sama5d4_xplained-headless-6.2.img.gz" target="_blank">linux4sam-openwrt-sama5d4_xplained-headless-6.2.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 17 MB) <br />md5: 744801ec2f7be529e52a218fb3b66e30 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table5" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demoa5d27Som1EK"></a> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D27 SOM1 EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d27_som1_ek-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d27_som1_ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 92 MB) <br />md5: ad1406d9c2d8aee9a86aeea47781bf20 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d27_som1_ek-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d27_som1_ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 201 MB) <br />md5: 0966539896ac55a1160bb03b0d54e0af </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D27 SOM1 EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d27_som1_ek-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d27_som1_ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 46 MB) <br />md5: d7c4813d95fffdcce3cc6bc847fd20a1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d27_som1_ek-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d27_som1_ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 237 MB) <br />md5: 14ea8d233a273c4e58a59b6c8f5aa2d6 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAMA5D27 SOM1 EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-openwrt-sama5d27_som1_ek-headless-6.2.img.gz" target="_blank">linux4sam-openwrt-sama5d27_som1_ek-headless-6.2.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 17 MB) <br />md5: aafeef65ed67e1bb545d7d4270ba3b7c </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table6" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demoa5d27WlSom1EK"></a> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D27 WLSOM1 EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d27_wlsom1_ek-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d27_wlsom1_ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 92 MB) <br />md5: 6f0f419f917f63d58887bce044c611ac </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d27_wlsom1_ek-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d27_wlsom1_ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 201 MB) <br />md5: 6b96408f949ef9a379df110763f0a24b </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D27 WLSOM1 EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d27_wlsom1_ek-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d27_wlsom1_ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 47 MB) <br />md5: 77cb4977a6a20ed6e9624c28a9675048 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d27_wlsom1_ek-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d27_wlsom1_ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 237 MB) <br />md5: a8199dad82eefddc77399fa1bacb8481 </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top" width="10%"> SAMA5D27 WLSOM1 EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-openwrt-sama5d27_wlsom1_ek-headless-6.2.img.gz" target="_blank">linux4sam-openwrt-sama5d27_wlsom1_ek-headless-6.2.img.gz<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 17 MB) <br />md5: e8ee252db0d29176f979380ba4111ba9 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="OpenWrt.html">OpenWrt</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table7" rules="all" width="100%">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top" width="10%"> <font color="#ffffff">Media type</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top" width="10%"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top" width="10%"> <font color="#ffffff">Screen</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3" valign="top" width="35%"> <font color="#ffffff">Binary</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol4 twikiLastCol" valign="top" width="30%"> <font color="#ffffff">Description</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> <a name="Demoa5d2PtcEK"></a> NAND Flash </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 PTC EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_ptc_ek-headless-6.2.zip" target="_blank">linux4sam-poky-sama5d2_ptc_ek-headless-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 116 MB) <br />md5: fa082db35f2364170e967b9a42d55f7f </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Flash_the_demo">#Flash_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_ptc_ek-graphics-6.2.zip" target="_blank">linux4sam-poky-sama5d2_ptc_ek-graphics-6.2.zip<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 236 MB) <br />md5: a276f3c035125c09d9dff2e067dfe6e2 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="2" valign="top" width="10%"> SAMA5D2 PTC EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_ptc_ek-headless-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d2_ptc_ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 92 MB) <br />md5: 908eeecea7f82ce66a9ea4c32e2fda5b </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="YoctoProject.html">Yocto Project / Poky</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-poky-sama5d2_ptc_ek-graphics-6.2.img.bz2" target="_blank">linux4sam-poky-sama5d2_ptc_ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 201 MB) <br />md5: 29a8a16e4cff49e5f3775c322c06b6d9 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiFirstCol" colspan="5" valign="top"> <font color="#ffffff"><a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" rowspan="2" valign="top" width="10%"> SD Card image </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" rowspan="2" valign="top" width="10%"> SAMA5D2 PTC EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2" valign="top" width="10%"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d2_ptc_ek-headless-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d2_ptc_ek-headless-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 40 MB) <br />md5: 663f989724576b8bf35134a5ab5781d3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLastCol twikiLast" rowspan="2" valign="top" width="30%"> Linux4SAM <a class="twikiLink" href="BuildRoot.html">BuildRoot</a> based demo <br />  compiled from tag <strong>linux4sam_6.2</strong> <br /> Follow procedure: <a class="twikiCurrentTopicLink twikiAnchorLink" href="DemoArchive6_2.html#Create_a_SD_card_with_the_demo">#Create_a_SD_card_with_the_demo</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLast" valign="top" width="10%"> PDA5" (TM5000 or AC320005-5) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLast" valign="top" width="35%"> <a href="https://files.linux4sam.org/pub/demo/linux4sam_6.2/linux4sam-buildroot-sama5d2_ptc_ek-graphics-6.2.img.bz2" target="_blank">linux4sam-buildroot-sama5d2_ptc_ek-graphics-6.2.img.bz2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (~ 237 MB) <br />md5: 24b94f65d255283b96af666a77affa27 </td>
+</tr></table> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/DemoArchive6_2?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:09:53 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PokyBuild by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> PokyBuild &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/PokyBuild?t=1625510849" type="application/x-wiki" title="Edit PokyBuild" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/PokyBuild?t=1625510849" title="Edit PokyBuild" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="WebLeftBar.html">WebLeftBar</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="YoctoProject.html">YoctoProject</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="PokyBuild.html">PokyBuild</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="OpenEmbedded_Yocto_Project_Poky"></a>  <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenEmbedded?topicparent=Linux4SAM.PokyBuild;nowysiwyg=1" rel="nofollow" title="OpenEmbedded (this topic does not yet exist; you can create it)">OpenEmbedded</a></span> / Yocto Project / Poky: build from sources </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#How_to_build_Poky_for_AT91"> How to build Poky for AT91</a> <ul>
+<li> <a href="#Building_environment"> Building environment</a> <ul>
+<li> <a href="#Prerequisite"> Prerequisite</a>
+</li> <li> <a href="#Step_by_step_build_procedure"> Step by step build procedure</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Atmel_Poky_SDK"> Atmel Poky SDK</a> <ul>
+<li> <a href="#Build_Atmel_Poky_SDK"> Build Atmel Poky SDK</a>
+</li> <li> <a href="#Install_Atmel_Poky_SDK"> Install Atmel Poky SDK</a>
+</li> <li> <a href="#Use_Atmel_Poky_SDK"> Use Atmel Poky SDK</a>
+</li></ul> 
+</li> <li> <a href="#Tips_tricks"> Tips &amp; tricks</a> <ul>
+<li> <a href="#BitBake"> BitBake</a>
+</li> <li> <a href="#Hello_World_example"> Hello World example</a>
+</li></ul> 
+</li> <li> <a href="#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<hr />
+<p />
+<h2><a name="How_to_build_Poky_for_AT91"></a> How to build Poky for AT91 </h2>
+<p />
+<p />
+Note that building an entire distribution is a long process. It also requires a big amount of free disk space.
+<p />
+The support for Atmel AT91 SoC family is included in a particular Yocto layer: <code>meta-atmel</code>. The source for this layer are hosted on <a href="https://github.com/linux4sam" target="_blank">Linux4SAM GitHub account<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>: <a href="https://github.com/linux4sam/meta-atmel" target="_blank">https://github.com/linux4sam/meta-atmel<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h3><a name="Building_environment"></a> Building environment </h3>
+<p />
+A step-by-step comprehensive installation is explained in the <a href="https://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#super-user" target="_blank">Yocto Project Quick Start<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. The following lines have to be considered as an add-on that is AT91 specific or that can facilitate your setup.
+<p />
+<h4><a name="Prerequisite"></a> Prerequisite </h4>
+<p />
+Here are the reference pages for setting up a Yocto building environment: <a href="https://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#yp-resources" target="_blank">What You Need and How You Get It<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h4><a name="Step_by_step_build_procedure"></a> Step by step build procedure </h4>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> here is a copy of the <a href="https://raw.githubusercontent.com/linux4sam/meta-atmel/dunfell/README" target="_blank">README<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> procedure available directly in the <code>meta-atmel</code> layer. This file in the meta-atmel layer repository must be considered as the reference and the following copy can be out-of-sync.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> starting with <code>Linux4SAM 2020.04</code> release, the <code>meta-atmel</code> layer supports Yocto templates, so make sure you create a new build environment using <code>oe-init-build-env</code>
+<pre>
+This layer provides support for Microchip microprocessors (aka AT91)
+====================================================================
+
+For more information about the Microchip MPU product line see:
+http://www.microchip.com/design-centers/32-bit-mpus
+Linux & Open Source on Microchip microprocessors:
+http://www.linux4sam.org
+
+
+Supported SoCs / MACHINE names
+==============================
+Note that most of the machine names below, have a SD Card variant that can be
+built by adding an "-sd" suffix to the machine name.
+- SAMA5D2 product family / sama5d2-xplained, sama5d2-xplained-emmc, sama5d27-som1-ek-sd, sama5d2-ptc-ek, sama5d2-icp, sama5d27-wlsom1-ek-sd
+- SAMA5D4 product family / sama5d4ek, sama5d4-xplained
+- SAMA5D3 product family / sama5d3xek, sama5d3-xplained
+- AT91SAM9x5 product family (AT91SAM9G15, AT91SAM9G25, AT91SAM9X25, AT91SAM9G35 and AT91SAM9X35) / at91sam9x5ek
+- AT91SAM9RL / at91sam9rlek
+- AT91SAM9G45 / at91sam9m10g45ek
+- SAM9X60 / sam9x60ek
+- SAMA7G5 / sama7g5ek-sd, sama7g5ek-emmc
+
+
+Sources
+=======
+- meta-atmel
+URI: git://github.com/linux4sam/meta-atmel.git
+URI: https://github.com/linux4sam/meta-atmel.git
+Branch: dunfell
+
+
+Dependencies
+============
+This Layer depends on :
+- poky
+URI: git://git.yoctoproject.org/poky
+Branch: dunfell
+Tag: 861cfcd52f0b769772c3726530210f2f43c3449b
+
+- meta-openembedded
+URI: git://git.openembedded.org/meta-openembedded
+URI: http://cgit.openembedded.org/meta-openembedded/
+Branch: dunfell
+Tag: f2d02cb71eaff8eb285a1997b30be52486c160ae
+
+- meta-aws (for AWS Greengrass, mandatory for SAMA5D2 microchip-* images)
+URI: git://github.com/aws/meta-aws.git
+URI: https://github.com/aws/meta-aws
+Branch: dunfell
+Tag: e34ed15a87e36fa4199c63a184630fa370abac55
+
+Build procedure
+===============
+
+0/ Create a directory
+mkdir my_dir
+cd my_dir
+
+1/ Clone yocto/poky git repository with the proper branch ready
+git clone git://git.yoctoproject.org/poky -b dunfell
+
+2/ Clone meta-openembedded git repository with the proper branch ready
+git clone git://git.openembedded.org/meta-openembedded -b dunfell
+
+3/ Clone meta-aws git repository with the proper branch ready
+git clone git://github.com/aws/meta-aws -b dunfell
+
+4/ Clone meta-atmel layer with the proper branch ready
+git clone git://github.com/linux4sam/meta-atmel.git -b dunfell
+
+5/ Enter the poky directory to configure the build system and start the build process
+cd poky
+
+6/ Change TEMPLATECONF from .templateconf to:
+export TEMPLATECONF=${TEMPLATECONF:-../meta-atmel/conf}
+Note: If it's the first time you use Yocto Project templates, and if the
+build-microchip directory remains from a previous use, we advice you start
+from a fresh directory. Keep your build-microchip/conf/local.conf file for
+reference.
+
+7/ Initialize build directory
+source oe-init-build-env build-microchip
+
+8/ To build a small image provided by Yocto Project:
+[MACHINE=<machine>] bitbake core-image-minimal
+
+Example for sama5d2-xplained-sd SD card image:
+MACHINE=sama5d2-xplained-sd bitbake core-image-minimal
+
+9/ To build the microchip image with no graphics support:
+[MACHINE=<machine>] bitbake microchip-headless-image
+
+Example for sama5d2-xplained-sd SD card image:
+MACHINE=sama5d2-xplained-sd bitbake microchip-headless-image
+
+10/ To build the microchip image with graphics support (EGT):
+[MACHINE=<machine>] bitbake microchip-graphics-image
+
+Example for sama5d2-xplained-sd SD card image:
+MACHINE=sama5d2-xplained-sd bitbake microchip-graphics-image
+
+Typical bitbake output
+======================
+Build Configuration:
+BB_VERSION           = "1.46.0"
+BUILD_SYS            = "x86_64-linux"
+NATIVELSBSTRING      = "universal"
+TARGET_SYS           = "arm-poky-linux-gnueabi"
+MACHINE              = "sama5d2-xplained-sd"
+DISTRO               = "poky-atmel"
+DISTRO_VERSION       = "3.1.4"
+TUNE_FEATURES        = "arm vfp cortexa5 neon vfpv4 thumb callconvention-hard"
+TARGET_FPU           = "hard"
+meta
+meta-poky
+meta-yocto-bsp       = "dunfell:861cfcd52f0b769772c3726530210f2f43c3449b"
+meta-oe
+meta-networking
+meta-python
+meta-initramfs       = "dunfell:f2d02cb71eaff8eb285a1997b30be52486c160ae"
+meta-atmel           = "dunfell:060a1d102176dbffdcd113d62585f728735811d3"
+meta-multimedia      = "dunfell:f2d02cb71eaff8eb285a1997b30be52486c160ae"
+meta-aws             = "dunfell:e34ed15a87e36fa4199c63a184630fa370abac55"
+
+
+Contributing
+============
+To contribute to this layer you should submit the patches for review to:
+the github pull-request facility directly or the forum. Anyway, don't forget to
+Cc the maintainers.
+
+AT91 Forum:
+http://www.at91.com/discussions/
+
+for some useful guidelines to be followed when submitting patches:
+http://www.openembedded.org/wiki/How_to_submit_a_patch_to_OpenEmbedded
+
+Maintainers:
+Codrin Ciubotariu <codrin.ciubotariu@microchip.com>
+Nicolas Ferre <nicolas.ferre@microchip.com>
+
+When creating patches insert the [meta-atmel] tag in the subject, for example
+use something like:
+git format-patch -s --subject-prefix='meta-atmel][PATCH' <origin>
+</pre>
+<p />
+<p />
+<p />
+<p />
+<h2><a name="Atmel_Poky_SDK"></a> Atmel Poky SDK </h2>
+<p />
+The meta-toolchain recipes build tarballs which contain cross compilation toolchain, cross compiled libraries, includes and configuration tools suitable for application development outside Poky.<br /> 
+The cross-compilation toolchain and all coss-compiled libraries will be present in this SDK allowing the user to exactly match what is provided in the associated <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/Linux4SAM?topicparent=Linux4SAM.PokyBuild;nowysiwyg=1" rel="nofollow" title="Linux4SAM (this topic does not yet exist; you can create it)">Linux4SAM</a></span> demo image.
+<p />
+If a random cross-compilation toolchain was used, it would lead to undefined symbols and unmatched library calls. With this SDK matching what is present on the target, cross-development is enhanced with all possibilities offered by shared libraries that any embedded Linux developer could expect from such a system.<br />  This cross-development cycle doesn't have to be integrated within an OpenEmbedded integration flow: usual Makefiles, cmake, IDE... in short: any developer-friendly environment could be used allowing the separation of the development phase from the integration phase.
+<p />
+<h3><a name="Build_Atmel_Poky_SDK"></a> Build <strong>Atmel Poky SDK</strong> </h3>
+This SDK is generated using the bitbake handy target <code>populate_sdk</code>.
+<p />
+<pre>
+bitbake -c populate_sdk microchip-graphics-image
+</pre>
+or
+<pre>
+bitbake -c populate_sdk microchip-headless-image
+</pre>
+<p />
+It will produce a comprehensive SDK script (auto-extracting archive) available in the deployment directory: from the build directory it is usually located in <code>tmp/deploy/sdk</code>.<br />  For instance, for the sama5d2 graphic image type of SDK, you can find it available in: <code>tmp/deploy/sdk/poky-atmel-glibc-x86_64-microchip-graphics-image-cortexa5t2hf-neon-vfpv4-sama5d2-xplained-sd-toolchain-3.1.sh</code>.
+<p />
+<h3><a name="Install_Atmel_Poky_SDK"></a> Install <strong>Atmel Poky SDK</strong> </h3>
+<p />
+Once the SDK archive is generated, you can install it by running the script directly. Choose the appropriate script name according to your board.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/help.gif" alt="HELP" title="HELP" width="16" height="16" border="0" /> Note that some of the SDK variants can apply on several boards or SoC (sama5d2 or sama5d4 SDK could match all boards equipped with these SoCs). You can check the <a class="twikiAnchorLink" href="SoftwareTools.html#Yocto_Project_SDK">Yocto Project SDK table</a> for more information about the different SDK "flavors".
+<p />
+Some installation information will be asked to the user as well as the appropriate installation rights:
+<p />
+Hereunder is an example with a SDK from the <code>Dunfell</code> branch of OpenEmbedded present in <code>Linux4SAM 2020.04</code>:
+<p />
+<pre>
+$ ./poky-atmel-glibc-x86&#95;64-microchip-graphics-image-cortexa5t2hf-neon-vfpv4-sama5d2-xplained-sd-toolchain-3.1.sh
+Poky (Yocto Project Reference Distro) SDK installer version 3.1
+&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+Enter target directory for SDK (default: /opt/poky-atmel/3.1): 
+You are about to install the SDK to &#34;/opt/poky-atmel/3.1&#34;. Proceed &#91;Y/n]? 
+Extracting SDK.....................................................................................................................................done
+Setting it up...done
+SDK has been successfully set up and is ready to be used.
+Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
+ $ . /opt/poky-atmel/3.1/environment-setup-cortexa5t2hf-neon-vfpv4-poky-linux-gnueabi
+</pre>
+<p />
+<h3><a name="Use_Atmel_Poky_SDK"></a> Use <strong>Atmel Poky SDK</strong> </h3>
+<p />
+The installation directory (/opt/poky-atmel/3.1) contains a setup script which can be sourced to initialize all required environment variables.
+<p />
+<pre>
+cd /opt/poky-atmel/3.1/
+source environment-setup-cortexa5t2hf-neon-vfpv4-poky-linux-gnueabi
+</pre>
+<p />
+You can check your new environment
+<pre>
+export &#124; less
+&#91;...]
+declare -x AR&#61;&#34;arm-poky-linux-gnueabi-ar&#34;
+declare -x AS&#61;&#34;arm-poky-linux-gnueabi-as &#34;
+declare -x CC&#61;&#34;arm-poky-linux-gnueabi-gcc  -march&#61;armv7-a -mthumb -mfpu&#61;neon -mfloat-abi&#61;hard -mcpu&#61;cortex-a5 --sysroot&#61;/opt/poky-atmel/3.1/sysroots/cortexa5t2hf-neon-poky-linux-gnueabi&#34;
+declare -x CFLAGS&#61;&#34; -O2 -pipe -g -feliminate-unused-debug-types &#34;
+declare -x CPP&#61;&#34;arm-poky-linux-gnueabi-gcc -E  -march&#61;armv7-a -mthumb -mfpu&#61;neon -mfloat-abi&#61;hard -mcpu&#61;cortex-a5 --sysroot&#61;/opt/poky-atmel/3.1/sysroots/cortexa5t2hf-neon-poky-linux-gnueabi&#34;
+declare -x CROSS&#95;COMPILE&#61;&#34;arm-poky-linux-gnueabi-&#34;
+declare -x LD&#61;&#34;arm-poky-linux-gnueabi-ld  --sysroot&#61;/opt/poky-atmel/3.1/sysroots/cortexa5t2hf-neon-poky-linux-gnueabi&#34;
+declare -x LDFLAGS&#61;&#34;-Wl,-O1 -Wl,--hash-style&#61;gnu -Wl,--as-needed&#34;
+&#91;...]
+declare -x OECORE&#95;DISTRO&#95;VERSION&#61;&#34;3.1&#34;
+declare -x OE&#95;QMAKE&#95;CC&#61;&#34;arm-poky-linux-gnueabi-gcc  -march&#61;armv7-a -mthumb -mfpu&#61;neon -mfloat-abi&#61;hard -mcpu&#61;cortex-a5 --sysroot&#61;/opt/poky-atmel/3.1/sysroots/cortexa5t2hf-neon-poky-linux-gnueabi&#34;
+&#91;...]
+</pre>
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" />To be able to compile the EGT demo applications provided in the <a href="http://www.at91.com/linux4sam/bin/view/Linux4SAM" target="_blank">Linux4SAM 6.2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> release, SDK needs to be generated using a clone of <a href="https://github.com/linux4sam/meta-atmel/commits/dunfell" target="_blank">meta-atmel<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h2><a name="Tips_tricks"></a> Tips &amp; tricks </h2>
+<p />
+<h3><a name="BitBake"></a> BitBake </h3>
+<p /> <ul>
+<li> <a href="https://www.yoctoproject.org/docs/latest/bitbake-user-manual/bitbake-user-manual.html" target="_blank">BitBake User Manual<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://elinux.org/Bitbake_Cheat_Sheet" target="_blank">BitBake Cheat Sheet<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> List tasks provided by a package:<pre>bitbake -c listtasks &#60;package&#95;name&#62;</pre>You can use one of those tasks to have a fine grained control over the package building.
+</li></ul> 
+<p />
+<h3><a name="Hello_World_example"></a> Hello World example </h3>
+<p />
+<a href="https://www.yoctoproject.org/docs/latest/dev-manual/dev-manual.html#new-recipe-testing-examples" target="_blank">Reference to the "Hello World" example<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h2><a name="Recent_FAQ"></a> Recent FAQ </h2>
+<p />
+<p /> <dl>
+<dt> <a class="twikiLink" href="YoctoProject.html">YoctoProject</a> </dt><dd> <br />&#8226; <a href="AudioFAQ.html" >Audio FAQ</a>: Audio with ALSA. () <br />&#8226; <a href="Sam9x60EkAttachingTm5000Display.html" >Sam 9 x 60 Ek Attaching Tm 5000 Display</a>: Addition to the other generic FAQ about LCD displays: <a class="twikiLink" href="ConnectModuleFromPDA.html">ConnectModuleFromPDA</a>. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>) <br />&#8226; <a href="GuiSolutions.html" >Gui Solutions</a>: Presentation of some GUI solutions. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="YoctoProjectFAQ.html" >Yocto Project FAQ</a>: Some Yocto Project FAQ entries. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>)
+</dd></dl>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r35 - 26 Jan 2021 - 14:30:48 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/PokyBuild"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="PokyBuild3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/PokyBuild by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:02:51 GMT -->
+</html>

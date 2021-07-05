@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/AT91BootstrapDebugEclipse by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:14:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> AT91BootstrapDebugEclipse &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/AT91BootstrapDebugEclipse?t=1625511181" type="application/x-wiki" title="Edit AT91BootstrapDebugEclipse" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/AT91BootstrapDebugEclipse?t=1625511181" title="Edit AT91BootstrapDebugEclipse" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="AT91BootstrapDebugEclipse.html">AT91BootstrapDebugEclipse</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="AT91Bootstrap_Debugging_with_Ecl"></a>  <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> Debugging with Eclipse for Linux </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#Setup_Cross_Development_Environm"> Setup Cross-Development Environment</a> <ul>
+<li> <a href="#Install_Cross_Development_Toolch"> Install Cross-Development  Toolchain(arm-none-eabi-gcc).</a>
+</li> <li> <a href="#Install_JLink_GDB_Server"> Install JLink GDB Server</a>
+</li> <li> <a href="#Install_Eclipse"> Install Eclipse</a>
+</li> <li> <a href="#Install_Eclipse_Plug_Ins"> Install Eclipse Plug-Ins</a> <ul>
+<li> <a href="#Install_GNU_ARM_C_C_Plug_Ins"> Install GNU ARM C/C++ Plug-Ins</a>
+</li> <li> <a href="#Install_Zylin_Embedded_CDT_Plug"> Install Zylin Embedded CDT Plug-Ins</a>
+</li> <li> <a href="#Check_the_Plug_Ins_Installation"> Check the Plug-Ins Installation</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Create_and_Build_Project"> Create and Build Project</a> <ul>
+<li> <a href="#Create_Project"> Create  Project</a>
+</li> <li> <a href="#Build_Project"> Build Project</a>
+</li></ul> 
+</li> <li> <a href="#Configure_Debug_Configuration_an"> Configure Debug Configuration and Debug</a> <ul>
+<li> <a href="#Configure_Debug_Configuration"> Configure Debug Configuration</a>
+</li> <li> <a href="#Start_Debug"> Start Debug</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+<p />
+The <a href="http://www.eclipse.org/" target="_blank">Eclipse<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> has become the de-facto industry standard environment host for embedded development.
+<p />
+The embedded cross-development with Eclipse environment via a JTAG target connection is shown below.
+<p />
+<img alt="development_system.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/development_system.png" />
+<p /> <ul>
+<li> The Eclipse IDE is the framework into which the other necessary tools are integrated.  <ul>
+<li> Eclipse itself includes an editor, project manager and debugger interface. 
+</li> <li> The GNU ARM Plug-Ins is intended for the embedded cross-development which C/C++ language used. 
+</li> <li> The Zylin / CDT Plug-Ins allow the Eclipse debugger to connect to a remote target via debug connection.    
+</li></ul> 
+</li> <li> The GNU Tools provide the assembler, compiler, linker and other code-generation utilities.
+</li> <li> The JLink GDB Server is a remote server for the GDB, and the GDB Server translates the GDB commands into the JLink commands. 
+</li> <li> The Atmel SAM-ICE&#8482; is a JTAG emulator designed for Atmel SAM3, SAM7, SAM9, SAMA ARM-based microcontrollers, including the Thumb® mode.
+</li> <li> <a href="http://www.at91.com/linux4sam/bin/view/Linux4SAM/" target="_blank">AT91SAM<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>-EK boards is the evaluation board for <a href="http://www.at91.com/" target="_blank">AT91SAM<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> chips. 
+</li></ul> 
+<p />
+This page describes how to we construct cross-development environment based on the open-source Eclipse IDE and GNU toolsets under Ubuntu 10.04.4 LTS.
+<p />
+<h1><a name="Setup_Cross_Development_Environm"></a> Setup Cross-Development Environment </h1>
+<p />
+<h2><a name="Install_Cross_Development_Toolch"></a> Install Cross-Development  Toolchain(<strong>arm-none-eabi-gcc</strong>). </h2>
+Download the toolchain software package( e.g. arm-2009q3-68-arm-none-eabi-i686-pc-linux-gnu.tar.bz2) from the Sourcery website.
+<p />
+Decompress the file directly in the work directory(e.g. ~/opt ).
+<p />
+To set environment variable "PATH", modify ~/.bashrc.
+<p />
+<pre>
+     $ export PATH&#61;&#91;INSTDIR]/bin:$PATH
+</pre>
+<p />
+To verify the cross toolchain installed properly, please type the following command.
+<pre>
+     $ arm-none-eabi-gcc -v
+</pre>
+<p />
+<img alt="arm-none-eabi-gcc-v.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/arm-none-eabi-gcc-v.png" />
+<p />
+<h2><a name="Install_JLink_GDB_Server"></a> Install JLink GDB Server </h2>
+<p />
+Download <strong>J-Link software &amp; documentation pack for Linux</strong> from the <a href="http://www.segger.com/jlink-software.html" target="_blank">Segger website<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (i.e. JLink_Linux_V462a.tgz).
+<p />
+Decompress the file directly in the working directory.
+<p />
+<img alt="jlink_linux_v462a.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/jlink_linux_v462a.png" />
+<p />
+Before launching <strong>JLink GDB Server</strong>, please do the following steps referring to README.txt:  <ul>
+<li> Install libusb: 
+</li></ul> 
+<pre>
+      $ sudo apt-get update
+      $ sudo apt-get install libusb-dev
+</pre> <ul>
+<li> Copy the jlink libray to the system library folder.
+</li></ul> 
+<pre>
+      $ sudo cp libjlinkarm.so.&#42; /usr/lib
+</pre> <ul>
+<li> Copy 45-jlink.rules to /etc/udev/rules.d/
+</li></ul> 
+<pre>
+      $ sudo cp 45-jlink.rules /etc/udev/rules.d/
+</pre>
+<p />
+ * To verify the JLink GDB Server installed properly,  type the following command to start the JLink GDB Server. 
+<pre>
+      $ sudo ./StartJLinkGDBServer.sh
+</pre>
+If the following message displays, it indicate the JLink GDB Server intall successfully.
+<p />
+<img alt="jlink_gdb_server.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/jlink_gdb_server.png" />
+<p />
+Note: The root permission is need to excute <strong>the JLink GDB Server</strong>.
+<p />
+Now the JLink GDB Server is ready to run.
+<p />
+<h2><a name="Install_Eclipse"></a> Install Eclipse </h2>
+<p />
+Download <strong>Eclipse IDE for C/C++ Developers for Linux</strong> from the <a href="http://www.eclipse.org/downloads/" target="_blank">Eclipse website<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+Decompress the file directly in the working directory (e.g. ~/eclipse) then type the following command to run Eclipse. No installation procedure is required.
+<pre>
+    $ ./eclipse
+</pre>
+<p />
+The used Eclipse version is:  <em>Juno Service Release 2</em>
+<p />
+<h2><a name="Install_Eclipse_Plug_Ins"></a> Install Eclipse Plug-Ins </h2>
+There are two ways to install the Plug-Ins.
+<p />
+The first way is to update directly from the corresponding website using the Eclipse standard update mechanism, this is recommended way.
+<p />
+The second way is to first download the Plug-Ins package from respective website, and then install it. 
+<p />
+<h3><a name="Install_GNU_ARM_C_C_Plug_Ins"></a> Install GNU ARM C/C++ Plug-Ins </h3>
+<p />
+To made the cross compilation possible, install the Eclipse Plug_Ins called <strong>GNU ARM Eclipse Plug-ins</strong>.
+<p />
+Adopt the second way to install this Plug-Ins.
+<p />
+First download the Plug-Ins software package from the <a href="http://sourceforge.net/projects/gnuarmeclipse/" target="_blank">GNU ARM Eclipse Plug-in website<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. (i.e. org.eclipse.cdt.cross.arm.gnu_0.5.4.201202210114.zip)
+<p />
+Then install this package, open menu <strong>Help</strong> -&gt; <strong>Install New Software&#8230;</strong>, press <strong>Add...</strong> button, the <strong>Add Repository</strong> dialog will display.
+<p />
+Then press <strong>Archive...</strong> to select the zip package.
+<p />
+<img alt="eclipse_install_gnuarm.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_install_gnuarm.png" />
+<p />
+Select the <strong>GNU ARM C/C++ Development Support</strong> item and press the <strong>Next</strong> button.
+<p />
+<h3><a name="Install_Zylin_Embedded_CDT_Plug"></a> Install Zylin Embedded CDT Plug-Ins </h3>
+<p />
+Adopt the first way to install this Plug-Ins
+<p />
+To install the Zylin Embedded CDT Plug-Ins, open the menu <strong>Help</strong> &#8211;&gt; <strong>Install New Software&#8230;</strong> then copy this URL <a href="http://opensource.zylin.com/zylincdt" target="_blank">http://opensource.zylin.com/zylincdt<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> in the <strong>Work with</strong> field then type enter.
+<p />
+<img alt="eclipse_zylincdt_plugin.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_zylincdt_plugin.png" />
+<p />
+Select  the <strong>Zylin Embedded CDT</strong> item and press the <strong>Next</strong> button
+<p />
+<h3><a name="Check_the_Plug_Ins_Installation"></a> Check the Plug-Ins Installation </h3>
+To verify the Plug-Ins Installation, open menu <strong>Help</strong> -&gt; <strong>About Eclipse</strong>,  the <strong>About Eclipse</strong> Dialog will display, press the <strong>Installation Details</strong> button, you will see the Installed Software.
+<p />
+<img alt="eclipse_installation_software.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_installation_software.png" />
+<p />
+<h1><a name="Create_and_Build_Project"></a> Create and Build Project </h1>
+<h2><a name="Create_Project"></a> Create  Project </h2>
+<p /> <ul>
+<li> Open the menu <strong>File</strong> -&gt; <strong>New</strong> -&gt; <strong>Makefile Project with Exiting Code</strong> .
+</li> <li> Input a <strong>Project Name</strong> (e.g. at91bootstrap)
+</li> <li> Press the <strong>Browse</strong> button to locate the Exiting Code Location
+</li> <li> Select the toolchains <em>ARM Linux GCC (Sourcery G++ Lite)</em> and press the <strong>Finish</strong> button
+</li></ul> 
+<p />
+<img alt="eclipse_new_project.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_new_project.png" />
+<p />
+<h2><a name="Build_Project"></a> Build Project </h2>
+<p />
+Open the menu <strong>Project</strong> -&gt; <strong>Build Project</strong> to build the select project.
+<p />
+<img alt="eclipse_build_project.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_build_project.png" />
+<p />
+Note: <ul>
+<li> Before building the project, the configuration MUST be done under command line. e.g., for at91sam9g20ek
+</li></ul> 
+<pre>
+        $ make mrproper &#38;&#38; make at91sam9g20eknf&#95;uboot&#95;defconfig
+</pre> <ul>
+<li> Change the <em>CONFIG_LINK_ADDR</em> from "0x00000" to "0x300000" in the file ".config".
+</li></ul> 
+<p />
+<h1><a name="Configure_Debug_Configuration_an"></a> Configure Debug Configuration and Debug </h1>
+<h2><a name="Configure_Debug_Configuration"></a> Configure Debug Configuration </h2>
+<p />
+Open the menu <strong>Run</strong> -&gt; <strong>Debug Configuration...</strong>, the <strong>Create, manage, and run configuration</strong> Dialog wil display. 
+<p />
+Select <strong>Zylin Embedded debug(Native)</strong> to configure the debug configuration.Input the Name, e.g. at91bootstrap_configuration.
+<p /> <ul>
+<li> Switch to the Tab <strong>Main</strong>. <ul>
+<li> Select Project by clicking <strong>Browse...</strong> button, 
+</li> <li> Select C/C++ Application by clicking <strong>Search Project...</strong> button, e.g. "binaries/at91sam9g20ek-nandflashboot-uboot-3.5.3-rc1.elf"
+</li></ul> 
+</li></ul> 
+<p />
+<img alt="eclipse_debug_configurations_main.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_debug_configurations_main.png" />
+<p /> <ul>
+<li> Switch to the Tab <strong>Debugger</strong> <ul>
+<li> Select <em>Embedded GDB</em> in <strong>Debugger</strong> drop down list.
+</li> <li> Select GDB debugger by clicking <strong>Browse...</strong> button, e.g. select "[INSTDIR]/bin/arm-none-eabi-gdb"
+</li> <li> Set GDB command file to blank.
+</li> <li> Select <em>Standard</em> in <strong>GDB command set</strong> drop down list
+</li> <li> Select <em>mi</em> in <strong>Protocol</strong> drop down list
+</li></ul> 
+</li></ul> 
+<p />
+<img alt="eclipse_debug_configurations_debugger.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_debug_configurations_debugger.png" />
+<p /> <ul>
+<li> Switch to the Tab <strong>Commands</strong>. <ul>
+<li> Please input the following command in the <strong>'Initialize' commands</strong> edit box.
+</li></ul> 
+</li></ul> 
+<pre>
+      target remote localhost:2331
+      monitor reset
+      load
+</pre>
+<p />
+<img alt="eclipse_debug_configurations_commands.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_debug_configurations_commands.png" />
+<p /> <ul>
+<li> Then click <strong>Apply</strong> button to finish the debug configuration.
+</li></ul> 
+<p />
+<h2><a name="Start_Debug"></a> Start Debug </h2>
+ You also could change the JLink GDB Server parameters to the suitable value.
+<p />
+e.g. change the following parameters
+<pre>
+VerifyDownload&#61;1
+InitialSpeed&#61;5
+Speed&#61;5
+UseAdaptive&#61;1
+</pre> 
+<p />
+<img alt="jlink_gdb_server_ini.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/jlink_gdb_server_ini.png" />
+<p />
+More information, please refer to <a href="http://www.segger.com/jlink-gdb-server.html" target="_blank">http://www.segger.com/jlink-gdb-server.html<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+  * To start debug, You should start the JLink GDB Server first. 
+<pre>
+      $ sudo ./StartJLinkGDBServer.sh
+</pre>
+<p /> <ul>
+<li> To debug the project,  Open the menu <strong>Run</strong> -&gt; <strong>Debug Configuration...</strong>, the <strong>Create, manage, and run configuration</strong> Dialog will display, then press <strong>Debug</strong> button to start debug.
+</li></ul> 
+<p />
+The successfully downloading image is shown below, the PC point to the first statement. 
+<p />
+the JLink GDB Server log message is shown in the left, the Eclipse Debug Perspective in the right.
+<p />
+<img alt="eclipse_debug_download.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_debug_download.png" />
+<p />
+Now you could debug the project, as shown below.
+<p />
+<img alt="eclipse_debug_singlestep.png" src="../../../pub/Linux4SAM/AT91BootstrapDebugEclipse/eclipse_debug_singlestep.png" /> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiForm">
+<table class='twikiFormTable' border='1'><tr><th class='twikiFormTableHRow twikiFirstCol' colspan='2'>
+<a class="twikiLink" href="WebFaqBaseForm.html">WebFaqBaseForm</a>
+</th></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Boards </td><td>
+<a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Components </td><td>
+<a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Summary </td><td>
+Debug <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a>
+</td></tr></table>
+</div><!-- /twikiForm --></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r2 - 27 Aug 2015 - 03:17:00 - <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Main/JoshWu?topicparent=Linux4SAM.AT91BootstrapDebugEclipse;nowysiwyg=1" rel="nofollow" title="JoshWu (this topic does not yet exist; you can create it)">JoshWu</a></span></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiCurrentTopicLink twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/AT91BootstrapDebugEclipse"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="AT91BootstrapDebugEclipse3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/AT91BootstrapDebugEclipse by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:14:19 GMT -->
+</html>

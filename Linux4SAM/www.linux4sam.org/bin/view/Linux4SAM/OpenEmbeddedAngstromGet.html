@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/OpenEmbeddedAngstromGet by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> OpenEmbeddedAngstromGet &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenEmbeddedAngstromGet?t=1625510996" type="application/x-wiki" title="Edit OpenEmbeddedAngstromGet" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenEmbeddedAngstromGet?t=1625510996" title="Edit OpenEmbeddedAngstromGet" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style>
+<!-- TABLEPLUGIN_table2 --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+</style>
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="LegacyLinux4SAM.html">LegacyLinux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="OpenEmbeddedAngstrom.html">OpenEmbeddedAngstrom</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="OpenEmbeddedAngstromGet.html">OpenEmbeddedAngstromGet</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="OpenEmbedded_Angstrom_get_demo_b"></a> OpenEmbedded / Angstrom : get demo binaries </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="#Root_file_system_pre_built_image"> Root file system pre-built images</a> <ul>
+<li> <a href="#Included_applications"> Included applications</a>
+</li> <li> <a href="#Angstom_2008_1_binaries"> Angstom 2008.1 binaries</a>
+</li></ul> 
+</li> <li> <a href="#Install_a_rootfs_on_an_AT91_boar"> Install a rootfs on an AT91 board</a> <ul>
+<li> <a href="#Using_SAM_BA"> Using SAM-BA</a>
+</li> <li> <a href="#Using_u_boot_commands"> Using u-boot commands</a>
+</li></ul> 
+</li></ul> 
+</div>
+<h2><a name="Root_file_system_pre_built_image"></a> Root file system pre-built images </h2>
+<p />
+The Root file system images are images of <code>jffs2</code> filesystems containing a entire embedded Linux system. This fielsystem is read/write capable and is designed to be stored in <strong>NAND FLASH memory</strong> available on AT91sam EK boards (256 MBytes, large pages : 2KBytes).
+<p />
+<h3><a name="Included_applications"></a> Included applications </h3>
+<p />
+List of included applications : overview and detailed package list.
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> &nbsp; </td>
+<th align="center" bgcolor="#687684" class="twikiTableCol1" valign="top"> <font color="#ffffff">console image</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol2" valign="top"> <font color="#ffffff">x11 image</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol3 twikiLastCol" valign="top"> <font color="#ffffff">x11 AT91SAM9M10 image</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Description </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> Non graphical Linux Root filesystem <br /> for AT91SAM9260EK board for example </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> Graphical Linux Root filesystem <br /> for board having a screen attached </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> Graphical Linux Root filesystem<br /> with video packages<br /> for AT91SAM9M10 based boards </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="right" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Common base packages </td>
+<td align="center" bgcolor="#ffffff" colspan="3" valign="top"> alsa &amp; alsa-utils <br /> avahi <br /> busybox <br /> dosfstools &amp; e2fsprogs <br /> dropbear (ssh server) <br /> glibc <br /> iptables <br /> opkg <br /> portmap <br /> strace <br /> thttpd (web server)<br /> tinylogin <br /> mtd utils <br /> iperf (network testing tool) <br /> wireless tools &amp; wpa-supplicant <br /> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Graphical packages </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> None </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol2" colspan="2" valign="top"> glib &amp; GTK+ <br /> GPE <br /> matchbox <br /> tslib <br /> X11 (xserver-kdrive-fbdev) + fonts <br /> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="right" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Multimedia packages </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol1" colspan="2" valign="top"> madplay<br /> mplayer <br /> </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> madplay<br /> mplayer <br /> Gstreamer framework <br /> Gstreamer plugins and audio/video libraries <br /> <span style="color: #ff6600">on2-8170-libs Hardware video decoder<br /> Gstreamer plugin</span> <br /> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> Complete package list </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/OpenEmbeddedAngstromGet/console-at91sam9-image_installed-packages.txt" target="_top">console-at91sam9-image</a> </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/OpenEmbeddedAngstromGet/x11-at91sam9-image_installed-packages.txt" target="_top">x11-at91sam9-image</a> </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol twikiLast" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/OpenEmbeddedAngstromGet/x11-at91sam9m10-image_installed-packages.txt" target="_top">x11-at91sam9m10-image</a> </td>
+</tr></table>
+<p />
+<!-- <img src="/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Note however that on boards that do not provide a display feature, all graphical related packages are not included. -->
+<p />
+<h3><a name="Angstom_2008_1_binaries"></a> Angstom 2008.1 binaries </h3>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Board</font> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <font color="#ffffff">Description</font> </th>
+<th align="center" bgcolor="#687684" class="twikiTableCol2 twikiLastCol" valign="top"> <font color="#ffffff">Binary</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9260ek </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> Angstrom console image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-console-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9260ek.rootfs.jffs2" target="_blank">Angstrom-console-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9260ek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9xeek </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> Angstrom console image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-console-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9xeek.rootfs.jffs2" target="_blank">Angstrom-console-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9xeek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9261ek </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9261ek.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9261ek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9263ek </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9263ek.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9263ek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9rlek </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9rlek.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9rlek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9g20ek </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> Angstrom console image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-console-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9g20ek.rootfs.jffs2" target="_blank">Angstrom-console-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9g20ek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9g10ek </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9g10ek.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9g10ek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9g45ekes </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9g45ekes.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9-image-glibc-ipk-2009.X-stable-at91sam9g45ekes.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> at91sam9m10ekes </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.0/images/Angstrom-x11-at91sam9m10-image-glibc-ipk-2009.X-stable-at91sam9m10ekes.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9m10-image-glibc-ipk-2009.X-stable-at91sam9m10ekes.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> at91sam9m10g45ek </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> Angstrom x11 (graphical) image tailored for AT91<br />JFFS2 root filesystem </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> <a href="ftp://www.linux4sam.org/pub/oe/linux4sam_2.1/images/Angstrom-x11-at91sam9m10-image-glibc-ipk-2009.X-stable-at91sam9m10g45ek.rootfs.jffs2" target="_blank">Angstrom-x11-at91sam9m10-image-glibc-ipk-2009.X-stable-at91sam9m10g45ek.rootfs.jffs2<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr></table>
+<p />
+<h2><a name="Install_a_rootfs_on_an_AT91_boar"></a> Install a rootfs on an AT91 board </h2>
+<p />
+This section describes How to load a jffs2 root filesystem into the NAND FLASH of the board with SAM-BA and right through the u-boot command line. SAM-BA is the simplest way.
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Note that the root file system is installed at <strong>offset</strong> <code><b>0x400000</b></code> in the NAND FLASH. From a Linux kernel point of view, this corresponds to the index 1 of the MTD subsystem device (<code>/dev/mtd1</code> and <code>/dev/mtdblock1</code>).
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> Note also that this operation will need a complete erase of the board NAND FLASH. Be sure not to loose data during this operation.
+<h3><a name="Using_SAM_BA"></a> Using SAM-BA </h3>
+<p /> <ul>
+<li> Connect the USB Device Interface to your host machine using the USB Device Cable
+</li> <li> Make sure that the chip can execute the bootROM monitor SAM-BA-boot :
+</li></ul> 
+<p /> <ul>
+<li> Start SAM-BA GUI Application
+</li> <li> Select the the board in the drop-down menu and choose the USB Connection     <p><img src="../../../pub/Linux4SAM/U-Boot/SAM-BA_selectboard.jpg" alt="SAM-BA_selectboard.jpg" width='276' height='132' /></p>
+</li> <li> Eventually plug back a jumper to access the media on which u-boot must be loaded to
+</li> <li> In the main SAM-BA window :
+</li></ul> 
+<img alt="SAM-BA_mainwin-rootfs.png" src="../../../pub/Linux4SAM/OpenEmbeddedAngstromGet/SAM-BA_mainwin-rootfs.png" /> <ol>
+<li> Choose the NandFlash media tab in the SAM-BA GUI interface
+</li> <li> Initialize the media choosing the <em>NandFlash Init</em> action in the <em>Scripts</em> rolling menu and press <em>Execute</em> 
+</li> <li> In the same <em>Scripts</em> menu choose the <em>NandFlash Erase All</em> action and press <em>Execute</em> . A <em>Please Wait...</em> dialog window is appearing: wait for the end of the erase process
+</li> <li> Press on <em>Send File Name</em> Browse button
+</li> <li> Choose the filesystem image file ( <em>x11-image-demo-at91sam9263ek.jffs2</em> for example) and press <em>Open</em> 
+</li> <li> Enter the proper address on media in the <em>Address</em> text field. You can find a media map for each product in <a class="twikiAnchorLink" href="GettingStarted.html#Linux4SAM_DataFlash_demo_Memory">GettingStarted#Linux4SAM_DataFlash_demo_Memory</a> and <a class="twikiAnchorLink" href="GettingStarted.html#Linux4SAM_NandFlash_demo_Memory">GettingStarted#Linux4SAM_NandFlash_demo_Memory</a>
+</li> <li> Press <em>Send File</em> button. A <em>Please Wait...</em> dialog window is appearing: wait for the end of the flashing process
+</li> <li> On AT91SAM9260-EK or AT91SAM9XE-EK, If you have erased the booting media, do not forget to replace <a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a> in it
+</li> <li> Close SAM-BA, remove the USB cable
+</li></ol> 
+<p />
+Ok, now you must have a the Linux root filesystem flashed on your board.
+<p />
+<h3><a name="Using_u_boot_commands"></a> Using u-boot commands </h3>
+<p />
+Here is a reference documentation about <a href="http://www.denx.de/wiki/view/DULG/RootFileSystemOnAJFFS2FileSystem" target="_blank">JFFS2 as root filesystem<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> on the u-boot documentation website.
+<p />
+Following commands documentation is available in <a href="http://www.denx.de/cgi-bin/gitweb.cgi?p=u-boot.git;a=blob_plain;f=doc/README.nand" target="_blank">the u-boot doc/README.nand<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> documentation file.
+<p />
+&nbsp;&nbsp;&nbsp;&nbsp;1. erase the whole NAND FLASH
+<pre>
+U-Boot&#62; nand erase
+
+NAND erase: device 0 whole chip
+Skipping bad block at  0x000c0000
+Skipping bad block at  0x009c0000
+Erasing at 0xffe0000 -- 100&#37; complete.
+OK
+</pre>
+<p />
+&nbsp;&nbsp;&nbsp;&nbsp;2. download the JFFS2 filesystem <a class="twikiAnchorLink" href="U-Boot.html#Loading_through_network">from TFTP</a> to the board RAM (address 0x21400000{{<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> for <strong>at91sam9g45 family</strong>: use proper location for RAM: 0x70000000 instead of 0x20000000}})
+<pre>
+U-Boot&#62; tftp 0x21400000 x11-image-demo-at91sam9263ek.jffs2
+TFTP from server 10.159.240.137; our IP address is 10.159.245.170
+Filename &#39;nferre/x11-image-demo-at91sam9263ek.jffs2&#39;.
+Load address: 0x21400000
+Loading: T #################################################################
+         #######################################################T ##########
+         #################################################################
+         &#91;..]
+        #########################
+done
+Bytes transferred &#61; 26083328 (18e0000 hex)
+</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/pencil.gif" width="16" height="16" alt="Pencil" title="Pencil" border="0" /> remember the number of <em>Bytes transferred</em> just indicated above. It will be useful for the <code>nand write.jffs2</code> command.
+<p />
+&nbsp;&nbsp;&nbsp;&nbsp;3. write the filesystem from RAM@0x21400000{{<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> for <strong>at91sam9g45 family</strong>: use proper location for RAM: 0x70000000 instead of 0x20000000}} to NAND FLASH at offset <code>0x400000</code> (Linux <code>/dev/mtdblock1</code>). Note the last parameter : it is the number of <em>Bytes transferred</em> indicated in the previous command.
+<pre>
+U-Boot&#62; nand write.jffs2 0x21400000 0x400000 0x18e0000
+
+NAND write: device 0 offset 0, size 26083328 ...
+Bad block at 0xc0000 in erase block from 0xc0000 will be skipped
+Bad block at 0x9c0000 in erase block from 0x9c0000 will be skipped
+Writing data at 0x195f800 -- 100&#37; complete.
+OK
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/hand.gif" width="16" height="16" alt="Pointing hand" title="Pointing hand" border="0" /> Note that <strong>bad blocks</strong> just shown above are normal behavior of a NAND FLASH : they are skipped and the filesystem will not mind, it is designed to manage them.
+<p />
+Good, now you have a fresh JFFS2 filesystem you can boot on. 
+<p />
+<p />
+<p />
+<hr /> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="OpenEmbeddedAngstromGetaabf.html?sortcol=0;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="OpenEmbeddedAngstromGetad61.html?sortcol=1;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="OpenEmbeddedAngstromGet306b.html?sortcol=2;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="OpenEmbeddedAngstromGete4a1.html?sortcol=3;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="OpenEmbeddedAngstromGete152.html?sortcol=4;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="OpenEmbeddedAngstromGetb628.html?sortcol=5;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="OpenEmbeddedAngstromGet6808.html?sortcol=6;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/OpenEmbeddedAngstromGet/SAM-BA_mainwin-rootfs.png">SAM-BA_mainwin-rootfs.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/OpenEmbeddedAngstromGet?filename=SAM-BA_mainwin-rootfs.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 30.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2007-09-11 - 11:37</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> SAM-BA main window flashing rootfs </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/txt.gif" width="16" height="16" alt="Text" title="Text" border="0" /><span class="twikiHidden">txt</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/OpenEmbeddedAngstromGet/console-at91sam9-image_installed-packages.txt">console-at91sam9-image_installed-packages.txt</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/OpenEmbeddedAngstromGet?filename=console-at91sam9-image_installed-packages.txt;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.8&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2010-03-17 - 15:07</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/txt.gif" width="16" height="16" alt="Text" title="Text" border="0" /><span class="twikiHidden">txt</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/OpenEmbeddedAngstromGet/x11-at91sam9-image_installed-packages.txt">x11-at91sam9-image_installed-packages.txt</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/OpenEmbeddedAngstromGet?filename=x11-at91sam9-image_installed-packages.txt;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 11.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2010-03-17 - 15:07</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/txt.gif" width="16" height="16" alt="Text" title="Text" border="0" /><span class="twikiHidden">txt</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/OpenEmbeddedAngstromGet/x11-at91sam9m10-image_installed-packages.txt">x11-at91sam9m10-image_installed-packages.txt</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/OpenEmbeddedAngstromGet?filename=x11-at91sam9m10-image_installed-packages.txt;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 13.8&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2010-03-17 - 15:08</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> &nbsp; </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r22 - 07 Jun 2010 - 14:16:24 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/OpenEmbeddedAngstromGet"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="OpenEmbeddedAngstromGet3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/OpenEmbeddedAngstromGet by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:08:47 GMT -->
+</html>

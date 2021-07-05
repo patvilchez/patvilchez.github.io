@@ -1,0 +1,7 @@
+Mirror in progress since Mon, 05 Jul 2021 20:43:52 .. please wait!
+winhttrack https://www.linux4sam.org/bin/view/Linux4SAM -W -O "/home/pvilchez/tmp/Linux4SAM" -%v +*.png +*.jpg 
+To pause the engine: create an empty file named 'hts-stop.lock'
+PID=340006
+UID=1000
+GID=1000
+START=1625510632

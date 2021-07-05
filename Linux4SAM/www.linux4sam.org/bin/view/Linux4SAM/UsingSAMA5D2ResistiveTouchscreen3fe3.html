@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingSAMA5D2ResistiveTouchscreen?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:11:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; UsingSAMA5D2ResistiveTouchscreen &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="Using_the_SAMA5D2_compatible_Res"></a> Using the <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/SAMA5D2?topicparent=Linux4SAM.UsingSAMA5D2ResistiveTouchscreen;nowysiwyg=1" rel="nofollow" title="SAMA5D2 (this topic does not yet exist; you can create it)">SAMA5D2</a></span>-compatible Resistive Touchscreen </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Using_the_SAMA5D2_compatible_Res"> Using the SAMA5D2-compatible Resistive Touchscreen</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Software_setup"> Software setup</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Overlay_information"> Overlay information</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Picture_of_the_setup"> Picture of the setup</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+The SAMA5D2 SoC has the support for Resistive Touchscreen. This feature is embedded in the ADC device.
+<p />
+This cannot be used on the <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a> board out of the box. Some changes are required in order to test on this board, or, another board needs to be devised.
+<p />
+Here is a list of the required changes: <ul>
+<li>  Move the PMIC on another i2c bus, because the pins used for the current i2c bus of the PMIC need to be used for the resistive touch connector.
+</li> <li>  Populate R36-R39
+</li></ul> 
+<p />
+Another modified board is required to adapt the resistive touchscreen SAM9X5-DM to a ribbon cable that can be connected to the LCD port of the <a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a> .
+<p />
+<h2><a name="Software_setup"></a> Software setup </h2>
+<p />
+With the modified hardware, resistive touchscreen can be enabled using an <a href="https://github.com/linux4sam/dt-overlay-at91" target="_blank">overlay provided in the at91 overlay tree<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. This needs to be loaded at boot time.</br>
+The resistive touchscreen uses the new Generic Resistive Touchscreen (GRTS) from the Kernel, which is linked to the adc-cells of the ADC device.</br>
+The GRTS driver registers a new input device, and receives the data through the X, Y, and PRESSURE channels from the ADC device, and reports them to the input subsystem.
+<p />
+<h2><a name="Overlay_information"></a> Overlay information </h2>
+<p />
+The <a href="https://github.com/linux4sam/dt-overlay-at91" target="_blank">at91 overlay tree<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> provides a special FIT configuration image, named sama5d2_xplained_grts.its which includes this overlay in the configuration.</br>
+To build this FIT image, instead of using sama5d2_xplained.itb as a target, use sama5d2_xplained_grts.itb </br>
+<pre>
+make DTC&#61;&#60;path&#62; KERNEL&#95;DIR&#61;&#60;path&#62; KERNEL&#95;BUILD&#95;DIR&#61;&#60;path&#62; sama5d2&#95;xplained&#95;grts.itb
+</pre>
+</br>
+Use the sama5d2_xplained_grts.itb to boot the kernel, altering the U-boot bootm command as follows: </br>
+<pre>
+bootm 0x24000000#kernel&#95;dtb#grts
+</pre>
+<p />
+For more information about how to use U-boot to boot a FIT image for the kernel and Device Tree overlays, <a class="twikiLink" href="UbootFitImage.html">see the specific page</a>.
+<p />
+<p />
+<strong><em><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/tip.gif" alt="TIP" title="TIP" width="16" height="16" border="0" /> Tips:</em></strong> The <a href="https://github.com/kergoth/tslib" target="_blank">TSlib touchscreen library<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is required to calibrate the touchscreen before it can be used. We recommend running ts_calibrate to calibrate it and ts_test to try it out.
+<p />
+<h2><a name="Picture_of_the_setup"></a> Picture of the setup </h2>
+<p />
+ <img src="../../../pub/Linux4SAM/UsingSAMA5D2ResistiveTouchscreen/P_20170613_1616521.jpg" alt="P_20170613_1616521.jpg" width="493" height="639" /><br /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments"> <div class="twikiAttachments">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreen02cd.html?skin=print.myskin;sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">I</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreencc4a.html?skin=print.myskin;sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Attachment</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreenc02a.html?skin=print.myskin;sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Action</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreen101b.html?skin=print.myskin;sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Size</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreenda64.html?skin=print.myskin;sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Date</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreen0539.html?skin=print.myskin;sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Who</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="UsingSAMA5D2ResistiveTouchscreenf3f9.html?skin=print.myskin;sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/jpg.gif" width="16" height="16" alt="JPEG" title="JPEG" border="0" /><span class="twikiHidden">jpg</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/UsingSAMA5D2ResistiveTouchscreen/P_20170613_1616521.jpg">P_20170613_1616521.jpg</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/UsingSAMA5D2ResistiveTouchscreen?filename=P_20170613_1616521.jpg;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 1661.4&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2018-10-17 - 07:47</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/EugenHristev?origurl=/bin/view/Main/EugenHristev">EugenHristev</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> resistive touch </td>
+</tr></table>
+</div> </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/UsingSAMA5D2ResistiveTouchscreen?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:11:52 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

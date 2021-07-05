@@ -1,0 +1,1366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/RealTime by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:14:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title> RealTime &lt; Linux4SAM &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" href="https://www.linux4sam.org/bin/edit/Linux4SAM/RealTime?t=1625511187" type="application/x-wiki" title="Edit RealTime" />
+<link rel="edit" href="https://www.linux4sam.org/bin/edit/Linux4SAM/RealTime?t=1625511187" title="Edit RealTime" />
+<meta name="SCRIPTURLPATH" content="/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/PatternSkin/pattern.js"></script><style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:100px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+
+
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/layout.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/style.css');
+@import url('https://www.linux4sam.org/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(https://www.linux4sam.org/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+@import url('https://www.linux4sam.org/pub/TWiki/Linux4SAM/mystyle.css');
+</style>
+<style type="text/css" media="all">
+	@import url("https://www.linux4sam.org/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+<!--GENERATED_HEADERS--><!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style>
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://www.linux4sam.org/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+</head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternClearHeaderCenter">
+</div>
+<p />
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html">Linux4SAM</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiLink" href="TipsNTricks.html">TipsNTricks</a><span class='natSep'>&nbsp;&#187; </span><a class="twikiCurrentTopicLink twikiLink" href="RealTime.html">RealTime</a>
+</span><!-- /patternHomePath--><span class="patternToolBar twikiRight"></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="Real_Time_solutions_on_AT91SAM_S"></a> Real Time solutions on AT91SAM SoC </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#Global_setup"> Global setup</a> <ul>
+<li> <a href="#Stress_during_benchmarks"> Stress during benchmarks</a>
+</li></ul> 
+</li> <li> <a href="#Latency"> Latency</a>
+</li> <li> <a href="#PREEMPT_RT"> PREEMPT_RT</a> <ul>
+<li> <a href="#Short_presentation"> Short presentation</a>
+</li> <li> <a href="#Setup"> Setup</a>
+</li> <li> <a href="#Benchmark"> Benchmark</a> <ul>
+<li> <a href="#Latency_from_external_signal_thr"> Latency from external signal (through GPIO)</a>
+</li> <li> <a href="#Timer_latency"> Timer latency</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Xenomai"> Xenomai</a> <ul>
+<li> <a href="#Short_presentation_AN1"> Short presentation</a>
+</li> <li> <a href="#Setup_AN1"> Setup</a>
+</li> <li> <a href="#Benchmarks"> Benchmarks</a>
+</li></ul> 
+</li> <li> <a href="#References"> References</a>
+</li></ul> 
+</div>
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+This page aims at presenting the two most important real-time Linux solutions, their setup and the expected performances on AT91SAM SoCs. The study covers the following two real-time Linux solutions:
+<p /> <ul>
+<li> The <a href="https://rt.wiki.kernel.org/" target="_blank">PREEMPT_RT<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> patch set
+</li> <li> The <a href="http://www.xenomai.org/" target="_blank">Xenomai<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> real-time extension
+</li></ul> 
+<p />
+<p />
+<h2><a name="Global_setup"></a> Global setup </h2>
+<p /> <ul>
+<li> The board used are the AT91SAM9G20EK, AT91SAM9M10-G45-EK and AT91SAM9263-EK.
+</li></ul> 
+<p /> <ul>
+<li> The kernel versions used are the 3.0.10 for the PREEMPT_RT patch and 2.6.38 for Xenomai.
+</li></ul> 
+<p /> <ul>
+<li> The root filesystem was generated using <a href="http://www.buildroot.org/" target="_blank">Buildroot<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> and was mounted over the network through NFS.
+</li></ul> 
+<p /> <ul>
+<li> The toolchain used was gcc-4.4-2010q1 from CodeSourcery.
+</li></ul> 
+<p />
+<p />
+<h3><a name="Stress_during_benchmarks"></a> Stress during benchmarks </h3>
+<p />
+RT benchmarks are only meaningful under heavy stress to guarantee to find worst case latencies. The following programs are used to stress the system:
+<p /> <ul>
+<li> hackbench to stress the scheduler
+</li> <li> netcat to stress the Ethernet interface and generate a lot of interrupts
+</li> <li> ls and dd for global stress
+</li></ul> 
+<p />
+Here is the script used to create load (doload.sh):
+<pre>
+#!/bin/sh
+(while true; do cat /usr/share/netcat/netcat.data; sleep 7; done &#124; netcat -vv -l -p 5566 ) &#38;
+a&#61;$!
+
+dd if&#61;/dev/zero of&#61;/dev/null &#38;
+b&#61;$!
+
+while true; do killall hackbench  &#62; /dev/null 2&#62;&#38;1; sleep 5; done &#38;
+d&#61;$!
+
+while true; do /bin/hackbench 1 &#62; /dev/null 2&#62;&#38;1; done &#38;
+e&#61;$!
+
+while true; do ls -lR / &#62; /dev/null 2&#62;&#38;1; done &#38;
+f&#61;$!
+
+sleep $1
+kill $a $b $c $d $e $f
+</pre>
+<p />
+<h2><a name="Latency"></a> Latency </h2>
+<p />
+When developing real-time applications with a system such as Linux, the typical scenario is the following: <ul>
+<li> An event from the physical world happens and gets notified to the CPU by means of an interrupt
+</li> <li> The interrupt handler recognizes and handles the event, and then wake-up the user-space task that will react to this event
+</li> <li> Some time later, the user-space task will run and be able to react to the physical world event
+</li></ul> 
+<p />
+Real-time is about providing guaranteed worst case latencies for this reaction time, called latency.
+All the following benchmarks will measure this latency.
+<p />
+There is latency at different stage of the system: first the interrupt latency itself, then the time spent in the interrupt handler, then the latency of the scheduler and finally the time spent in the scheduler:
+<p />
+<center><img src="../../../pub/Linux4SAM/RealTime/latency.png" alt="latency.png" width='529' height='210' /></center>
+<p />
+For better performances, the task can be done in the kernelspace or in an interrupt handler. The drawback in theses cases is that the developpment is more difficult and the code have a restraint accces to kernel or userspace facilities. 
+<p />
+<h2><a name="PREEMPT_RT"></a> PREEMPT_RT </h2>
+<p />
+<p />
+<h3><a name="Short_presentation"></a> Short presentation </h3>
+<p /> <ul>
+<li> PREEMPT_RT is a long-term project led by Linux kernel developers Ingo Molnar, Thomas Gleixner and Steven Rostedt. <ul>
+<li> <a href="https://rt.wiki.kernel.org/" target="_blank">https://rt.wiki.kernel.org<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> The goal is to gradually improve the Linux kernel regarding real-time requirements and to get these improvements merged into the mainline kernel <ul>
+<li> PREEMPT_RT development works very closely with the mainline Linux development
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Many of the improvements designed, developed and debugged inside PREEMPT_RT over the years are now part of the mainline Linux kernel <ul>
+<li> The project is a long-term branch of the Linux kernel that ultimately should disappear as everything will have been merged
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Development of real-time applications and development of drivers within the PREEMPT_RT patch set applied on the Linux kernel is exactly the same as on a standard Linux kernel. There are no special APIs, no special library. The PREEMPT_RT patch set simply offers more reliable worst-case latencies and more configurable system behaviour (mostly through the configuration of interrupt threads priorities).
+</li></ul> 
+<p />
+<h3><a name="Setup"></a> Setup </h3> <ul>
+<li> PREEMPT_RT is delivered as a patch against the mainline kernel <ul>
+<li> Best to have a board supported by the mainline kernel, otherwise the PREEMPT_RT patch may not apply and may require some adaptations
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Many official kernel releases are supported, but not all. For example, 2.6.31 and 2.6.33 are supported, but not 2.6.32. (At the end of November 2011 the versions available were 2.6.22, 2.6.24, 2.6.25, 2.6.26, 2.6.29, 2.6.31, 2.6.33, 3.0 and 3.2)
+</li></ul> 
+<p /> <ul>
+<li> Quick set up <ul>
+<li> Download the latest PREEMPT_RT patch from <code>http://www.kernel.org/pub/linux/kernel/projects/rt/</code>
+</li> <li> Download and extract the corresponding mainline kernel version
+</li> <li> Apply the patch to the mainline kernel tree <ul>
+<li> For example with kernel sources 3.0.12 installed at <code>/usr/local/src/v3.0.12</code>, the command lines would be:<pre>
+$ cd /usr/local/src/
+$ wget http://www.kernel.org/pub/linux/kernel/projects/rt/3.0/patches-3.0.12-rt30.tar.bz2
+--2011-12-19 16:43:20--  http://www.kernel.org/pub/linux/kernel/projects/rt/3.0/patches-3.0.12-rt30.tar.bz2
+Resolving www.kernel.org... 149.20.4.69
+Connecting to www.kernel.org&#124;149.20.4.69&#124;:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 252203 (246K) &#91;application/x-bzip2]
+Saving to: `patches-3.0.12-rt30.tar.bz2&#39;
+
+100&#37;&#91;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#62;] 252,203      113K/s   in 2.2s    
+
+(113 KB/s) - `patches-3.0.12-rt30.tar.bz2&#39; saved &#91;252203/252203]
+
+$cd v3.0.12
+$bzcat ../patches-3.0.12-rt30.patch.bz2 &#124; patch -p1
+patching file lib/scatterlist.c
+patching file arch/powerpc/platforms/wsp/opb&#95;pic.c
+patching file drivers/tty/tty&#95;ldisc.c
+patching file mm/slab.c
+&#91;...]
+</pre>
+</li></ul> 
+</li> <li> Configure the kernel,<pre>
+$ make ARCH&#61;arm KBUILD&#95;OUTPUT&#61;../build&#95;kernel&#95;atmel at91sam9g20ek&#95;defconfig
+  HOSTCC  scripts/basic/fixdep
+&#91;...]
+#
+# configuration written to .config
+#
+$ make ARCH&#61;arm KBUILD&#95;OUTPUT&#61;../build&#95;kernel&#95;atmel xconfig
+</pre>
+</li> <li> and be sure to enable <ul>
+<li> <code>CONFIG_PREEMPT_RT</code> <code>CONFIG_HIGH_RES_TIMERS</code> (High Resolution Timer Support)
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/Xconfig_preempt-rt_3_0_12-rt12.png" alt="Xconfig_preempt-rt_3_0_12-rt12.png" width='766' height='312' /></center> <ul>
+ <li>
+ <ul>
+ <li>
+ <ul>
+<li> <code>CONFIG_ATMEL_TCLIB</code> (located in <code>drivers/misc</code> menu)
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/Xconfig_TCB_3_0_12-rt12.png" alt="Xconfig_TCB_3_0_12-rt12.png" width='579' height='275' /></center> <ul>
+ <li>
+ <ul>
+<li> Compile your kernel, and boot<pre>
+  GEN     /usr/local/src/build&#95;kernel&#95;atmel/Makefile
+  CHK     include/linux/version.h
+  Using /usr/local/src/v3.0.12 as source for kernel
+  CHK     include/generated/utsrelease.h
+make&#91;2]: `include/generated/mach-types.h&#39; is up to date.
+  CALL    /usr/local/src/v3.0.12/scripts/checksyscalls.sh
+  CC      init/main.o
+  CHK     include/generated/compile.h
+&#91;...]
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    2164096 Bytes &#61; 2113.38 kB &#61; 2.06 MB
+Load Address: 0x20008000
+Entry Point:  0x20008000
+  Image arch/arm/boot/uImage is ready
+</pre>
+</li></ul> 
+</li></ul> 
+<p />
+You are now running the real-time Linux kernel.
+<p />
+Of course, some system configuration remains to be done, in particular setting appropriate priorities to the interrupt threads, which depends on your application.
+<p />
+<em>Git users can also clone this git tree: git://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-stable-rt.git</em>
+<p />
+<h3><a name="Benchmark"></a> Benchmark </h3>
+<p />
+<h4><a name="Latency_from_external_signal_thr"></a> Latency from external signal (through GPIO) </h4>
+<p />
+This benchmark reproduces a common use case: a signal comes though a GPIO and after this event a signal is output on another GPIO.
+<p />
+All the code runs in userspace using the sysfs gpio interface.It shows the worst case we can expect when the code handling the event is located in an userspace application. Lower latencies can be achieved by handling directly the event inside the kernel, but implementing application-specific code within the kernel is usually much more difficult. What is measured here is the full scheduling latency plus the time spent in the task to set the GPO including the switch in kernel space:
+<center><img src="../../../pub/Linux4SAM/RealTime/latency_gpio.png" alt="latency_gpio.png" width='553' height='256' /></center>
+<p />
+<p />
+For AT91SAM9M10-G45-EK and AT91SAM9G20EK boards, GPIOs from the ISI connector are used: <ul>
+<li> PB26 is used as input,
+</li> <li> PB10 is used as output,
+</li></ul> 
+<p />
+Both signals are connected to an oscilloscope which is setup in overlay mode in order to get the worst latency between input and output. The oscilloscope triggers on high to low transition on PB26.
+<p />
+The external signal is generated using another board with this kind of command line:
+<pre>
+echo 75 &#62; /sys/class/gpio/export
+echo out &#62; /sys/class/gpio/gpio75/direction
+while true; do echo 1 &#62;/sys/class/gpio/gpio75/value; ./microsleep ; echo 0 &#62;/sys/class/gpio/gpio75/value; ./microsleep ;  done
+</pre>
+<em>microsleep is just a simple C program calling nanosleep(), for the tests the sleep value was 30 ms.</em>
+<p />
+Here is the script used to setup the GPIO (prepare_gpio.sh) on the target board:
+<pre>
+#!/bin/sh
+echo 74 &#62; /sys/class/gpio/export
+echo out &#62; /sys/class/gpio/gpio74/direction
+echo 90 &#62; /sys/class/gpio/export
+echo in &#62; /sys/class/gpio/gpio90/direction
+echo both &#62;  /sys/class/gpio/gpio90/edge
+</pre>
+<p />
+Then the following command line:
+<pre>
+./prepare&#95;gpio.sh ; chrt -f 99 ./rttest&#95;gpio &#38; while true; do ./doload.sh 65 ; done
+</pre>
+<p />
+The source code for rttest_gpio.c is available here <a href="https://www.linux4sam.org/pub/Linux4SAM/RealTime/rttest_gpio.c" target="_top">rttest_gpio.c</a>
+This code is compiled with this simple command line:
+<pre>
+arm-none-linux-gnueabi-gcc  -Wall  -o rttest&#95;gpio rttest&#95;gpio.c -lrt
+</pre>
+<p />
+On the following oscilloscope snapshot, we can see what we get after 12 hours on AT91SAM9M10-G45-EK with a 3.0.10-rt27 kernel PREEMPT_RT_FULL selected: <ul>
+<li> The input signal is in green and the output signal is in yellow .
+</li> <li> As the oscilloscope triged on the falling edge of the input signal, we barely see this signal at the left of the snapshot.
+</li> <li> The medium green band is due to a small noise on the reference ground.
+</li> <li> Time base is 1ms and 1V by square.
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-12H_GPIO.png" alt="G45_3-0-10-rt27-12H_GPIO.png" />
+</center>
+<p />
+On the following oscilloscope snapshot, we can see of what we get after 4 hours on AT91SAM9M10-G45-EK with a 3.0.10-rt27 kernel without PREEMPT: <ul>
+<li> The input signal is in green and the output signal is in yellow.
+</li> <li> The input signal have a 30ms period. The output signal fill this 30ms and overlap the next input period. So we can only conclude that maximum latency is at least 30ms.
+</li> <li> The medium green band is due to a small noise on the reference ground.
+</li> <li> Time base is 5ms and 1V by square.
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-4H_GPIO_nopreempt.png" alt="G45_3-0-10-rt27-4H_GPIO_nopreempt.png"/></center>
+<p />
+<p />
+On the following oscilloscope snapshot, we can see of what we get after 11 hours on AT91SAM9G20-EK with a 3.0.10-rt27 kernel PREEMPT_RT_FULL selected: <ul>
+<li> The input signal is in yellow and the output signal is in green.
+</li> <li> As the oscilloscope triged on the falling edge of the input signal, we barely see this signal at the left of the snapshot.
+</li> <li> Time base is 500us and 1V by square.
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/G20_3-0-10-rt27-11H_GPIO.png" alt="G20_3-0-10-rt27-11H_GPIO.png"/>
+</center>
+<p />
+On the following oscilloscope snapshot, we can see of what we get after 11 hours on AT91SAM9G20-EK with a 3.0.10-rt27 kernel without PREEMPT: <ul>
+<li> The input signal is in yellow and the output signal is in green.
+</li> <li> The input signal have a 30ms period. The output signal fill this 30ms and overlap the next input period. So we can only conclude that maximum latency is at least 30ms.
+</li> <li> Time base is 5ms and 1V by square.
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/G20_3-0-10-rt27-11H_GPIO_nopreempt.png" alt="G20_3-0-10-rt27-11H_GPIO_nopreempt.png"/></center>
+<p />
+<p />
+Kernel version used was 3.0.10-rt27, with PREEMPT_RT_FULL and without PREEMPT:
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> &nbsp; </td>
+<td align="center" bgcolor="#ffffff" colspan="3" valign="top"> Max Latency for </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Board </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> PREEMPT_RT_FULL </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> NO PREEMPT </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AT91SAM9M10-G45-EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> 618us </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> &gt;30ms </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> AT91SAM9G20-EK </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> 608us </td>
+<td align="center" bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> &gt;30ms </td>
+</tr></table>
+<p />
+<h4><a name="Timer_latency"></a> Timer latency </h4>
+<p />
+This benchmark measures the latency timer using <a href="https://rt.wiki.kernel.org/index.php/Cyclictest" target="_blank">cyclictest<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> a high resolution test program.
+<p />
+What is measured here is the full scheduling latency plus the short time spent in the task to read the current time:
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/latency_timer.png" alt="latency_timer.png" width='553' height='256' /></center>
+<p />
+<p />
+There are serveral ways to test the latency: <ul>
+<li> Using timer_settime (high-resolution POSIX timer), option -s with cyclictest
+</li> <li> Using setitimer (high-resolution interval timer), no option with cyclictest
+</li> <li> Using nanosleep (high-resolution sleep), option -n with cyclictest
+</li> <li> Using clock_nanosleep (high-resolution sleep with clock selection), option -n -s with cyclictest
+</li></ul> 
+<p />
+Here are the results for AT91SAM9G20 and AT91SAM9G45:
+<p /> <ul>
+<li> AT91SAM9G20 - 3.0.12-rt30+ PREEMPT RT  - $cyclictest -m -a -t -n -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -n -p99
+</li> <li>  Benchmark duration: 44 h 30 min
+</li> <li>  Number of samples: 160247021
+</li> <li>  Min Latencies: 00016 us
+</li> <li>  Avg Latencies: 00087 us
+</li> <li>  Max Latencies: 00177 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_rt30_matnp99.png" alt="cyclictest_G20_3_0_12_rt30_matnp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G20 - 3.0.12-rt30+ PREEMPT RT  - $cyclictest -m -a -t -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -p99
+</li> <li>  Benchmark duration: 16 h 40 min
+</li> <li>  Number of samples: 060037201
+</li> <li>  Min Latencies: 00076 us
+</li> <li>  Avg Latencies: 00213 us
+</li> <li>  Max Latencies: 02136 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_rt30_matp99.png" alt="cyclictest_G20_3_0_12_rt30_matp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G20 - 3.0.12-rt30+ PREEMPT RT  - $cyclictest -m -a -t -s -n -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -s -n -p99
+</li> <li>  Benchmark duration: 9 h 47 min
+</li> <li>  Number of samples: 035257192
+</li> <li>  Min Latencies: 00020 us
+</li> <li>  Avg Latencies: 00100 us
+</li> <li>  Max Latencies: 50229 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_rt30_matsnp99.png" alt="cyclictest_G20_3_0_12_rt30_matsnp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G20 - 3.0.12  - $cyclictest -m -a -t -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -p99
+</li> <li>  Benchmark duration: 11 h 09 min
+</li> <li>  Number of samples: 031919110
+</li> <li>  Min Latencies: 00027 us
+</li> <li>  Avg Latencies: 00380 us
+</li> <li>  Max Latencies: 39823 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_vanilla_no_preempt_matp99.png" alt="cyclictest_G20_3_0_12_vanilla_no_preempt_matp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G45 - 3.0.12-rt30+ PREEMPT RT  - $cyclictest -m -a -t -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -p99
+</li> <li>  Benchmark duration: 54 h 29 min
+</li> <li>  Number of samples: 196190335
+</li> <li>  Min Latencies: 00070 us
+</li> <li>  Avg Latencies: 00219 us
+</li> <li>  Max Latencies: 01106 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_rt30_matp99.png" alt="cyclictest_G45_3_0_12_rt30_matp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G45 - 3.0.12-rt30+ PREEMPT RT  - $cyclictest -m -a -t -s -n -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -s -n -p99
+</li> <li>  Benchmark duration: 33 h 1 min
+</li> <li>  Number of samples: 118900140
+</li> <li>  Min Latencies: 00021 us
+</li> <li>  Avg Latencies: 00106 us
+</li> <li>  Max Latencies: 00264 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_rt30_matsnp99.png" alt="cyclictest_G45_3_0_12_rt30_matsnp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G45 - 3.0.12-rt30+ PREEMPT RT  - $cyclictest -m -a -t -s -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -s -p99
+</li> <li>  Benchmark duration: 29 h 22 min
+</li> <li>  Number of samples: 105720602
+</li> <li>  Min Latencies: 00100 us
+</li> <li>  Avg Latencies: 02441 us
+</li> <li>  Max Latencies: 03861 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_rt30_matsp99.png" alt="cyclictest_G45_3_0_12_rt30_matsp99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G45 - 3.0.12  - $cyclictest -m -a -t -p99 <ul>
+<li>  Command used - $cyclictest -m -a -t -p99
+</li> <li>  Benchmark duration: 11 h 02 min
+</li> <li>  Number of samples: 030618980
+</li> <li>  Min Latencies: 00032 us
+</li> <li>  Avg Latencies: 00503 us
+</li> <li>  Max Latencies: 94991 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_vanilla_no_preempt_matp99.png" alt="cyclictest_G45_3_0_12_vanilla_no_preempt_matp99.png" /></center>
+<p />
+<p />
+<h2><a name="Xenomai"></a> Xenomai </h2>
+<p />
+<p />
+<h3><a name="Short_presentation_AN1"></a> Short presentation </h3>
+<p /> <ul>
+<li> Xenomai Started in 2001 as a project aiming at emulating traditional RTOS.
+</li></ul> 
+<p /> <ul>
+<li> The initial goal is to make it easier to port programs to GNU/Linux by providing skins mimicking the APIs of traditional RTOS such as VxWorks, pSOS+, and VRTXsa as well as the POSIX API, and a &#8220;native&#8221; API.
+</li></ul> 
+<p /> <ul>
+<li> It was initially related to the RTAI project (as the RTAI / fusion branch), but it is now independent.
+</li></ul> 
+<p /> <ul>
+<li> Real-time applications in Xenomai cannot use the Linux device drivers, so special device drivers must be written for the devices that are involved with the real-time tasks. Those drivers cannot benefit from the existing hardware support in Linux, and must be rewritten independently.
+</li></ul> 
+<p /> <ul>
+<li> Real-time applications in Xenomai are generally written against the <em>native skin</em> (a Xenomai API) or the <em>POSIX skin</em> (which reproduces the traditional API in Linux but binds it to Xenomai calls)
+</li></ul> 
+<p />
+<h3><a name="Setup_AN1"></a> Setup </h3>
+<p /> <ul>
+<li> Download Xenomai sources at <a href="http://download.gna.org/xenomai/stable/" target="_blank">http://download.gna.org/xenomai/stable/<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Download one of the Linux versions supported by this release (see <code>ksrc/arch/arm/patches/</code>)
+</li> <li> Since version 2.0, split kernel/user building model, kernel uses a script called script/prepare-kernel.sh which integrates Xenomai kernel-space support in the Linux sources. <ul>
+<li> For example with Xenomai 2.6.0 and a kernel sources 2.6.38.8 installed at <code>/usr/local/src/v2.6.38.8</code> , the command lines would be:<pre>
+cd xenomai-2.6.0
+./scripts/prepare-kernel.sh --arch&#61;arm --linux&#61;/usr/local/src/v2.6.38.8
+</pre>
+</li></ul> 
+</li> <li> Kernel <ul>
+<li> Configure kernel, for example fot AT91SAM9G20-EK:<pre>
+$ make at91sam9g20ek&#95;defconfig
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/basic/docproc
+  GEN     /mnt/open/kernel/build&#95;kernel&#95;atmel-xeno/Makefile
+&#91;...]
+#
+# configuration written to .config
+#
+</pre>
+</li> <li> and be sure to enable <ul>
+<li> Xenomai: <code>CONFIG_XENOMAI</code>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/Xconfig_Xenomai_2.6.38.8.png" alt="Xconfig_Xenomai_2.6.38.8.png" width='915' height='420' /></center>      <ul>
+ <li>
+ <ul>
+ <li>
+ <ul>
+<li> Fast Swicth Context Extension (FCSE):  <code>CONFIG_ARM_FCSE_GUARANTEED</code>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+<center><img src="../../../pub/Linux4SAM/RealTime/Xconfig_ARM_FCSE_2.6.38.9.png" alt="Xconfig_ARM_FCSE_2.6.38.9.png" width='748' height='389' /></center> <ul>
+ <li>
+ <ul>
+ <li>
+ <ul>
+<li> High Resolution Timer Support <code>CONFIG_HIGH_RES_TIMERS</code>  (see PREEMPT_RT part)
+</li> <li> <code>CONFIG_ATMEL_TCLIB</code> (see PREEMPT_RT  part)
+</li></ul> 
+</li></ul> 
+</li> <li> Userspace <ul>
+<li> User-space libraries are compiled using the traditional autotools. In the following examples, CFLAGS and LDFLAGS are set with march=armv5, because the toolchain used is the one provided by Linaro which will compile by default for armv7 whereas the <code>AT91SAM</code> family are amrv5 <pre>
+/home/gclement/xenomai-2.6.0$ ./configure --build&#61;i686-pc-linux-gnu --host&#61;arm-linux-gnueabi  CFLAGS&#61;&#34;-march&#61;armv5&#34; LDFLAGS&#61;&#34;-march&#61;armv5&#34;
+checking build system type... i686-pc-linux-gnu
+checking host system type... arm-unknown-linux-gnueabi
+checking for a BSD-compatible install... /usr/bin/install -c
+&#91;...]
+config.status: linking ./include/asm-generic to src/include/asm-generic/xenomai
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+/home/gclement/xenomai-2.6.0$ make
+Making all in src
+make&#91;1]: Entering directory `/home/gclement/xenomai-2.6.0/src&#39;
+Making all in include
+make&#91;2]: Entering directory `/home/gclement/xenomai-2.6.0/src/include&#39;
+make  all-am
+make&#91;3]: Entering directory `/home/gclement/xenomai-2.6.0/src/include&#39;
+make&#91;3]: Leaving directory `/home/gclement/xenomai-2.6.0/src/include&#39;
+make&#91;2]: Leaving directory `/home/gclement/xenomai-2.6.0/src/include&#39;
+Making all in skins
+make&#91;2]: Entering directory `/home/gclement/xenomai-2.6.0/src/skins&#39;
+Making all in common
+make&#91;3]: Entering directory `/home/gclement/xenomai-2.6.0/src/skins/common&#39;
+/bin/sh ../../../libtool  --tag&#61;CC   --mode&#61;compile arm-linux-gnueabi-gcc -DHAVE&#95;CONFIG&#95;H -I. -I../../../src/include  -O2 -D&#95;GNU&#95;SOURCE -D&#95;REENTRANT -Wall -Werror-implicit-function-declaration -pipe -D&#95;&#95;XENO&#95;&#95; -D&#95;&#95;IN&#95;XENO&#95;&#95; -Wstrict-prototypes -I../../../include   -march&#61;armv5 -MT libxenomai&#95;la-assert&#95;context.lo -MD -MP -MF .deps/libxenomai&#95;la-assert&#95;context.Tpo -c -o libxenomai&#95;la-assert&#95;context.lo `test -f &#39;assert&#95;context.c&#39; &#124;&#124; echo &#39;./&#39;`assert&#95;context.c
+&#91;...]
+make&#91;1]: Leaving directory `/home/gclement/xenomai-2.6.0/scripts&#39;
+make&#91;1]: Entering directory `/home/gclement/xenomai-2.6.0&#39;
+make&#91;1]: Nothing to be done for `all-am&#39;.
+make&#91;1]: Leaving directory `/home/gclement/xenomai-2.6.0&#39;
+
+/home/gclement/xenomai-2.6.0$ make DESTDIR&#61;/home/gclement/rootfs/ install
+Making install in src
+make&#91;1]: Entering directory `/home/gclement/xenomai-2.6.0/src&#39;
+Making install in include
+&#91;...]
+&#91;sudo] password for gclement: 
+sudo is working.
+make&#91;2]: Nothing to be done for `install-data-am&#39;.
+make&#91;2]: Leaving directory `/home/gclement/xenomai-2.6.0&#39;
+make&#91;1]: Leaving directory `/home/gclement/xenomai-2.6.0&#39;
+/home/gclement/xenomai-2.6.0$ 
+</pre>
+</li> <li> The xeno-config script, installed when installing Xenomai user-space support helps you to compile your own programs. This scripts need to know where the libraries and the headers have been installed. DESTDIR must be set to point to the staging root file system:
+</li></ul> 
+</li></ul> 
+<pre>
+/home/gclement/$ export DESTDIR&#61;/home/gclement/rootfs/
+/home/gclement/$ arm-linux-gnueabi-gcc  `xeno-config --skin&#61;posix --cflags`  -o rttest&#95;xeno rttest.c `xeno-config --skin&#61;posix --ldflags`
+/home/gclement/$ file rttest&#95;xeno 
+rttest&#95;xeno: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.31, not stripped</pre>
+<p /> <ul>
+ <li>
+ <ul>
+<li> See Xenomai's examples directory for more example.
+</li> <li> Installation details may be found in the README.INSTALL guide.
+</li> <li> For an introduction on programming with the native Xenomai API, see: <a href="http://www.xenomai.org/documentation/branches/v2.4.x/pdf/Native-API-Tour-rev-C.pdf" target="_blank">http://www.xenomai.org/documentation/branches/v2.4.x/pdf/Native-API-Tour-rev-C.pdf<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> For an introduction on programming with the POSIX API, see: <a href="http://www.xenomai.org/index.php/Porting_POSIX_applications_to_Xenomai" target="_blank">http://www.xenomai.org/index.php/Porting_POSIX_applications_to_Xenomai<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Another option which is more straightforward is to use <a href="http://buildroot.uclibc.org/" target="_blank">Buildroot<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> which now integrates support for Xenomai
+</li></ul> 
+<p />
+<p />
+<h3><a name="Benchmarks"></a> Benchmarks </h3>
+<p />
+Benchmarks are done using the latency program provided with Xenomai. It comes in 3 flavors: <ul>
+<li>  User task: periodic user-mode task
+</li></ul> 
+As for timer latency benchmark done on with cyclictest, what is measured here is the full scheduling latency plus the short time spent in the task to read the current time:
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/latency_timer.png" alt="latency_timer.png" width='553' height='256' /></center>
+<p /> <ul>
+<li>  Kernel Task: in-kernel periodic task
+</li></ul> 
+What is measured here is the full scheduling latency plus the short time spent in the task to read the current time, but here the task is in the kernel space so there is no context switch between kernel and user space:
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/latency_kernel_timer.png" alt="latency_kernel_timer.png" width='553' height='266' /></center>
+<p /> <ul>
+<li>  Timer IRQ: in-kernel timer handle
+</li></ul> 
+What is measured here is only the interrupt latency and the time spent in the interrupt handlers:
+<center>
+<img src="../../../pub/Linux4SAM/RealTime/latency_IRQ_timer.png" alt="latency_IRQ_timer.png" width='323' height='246' /></center>
+<p />
+It has been tested on 3 boards, with default configuration plus the following ones: <ul>
+<li> <code>CONFIG_HIGH_RES_TIMERS</code>
+</li> <li> <code>CONFIG_ATMEL_TCLIB</code>
+</li> <li> <code>CONFIG_ATMEL_TCB_CLKSRC</code>
+</li> <li> <code>CONFIG_XENOMAI</code>
+</li> <li> <code>CONFIG_XENO_DRIVERS_TIMERBENCH</code>
+</li> <li> <code>CONFIG_ARM_FCSE_GUARANTEED</code>
+</li> <li> <code>CONFIG_XENO_HW_UNLOCKED_SWITCH</code>
+</li></ul> 
+<p />
+Xenomai 2.6 was used with a 2.6.38 kernel.
+<p />
+The commands used for testing were the following: <ul>
+<li> For User task:<pre>
+while true; do ./doload.sh 65 &#38;  ; done &#38; latency
+</pre>
+</li> <li> For Kernel task:<pre>
+while true; do ./doload.sh 65 &#38;  ; done &#38; latency -t1
+</pre>
+</li> <li> For Timer IRQ:<pre>
+while true; do ./doload.sh 65 &#38;  ; done &#38; latency -t2
+</pre>
+</li></ul> 
+<p />
+Here are the results for AT91SAM9G20-EK and AT91SAM9M10G45-EK:
+<p /> <ul>
+<li> AT91SAM9G20-EK - 2.6.38.8-ipipe+  - $latency -h -H10000 -P99 -T36000 -q <ul>
+<li>  Command used - $latency -h -H10000 -P99 -T36000 -q
+</li> <li>  Benchmark duration: 10 h 00 min
+</li> <li>  Number of samples: 35999927
+</li> <li>  Min Latencies: 8.720 us
+</li> <li>  Avg Latencies: 32.945 us
+</li> <li>  Max Latencies: 106.589 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/latency_G20_2_6_38_t0P99.png" alt="latency_G20_2_6_38_t0P99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G20-EK - 2.6.38.8-ipipe+  - $latency -h -H10000 -t1 -P99 -T36000 -q <ul>
+<li>  Command used - $latency -h -H10000 -t1 -P99 -T36000 -q
+</li> <li>  Benchmark duration: 10 h 00 min
+</li> <li>  Number of samples: 35999817
+</li> <li>  Min Latencies: 3.876 us
+</li> <li>  Avg Latencies: 19.065 us
+</li> <li>  Max Latencies: 42.542 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/latency_G20_2_6_38_t1P99.png" alt="latency_G20_2_6_38_t1P99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9G20-EK - 2.6.38.8-ipipe+  - $latency -h -H10000 -t2 -P99 -T36000 -q <ul>
+<li>  Command used - $latency -h -H10000 -t2 -P99 -T36000 -q
+</li> <li>  Benchmark duration: 10 h 00 min
+</li> <li>  Number of samples: 35999845
+</li> <li>  Min Latencies: 0.000 us
+</li> <li>  Avg Latencies: 6.607 us
+</li> <li>  Max Latencies: 21.240 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/latency_G20_2_6_38_t2P99.png" alt="latency_G20_2_6_38_t2P99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9M10G45-EK - 2.6.38.8-ipipe+  - $latency -h -H10000 -P99 -T36000 -q <ul>
+<li>  Command used - $latency -h -H10000 -P99 -T36000 -q
+</li> <li>  Benchmark duration: 10 h 00 min
+</li> <li>  Number of samples: 36022992
+</li> <li>  Min Latencies: 6.720 us
+</li> <li>  Avg Latencies: 34.560 us
+</li> <li>  Max Latencies: 118.080 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/latency_G45_2_6_38_t0P99.png" alt="latency_G45_2_6_38_t0P99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9M10G45-EK - 2.6.38.8-ipipe+  - $latency -h -H10000 -t1 -P99 -T36000 -q <ul>
+<li>  Command used - $latency -h -H10000 -t1 -P99 -T36000 -q
+</li> <li>  Benchmark duration: 10 h 00 min
+</li> <li>  Number of samples: 35999920
+</li> <li>  Min Latencies: 1.087 us
+</li> <li>  Avg Latencies: 19.414 us
+</li> <li>  Max Latencies: 47.028 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/latency_G45_2_6_38_t1P99.png" alt="latency_G45_2_6_38_t1P99.png" /></center>
+<p /> <ul>
+<li> AT91SAM9M10G45-EK - 2.6.38.8-ipipe+  - $latency -h -H10000 -t2 -P99 -T36000 -q <ul>
+<li>  Command used - $latency -h -H10000 -t2 -P99 -T36000 -q
+</li> <li>  Benchmark duration: 10 h 00 min
+</li> <li>  Number of samples: 35999830
+</li> <li>  Min Latencies: -3.835 us
+</li> <li>  Avg Latencies: 6.343 us
+</li> <li>  Max Latencies: 21.106 us
+</li></ul> 
+</li></ul> 
+<p />
+<img src="../../../pub/Linux4SAM/RealTime/latency_G45_2_6_38_t2P99.png" alt="latency_G45_2_6_38_t2P99.png" /></center>
+<p />
+<p />
+For AT91SAM9263-EK, each test ran during at least 3 hours.
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> &nbsp; </td>
+<td align="center" bgcolor="#ffffff" colspan="4" valign="top"> Max Latency for </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Board </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> User task </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> Kernel Task </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> Timer IRQ </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> AT91SAM9263-EK </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> 105us </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> 62us </td>
+<td align="center" bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol twikiLast" valign="top"> 26us </td>
+</tr></table>
+<p />
+<h2><a name="References"></a> References </h2>
+<p /> <ul>
+<li> Websites <ul>
+<li> The Wiki Web for the CONFIG_PREEMPT_RT community, and real-time Linux in general. <a href="https://rt.wiki.kernel.org/index.html" target="_blank">Real-Time Linux Wiki<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Information about Real-time usage of Linux hosted by CE Linux Forum <a href="http://elinux.org/Real_Time" target="_blank">Real Time - elinux.org<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. There are less information than the previous website but it have some references on more recent paper or presentations.
+</li> <li> <a href="https://www.osadl.org/Realtime-Linux.projects-realtime-linux.0.html" target="_blank">OSADL Project: Realtime Linux<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. The most intersting point is their realtime latency testing farm.
+</li> <li> <a href="http://www.xenomai.org/index.php/Main_Page" target="_blank">Xenomai web site<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> and <a href="http://gna.org/projects/adeos" target="_blank">Adeos<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Books <ul>
+<li> Building Embedded Linux systems 2nd Edition
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> Papers <ul>
+<li> Comparison between Xenomai, PREEMPT_RT and vanilla Linux on an (Beagle Board ARMv7 architecture). <a href="https://www.osadl.org/fileadmin/dam/rtlws/12/Brown.pdf" target="_blank">How fast is fast enough? Choosing between Xenomai and Linux for real-time applications / Jeremy Brown and Bradly Martin, Rep Invariant Systems, inc., USA<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+</li></ul>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiForm">
+<table class='twikiFormTable' border='1'><tr><th class='twikiFormTableHRow twikiFirstCol' colspan='2'>
+<a class="twikiLink" href="WebFaqBaseForm.html">WebFaqBaseForm</a>
+</th></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Boards </td><td>
+<a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>, <a class="twikiLink" href="GettingStarted.html">other AT91SAM9 boards</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Components </td><td>
+<a class="twikiLink" href="LinuxKernel.html">Kernel</a>
+</td></tr><tr valign='top'><td class='twikiFormTableRow twikiFirstCol' align='right'> Summary </td><td>
+Enable Real Time support for AT91SAM9 Soc
+</td></tr></table>
+</div><!-- /twikiForm --><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyHidden twistyInited"><a href="#"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twikiMakeHidden twistyInited">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="RealTimeaabf.html?sortcol=0;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="RealTimead61.html?sortcol=1;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="RealTime306b.html?sortcol=2;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="RealTimee4a1.html?sortcol=3;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="RealTimee152.html?sortcol=4;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="RealTimeb628.html?sortcol=5;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="middle"> <a href="RealTime6808.html?sortcol=6;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G20_3-0-10-rt27-11H_GPIO.png">G20_3-0-10-rt27-11H_GPIO.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G20_3-0-10-rt27-11H_GPIO.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 7.7&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-09 - 13:23</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G20_3-0-10-rt27-11H_GPIO_nopreempt.png">G20_3-0-10-rt27-11H_GPIO_nopreempt.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G20_3-0-10-rt27-11H_GPIO_nopreempt.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 8.8&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-09 - 13:23</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-12H_GPIO.png">G45_3-0-10-rt27-12H_GPIO.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G45_3-0-10-rt27-12H_GPIO.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 6.8&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-10 - 00:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-34H_GPIO_nopreempt.png">G45_3-0-10-rt27-34H_GPIO_nopreempt.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G45_3-0-10-rt27-34H_GPIO_nopreempt.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 10.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-23 - 13:24</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-36H_GPIO.png">G45_3-0-10-rt27-36H_GPIO.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G45_3-0-10-rt27-36H_GPIO.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 8.3&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2011-12-07 - 15:11</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-4H_GPIO_nopreempt.png">G45_3-0-10-rt27-4H_GPIO_nopreempt.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G45_3-0-10-rt27-4H_GPIO_nopreempt.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 8.7&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-09 - 13:23</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/G45_3-0-10-rt27-notrace_47H_GIO_ext_noprintf.png">G45_3-0-10-rt27-notrace_47H_GIO_ext_noprintf.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=G45_3-0-10-rt27-notrace_47H_GIO_ext_noprintf.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 8.3&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2011-12-07 - 15:11</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/Xconfig_ARM_FCSE_2.6.38.9.png">Xconfig_ARM_FCSE_2.6.38.9.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=Xconfig_ARM_FCSE_2.6.38.9.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 65.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-24 - 14:47</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/Xconfig_TCB_3_0_12-rt12.png">Xconfig_TCB_3_0_12-rt12.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=Xconfig_TCB_3_0_12-rt12.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 44.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2011-12-19 - 17:00</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/Xconfig_Xenomai_2.6.38.8.png">Xconfig_Xenomai_2.6.38.8.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=Xconfig_Xenomai_2.6.38.8.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 71.3&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-24 - 14:38</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/Xconfig_preempt-rt_3_0_12-rt12.png">Xconfig_preempt-rt_3_0_12-rt12.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=Xconfig_preempt-rt_3_0_12-rt12.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 55.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2011-12-19 - 16:56</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_rt30_matnp99.png">cyclictest_G20_3_0_12_rt30_matnp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G20_3_0_12_rt30_matnp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 6.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:24</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_rt30_matp99.png">cyclictest_G20_3_0_12_rt30_matp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G20_3_0_12_rt30_matp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.4&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:25</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_rt30_matsnp99.png">cyclictest_G20_3_0_12_rt30_matsnp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G20_3_0_12_rt30_matsnp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:25</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G20_3_0_12_vanilla_no_preempt_matp99.png">cyclictest_G20_3_0_12_vanilla_no_preempt_matp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G20_3_0_12_vanilla_no_preempt_matp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 4.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:26</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_rt30_matp99.png">cyclictest_G45_3_0_12_rt30_matp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G45_3_0_12_rt30_matp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.7&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:26</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_rt30_matsnp99.png">cyclictest_G45_3_0_12_rt30_matsnp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G45_3_0_12_rt30_matsnp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.4&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:27</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_rt30_matsp99.png">cyclictest_G45_3_0_12_rt30_matsp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G45_3_0_12_rt30_matsp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.5&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:27</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/cyclictest_G45_3_0_12_vanilla_no_preempt_matp99.png">cyclictest_G45_3_0_12_vanilla_no_preempt_matp99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=cyclictest_G45_3_0_12_vanilla_no_preempt_matp99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 4.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-27 - 15:27</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency.png">latency.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 11.2&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-25 - 16:49</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_G20_2_6_38_t0P99.png">latency_G20_2_6_38_t0P99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_G20_2_6_38_t0P99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-07 - 11:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_G20_2_6_38_t1P99.png">latency_G20_2_6_38_t1P99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_G20_2_6_38_t1P99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 6.4&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-07 - 11:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_G20_2_6_38_t2P99.png">latency_G20_2_6_38_t2P99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_G20_2_6_38_t2P99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-07 - 11:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_G45_2_6_38_t0P99.png">latency_G45_2_6_38_t0P99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_G45_2_6_38_t0P99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-07 - 11:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_G45_2_6_38_t1P99.png">latency_G45_2_6_38_t1P99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_G45_2_6_38_t1P99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 6.4&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-07 - 11:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_G45_2_6_38_t2P99.png">latency_G45_2_6_38_t2P99.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_G45_2_6_38_t2P99.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 5.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-02-07 - 11:04</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_IRQ_timer.png">latency_IRQ_timer.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_IRQ_timer.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 9.2&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-25 - 16:59</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_gpio.png">latency_gpio.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_gpio.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 14.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-25 - 16:58</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_kernel_timer.png">latency_kernel_timer.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_kernel_timer.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 13.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-25 - 17:01</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/RealTime/latency_timer.png">latency_timer.png</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=latency_timer.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 14.0&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2012-01-25 - 16:58</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/c.gif" width="16" height="16" alt="C source code file" title="C source code file" border="0" /><span class="twikiHidden">c</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://www.linux4sam.org/pub/Linux4SAM/RealTime/rttest_gpio.c">rttest_gpio.c</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/RealTime?filename=rttest_gpio.c;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> 1.5&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2011-12-07 - 15:26</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/FreeElectrons?origurl=/bin/view/Main/FreeElectrons">FreeElectrons</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> &nbsp; </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">r28 - 09 Sep 2016 - 08:25:11 - <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/NicolasFerre?origurl=/bin/view/Main/NicolasFerre">NicolasFerre</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+<div id="patternLeftBar">
+<div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"><img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> Linux4SAM</a>
+</li></ul> 
+</div>
+<br>
+<h2><a name="Linux4SAM"></a> <a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a> </h2>
+<ul>
+  <li><a class="twikiLink" href="SoftwareTools.html">Software tools</a></li>
+  <li><a class="twikiLink" href="AT91Bootstrap.html">AT91Bootstrap</a></li>
+  <li><a class="twikiLink" href="U-Boot.html">U-Boot</a>
+  <li><a class="twikiLink" href="LinuxKernel.html">Linux Kernel</a></li>
+  <li><a class="twikiLink" href="DT-Overlay.html">DT-Overlay</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Open_source_embedded_distributio">Open source solutions</a></u>
+<ul>
+    <li><a class="twikiLink" href="YoctoProject.html">Yocto Project</a></li>
+    <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/OpenEmbeddedAngstrom">OpenEmbedded / Angstrom</a></li>-->
+    <li><a class="twikiLink" href="BuildRoot.html">Buildroot</a></li>
+    <li><a class="twikiLink" href="OpenWrt.html">OpenWrt</a></li>
+</ul>
+<p />
+<u><a class="twikiCurrentWebHomeLink twikiAnchorLink" href="WebHome.html#Applications">Applications</a></u>
+<ul>
+    <li><a class="twikiAnchorLink" href="Applications.html#Graphics_Toolkit">Graphics Toolkit</a></li>
+    <li><a class="twikiAnchorLink" href="Applications.html#WiFi_and_Bluetooth">WiFi and Bluetooth</a></li>
+</ul>
+<p />
+<h2><a name="Boards"></a> Boards </h2>
+<ul>
+    <li><a class="twikiLink" href="Sama5d2IcpMainPage.html">SAMA5D2-ICP</a></li>
+    <li><a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">SAMA5D27 WLSOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sam9x60EKMainPage.html">SAM9X60-EK</a></li>
+    <li><a class="twikiLink" href="Sama5d27Som1EKMainPage.html">SAMA5D27 SOM1 EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2PtcEKMainPage.html">SAMA5D2 PTC EK</a></li>
+    <li><a class="twikiLink" href="Sama5d2XplainedMainPage.html">SAMA5D2 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d3XplainedMainPage.html">SAMA5D3 Xplained</a></li>
+    <li><a class="twikiLink" href="Sama5d4XplainedMainPage.html">SAMA5D4 Xplained</a></li>
+    <li><a class="twikiLink" href="GettingStarted.html">Older boards</a></li>
+</ul>
+<p />
+<p />
+<h2><a name="FAQ"></a> <a class="twikiLink" href="WebFaq.html">FAQ</a> </h2>
+<div class="twikiToc"> <ul>
+<li> <a href="WebFaq.html#FAQ_updates_by_Boards"> FAQ updates by Boards</a>
+</li> <li> <a href="WebFaq.html#FAQ_updates_by_Components"> FAQ updates by Components</a>
+</li></ul> 
+</div>
+<p />
+<!--
+<u>FAQ</u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/U-BootFAQ">U-Boot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/BuildRootFAQ">BuildRoot FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioFAQ">Audio FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9x5">AT91SAM9x5 FAQ</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/FAQ_9n12">AT91SAM9N12 FAQ</a></li>
+</ul>
+<p />
+<u><a class="twikiLink" href="/bin/view/Linux4SAM/TipsNTricks">Tips &amp; Tricks</a></u>
+<ul>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AudioRecordOnAt91sam9g20ek">9G20EK Audio Recording</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SAM9M10Gstreamer">9M10 vdec with Gstreamer</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/IioAdcDriver">IIO ADC driver</a></li>
+    <li><a class="twikiCurrentTopicLink twikiLink" href="/bin/view/Linux4SAM/RealTime">Real Time on A91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/SDCardBootNotice">SD card boot for AT91SAM SoC</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/PmeccConfigure">NAND ECC configuration (PMECC)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/AT91BootstrapDebugEclipse">AT91Bootstrap Debugging with Eclipse for Linux</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingIsi">Using ISI (Image Sensor Interface)</a></li>
+    <li><a class="twikiLink" href="/bin/view/Linux4SAM/UsingMaxTouch">Using maXTouch (capacitive touchscreen)</a></li>
+</ul>
+<p />
+<br><br>
+<h2><a name="Demos"></a> <a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo_archives">Demos</a> </h2>
+<p />
+<u>For following products:</u>
+<br><br>
+<ul>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4xplained">SAMA5D4 Xplained</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d4ek">SAMA5D4-EK</a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x">SAMA5D3x-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demoa5d3x_yocto">SAMA5D3x-EK <br /> Home Automation Demo <br />  with Yocto</a></li>
+  <li><a href="http://www.timesys.com/embedded-linux/resources/dev-center/sama5d3" target="_blank">SAMA5D3x-EK <br /> Home Automation Demo <br />  with LinuxLink<img alt="" border="0" height="12" src="/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />  &nbsp;</li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9n12#Demo_archives">AT91SAM9N12-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted_9x5#Demo_archives">AT91SAM9x5-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9m10g45ek">AT91SAM9M10G45-EK</a></li>
+  <li><a class="twikiAnchorLink" href="/bin/view/Linux4SAM/GettingStarted#Demo9g20">AT91SAM9G20-EK</a></li>
+</ul>
+-->
+<p />
+<p />
+<h2><a name="Useful_links"></a> <a class="twikiLink" href="LinksToCommunities.html">Useful links</a> </h2>
+<ul>
+  <li><a href="https://www.microchip.com/forums/f540.aspx" target="_blank">Microchip Microprocessors forums</a></li>
+  <li><a href="http://www.at91.com/" target="_blank">AT91 Community (archive)</a></li>
+  <li><a href="http://www.microchip.com/" target="_blank">Microchip</a></li>
+  <li><a href="https://github.com/linux4sam" target="_blank">Linux4SAM on GitHub</a></li>
+  <!--<li><a class="twikiLink" href="/bin/view/Linux4SAM/LinuxNewsletter">Atmel | Linux newsletter</a></li>-->
+</ul>
+<br><br>
+<h2><a name="NAVIGATION"></a> NAVIGATION </h2>
+<p />
+<div id="navButtonl">
+<a class="twikiCurrentWebHomeLink twikiLink" href="WebHome.html"> Linux4SAM</a>
+</div> <ul>
+<li> <a class="twikiLink" href="WebTopicList.html"> Index</a>
+</li> <li> <a class="twikiLink" href="WebChanges.html"> Changes</a>
+</li> <li> <a class="twikiLink" href="WebNotify.html"> Notifications</a>
+</li> <li> <a class="twikiLink" href="WebStatistics.html"> Statistics</a>
+</li></ul> 
+<p />
+</div>
+<!-- /patternLeftBarContents--></div>
+<!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper-->
+<div id="patternTopBar">
+<div id="patternTopBarContents">
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="../Linux4SAM.html"><img src="../../../pub/Main/TWikiPreferences/tux2_atmel_header.png" border="0" alt="Linux4SAM" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/RealTime"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://www.linux4sam.org/bin/view/Linux4SAM/WebSearch"><input type="text" class="twikiInputField" id="quickSearchBox" name="search" value="" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="Linux4SAM" /><noscript>&nbsp;<input type="submit" size="5" class="twikiButton" name="submit" value="Search" />&nbsp;</noscript>   </form>
+</li> <li> 
+</li></ul> 
+</td></tr></table>
+<div class="page-title"> Linux &amp; Open Source for AT91 Microchip Microprocessors</div>
+<div class="page-print">
+<p>
+<p />
+<a href="RealTime3fe3.html?skin=print.myskin">Print</a></p>
+<p />
+</div>
+</div></div>
+<!-- /patternTopBar-->
+<div id="patternBottomBar">
+<div id="patternBottomBarContents">
+<div id="patternWebBottomBar">
+<p>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors. </p>
+<p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. </p>
+<p>Microchip&reg; and others, are registered trademarks or trademarks of Microchip Technology Inc. and its subsidiaries. <a href="http://twiki.org/" target="_blank" class="natExternalLink"><img width="80" height="15" border="0" title="This site is powered by the TWiki collaboration platform" alt="This site is powered by the TWiki collaboration platform" src="https://www.linux4sam.org/linux4sam/T-logo-80x15.gif" class="img-twiki"></a></p>
+<p>Arm&reg; and others are registered trademarks or trademarks of Arm Limited (or its affiliates).  Other terms and product names may be trademarks of others.</p>
+<p>Ideas, requests, contributions ? Connect to <a href="LinksToCommunities.html" class="twikiLink">LinksToCommunities</a> page.</p>
+<p>Syndicate this site<a href="WebRss" class="linux4sam-rss">RSS</a>
+<a href="WebAtom" class="linux4sam-rss">ATOM</a></p>
+</div>
+<!--/patternWebBottomBar--></div>
+<!-- /patternBottomBarContents--></div>
+<!-- /patternBottomBar-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10893750-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+<script type="text/javascript">
+  _bizo_data_partner_id = "8288";
+</script>
+<script type="text/javascript">
+	(function() {
+		  var s = document.getElementsByTagName("script")[0];
+		  var b = document.createElement("script");
+		  b.type = "text/javascript";
+		  b.async = true;
+		  b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";
+		  s.parentNode.insertBefore(b, s);
+	 })();
+</script>
+<noscript>
+  <img height="1" width="1" alt="" style="display:none;" src="http://www.bizographics.com/collect/?pid=8288&amp;fmt=gif" />
+</noscript>
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body>
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/RealTime by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:15:57 GMT -->
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/OpenWrt?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:04:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; OpenWrt &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="OpenWrt"></a> OpenWrt </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Related_Links"> Related Links</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#How_to_build_OpenWrt_for_AT91"> How to build OpenWrt for AT91</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Prerequisites"> Prerequisites</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Get_sources"> Get sources</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Build_OpenWrt_images"> Build OpenWrt images</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Cross_toolchain"> Cross toolchain</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#The_build_system_configuration_i"> The build system configuration interface</a> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Customizing_Linux_Kernel_configu"> Customizing Linux Kernel configuration</a>
+</li></ul> 
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Using_an_OpenWrt_system"> Using an OpenWrt system</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+OpenWrt is an open source project for embedded operating system based on Linux, primarily used on embedded devices to route network traffic. All components have been optimized to be small enough to fit into the limited storage and memory available in home routers.
+<p />
+OpenWrt is configured using a command-line interface (ash shell), or a web interface (LuCI). OpenWrt can run on various types of devices, including CPE routers, residential gateways, smartphones, pocket computers and laptops etc.
+<p />
+Currently the OpenWrt can build <ul>
+<li> AT91Bootstrap
+</li> <li> u-boot-at91
+</li> <li> linux-at91
+</li> <li> A cross-compiler optimized for at91 SoC
+</li> <li> Root filesystems of different types
+</li> <li> Bootable SD card Image
+</li></ul> 
+<p />
+<h2><a name="Related_Links"></a> Related Links </h2> <ul>
+<li> <a href="http://openwrt.org/" target="_blank">openwrt.org<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="http://busybox.net/" target="_blank">BusyBox<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h2><a name="How_to_build_OpenWrt_for_AT91"></a> How to build OpenWrt for AT91 </h2>
+<p />
+<h3><a name="Prerequisites"></a> Prerequisites </h3>
+<p />
+Host build system should be a Linux system with <a href="https://openwrt.org/docs/guide-developer/build-system/install-buildsystem" target="_blank">necessary software<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> installed.
+<p />
+On Ubuntu/Debian you should also install libssl1.0-dev.
+<p />
+<pre>
+$ sudo apt-get install libssl1.0-dev
+</pre>
+<p />
+libssl provided by Ubuntu 20.04 doesn't fit with kernel necessities. The workaround for this is to do the following before installing <code>libssl1.0-dev</code>:<br>
+Edit <code>/etc/apt/sources.list</code> file and add the following line at the end:
+<pre>
+deb http://security.ubuntu.com/ubuntu bionic-security main
+</pre>
+Update:
+<pre>
+sudo apt-get update
+</pre>
+<p />
+<img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/note.gif" width="16" height="16" alt="Note" title="Note" border="0" /> You can install missing packages using <code>yum install</code> with Fedora or <code>apt-get install</code> with Ubuntu or Debian. These commands may require <strong>root</strong> privileges or being in a correct sudoers group.
+<p />
+<h3><a name="Get_sources"></a> Get sources </h3>
+<p />
+You can easily download OpenWrt sources from our  <a href="https://github.com/linux4sam/openwrt-at91.git" target="_blank">OpenWrt git<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> repository.
+<p />
+To get the source code, you should clone the repository:
+<p />
+<pre>
+$ git clone https://github.com/linux4sam/openwrt-at91.git
+Cloning into &#39;openwrt-at91&#39;...
+remote: Enumerating objects: 44, done.
+remote: Counting objects: 100&#37; (44/44), done.
+remote: Compressing objects: 100&#37; (37/37), done.
+remote: Total 420102 (delta 17), reused 13 (delta 7), pack-reused 420058
+Receiving objects: 100&#37; (420102/420102), 148.16 MiB &#124; 190.00 KiB/s, done.
+Resolving deltas: 100&#37; (285014/285014), done.
+$ cd openwrt-at91
+$ 
+</pre>
+<p />
+The source code has been taken from the master branch which is pointing on the latest version of OpenWrt. If you want to use a specific release, you can list them and use one of them by doing this:
+<p />
+<pre>
+$ git checkout  openwrt-19.07.2-at91 -b openwrt-19.07.2-at91,
+</pre>
+<p />
+To benefit the latest enhancements for Microchip products, you are advised to use the openwrt-19.07.2-at91 branch.
+<p />
+<h3><a name="Build_OpenWrt_images"></a> Build OpenWrt images </h3>
+<p />
+The OpenWrt image contains the following components:
+<p /> <ul>
+<li> BOOT.BIN (AT91Bootstrap)
+</li> <li> U-boot.bin (U-Boot)
+</li> <li> zImage (kernel image)
+</li> <li> at91 Device tree blob
+</li> <li> Root filesystems of different types
+</li> <li> Bootable SD card Image
+</li></ul> 
+<p />
+The OpenWrt build system configuration interface handles the selection of the target platform, packages to be compiled, packages to be included in the firmware file, some kernel options, etc. Start the OpenWrt build system configuration interface by issuing the following command 
+<p />
+Download and install all available "feeds" (see <a href="https://openwrt.org/docs/guide-developer/feeds" target="_blank">Openwrt feeds<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> for more options):
+<p />
+<pre>
+$ ./scripts/feeds update  -a
+$ ./scripts/feeds install  -a 
+</pre>
+<p />
+<strong>NOTE:</strong> It is possible to create out of tree builds by setting the TOPDIR environment variable and creating the appropriate directory structure (see <a href="https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=b1f102b03e7279c21b231cb16658a09ce1e543ca" target="_blank">this<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> for details). Otherwise make sure that TOPDIR is not set before running <em>./script/feeds</em>, to avoid errors regarding missing files or directories.
+<p />
+You'll find a configs folder containing  several default configurations for different At91 sama5 targets. If you want to build the OpenWrt image we provide for sama5d2_Xplained board, you'll have to do:
+<p />
+<pre>
+$ cp configs/sama5d2&#95;xplained&#95;defconfig  .config
+$ make defconfig 
+</pre>
+<p />
+Everything is now ready for building the image(s), which is done with one single command:
+<p />
+<pre>
+$ make 
+</pre>
+<p />
+After a successful build, the freshly built images can be found in the newly created <code>at91</code> directory in <code>&lt;openwrt-at91&gt;/bin/target/</code> directory. The compiled files are additionally classified by the target platform, so e.g. a firmware built for an at91 sama5d2 xplained device will be in <code>&lt;openwrt-at91&gt;/bin/target/at91/sama5-glibc</code> directory
+<p />
+<pre>
+$ ls bin/targets/at91/sama5-glibc/
+<font color="#3465A4"><b>at91bootstrap-sama5d2_xplaineddf_qspi_uboot</b></font>
+<font color="#3465A4"><b>at91bootstrap-sama5d2_xplaineddf_uboot</b></font>
+<font color="#3465A4"><b>at91bootstrap-sama5d2_xplainedsd_uboot</b></font>
+<font color="#3465A4"><b>at91dtoverlay-sama5d2_xplained</b></font>
+config.buildinfo
+feeds.buildinfo
+openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained.dtb
+openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained-ext4-root.ubi
+<font color="#CC0000"><b>openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained-ext4-sdcard.img.gz</b></font>
+<font color="#4E9A06"><b>openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained-ext4-zImage</b></font>
+openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained-ubifs-root.ubi
+<font color="#4E9A06"><b>openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained-ubifs-zImage</b></font>
+openwrt-19.07.2-linux4sam-2020.10-at91-sama5-at91-sama5d2_xplained-uImage
+openwrt-19.07.2-linux4sam-2020.10-at91-sama5-device-at91-sama5d2-xplained.manifest
+<font color="#CC0000"><b>openwrt-19.07.2-linux4sam-2020.10-at91-sama5-device-at91-sama5d2-xplained-rootfs.tar.gz</b></font>
+<font color="#3465A4"><b>packages</b></font>
+sama5d2_xplained.itb
+sha256sums
+uboot.env
+<font color="#3465A4"><b>u-boot-sama5d2_xplained_mmc</b></font>
+<font color="#3465A4"><b>u-boot-sama5d2_xplained_spiflash</b></font>
+version.buildinfo
+</pre>
+<p />
+To write the compressed image (<code>*.img.gz</code>) on the SD card, follow steps mentioned in <a href="http://www.at91.com/linux4sam/bin/view/Linux4SAM/Sama5d2XplainedMainPage#Create_a_SD_card_with_the_demo" target="_blank">Create a SD card with the demo<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h2><a name="Cross_toolchain"></a> Cross toolchain </h2>
+<p />
+While creating the OpenWrt images, OpenWrt will build a cross toolchain (or will download or use one present on your machine). You can find it under <code>staging_dir/toolchain-arm_cortex-a5_gcc-8.4.0_glibc_eabi/bin</code>
+<p />
+<pre>$ ls  staging_dir/toolchain-arm_cortex-a5_gcc-8.4.0_glibc_eabi/bin/
+<font color="#06989A"><b>arm-openwrt-linux-addr2line</b></font>   <font color="#06989A"><b>arm-openwrt-linux-gcov-tool</b></font>           <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcov</b></font>       <font color="#06989A"><b>arm-openwrt-linux-gprof</b></font>    <font color="#4E9A06"><b>iconv</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-ar</b></font>          <font color="#06989A"><b>arm-openwrt-linux-gdb</b></font>                 <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcov-dump</b></font>  <font color="#06989A"><b>arm-openwrt-linux-ld</b></font>       <font color="#4E9A06"><b>ldd</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-as</b></font>          <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-addr2line</b></font>   <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcov-tool</b></font>  <font color="#06989A"><b>arm-openwrt-linux-ld.bfd</b></font>   <font color="#4E9A06"><b>locale</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-c++</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-ar</b></font>          <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gdb</b></font>        <font color="#06989A"><b>arm-openwrt-linux-nm</b></font>       <font color="#4E9A06"><b>localedef</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-c++filt</b></font>     <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-as</b></font>          <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gprof</b></font>      <font color="#06989A"><b>arm-openwrt-linux-objcopy</b></font>  <font color="#4E9A06"><b>makedb</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-cpp</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-c++</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-ld</b></font>         <font color="#06989A"><b>arm-openwrt-linux-objdump</b></font>  <font color="#4E9A06"><b>mtrace</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-elfedit</b></font>     <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-c++filt</b></font>     <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-ld.bfd</b></font>     <font color="#06989A"><b>arm-openwrt-linux-ranlib</b></font>   <font color="#4E9A06"><b>pcprofiledump</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-g++</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-cpp</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-nm</b></font>         <font color="#06989A"><b>arm-openwrt-linux-readelf</b></font>  <font color="#4E9A06"><b>pldd</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcc</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-elfedit</b></font>     <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-objcopy</b></font>    <font color="#06989A"><b>arm-openwrt-linux-size</b></font>     <font color="#4E9A06"><b>readelf</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcc-8.4.0</b></font>   <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-g++</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-objdump</b></font>    <font color="#06989A"><b>arm-openwrt-linux-strings</b></font>  <font color="#4E9A06"><b>sotruss</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcc-ar</b></font>      <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcc</b></font>         <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-ranlib</b></font>     <font color="#06989A"><b>arm-openwrt-linux-strip</b></font>    <font color="#4E9A06"><b>sprof</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcc-nm</b></font>      <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcc-8.4.0</b></font>   <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-readelf</b></font>    <font color="#4E9A06"><b>catchsegv</b></font>                  <font color="#4E9A06"><b>tzselect</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcc-ranlib</b></font>  <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcc-ar</b></font>      <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-size</b></font>       <font color="#4E9A06"><b>gencat</b></font>                     <font color="#4E9A06"><b>xtrace</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcov</b></font>        <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcc-nm</b></font>      <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-strings</b></font>    <font color="#4E9A06"><b>getconf</b></font>
+<font color="#06989A"><b>arm-openwrt-linux-gcov-dump</b></font>   <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-gcc-ranlib</b></font>  <font color="#4E9A06"><b>arm-openwrt-linux-gnueabi-strip</b></font>      <font color="#4E9A06"><b>getent</b></font>
+</pre>
+<p />
+<h2><a name="The_build_system_configuration_i"></a> The build system configuration interface </h2>
+<p />
+The build system configuration interface handles the selection of the target platform, packages to be compiled, packages to be included in the firmware file, some kernel options, etc. 
+Start the build system configuration interface by writing the following command:
+<p />
+<pre>
+make menuconfig
+</pre>
+<p />
+     <img src="../../../pub/Linux4SAM/OpenWrt/Openwrt-Menuconfig.png" alt="Openwrt-Menuconfig.png" width="800" height="521" />
+<p />
+<h3><a name="Customizing_Linux_Kernel_configu"></a> Customizing Linux Kernel configuration </h3>
+<p />
+All the explanations are available in the OpenWrt developer guide under <a href="https://openwrt.org/docs/guide-developer/build-system/use-buildsystem#kernel_configuration_optional" target="_blank">kernel configuration<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> section.
+<p />
+<h2><a name="Using_an_OpenWrt_system"></a> Using an OpenWrt system </h2>
+<p />
+OpenWrt has the following ways to configure stuff: <ul>
+<li> There is “UCI” <a href="https://openwrt.org/docs/guide-user/base-system/uci" target="_blank">(Unified Configuration Interface)<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> to store and manipulate all its configuration. This is an OpenWrt-own format and standard for config files and command line utilities to configure OpenWrt-related stuff)
+</li> <li> There is <a href="https://openwrt.org/docs/guide-user/start#luci_web_interface" target="_blank">“LuCi”<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> - a web GUI interface for UCI, by default usually listening at <a href="http://192.168.1.1/" target="_blank">http://192.168.1.1<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. LuCi is based  on LUA and its a OpenWrt own standard as well. You can also enable https for LuCi access. Not all options may be available in LuCi and LuCi requires about 1MB of flash space. 
+</li></ul> 
+<p />
+     <img src="../../../pub/Linux4SAM/OpenWrt/Openwrt-LuCi.png" alt="Openwrt-LuCi.png" width="713" height="365" />
+<p /> <ul>
+<li> There are several classic Linux config files also used in on OpenWrt devices. These files use the same format and config options as in other Linux distributions.
+</li> <li> Optional installable packages sometimes integrate into the UCI config model and may also provide a LuCi config extension, but many extension packages also bring their own config files* Root File System's
+</li></ul> 
+<p />
+<h2><a name="Recent_FAQ"></a> Recent FAQ </h2>
+<p />
+<p /> <dl>
+<dt> <a class="twikiCurrentTopicLink twikiLink" href="OpenWrt.html">OpenWrt</a> </dt><dd> <br />&#8226; <a href="BuildIssueOpenWrtUbuntu2004.html" >Build Issue Open Wrt Ubuntu 2004</a>: OpenWrt build error on Ubuntu 20.04. (<a class="twikiLink" href="Sama5d2IcpMainPage.html">Sama5d2-icp</a>, <a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>, <a class="twikiLink" href="Sama5d27WLSom1EKMainPage.html">Sama5d27WLSom1EK</a>, <a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>)
+</dd></dl> 
+<p /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments"> <div class="twikiAttachments">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="OpenWrt02cd.html?skin=print.myskin;sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">I</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="OpenWrtcc4a.html?skin=print.myskin;sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Attachment</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="OpenWrtc02a.html?skin=print.myskin;sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Action</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="OpenWrt101b.html?skin=print.myskin;sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Size</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="OpenWrtda64.html?skin=print.myskin;sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Date</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="OpenWrt0539.html?skin=print.myskin;sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Who</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="OpenWrtf3f9.html?skin=print.myskin;sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="../../../pub/Linux4SAM/OpenWrt/Openwrt-LuCi.png">Openwrt-LuCi.png</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/OpenWrt?filename=Openwrt-LuCi.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> 77.8&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <span class="twikiNoBreak">2018-03-29 - 19:16</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/SandeepSheriker?origurl=/bin/view/Main/SandeepSheriker">SandeepSheriker</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> Openwrt-Luci </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/png.gif" width="16" height="16" alt="PNG" title="PNG" border="0" /><span class="twikiHidden">png</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> <a href="../../../pub/Linux4SAM/OpenWrt/Openwrt-Menuconfig.png">Openwrt-Menuconfig.png</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLast" valign="top"> <a href="https://www.linux4sam.org/bin/attach/Linux4SAM/OpenWrt?filename=Openwrt-Menuconfig.png;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#edf4f9" class="twikiTableCol3 twikiLast" valign="top"> 109.9&nbsp;K </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLast" valign="top"> <span class="twikiNoBreak">2018-03-29 - 19:14</span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLast" valign="top"> <a class="twikiLink" href="https://www.linux4sam.org/bin/login/Main/SandeepSheriker?origurl=/bin/view/Main/SandeepSheriker">SandeepSheriker</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> Openwrt-Menuconfig </td>
+</tr></table>
+</div> </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/OpenWrt?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:04:18 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>

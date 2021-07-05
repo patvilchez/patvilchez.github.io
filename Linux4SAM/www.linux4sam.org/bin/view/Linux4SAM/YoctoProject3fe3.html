@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/YoctoProject?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:03:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/RedDotPlugin/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.linux4sam.org/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<title>TWiki &middot; Linux4SAM &middot; YoctoProject &middot; (printable)</title>
+<base  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta name="generator" content="TWiki/NatSkin" /> 
+<link rel="icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="https://www.linux4sam.org/pub/Linux4SAM/WebPreferences/favicon.ico" type="image/x-icon" />
+<!-- 
+
+  Enable the line below when firefox has fixed printing of pages
+  that import css. See https://bugzilla.mozilla.org/show_bug.cgi?id=154892 
+
+%GETSKINSTYLE% 
+
+-->
+<!-- template javascript -->
+
+<!-- template javascript -->
+<style type="text/css">
+.natFeedIcon,
+.blogEntryFeed,
+.blogNavigation,
+.blogAddComment {
+  display:none;
+}
+/*
+.natExternalLink:after {
+  content: " (" attr(href) ") ";
+}
+*/
+%WEBCOMPONENT{"WebCss"}%
+</style>
+</head>
+<body class="natBody natBodyPrint">
+<div class="natBodyContents">
+  <div class="natMiddle natMain">
+	 <div class="natMainContents">
+<p /><h1><a name="Yocto_Project"></a> Yocto Project </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="index3fe3.html?skin=print.myskin#Introduction"> Introduction</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Related_Links"> Related Links</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#OpenEmbedded_Yocto_Project_Poky"> OpenEmbedded / Yocto Project / Poky: build from sources</a>
+</li> <li> <a href="index3fe3.html?skin=print.myskin#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<p />
+<hr />
+<p />
+<h2><a name="Introduction"></a> Introduction </h2>
+<p />
+The <a href="https://www.yoctoproject.org/about" target="_blank">Yocto Project<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is a powerful building environment. It is build on top of several components including the famous <a href="http://www.openembedded.org/" target="_blank">OpenEmbedded<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>  build framework for embedded Linux.
+<a href="http://www.pokylinux.org/" target="_blank">Poky<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is the reference system for building a whole embedded Linux distribution. The support for our AT91 products has been added permitting to offer a <strong>root file system</strong> with a wide range of applications.
+<p />
+Binary images for both graphical and non graphical uses are provided to allow a quick overview. Once you have a basic root file system up an running, the package system allow you to fit application set to your need.
+<p />
+This page will guide you through the comprehensive Yocto Project documentation without duplicating information. All you will need to use and build such material is available in those project websites. The golden links are listed below.
+<p />
+<h2><a name="Related_Links"></a> Related Links </h2> <ul>
+<li> <a href="https://www.yoctoproject.org/" target="_blank">Yocto Project<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://wiki.yoctoproject.org/" target="_blank">Yocto Project Wiki<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://www.yoctoproject.org/tools-resources/videos/getting-started-yocto-project-new-developer-screencast-tutorial" target="_blank">Getting Started with the Yocto Project - New Developer Screencast Tutorial<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> - can be outdated but still interesting for newcomers.
+</li></ul> 
+<p /> <ul>
+<li> Home of the <a href="https://github.com/linux4sam/meta-atmel" target="_blank">OpenEmbedded layer: meta-atmel<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> that adds support for Microchip AT91 SoCs to Yocto Project. <a href="https://layers.openembedded.org/layerindex/branch/master/layer/meta-atmel/" target="_blank">Meta-atmel official layer page<img alt="" border="0" height="12" src="https://www.linux4sam.org/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> in the layer index.
+</li></ul> 
+<p />
+<h2><a name="OpenEmbedded_Yocto_Project_Poky"></a> <span class="twikiNewLink"><a href="https://www.linux4sam.org/bin/edit/Linux4SAM/OpenEmbedded?topicparent=Linux4SAM.YoctoProject;nowysiwyg=1" rel="nofollow" title="OpenEmbedded (this topic does not yet exist; you can create it)">OpenEmbedded</a></span> / Yocto Project / Poky: build from sources </h2>
+<p />
+ <div class="twikiToc"> <ul>
+<li> <a href="PokyBuild3fe3.html?skin=print.myskin#How_to_build_Poky_for_AT91"> How to build Poky for AT91</a> <ul>
+<li> <a href="PokyBuild3fe3.html?skin=print.myskin#Building_environment"> Building environment</a>
+</li></ul> 
+</li> <li> <a href="PokyBuild3fe3.html?skin=print.myskin#Atmel_Poky_SDK"> Atmel Poky SDK</a> <ul>
+<li> <a href="PokyBuild3fe3.html?skin=print.myskin#Build_Atmel_Poky_SDK"> Build Atmel Poky SDK</a>
+</li> <li> <a href="PokyBuild3fe3.html?skin=print.myskin#Install_Atmel_Poky_SDK"> Install Atmel Poky SDK</a>
+</li> <li> <a href="PokyBuild3fe3.html?skin=print.myskin#Use_Atmel_Poky_SDK"> Use Atmel Poky SDK</a>
+</li></ul> 
+</li> <li> <a href="PokyBuild3fe3.html?skin=print.myskin#Tips_tricks"> Tips &amp; tricks</a> <ul>
+<li> <a href="PokyBuild3fe3.html?skin=print.myskin#BitBake"> BitBake</a>
+</li> <li> <a href="PokyBuild3fe3.html?skin=print.myskin#Hello_World_example"> Hello World example</a>
+</li></ul> 
+</li> <li> <a href="PokyBuild3fe3.html?skin=print.myskin#Recent_FAQ"> Recent FAQ</a>
+</li></ul> 
+</div>
+<p />
+<p />
+<h2><a name="Recent_FAQ"></a> Recent FAQ </h2>
+<p />
+<p /> <dl>
+<dt> <a class="twikiCurrentTopicLink twikiLink" href="YoctoProject.html">YoctoProject</a> </dt><dd> <br />&#8226; <a href="AudioFAQ.html" >Audio FAQ</a>: Audio with ALSA. () <br />&#8226; <a href="Sam9x60EkAttachingTm5000Display.html" >Sam 9 x 60 Ek Attaching Tm 5000 Display</a>: Addition to the other generic FAQ about LCD displays: <a class="twikiLink" href="ConnectModuleFromPDA.html">ConnectModuleFromPDA</a>. (<a class="twikiLink" href="Sam9x60EKMainPage.html">Sam9x60EK</a>) <br />&#8226; <a href="GuiSolutions.html" >Gui Solutions</a>: Presentation of some GUI solutions. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>) <br />&#8226; <a href="YoctoProjectFAQ.html" >Yocto Project FAQ</a>: Some Yocto Project FAQ entries. (<a class="twikiLink" href="Sama5d27Som1EKMainPage.html">Sama5d27Som1EK</a>, <a class="twikiLink" href="Sama5d2PtcEKMainPage.html">Sama5d2PtcEK</a>, <a class="twikiLink" href="Sama5d2XplainedMainPage.html">Sama5d2Xplained</a>, <a class="twikiLink" href="Sama5d4XplainedMainPage.html">Sama5d4Xplained</a>, <a class="twikiLink" href="Sama5d4ekMainPage.html">Sama5d4ek</a>, <a class="twikiLink" href="Sama5d3XplainedMainPage.html">Sama5d3Xplained</a>, <a class="twikiLink" href="Sama5d3xekMainPage.html">Sama5d3xek</a>, <a class="twikiLink" href="AT91sam9x5ekMainPage.html">AT91sam9x5-ek</a>)
+</dd></dl> 
+<p />
+<p />
+<hr /> 
+	 </div>
+  <div class="natMainFooterContents">
+	 <div class="natTopicAttachments">  </div>
+  </div>
+  </div>
+</div>
+</body>
+
+<!-- Mirrored from www.linux4sam.org/bin/view/Linux4SAM/YoctoProject?skin=print.myskin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 19:03:27 GMT -->
+</html>
+<!-- template: view.print.nat.tmpl -->
+<style>
+h1,h1 span{color:#000;}
+</style>
